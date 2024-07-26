@@ -1,0 +1,15 @@
+{
+    "projectName": "Made",
+    "languages": [{
+        "id": "made",
+        "grammar": "src/language/made.langium",
+        "fileExtensions": [".made"],
+        "textMate": {
+            "out": "syntaxes/made.tmLanguage.json"
+        },
+        "monarch": {
+            "out": "syntaxes/made.monarch.ts"
+        }
+    }],
+    "out": "src/language/generated"
+}
