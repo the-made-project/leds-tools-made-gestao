@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';
 import { extractAstNode } from './cli-util.js';
-import { generateJavaScript } from './generator.js';
+import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
 import * as url from 'node:url';
 import * as fs from 'node:fs/promises';
@@ -17,7 +17,7 @@ const packageContent = await fs.readFile(packagePath, 'utf-8');
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
     const model = await extractAstNode<Model>(fileName, services);
-    const generatedFilePath = generateJavaScript(model, fileName, opts.destination);
+    const generatedFilePath = generate(model, fileName, opts.destination,opts);
     console.log(chalk.green(`We MADE! ${generatedFilePath}`));
 };
 
