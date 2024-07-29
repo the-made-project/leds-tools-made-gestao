@@ -2,11 +2,13 @@ import type { Model } from '../language/generated/ast.js';
 import * as path from 'node:path';
 import { GenerateOptions } from './main.js';
 import { generateDocumentation} from './Documentation/generate.js'
+import { generateProjectManagement} from './Project Manager Integration/generate.js'
 
 export function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): string {
     const final_destination = extractDestination(filePath, destination)
     
     if (opts.only_project_management){
+        generateProjectManagement(model, final_destination)
     }
     if (opts.only_project_documentation){
         generateDocumentation(model,final_destination)
