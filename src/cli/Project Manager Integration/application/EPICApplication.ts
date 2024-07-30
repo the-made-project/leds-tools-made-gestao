@@ -28,14 +28,14 @@ export class EPICApplication extends IssueAbstractApplication {
 
         let description = epic.description ?? ""
         
-        description = epic.process.ref.description ?? ""
+        description = epic.process?.ref?.description ?? ""
        
         let labels = epic.label ? Util.appendValue(epic.label,epic.labelx): []
-        let labelProcess = epic.process.ref.label? Util.appendValue(epic.process.ref.label,epic.process.ref.labelx): []
+        let labelProcess = epic.process?.ref?.label? Util.appendValue(epic.process?.ref?.label ?? "",epic.process?.ref?.labelx || [""]): []
 
         labels = labels.concat(labelProcess)
 
-        this.jiraIntegrationService.createEPIC(epic.name,description,undefined, labels )
+        this.jiraIntegrationService.createEPIC(epic.name ?? "",description,undefined, labels )
         .then(result => {
             
             const key = (result as any).key 
@@ -44,7 +44,7 @@ export class EPICApplication extends IssueAbstractApplication {
             this.save(epicID, result)  
 
             if (epic.process){
-                epic.process.ref.activities.map(async activity => await this.usApplication.createByActivity(activity,key, epic))
+                epic.process?.ref?.activities.map(async activity => await this.usApplication.createByActivity(activity,key, epic))
             }      
             
             }).catch(error => {
@@ -56,7 +56,7 @@ export class EPICApplication extends IssueAbstractApplication {
         
         let labels = epic.label ? Util.appendValue(epic.label,epic.labelx): []
 
-        this.jiraIntegrationService.createEPIC(epic.name,epic.description, undefined, labels )
+        this.jiraIntegrationService.createEPIC(epic.name || "",epic.description || "", undefined, labels )
         .then(async (result) => {
             
             const epicID = epic.id.toLowerCase()

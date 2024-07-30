@@ -4,11 +4,12 @@ import { GenerateOptions } from './main.js';
 import { generateDocumentation} from './Documentation/generate.js'
 import { generateProjectManagement} from './Project Manager Integration/generate.js'
 
-export function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): string {
+export async function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): Promise<string> {
     const final_destination = extractDestination(filePath, destination)
     
     if (opts.only_project_management){
-        generateProjectManagement(model, final_destination)
+        const name = await generateProjectManagement(model, final_destination)
+        console.log(`Syncronized ${name}`)
     }
     if (opts.only_project_documentation){
         generateDocumentation(model,final_destination)

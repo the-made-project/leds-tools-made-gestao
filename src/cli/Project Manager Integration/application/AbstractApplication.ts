@@ -7,9 +7,9 @@ import { JsonFileCRUD } from "../dao/JsonFileCRUD.js";
 export abstract class AbstractApplication {
 
     jiraIntegrationService: JiraIntegrationService
-    jsonDAO: JsonFileCRUD
+    jsonDAO!: JsonFileCRUD;
     DB_PATH: string
-    objectMap:  Map<string,string>
+    objectMap!: Map<string, string>;
 
     constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string){
         Util.mkdirSync(target_folder)
@@ -20,20 +20,18 @@ export abstract class AbstractApplication {
         
     }
 
-    protected async saveOnFile(key:any, value:any, _function:any, type:string){
-
-        value.type = type
+    protected async saveOnFile(key: any, value: any, _function: JsonFileCRUD, type: string) {
+      value.type = type;
+      await _function.create(key, value);
+  }
     
-        _function.create(key, value)
-      }
-    
-    protected idExists (key:any, _function){
+    protected idExists (key:any, _function: JsonFileCRUD){
     
         return _function.idExists(key)
     
     }
 
-    protected async readByKey(key:any,_function){
+    protected async readByKey(key:any,_function: JsonFileCRUD){
       return _function.readByKey(key)
     }
 

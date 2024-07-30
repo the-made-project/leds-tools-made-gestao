@@ -22,82 +22,41 @@ export class JiraApplication {
     this.planningApplication = new PlanningApplication(email,apiToken,host,projectKey,target_folder)
   }
     
-  public async run(model:Model){
+  public async run(model: Model) {
+    await this.planningApplication.processUser();
 
-    await this.planningApplication.processUser()
+    const epics = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
+    const userstories = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
+    const tasks = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isTaskBacklog));
+    const timeBoxes = model.components.filter(isTimeBox);
 
-    const epics = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic))
-
-    const userstories = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory))
-
-    const tasks =  model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isTaskBacklog))
-
-    const timeBoxes = model.components.filter(isTimeBox)
-    
-    await this.createEPIC(epics)
-
-    await this.createUserStory(userstories)
-    
-    await this.createTaskBacklog(tasks)
-
-    await this.createTimeBoxes(timeBoxes)
-
-    await this.createPlanningItem(timeBoxes)
-  }
+    await Promise.all([
+        this.createEPIC(epics),
+        this.createUserStory(userstories),
+        this.createTaskBacklog(tasks),
+        this.createTimeBoxes(timeBoxes),
+        this.createPlanningItem(timeBoxes)
+    ]);
+}
   
   public async createEPIC(epics: Epic[]) {
+    await Promise.all(epics.map(epic => this.epicApplication.create(epic)));
+}
 
-    epics.forEach (async (epic) => {
-      
-      await this.epicApplication.create(epic)
-     
-    });
-    
-  }
+public async createUserStory(atomicUserStories: AtomicUserStory[]) {
+    await Promise.all(atomicUserStories.map(atomicUserStory => this.USApplication.create(atomicUserStory)));
+}
 
-  public async createUserStory(atocmiUserStories: AtomicUserStory[]) {
-    // Verificar quando tiver relação com uma EPIC
+public async createTaskBacklog(backlogTasks: TaskBacklog[]) {
+    await Promise.all(backlogTasks.map(task => this.taskApplication.create(task)));
+}
 
-    atocmiUserStories.map(async (atomicUserStory) => {
+public async createTimeBoxes(timeBoxes: TimeBox[]) {
+    await Promise.all(timeBoxes.map(timeBox => this.timeBoxApplication.create(timeBox)));
+}
 
-     await this.USApplication.create(atomicUserStory)
-      
-    })
-    
-  }
+public async createPlanningItem(timeBoxes: TimeBox[]) {
+    await Promise.all(timeBoxes.map(timeBox => this.planningApplication.createPlanning(timeBox)));
+}
 
-  public async createTaskBacklog(backlogTasks: TaskBacklog[]) {
-    
-    backlogTasks.map(async (task) =>  {
-
-      await this.taskApplication.create(task)
-      
-    })
-    
-  }  
-
-  public async createTimeBoxes(timeBoxes:TimeBox[]) {
-
-    timeBoxes.map(async timeBox => {
-      await this.timeBoxApplication.create(timeBox)
-      }
-      
-    );
-  
-  }
-
-  public async createPlanningItem(timeBoxes:TimeBox[]){
-
-    timeBoxes.map(async timeBox => {
-    
-      await this.planningApplication.createPlanning(timeBox)
-    
-    } );
-  
-  }
-
-  
-
-  
-  
 }   

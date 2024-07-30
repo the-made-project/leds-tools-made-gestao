@@ -13,15 +13,11 @@ export async function generateProjectManagement(model: Model,target_folder: stri
   const apiToken  = model.project.token; 
   const projectKey = model.project.Identification;
 
-  const jiraApplication = new JiraApplication(email,apiToken,host,projectKey,target_folder)
+  const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder)
+  for (let a = 0 ; a <=3 ; a++){
+    await Jira.run(model)
+  }
   
-  await jiraApplication.run(model)
   
   return model.project.name
 }
- 
-
-
-
-
-
