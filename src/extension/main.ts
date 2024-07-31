@@ -11,7 +11,6 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
             const filepath = vscode.window.activeTextEditor?.document.fileName
             if(filepath) {
                 generateAction(filepath,opts).catch((reason) => vscode.window.showErrorMessage(reason.message))
-                vscode.window.showInformationMessage("Code generated successfully!")
             }
         }
     }
