@@ -29,7 +29,7 @@ style = [
 ]
 
 [tool.commitizen.customize]
-message_template = "{{change_type}}(GESTAO-{{issue_key}}): #comment {{message}} {%if workflow_transition %} #{{workflow_transition_stage}} {% endif %}"
+message_template = "{{change_type}}(GESTAO-{{issue_key}}): #comment: {{message}} {%if workflow_transition %} #workflow transition: {{workflow_transition_stage}} {% endif %} {%if daily_blocker%} #impediment(s): {{daily_blocker_message}} {% endif %}"
 schema = "<type>: <body>"
 schema_pattern = "(feature|fix|doc|refactor|ci|test|build):(\\s.*)"
 
@@ -46,14 +46,14 @@ change_type_map = {"feature" = "Feat", "fix" = "Fix", "doc"="Doc","refactor"="Re
 type = "list"
 name = "change_type"
 choices = [
-    {value = "feature", name = "Feature: A new feature. Correlates with MINOR in SemVer"}, 
-    {value = "fix", name = "Fix: A bug fix. Correlates with PATCH in SemVer"},
-    {value = "hotfix", name = "Hot Fix: A bug fix on production environment. Correlates with PATCH in SemVer"},
+    {value = "feature", name = "Feature: A new feature."}, 
+    {value = "fix", name = "Fix: A bug fix."},
+    {value = "hotfix", name = "Hot Fix: A bug fix on production environment."},
     {value = "doc", name = "Doc: Documenation only changes."},
     {value = "refactor", name = "Refactor: A code change that neither fixes a bug nor adds a feature."},
     {value = "test", name = "Test: Adding missing or correcting existing tests."},
-    {value = "build", name = "Build: Changes that affect the build system or external dependencies (example scopes: pip, docker, npm)."},
-    {value = "ci", name = "CI: Changes to our CI configuration files and scripts (example scopes: GitLabCI)."},
+    {value = "build", name = "Build: Changes that affect the build system or external dependencies (example: pip, docker, npm)."},
+    {value = "ci", name = "CI: Changes to our CI configuration files and scripts (example: GitLabCI)."},
     {value = "chore", name = "CHORE: Means nothing that an external user would see"},
    ]
 
@@ -84,3 +84,13 @@ choices = [
     {value = "testing", name = "Testing"},
     {value = "closed", name = "Closed"}, 
     ]
+
+[[tool.commitizen.customize.questions]]
+type = "confirm"
+name = "daily_blocker"
+message = "Anything blocking your progress?"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "daily_blocker_message"
+message = "Explain your impediment(s):"

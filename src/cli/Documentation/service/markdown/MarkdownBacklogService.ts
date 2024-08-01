@@ -229,11 +229,10 @@ export class MarkdownBacklogService {
 
         var nodes: Node[] = [];
         var dependencies: Dependency[] = []
-
         //criar o nodes
-        timeBox.plannig?.planningItems.map(planning => nodes.push({node:planning.item?.ref?.id.toUpperCase() ?? "", description: planning.item?.ref?.name ?? ""}))
+        timeBox.planning?.planningItems.map(planning => nodes.push({node:planning.item?.ref?.id.toUpperCase() ?? "", description: planning.item?.ref?.name ?? ""}))
         // criar as dependencias
-        timeBox.plannig?.planningItems.forEach(planning => {
+        timeBox.planning?.planningItems.forEach(planning => {
             const itemRef = planning.item?.ref;
             if (itemRef) {
                 dependencies.push(...this.createDependencies(itemRef));
@@ -262,7 +261,7 @@ export class MarkdownBacklogService {
 
         |ID    |Nome |Resposável |Tempo Planejado | Complexidade |
         |:---- |:----|:--------  |:-------:       | :----------: |
-        ${timeBox.plannig?.planningItems.map(planning => this.createPlanningItem(planning)).join("")}
+        ${timeBox.planning?.planningItems.map(planning => this.createPlanningItem(planning)).join("")}
         
 
         ## Ordem de Execução
@@ -357,12 +356,4 @@ export class MarkdownBacklogService {
         `
     }
 
-    
-    
-
-    
-   
-  
-
-    
 }

@@ -28,8 +28,6 @@ VersionPlanning:
 ;
 
 VersionPlanningItem:
-    ('item' ':' item=[backlogElement:QualifiedName] 
-     | 'item' ':' itemString=STRING       
-    )*
-    
+    ('item' ':' (item=[backlogElement:QualifiedName] | itemString=STRING))+
 ;
+
