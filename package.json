@@ -13,11 +13,6 @@
         "type": "git",
         "url": "https://gitlab.com/ledsifes/tools/made"
     },
-    "files": [
-        "bin",
-        "out",
-        "src"
-    ],
     "type": "module",
     "scripts": {
         "build": "tsc -b tsconfig.src.json && node esbuild.mjs",
