@@ -63,7 +63,7 @@
         "vite": "~4.4.11",
         "vitest": "~1.0.0"
     },
-    "displayName": "made",
+    "displayName": "MADE - Leds",
     "engines": {
         "vscode": "^1.67.0",
         "node": ">=18.0.0"

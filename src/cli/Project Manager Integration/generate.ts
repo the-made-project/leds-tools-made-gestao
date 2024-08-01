@@ -20,7 +20,7 @@ export async function generateProjectManagement(model: Model,target_folder: stri
   const projectKey = model.project.Identification;
 
   const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder)
-  for (let a = 0 ; a <=3 ; a++){
+  for (let a = 0 ; a <=2 ; a++){
     await Jira.run(model)
   }
   
