@@ -16,7 +16,9 @@ export async function generate(model: Model, filePath: string, destination: stri
         generateDocumentation(model,final_destination)
     }
     if (opts.all){
-
+        generateDocumentation(model,final_destination)
+        const name = await generateProjectManagement(model, final_destination)
+        console.log(`Synchronized ${name}`)
     }
     
     vscode.window.showInformationMessage("We MADE!")

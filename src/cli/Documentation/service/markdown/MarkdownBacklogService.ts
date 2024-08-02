@@ -71,8 +71,6 @@ export class MarkdownBacklogService {
        
         //fs.writeFileSync(path.join(this.MANAGEMENT_PATH, "/planningoverview.md"), this.createProjectDSM())
         fs.writeFileSync(path.join(this.ANALYSIS_PATH, "/Dependency Analysis.md"), this.createProjectDSM())
-       
-        vscode.window.showInformationMessage('Planning Orizuri created!');
 
     }
 
