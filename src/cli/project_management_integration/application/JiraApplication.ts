@@ -5,13 +5,8 @@ import { USApplication } from "./USApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { PlanningApplication } from "./PlanningApplication.js";
 import { TeamApplication } from "./TeamApplication.js";
-import { createMadeServices } from "../../../language/made-module.js";
-import { EmptyFileSystem} from 'langium';
-import { CancellationToken } from "vscode-languageserver";
-import path from "path";
-import * as fs from 'fs';
 
-const services  = createMadeServices(EmptyFileSystem);     
+  
 
 export class JiraApplication {
 
