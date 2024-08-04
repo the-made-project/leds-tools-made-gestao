@@ -21,9 +21,20 @@ export async function generateProjectManagement(model: Model,target_folder: stri
 
   const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder)
   for (let a = 0 ; a <=2 ; a++){
-    await Jira.run(model)
+    await Jira.createModel(model)
   }
   
-  
   return model.project.name
+}
+
+export async function generateMadeFile(model: Model,target_folder: string) : Promise<string> {
+  
+  const host = model.project.host; 
+  const email = model.project.email; 
+  const apiToken  = model.project.token; 
+  const projectKey = model.project.Identification;
+ 
+  const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder)
+  await Jira.GetProjectInformation(model)
+  return model.project.name;
 }

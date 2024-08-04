@@ -20,7 +20,6 @@ export class MarkdownService {
         this.model = model
         this.target_folder = target_folder
         this.DOC_PATH = createPath(this.target_folder,'docs')
-        
         fs.mkdirSync(this.target_folder, {recursive:true})
 
         this.markdownProcessService = new MarkdownProcessService(model,this.DOC_PATH)

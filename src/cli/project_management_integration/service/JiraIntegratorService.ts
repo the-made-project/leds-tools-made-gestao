@@ -4,6 +4,9 @@ const URL_ISSUE = "/rest/api/3/issue"
 const URL_SPRINT = "/rest/agile/1.0/sprint"
 const URL_USERS = "/rest/api/3/users/search"
 
+const URL_ASSIGNEE = "/rest/api/3/user/assignable/search"
+
+
 export class JiraIntegrationService {
 
   projectKey: string;
@@ -22,10 +25,18 @@ export class JiraIntegrationService {
       
     }
 
+  public async getAssigneeUsers(){
+    const URL = this.host+URL_ASSIGNEE+`?project=${this.projectKey}`
+    console.log(URL)
+    const members = await Util.get(URL,this.email, this.apiToken)
+    const people = members.filter((member:any) => member.accountType === 'atlassian');
+    return people
+  }
+
   public async createEPIC (summary: string, description: string,  parent?:string, labels?: string[] ){
       
       return await this.createIssue(summary,'Epic',description, parent, labels)
-}
+  }
 
   public async createUserStory (summary: string,description: string, parent?:string, labels?: string[]){
       
@@ -121,7 +132,9 @@ export class JiraIntegrationService {
 
   public async getUsers(){
     const URL = this.host+URL_USERS
-    return await Util.get(URL,this.email, this.apiToken) 
+    const members = await Util.get(URL,this.email, this.apiToken)
+    const people = members.filter((member:any) => member.accountType === 'atlassian');
+    return people 
   }
 
   public async assigneTeamMemberIssue(issueID: string, teamemberID: string){

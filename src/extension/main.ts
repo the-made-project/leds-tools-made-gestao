@@ -15,8 +15,12 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
         }
     }
 
-    const generateProjectManagement = build_generate_functions({ only_project_management: true })
-    context.subscriptions.push(vscode.commands.registerCommand("made.generateProjectManagement", generateProjectManagement))
+    const synchronizeFromMadeToProjectManagement = build_generate_functions({ only_synchronize_from_made_to_projectManagement: true })
+    context.subscriptions.push(vscode.commands.registerCommand("made.synchronizeFromMadeToProjectManagement", synchronizeFromMadeToProjectManagement))
+
+    const synchronizeToProjectManagementFroMade = build_generate_functions({ only_synchronize_from_projectManagement_to_made: true })
+    context.subscriptions.push(vscode.commands.registerCommand("made.synchronizeFromProjectManagementToMade", synchronizeToProjectManagementFroMade))
+
 
     const generateDocumentation = build_generate_functions({ only_project_documentation: true })
     context.subscriptions.push(vscode.commands.registerCommand("made.generateDocumentation", generateDocumentation))

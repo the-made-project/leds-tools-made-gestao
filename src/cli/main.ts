@@ -25,7 +25,8 @@ export const generateAction = async (fileName: string, opts: GenerateOptions): P
 
 export type GenerateOptions = {
     destination?: string,
-    only_project_management?: boolean,
+    only_synchronize_from_made_to_projectManagement?: boolean,
+    only_synchronize_from_projectManagement_to_made?: boolean,
     only_project_documentation?: boolean,
     all?: boolean,
 }

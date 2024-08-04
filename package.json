@@ -87,8 +87,12 @@
         ],
         "commands": [
             {
-                "command": "made.generateProjectManagement",
-                "title": "Sincronize With Project Management"
+                "command": "made.synchronizeFromMadeToProjectManagement",
+                "title": "Synchronize From Made to Project Management"
+            },
+            {
+                "command": "made.synchronizeFromProjectManagementToMade",
+                "title": "Synchronize From Project Management to Made"
             },
             {
                 "command": "made.generateDocumentation",
@@ -102,7 +106,11 @@
         "menus": {
             "commandPalette": [
                 {
-                    "command": "made.generateProjectManagement",
+                    "command": "made.synchronizeFromMadeToProjectManagement",
+                    "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.synchronizeFromProjectManagementToMade",
                     "when": "editorLangId == made"
                 },
                 {
@@ -116,7 +124,12 @@
             ],
             "editor/context": [
                 {
-                    "command": "made.generateProjectManagement",
+                    "command": "made.synchronizeFromMadeToProjectManagement",
+                    "group": "z_commands",
+                    "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.synchronizeFromProjectManagementToMade",
                     "group": "z_commands",
                     "when": "editorLangId == made"
                 },
