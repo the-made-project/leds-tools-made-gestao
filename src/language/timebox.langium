@@ -33,9 +33,10 @@ Performed:
 
 PlanningItem:
     'item' ':' (item=[timeBoxTask:QualifiedName] | itemString=STRING)?
-    ('assigner' ':' (assigner=[TeamMember:QualifiedName] | assignerString=STRING))?
+    ('assignee' ':' (assignee=[TeamMember:QualifiedName] | assigneeString=STRING))?
     ('planned' ':' planned=INT)?
     ('complexity' ':' complexity=INT)?
+    ('dueDate' ':' duedate=DATE)?
 ;
 
 

@@ -63,7 +63,7 @@ timebox timeboxid {
     responsible: TeamID.memberid 
 
     planning {
-        item: "planning item" assigner: "member name"
+        item: "planning item" assignee: "member name"
     } 
 
     performed{

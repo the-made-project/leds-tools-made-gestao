@@ -30,52 +30,54 @@ export class PlanningApplication extends IssueAbstractApplication {
         }
     }
 
-    private async _create(email: string, key: string) {
-        if (email && key) {
-            const accountId = this.objectMap.get(email.toLowerCase());
+    private async _create(emailAssigner: string, key: string, dueDate: string) {
+        if (emailAssigner && key) {
+            const accountId = this.objectMap.get(emailAssigner.toLowerCase());
             const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;
             console.log(id);
             if (!this.idExists(id, this.jsonDAO)) {
                 try {
-                    let result = await this.jiraIntegrationService.assigneTeamMemberIssue(key, accountId ?? "");
-                    result += "a"
+                    let result = await this.jiraIntegrationService.editMetaData(key, accountId ?? "", dueDate);
+                    console.log(result);
                     const value = {
                         issueId: key,
                         accountId: accountId
                     };
                     await this.save(id, value);
                 } catch (error) {
-                    console.error('Error assigning team member to issue:', error);
+                    console.error('Error editing metadata', error);
                 }
             }
         }
-    }
+}
 
-    public async createPlanning(timeBox: TimeBox) {
-        const planningItems = timeBox?.planning?.planningItems ?? [];
-        for (const planningItem of planningItems) {
-            const email = planningItem?.assigner?.ref?.email;
-            const itemId = planningItem?.item?.ref?.id.toLowerCase() ?? planningItem?.itemString?.toLowerCase();
-            if (!itemId) continue;
 
-            const issues = [];
-            const response = this.issueDAO.readbyPartOfKey(itemId);
-            for (const value of response) {
-                const data = response[value];
-                const type = data?.type;
-                if (type !== "epic") {
-                    const key = data?.key;
-                    if (key) {
-                        issues.push(key);
-                    }
+public async createPlanning(timeBox: TimeBox) {
+    const planningItems = timeBox?.planning?.planningItems ?? [];
+    for (const planningItem of planningItems) {
+        const dueDate = planningItem.duedate
+        const email = planningItem?.assignee?.ref?.email;
+        const itemId = planningItem?.item?.ref?.id.toLowerCase() ?? planningItem?.itemString?.toLowerCase();
+        if (!itemId) continue;
+
+        const issues = [];
+        const response = this.issueDAO.readbyPartOfKey(itemId);
+        for (const value of response) {
+            const data = value;
+            const type = data?.type;
+            if (type !== "epic") {
+                const key = data?.key;
+                if (key) {
+                    issues.push(key);
                 }
             }
-
-            for (const issueId of issues) {
-                await this._create(email ?? "", issueId);
-            }
+        }
+        
+        for (const issueId of issues) {
+            await this._create(email ?? "", issueId, dueDate ?? "");
         }
     }
+}
 
     private async save(id: any, result: any) {
         await super.saveOnFile(id, result, this.jsonDAO, "assignees");

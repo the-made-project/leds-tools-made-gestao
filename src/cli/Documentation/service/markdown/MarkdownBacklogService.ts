@@ -311,7 +311,7 @@ export class MarkdownBacklogService {
         const name = planningItem?.item?.ref?.name ?? this.retriveNameFromPathString(planningItem?.itemString ?? "") ?? "-"
         
         return expandToStringWithNL`        
-        ${planningItem.item?.ref?.id.toLowerCase() ?? planningItem?.itemString?.toLowerCase()} |${name} |${planningItem.assigner?.ref?.id.toLowerCase() ?? planningItem?.assignerString?.toLowerCase()}| ${planningItem.planned ?? `-`} |${planningItem.complexity ?? `-`}|`
+        ${planningItem.item?.ref?.id.toLowerCase() ?? planningItem?.itemString?.toLowerCase()} |${name} |${planningItem.assignee?.ref?.id.toLowerCase() ?? planningItem?.assigneeString?.toLowerCase()}| ${planningItem.planned ?? `-`} |${planningItem.complexity ?? `-`}|`
     }
    
     private createPerfomedItem(performedItem: PerfomedItem):string{

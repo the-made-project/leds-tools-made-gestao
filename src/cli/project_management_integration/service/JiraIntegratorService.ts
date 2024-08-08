@@ -54,7 +54,7 @@ export class JiraIntegrationService {
     }
     
 
-  private async createIssue (summary: string, type: string, description: string, parent?:string, labels?: string[] ){
+  private async createIssue (summary: string, type: string, description: string, parent?:string, labels?: string[]){
       
       const URL = this.host+URL_ISSUE
     
@@ -137,10 +137,15 @@ export class JiraIntegrationService {
     return people 
   }
 
-  public async assigneTeamMemberIssue(issueID: string, teamemberID: string){
+  public async editMetaData(issueID: string, teamemberID: string, dueDate: string){
     
+    /**
+     * Caso você esteja sofrendo com algum erro na hora de definir o assignee...
+     * Verifica primeiro se a api daqui tá atualizada com a do Jira, se não estiver eu tenho uma triste notícia:
+     * O problema vem antes de chegar aqui, vai ter que debugar tudo. Espero que na sua vez já dê pra debugar, boa sorte!
+     */
+
     const URL = this.host+URL_ISSUE+`/${issueID}/assignee`
-    console.log (teamemberID)
     try {
      
       const data = `{
