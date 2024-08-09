@@ -36,7 +36,7 @@ PlanningItem:
     ('assignee' ':' (assignee=[TeamMember:QualifiedName] | assigneeString=STRING))?
     ('planned' ':' planned=INT)?
     ('complexity' ':' complexity=INT)?
-    ('dueDate' ':' duedate=DATE)?
+    ('dueDate' ':' duedate=STRING)?
 ;
 
 

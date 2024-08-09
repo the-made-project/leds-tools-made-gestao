@@ -30,25 +30,62 @@ export class PlanningApplication extends IssueAbstractApplication {
         }
     }
 
-    private async _create(emailAssigner: string, key: string, dueDate: string) {
-        if (emailAssigner && key) {
-            const accountId = this.objectMap.get(emailAssigner.toLowerCase());
-            const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;
-            console.log(id);
-            if (!this.idExists(id, this.jsonDAO)) {
-                try {
-                    let result = await this.jiraIntegrationService.editMetaData(key, accountId ?? "", dueDate);
-                    console.log(result);
-                    const value = {
-                        issueId: key,
-                        accountId: accountId
-                    };
-                    await this.save(id, value);
-                } catch (error) {
-                    console.error('Error editing metadata', error);
-                }
+private async _create(emailAssigner: string, key: string, dueDate: string) {
+    if (emailAssigner && key && dueDate) {
+        const accountId = this.objectMap.get(emailAssigner.toLowerCase());
+        const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;
+        console.log(id);
+        if (!this.idExists(id, this.jsonDAO)) {
+            try {
+                let result = await this.jiraIntegrationService.editMetaData(key, accountId ?? "", dueDate);
+                console.log(result);
+                const value = {
+                    issueId: key,
+                    accountId: accountId,
+                    dueDate: dueDate
+                };
+                await this.save(id, value);
+            } catch (error) {
+                console.error('Error editing metadata', error);
             }
         }
+    }
+    if (emailAssigner && key) {
+        const accountId = this.objectMap.get(emailAssigner.toLowerCase());
+        const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;
+        console.log(id);
+        if (!this.idExists(id, this.jsonDAO)) {
+            try {
+                let result = await this.jiraIntegrationService.editMetaData(key, accountId ?? "", undefined);
+                console.log(result);
+                const value = {
+                    issueId: key,
+                    accountId: accountId,
+                };
+                await this.save(id, value);
+            } catch (error) {
+                console.error('Error editing metadata', error);
+            }
+        }
+    }
+    if (dueDate && key) {
+        const accountId = this.objectMap.get(emailAssigner.toLowerCase());
+        const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;
+        console.log(id);
+        if (!this.idExists(id, this.jsonDAO)) {
+            try {
+                let result = await this.jiraIntegrationService.editMetaData(key,undefined, dueDate);
+                console.log(result);
+                const value = {
+                    issueId: key,
+                    dueDate: dueDate
+                };
+                await this.save(id, value);
+            } catch (error) {
+                console.error('Error editing metadata', error);
+            }
+        }
+    }
 }
 
 

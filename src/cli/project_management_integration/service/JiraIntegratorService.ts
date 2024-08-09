@@ -137,23 +137,24 @@ export class JiraIntegrationService {
     return people 
   }
 
-  public async editMetaData(issueID: string, teamemberID: string, dueDate: string){
-    
-    /**
-     * Caso você esteja sofrendo com algum erro na hora de definir o assignee...
-     * Verifica primeiro se a api daqui tá atualizada com a do Jira, se não estiver eu tenho uma triste notícia:
-     * O problema vem antes de chegar aqui, vai ter que debugar tudo. Espero que na sua vez já dê pra debugar, boa sorte!
-     */
-
-    const URL = this.host+URL_ISSUE+`/${issueID}/assignee`
+  public async editMetaData(issueID: string, teamemberID?: string, dueDate?: string){
+    const URL = this.host + URL_ISSUE + `/${issueID}`;
+    let dataFields: any = {};
+  
+    if (teamemberID) {
+      dataFields.assignee = { "accountId": teamemberID };
+    }
+    if (dueDate) {
+      dueDate = Util.convertDateFormat(dueDate);
+      dataFields.duedate = dueDate;
+    }
+  
+    const data = JSON.stringify({ "fields": dataFields });
+  
     try {
-     
-      const data = `{
-        "accountId": "${teamemberID}"
-      }`;
-     
-      return await Util.send(URL,this.email, this.apiToken, data,"PUT",false)
-    }catch (error) {
+      const response = await Util.send(URL, this.email, this.apiToken, data, "PUT", false);
+      return response;
+    } catch (error) {
       throw new Error((error as Error).message);
     }
   }

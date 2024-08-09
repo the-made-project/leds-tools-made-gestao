@@ -110,7 +110,8 @@ export class Util {
             }
             if (status_response)
               return await response.json();
-            return "Não sei o que era pra retornar"
+
+            return response.json;
 
         }catch (error) {
             throw new Error(`Error fetching data: ${(error as Error).message}`);
