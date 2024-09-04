@@ -1,6 +1,7 @@
-import { Epic, isBacklog, isEpic, Model } from "../../../language/generated/ast.js"
+import { isBacklog, isEpic, isTimeBox, Model } from "../../../language/generated/ast.js"
 import { EPICApplication } from "./EPICApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
+import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { USApplication } from "./USApplication.js";
 import { EventEmitter } from 'events'
 
@@ -9,26 +10,24 @@ import { EventEmitter } from 'events'
 export class JiraApplication {
 
   epicApplication: EPICApplication
-  USApplication: USApplication
-  TaskApplication: TaskApplication
-  target_folder: string
+  uSApplication: USApplication
+  taskApplication: TaskApplication
+  timeBoxApplication: TimeBoxApplication
   model: Model
-  eventEmitter: EventEmitter
 
-    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
+  constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
 
-      this.epicApplication = new EPICApplication(email,apiToken,host,projectKey,target_folder,eventEmitter)
-
-      this.USApplication = new USApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
-
-      this.TaskApplication = new TaskApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
-     
-      this.target_folder = target_folder
+      
 
       this.model = model
 
-      this.eventEmitter = eventEmitter
+      this.epicApplication = new EPICApplication(email,apiToken,host,projectKey,target_folder,eventEmitter)
 
+      this.uSApplication = new USApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
+
+      this.taskApplication = new TaskApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
+     
+      this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,eventEmitter)
     }
     
     
@@ -42,15 +41,14 @@ export class JiraApplication {
     public async createModel() {
 
       const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
+      await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
 
-      await this.createEPIC(epics);
+      this.model.components.filter(isTimeBox).map(timeBox => this.timeBoxApplication.create(timeBox));
+      
+      
       
   }
     
-  public async createEPIC(epics: Epic[]) {
-      
-      await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
-  }
-  
+    
 
 }   

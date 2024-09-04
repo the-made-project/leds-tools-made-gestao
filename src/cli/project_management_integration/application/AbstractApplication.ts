@@ -8,7 +8,7 @@ import { EventEmitter } from 'events';
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 
-import {IssueDTO, IssuesDTO} from '../dto/models.js'
+import {IssuesDTO} from '../dto/models.js'
 
 export abstract class AbstractApplication {
 
@@ -16,7 +16,7 @@ export abstract class AbstractApplication {
   DB_PATH: string  
   eventEmitter: EventEmitter
   jsonFile: string
-
+  
   constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, eventEmitter: EventEmitter) {
         Util.mkdirSync(target_folder)
         
@@ -31,12 +31,12 @@ export abstract class AbstractApplication {
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
     const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { issues: [] };
+    const defaultData: IssuesDTO = { data: [] };
 
     const db = new LowSync<IssuesDTO>(adapter,defaultData)
     await db.read()
     
-    const exists = lodash.chain(db.data).get('issues').some({ internalId: id }).value();
+    const exists = lodash.chain(db.data).get('data').some({ internalId: id }).value();
     
     if (exists) return true;
     
@@ -45,11 +45,11 @@ export abstract class AbstractApplication {
 }
 
 
-  protected async save(issueDTO: IssueDTO) {
+  protected async save(issueDTO: any) {
     
     const ISSUEPATH = path.join(this.DB_PATH,  this.jsonFile);    
     const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { issues: [] };
+    const defaultData: IssuesDTO = { data: [] };
 
     const db = new LowSync<IssuesDTO>(adapter,defaultData)
 
@@ -58,8 +58,8 @@ export abstract class AbstractApplication {
     await db.write();
 
     
-    if (db.data?.issues) {
-        db.data.issues.push(issueDTO);
+    if (db.data?.data) {
+        db.data.data.push(issueDTO);
      }
     
     await db.write();

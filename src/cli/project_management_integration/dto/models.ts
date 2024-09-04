@@ -1,3 +1,4 @@
+
 export type IssueDTO = {
     internalId: string;
     id: string;
@@ -7,7 +8,18 @@ export type IssueDTO = {
   };
   
 export type IssuesDTO = {
-    issues: IssueDTO[];
+    data: any[];
  };
 
+
+ export type TimeBoxDTO = {
+  internalId: string;
+  startDate:string;
+  endDate: string;
+  name: string;
+  id: string;
+  key: string;
+  self: string;
+  
+};
 
