@@ -29,7 +29,8 @@ export class TimeBoxApplication extends AbstractApplication {
             
                     const timeBoxID = timeBox.id.toLowerCase()
         
-                    const timeBoxDTO: TimeBoxDTO = {
+                    const timeBoxDTO: TimeBoxDTO = 
+                    {
                         internalId: timeBoxID,
                         startDate:timeBox.startDate ?? "", 
                         endDate: timeBox.endDate ?? "",
@@ -44,7 +45,7 @@ export class TimeBoxApplication extends AbstractApplication {
                     this.eventEmitter.emit('sprintCreated', timeBox, timeBoxDTO);                
                     
                     }).catch(error => {
-                    console.error(error);
+                        console.error(error);
                 });    
 
                 

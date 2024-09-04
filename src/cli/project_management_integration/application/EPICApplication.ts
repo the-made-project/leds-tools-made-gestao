@@ -2,7 +2,7 @@ import { Epic } from "../../../language/generated/ast.js";
 import { Util } from "../service/util.js";
 import {IssueAbstractApplication} from "./IssueAbstractApplication.js"
 import { EventEmitter } from 'events';
-import { IssueDTO } from "../dto/models.js";
+import { IssueDTO} from "../dto/models.js";
 
 export class EPICApplication extends IssueAbstractApplication {
 
@@ -10,8 +10,11 @@ export class EPICApplication extends IssueAbstractApplication {
         super(email,apiToken,host,projectKey,target_folder, eventEmitter)
         
         this.eventEmitter = eventEmitter
+
+       
     }
 
+    
     public async create(epic: Epic) {
 
         const id = `${epic.id.toLowerCase()}`

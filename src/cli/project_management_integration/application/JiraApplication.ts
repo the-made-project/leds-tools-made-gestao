@@ -5,8 +5,6 @@ import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { USApplication } from "./USApplication.js";
 import { EventEmitter } from 'events'
 
- //isTimeBox, isTaskBacklog, TimeBox, isAtomicUserStory, AtomicUserStory, TaskBacklog,  isTaskBacklog, isTimeBox
-
 export class JiraApplication {
 
   epicApplication: EPICApplication
@@ -16,8 +14,6 @@ export class JiraApplication {
   model: Model
 
   constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
-
-      
 
       this.model = model
 
@@ -39,13 +35,16 @@ export class JiraApplication {
 
 
     public async createModel() {
-
+      
+      //Buscando elementos
       const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
-      await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
+      const timeBox = this.model.components.filter(isTimeBox)
 
-      this.model.components.filter(isTimeBox).map(timeBox => this.timeBoxApplication.create(timeBox));
+      // Criando EPIC, US e TASK
+      await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
       
-      
+      // Criando os Sprint
+      await Promise.all(timeBox.map(timeBox => this.timeBoxApplication.create(timeBox)));
       
   }
     

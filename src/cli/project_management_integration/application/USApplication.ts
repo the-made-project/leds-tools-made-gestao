@@ -1,5 +1,5 @@
-import { AtomicUserStory, Epic, isAtomicUserStory, isBacklog, Model } from "../../../language/generated/ast.js";
-import { IssueDTO } from "../dto/models.js";
+import { AtomicUserStory, Epic, isAtomicUserStory, isBacklog, Model, TimeBox } from "../../../language/generated/ast.js";
+import { IssueDTO, TimeBoxDTO } from "../dto/models.js";
 import { IssueAbstractApplication } from "./IssueAbstractApplication.js";
 import { EventEmitter } from 'events';
 export class USApplication extends IssueAbstractApplication {
@@ -13,8 +13,24 @@ export class USApplication extends IssueAbstractApplication {
         this.model = model
         
         this.eventEmitter.on('epicCreated', this.createUserStory.bind(this));
+        this.eventEmitter.on('sprintCreated', this.moveIssue.bind(this));
         
     }
+
+    private async moveIssue (timeBox: TimeBox, timeBoxDTO: TimeBoxDTO){
+        
+        const planningItems = timeBox.planning?.planningItems || []
+        
+        let issues: string[] = [];
+
+        planningItems.map(planningItem => {
+            const key = planningItem.item?.ref?.id.toLocaleLowerCase() || ""
+            issues.push(key)
+        })
+
+        console.log (issues)
+    }
+
 
     private async createUserStory(epic: Epic, issueDTO: IssueDTO){
         
