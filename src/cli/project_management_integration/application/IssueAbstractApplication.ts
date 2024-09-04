@@ -6,6 +6,7 @@ export  class IssueAbstractApplication extends AbstractApplication {
     constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string){
 
         super(email,apiToken,host,projectKey,target_folder)
+        
         this.jsonDAO = new IssueDAO(this.DB_PATH) 
     }
 }

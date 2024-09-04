@@ -1,18 +1,32 @@
 import { Epic } from "../../../language/generated/ast.js";
 import { Util } from "../service/util.js";
 import {IssueAbstractApplication} from "./IssueAbstractApplication.js"
-import { USApplication } from "./USApplication.js";
+import { EventEmitter } from 'events';
+import { Low } from 'lowdb';
+import { JSONFile } from 'lowdb/node';
+import path from "path";
+
+type EpicX = {
+    id: string;
+    key: string;
+    self: string;
+    type: string;
+  };
+  
+type DataX = {
+   epics: EpicX[];
+ };
+
 
 export class EPICApplication extends IssueAbstractApplication {
 
-    usApplication: USApplication
+    eventEmitter: EventEmitter
 
-    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string){
+    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string,eventEmitter: EventEmitter){
         super(email,apiToken,host,projectKey,target_folder)
-
-        this.usApplication = new USApplication(email,apiToken,host,projectKey,target_folder)
+        
+        this.eventEmitter = eventEmitter
     }
-
 
     public async create(epic: Epic) {
 
@@ -20,36 +34,17 @@ export class EPICApplication extends IssueAbstractApplication {
     
         if (!this.idExists(id, this.jsonDAO)){
             await this._create(epic)
-        }     
-       
+            
+        }             
+
+        this.eventEmitter.emit('epicCreated', epic);
+        
     }
 
-    private async createEpicByProcess(epic: Epic){
-
-        let description = epic.description ?? ""
+    private async _create (epic: Epic){
         
-        description = epic.process?.ref?.description ?? ""
-       
-        let labels = epic.label ? Util.appendValue(epic.label,epic.labelx): []
-        let labelProcess = epic.process?.ref?.label? Util.appendValue(epic.process?.ref?.label ?? "",epic.process?.ref?.labelx || [""]): []
-
-        labels = labels.concat(labelProcess)
-
-        this.jiraIntegrationService.createEPIC(epic.name ?? "",description,undefined, labels )
-        .then(result => {
-            
-            const key = (result as any).key 
-            const epicID = epic.id.toLowerCase()
-
-            this.save(epicID, result)  
-
-            if (epic.process){
-                epic.process?.ref?.activities.map(async activity => await this.usApplication.createByActivity(activity,key, epic))
-            }      
-            
-            }).catch(error => {
-            console.error(error);
-        });    
+        
+        await this.createEpicWithOutProcess (epic)
     }
 
     private async createEpicWithOutProcess(epic: Epic){
@@ -69,21 +64,38 @@ export class EPICApplication extends IssueAbstractApplication {
     }
 
 
-    private async _create (epic: Epic){
-        
-        if (epic.process){
-            await this.createEpicByProcess(epic)
-        }
-        else{
-            await this.createEpicWithOutProcess(epic)
-        }
-        
-        
-    }
+    
+   private async save(epicID:any, result: any) {
+    
+    // Configuração do LowDB
+    const ISSUEPATH = path.join(this.DB_PATH, 'issuesnovo.json');
+    
+    const adapter = new JSONFile<DataX>(ISSUEPATH); 
+    const defaultData: DataX = { epics: [] };
 
-   private async save(epicID:any, result:any,) {
+    const db = new Low<DataX>(adapter,defaultData)
 
-        await super.saveOnFile(epicID, result, this.jsonDAO, "epic")  
+    await db.read();
+  
+    // Inicializa o banco de dados com um array vazio se estiver vazio
+    db.data ||= defaultData;
+    await db.write();
+
+    // Novo objeto Epic
+    const newEpic: EpicX = {
+        id: "11593",
+        key: "PROJ2-36",
+        self: "https://conectafapes.atlassian.net/rest/api/3/issue/11593",
+        type: "epic"
+    };
+
+    // Adicionar o novo epic ao array
+    if (db.data?.epics) {
+        db.data.epics.push(newEpic);  // Adiciona o novo epic
+     }
+
+    // Escrever os dados no arquivo
+    await db.write();
    }
 
 }

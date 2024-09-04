@@ -31,6 +31,7 @@ export class PlanningApplication extends IssueAbstractApplication {
     }
 
 private async _create(emailAssigner: string, key: string, dueDate: string) {
+    
     if (emailAssigner && key && dueDate) {
         const accountId = this.objectMap.get(emailAssigner.toLowerCase());
         const id = `${key.toLowerCase()}.${accountId?.toLowerCase()}`;

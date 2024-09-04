@@ -1,12 +1,13 @@
-import { Epic, isBacklog, isEpic, Model ,TimeBox, isAtomicUserStory, AtomicUserStory, TaskBacklog, isTimeBox, isTaskBacklog, Team} from "../../../language/generated/ast.js"
+import { Epic, isBacklog, isEpic, Model } from "../../../language/generated/ast.js"
 import { EPICApplication } from "./EPICApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
 import { USApplication } from "./USApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { PlanningApplication } from "./PlanningApplication.js";
 import { TeamApplication } from "./TeamApplication.js";
+import { EventEmitter } from 'events'
 
-  
+ //isTimeBox, isTaskBacklog, TimeBox, isAtomicUserStory, AtomicUserStory, TaskBacklog,  isTaskBacklog, isTimeBox
 
 export class JiraApplication {
 
@@ -17,85 +18,53 @@ export class JiraApplication {
   planningApplication: PlanningApplication
   teamApplication: TeamApplication
   target_folder: string
+  model: Model
+  eventEmitter: EventEmitter
 
-    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string){
+    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
 
-      this.epicApplication = new EPICApplication(email,apiToken,host,projectKey,target_folder)
-      this.USApplication = new USApplication(email,apiToken,host,projectKey,target_folder)
+      this.USApplication = new USApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
+      
+      this.epicApplication = new EPICApplication(email,apiToken,host,projectKey,target_folder,eventEmitter)
+      
       this.taskApplication = new TaskApplication(email,apiToken,host,projectKey,target_folder)
+      
       this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder)
+      
       this.planningApplication = new PlanningApplication(email,apiToken,host,projectKey,target_folder)
+      
       this.teamApplication = new TeamApplication(email,apiToken,host,projectKey,target_folder)
 
       this.target_folder = target_folder
+
+      this.model = model
+
+      this.eventEmitter = eventEmitter
 
     }
     
     
     public async GetProjectInformation(model: Model){
       
-      
-      const team: Team = {
-        $type: 'Team',
-        $container: model,
-        id: "development",
-        name: 'Team from Jira',
-        label: '',
-        labelx:[],
-        teammember: [],
-        description: 'Team from Jira'
-
-      };
-  
-      //Buscando os Team Member no Jira. Não vem o e-mail,por questões de segurança, acredito que só podemos usar o ID do jira. Precisamos mudar isso depois
-      // const members = await this.teamApplication.retrieveAll()
-     
-      //Adiciona nos componentes
-       model.components.push(team)      
-       console.log ("Instance")
-       console.log(model)
-
-      //criar uma funcao que criar um .made um aquivo separado e imprime as equipes e outras coisas
-
-      
+      console.log("bla") 
+         
     }
 
 
-    public async createModel(model: Model) {
+    public async createModel() {
+
       await this.planningApplication.processUser();
 
-      const epics = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
-      const userstories = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
-      const tasks = model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isTaskBacklog));
-      const timeBoxes = model.components.filter(isTimeBox);
+      const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
 
-      await Promise.all([
-          this.createEPIC(epics),
-          this.createUserStory(userstories),
-          this.createTaskBacklog(tasks),
-          this.createTimeBoxes(timeBoxes),
-          this.createPlanningItem(timeBoxes)
-      ]);
+      await this.createEPIC(epics);
+      
   }
     
   public async createEPIC(epics: Epic[]) {
-      await Promise.all(epics.map(epic => this.epicApplication.create(epic)));
+      
+      await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
   }
-
-  public async createUserStory(atomicUserStories: AtomicUserStory[]) {
-      await Promise.all(atomicUserStories.map(atomicUserStory => this.USApplication.create(atomicUserStory)));
-  }
-
-  public async createTaskBacklog(backlogTasks: TaskBacklog[]) {
-      await Promise.all(backlogTasks.map(task => this.taskApplication.create(task)));
-  }
-
-  public async createTimeBoxes(timeBoxes: TimeBox[]) {
-      await Promise.all(timeBoxes.map(timeBox => this.timeBoxApplication.create(timeBox)));
-  }
-
-  public async createPlanningItem(timeBoxes: TimeBox[]) {
-      await Promise.all(timeBoxes.map(timeBox => this.planningApplication.createPlanning(timeBox)));
-  }
+  
 
 }   
