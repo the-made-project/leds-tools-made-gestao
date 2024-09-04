@@ -6,15 +6,16 @@ import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 import path from "path";
 
-type EpicX = {
+type EpicDTO = {
+    internalId: string;
     id: string;
     key: string;
     self: string;
     type: string;
   };
   
-type DataX = {
-   epics: EpicX[];
+type DataDTO = {
+   epics: EpicDTO[];
  };
 
 
@@ -56,7 +57,15 @@ export class EPICApplication extends IssueAbstractApplication {
             
             const epicID = epic.id.toLowerCase()
 
-            await this.save(epicID, result)    
+            const newEpicDTO: EpicDTO = {
+                internalId: epicID,
+                id: (result).id,
+                key: (result).key,
+                self: (result).self,
+                type: "epic"
+            };
+
+            await this.save(newEpicDTO)    
             
             }).catch(error => {
             console.error(error);
@@ -65,33 +74,25 @@ export class EPICApplication extends IssueAbstractApplication {
 
 
     
-   private async save(epicID:any, result: any) {
+   private async save(epic: EpicDTO) {
     
     // Configuração do LowDB
     const ISSUEPATH = path.join(this.DB_PATH, 'issuesnovo.json');
     
-    const adapter = new JSONFile<DataX>(ISSUEPATH); 
-    const defaultData: DataX = { epics: [] };
+    const adapter = new JSONFile<DataDTO>(ISSUEPATH); 
+    const defaultData: DataDTO = { epics: [] };
 
-    const db = new Low<DataX>(adapter,defaultData)
+    const db = new Low<DataDTO>(adapter,defaultData)
 
     await db.read();
   
     // Inicializa o banco de dados com um array vazio se estiver vazio
     db.data ||= defaultData;
     await db.write();
-
-    // Novo objeto Epic
-    const newEpic: EpicX = {
-        id: "11593",
-        key: "PROJ2-36",
-        self: "https://conectafapes.atlassian.net/rest/api/3/issue/11593",
-        type: "epic"
-    };
-
+    
     // Adicionar o novo epic ao array
     if (db.data?.epics) {
-        db.data.epics.push(newEpic);  // Adiciona o novo epic
+        db.data.epics.push(epic);  // Adiciona o novo epic
      }
 
     // Escrever os dados no arquivo
