@@ -19,10 +19,7 @@ export class EPICApplication extends IssueAbstractApplication {
         
         if (!value){
             
-            console.log ("passou")
-            const issueDTO = await this._create(epic)
-
-            this.eventEmitter.emit('epicCreated', epic, issueDTO);    
+            await this._create(epic)
         }          
         
     }
@@ -35,7 +32,7 @@ export class EPICApplication extends IssueAbstractApplication {
     private async createEpicWithOutProcess(epic: Epic){
         
         let labels = epic.label ? Util.appendValue(epic.label,epic.labelx): []
-
+        
         this.jiraIntegrationService.createEPIC(epic.name || "",epic.description || "", undefined, labels )
         .then(async (result) => {
             
@@ -50,7 +47,8 @@ export class EPICApplication extends IssueAbstractApplication {
             };
 
             await this.save(issueDTO)   
-            return issueDTO 
+                  
+            this.eventEmitter.emit('epicCreated', epic, issueDTO);                
             
             }).catch(error => {
             console.error(error);

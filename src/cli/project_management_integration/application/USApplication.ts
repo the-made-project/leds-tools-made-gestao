@@ -24,10 +24,61 @@ export class USApplication extends IssueAbstractApplication {
         
     } 
 
-    private async create(atomicUserStory: AtomicUserStory, issueDTO: IssueDTO) {        
-        console.log (atomicUserStory)
-        console.log (issueDTO)
+    private async create(atomicUserStory: AtomicUserStory, issueDTO: IssueDTO) { 
+        if (atomicUserStory.epic) {
+            await this.createWithEpicOnly(atomicUserStory, issueDTO)
+        }       
+        
     }
+
+    private async createWithEpicOnly(atomicUserStory: AtomicUserStory, epicDTO: IssueDTO) {
+        const id = `${epicDTO.internalId}.${atomicUserStory.id.toLowerCase()}` 
+        
+        const value = await this._idExists(id)
+
+        if (!value){            
+            await this._create(atomicUserStory,epicDTO)
+        }   
+
+    }
+
+    protected async _create(atomicUserStory: AtomicUserStory, epicDTO: IssueDTO) {
+                
+        try {
+            
+            const description = atomicUserStory.description || ""
+            const parent = epicDTO.key
+            const labels = ["labelx"]
+
+            await this.jiraIntegrationService.createUserStory(atomicUserStory.name ?? "", 
+                description, 
+                parent, 
+                labels).then(async (result) => {
+            
+                    const usID = `${epicDTO.internalId}.${atomicUserStory.id.toLocaleLowerCase()}`
+        
+                    const issueDTO: IssueDTO = {
+                        internalId: usID,
+                        id: (result).id,
+                        key: (result).key,
+                        self: (result).self,                
+                        type: "atomicuserstory"
+                    };
+        
+                    await this.save(issueDTO)   
+
+                    this.eventEmitter.emit('usCreated', atomicUserStory, issueDTO);   
+                    
+                    }).catch(error => {
+                    console.error(error);
+                });    
+            
+        } catch (error) {
+            console.error('Error creating user story:', error);
+        }
+    }
+
+    
 
 
    
