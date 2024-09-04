@@ -2,9 +2,10 @@ import { Epic } from "../../../language/generated/ast.js";
 import { Util } from "../service/util.js";
 import {IssueAbstractApplication} from "./IssueAbstractApplication.js"
 import { EventEmitter } from 'events';
-import { Low } from 'lowdb';
-import { JSONFile } from 'lowdb/node';
+import { LowSync } from 'lowdb';
+import { JSONFileSync  } from 'lowdb/node';
 import path from "path";
+import lodash from 'lodash'
 
 type EpicDTO = {
     internalId: string;
@@ -33,13 +34,26 @@ export class EPICApplication extends IssueAbstractApplication {
 
         const id = `${epic.id.toLowerCase()}`
     
-        if (!this.idExists(id, this.jsonDAO)){
+        if (!this._idExists(id)){
             await this._create(epic)
             
         }             
 
         this.eventEmitter.emit('epicCreated', epic);
         
+    }
+
+    private async _idExists(id:string){
+        const ISSUEPATH = path.join(this.DB_PATH, 'issuesnovo.json');
+    
+        const adapter = new JSONFileSync <DataDTO>(ISSUEPATH); 
+        const defaultData: DataDTO = { epics: [] };
+    
+        const db = new LowSync<DataDTO>(adapter,defaultData)
+        await db.read()
+
+        return lodash.chain(db.data).get('epics').find({ internalId: id }).value()        
+
     }
 
     private async _create (epic: Epic){
@@ -79,17 +93,17 @@ export class EPICApplication extends IssueAbstractApplication {
     // Configuração do LowDB
     const ISSUEPATH = path.join(this.DB_PATH, 'issuesnovo.json');
     
-    const adapter = new JSONFile<DataDTO>(ISSUEPATH); 
+    const adapter = new JSONFileSync <DataDTO>(ISSUEPATH); 
     const defaultData: DataDTO = { epics: [] };
 
-    const db = new Low<DataDTO>(adapter,defaultData)
+    const db = new LowSync<DataDTO>(adapter,defaultData)
 
     await db.read();
   
     // Inicializa o banco de dados com um array vazio se estiver vazio
     db.data ||= defaultData;
     await db.write();
-    
+
     // Adicionar o novo epic ao array
     if (db.data?.epics) {
         db.data.epics.push(epic);  // Adiciona o novo epic
