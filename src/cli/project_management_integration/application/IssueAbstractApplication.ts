@@ -1,12 +1,12 @@
-import { IssueDAO } from "../dao/IssueDAO.js";
+
 import { AbstractApplication } from "./AbstractApplication.js";
+import { EventEmitter } from 'events';
 
 export  class IssueAbstractApplication extends AbstractApplication {
 
-    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string){
+    constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, eventEmitter: EventEmitter) {
 
-        super(email,apiToken,host,projectKey,target_folder)
+        super(email,apiToken,host,projectKey,target_folder,eventEmitter)       
         
-        this.jsonDAO = new IssueDAO(this.DB_PATH) 
     }
 }

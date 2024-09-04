@@ -1,47 +1,71 @@
 import { JiraIntegrationService } from "../service/JiraIntegratorService.js";
 import { Util } from '../service/util.js';
 import { createPath } from '../../generator-utils.js'
-import { JsonFileCRUD } from "../dao/JsonFileCRUD.js";
+
+import path from "path";
+import lodash from 'lodash'
+import { EventEmitter } from 'events';
+import { LowSync } from 'lowdb';
+import { JSONFileSync  } from 'lowdb/node';
+
+import {IssueDTO, IssuesDTO} from '../dto/models.js'
 
 export abstract class AbstractApplication {
 
   jiraIntegrationService: JiraIntegrationService
-  jsonDAO!: JsonFileCRUD;
   DB_PATH: string
   objectMap!: Map<string, string>;
+  eventEmitter: EventEmitter
 
-  constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string) {
-      Util.mkdirSync(target_folder)
-
-      this.DB_PATH = createPath(target_folder, 'db')
-
-      this.jiraIntegrationService = new JiraIntegrationService(email, apiToken, host, projectKey);
+  constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, eventEmitter: EventEmitter) {
+        Util.mkdirSync(target_folder)
+        
+        this.DB_PATH = createPath(target_folder, 'db')
+        this.eventEmitter = eventEmitter
+        this.jiraIntegrationService = new JiraIntegrationService(email, apiToken, host, projectKey);
   }
 
-  protected async saveOnFile(key: any, value: any, _function: JsonFileCRUD, type: string) {
-      try {
-          value.type = type;
-          await _function.create(key, value);
-      } catch (error) {
-      }
-  }
+  protected async _idExists(id:string){
+    
+    const ISSUEPATH = path.join(this.DB_PATH, 'issue.json');
 
-  protected idExists(key: any, _function: JsonFileCRUD) {
-      try {
-          const exists = _function.idExists(key);
-          return exists;
-      } catch (error) {
-          return false;
-      }
-  }
+    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
+    const defaultData: IssuesDTO = { issues: [] };
 
-  protected async readByKey(key: any, _function: JsonFileCRUD) {
-      try {
-          const result = await _function.readByKey(key);
-          return result;
-      } catch (error) {
-          return null;
-      }
-  }
+    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    await db.read()
+    
+    const exists = lodash.chain(db.data).get('issues').some({ internalId: id }).value();
+    
+    console.log(exists);
+
+    if (exists) return true;
+    
+    return false;
+
+}
+
+
+  protected async save(issueDTO: IssueDTO) {
+    
+    const ISSUEPATH = path.join(this.DB_PATH, 'issue.json');    
+    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
+    const defaultData: IssuesDTO = { issues: [] };
+
+    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+
+    await db.read();
+    db.data ||= defaultData;
+    await db.write();
+
+    
+    if (db.data?.issues) {
+        db.data.issues.push(issueDTO);
+     }
+
+    console.log("Save")
+    await db.write();
+   }
+
 
 }
