@@ -25,7 +25,7 @@ export class USApplication extends IssueAbstractApplication {
 
     private async addUSCreated(atomicUserStory: AtomicUserStory, atomicUserStoryDTO: IssueDTO){
        
-        this.USCreated.set(atomicUserStoryDTO.id,atomicUserStoryDTO)
+        this.USCreated.set(atomicUserStory.id.toLocaleLowerCase(),atomicUserStoryDTO)
         
         //Informando que todo os US foram criados
         if (this.us.length == this.USCreated.size){                

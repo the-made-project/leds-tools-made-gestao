@@ -18,7 +18,6 @@ export type IssuesDTO = {
   endDate: string;
   name: string;
   id: string;
-  key: string;
   self: string;
   
 };

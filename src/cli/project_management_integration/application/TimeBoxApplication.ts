@@ -2,12 +2,12 @@
 import { isTimeBox, Model, TimeBox } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import { IssueDTO, TimeBoxDTO } from "../dto/models.js";
+import { TimeBoxDTO, IssueDTO } from "../dto/models.js";
 
 export class TimeBoxApplication extends AbstractApplication {
     
-    timeBoxesCreated: Map<String,TimeBoxDTO>
-    timeBoxesFullCreated: Map<String,TimeBoxDTO>
+    timeBoxesCreated: Map<string,TimeBox>
+    timeBoxesFullCreated: Map<string,TimeBox>
     timeBoxes : TimeBox[]
     model: Model
     USCreated: Map<String,IssueDTO>
@@ -27,7 +27,7 @@ export class TimeBoxApplication extends AbstractApplication {
 
         this.timeBoxes = this.model.components.filter(isTimeBox);
 
-        this.eventEmitter.on('sprintCreated', this.addSprintCreated.bind(this));  
+        this.eventEmitter.on('timBoxCreated', this.addSprintCreated.bind(this));  
 
         this.eventEmitter.on('allUSCreated', this.addUSCreated.bind(this));  
 
@@ -41,14 +41,30 @@ export class TimeBoxApplication extends AbstractApplication {
         this.USCreated = USCreated
         this.moveUS()
     }
-    private async addTimeBoxCreated (timeBoxesCreated: Map<String,TimeBoxDTO>){
+    private async addTimeBoxCreated (timeBoxesCreated: Map<string,TimeBox>){
         this.timeBoxesFullCreated = timeBoxesCreated
         this.moveUS()
     } 
 
     private async moveUS(){
         if ((this.USCreated.size > 0) && (this.timeBoxesFullCreated.size >0)){
-            console.log (`Podemos mover: ${this.USCreated.size} - ${this.timeBoxesFullCreated.size}` )
+            let issues: string[] = [];
+            let timeboxID: string = ""
+            this.timeBoxesFullCreated.forEach((value , key) => {
+                timeboxID = key
+                // Mover sem verificar se já foi movido
+                value.planning?.planningItems.map (planningItem => {
+                    const id = planningItem.item?.ref?.id.toLowerCase() || ""
+                    const issueDTO = this.USCreated.get(id)
+                    issues.push (issueDTO?.key || "")
+
+                })
+            })
+            console.log (`${issues} - ${timeboxID}`)
+
+            if (issues.length > 0) {
+                await this.jiraIntegrationService.moveIssueToSprint(issues, timeboxID);
+            }
         }
 
     }
@@ -57,7 +73,7 @@ export class TimeBoxApplication extends AbstractApplication {
 
     private async addSprintCreated(timeBox: TimeBox, timeBoxDTO: TimeBoxDTO){
        
-        this.timeBoxesCreated.set(timeBoxDTO.id,timeBoxDTO)
+        this.timeBoxesCreated.set(timeBoxDTO.id,timeBox)
         
         //Informando que todo os US foram criados
         if (this.timeBoxes.length == this.timeBoxesCreated.size){                
@@ -92,13 +108,12 @@ export class TimeBoxApplication extends AbstractApplication {
                         endDate: timeBox.endDate ?? "",
                         name: timeBox.name ??timeBox.id, 
                         id: (result).id,
-                        key: (result).key,
                         self: (result).self,
                     };
         
                     await this.save(timeBoxDTO)   
                           
-                    this.eventEmitter.emit('sprintCreated', timeBox, timeBoxDTO);                
+                    this.eventEmitter.emit('timBoxCreated', timeBox, timeBoxDTO);                
                     
                     }).catch(error => {
                         console.error(error);
