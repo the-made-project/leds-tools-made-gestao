@@ -28,8 +28,7 @@ export class TaskApplication extends IssueAbstractApplication {
 
     private async createSubTask(task: TaskBacklog, atomicUserStoryDTO: IssueDTO) {        
         
-        const parent = atomicUserStoryDTO.key
-        console.log (parent)
+        const parent = atomicUserStoryDTO.key        
         const labels = ["labelx"]
 
         try {

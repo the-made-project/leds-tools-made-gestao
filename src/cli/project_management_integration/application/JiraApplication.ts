@@ -23,7 +23,7 @@ export class JiraApplication {
 
       this.taskApplication = new TaskApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
      
-      this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,eventEmitter)
+      this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
     }
     
     

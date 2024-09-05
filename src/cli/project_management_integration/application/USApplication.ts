@@ -1,37 +1,38 @@
-import { AtomicUserStory, Epic, isAtomicUserStory, isBacklog, Model, TimeBox } from "../../../language/generated/ast.js";
-import { IssueDTO, TimeBoxDTO } from "../dto/models.js";
+
+import { AtomicUserStory, Epic, isAtomicUserStory, isBacklog, Model } from "../../../language/generated/ast.js";
+import { IssueDTO } from "../dto/models.js";
 import { IssueAbstractApplication } from "./IssueAbstractApplication.js";
 import { EventEmitter } from 'events';
 export class USApplication extends IssueAbstractApplication {
 
     model: Model
-    
+    USCreated: Map<String,IssueDTO>
+    us : AtomicUserStory[]
     constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, model: Model, eventEmitter: EventEmitter) {
         
         super(email, apiToken, host, projectKey, target_folder,eventEmitter);
+        
+        this.USCreated = new Map();
 
         this.model = model
+
+        this.us = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
         
-        this.eventEmitter.on('epicCreated', this.createUserStory.bind(this));
-        this.eventEmitter.on('sprintCreated', this.moveIssue.bind(this));
+        this.eventEmitter.on('epicCreated', this.createUserStory.bind(this));    
+        this.eventEmitter.on('usCreated', this.addUSCreated.bind(this));    
         
     }
 
-    private async moveIssue (timeBox: TimeBox, timeBoxDTO: TimeBoxDTO){
+    private async addUSCreated(atomicUserStory: AtomicUserStory, atomicUserStoryDTO: IssueDTO){
+       
+        this.USCreated.set(atomicUserStoryDTO.id,atomicUserStoryDTO)
         
-        const planningItems = timeBox.planning?.planningItems || []
+        //Informando que todo os US foram criados
+        if (this.us.length == this.USCreated.size){                
+            this.eventEmitter.emit('allUSCreated', this.USCreated);   
+        }
         
-        let issues: string[] = [];
-
-        planningItems.map(planningItem => {
-            const key = planningItem.item?.ref?.id.toLocaleLowerCase() || ""
-            issues.push(key)
-        })
-
-        console.log (issues)
-    }
-
-
+    }  
     private async createUserStory(epic: Epic, issueDTO: IssueDTO){
         
         const userstories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory).filter(us => us.epic?.ref == epic))
@@ -82,7 +83,7 @@ export class USApplication extends IssueAbstractApplication {
                     };
         
                     await this.save(issueDTO)   
-
+                    
                     this.eventEmitter.emit('usCreated', atomicUserStory, issueDTO);   
                     
                     }).catch(error => {
