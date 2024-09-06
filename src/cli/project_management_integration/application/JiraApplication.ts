@@ -1,4 +1,4 @@
-import { isBacklog, isEpic, isTimeBox, Model } from "../../../language/generated/ast.js"
+import { isAtomicUserStory, isBacklog, isEpic, isTimeBox, Model } from "../../../language/generated/ast.js"
 import { EPICApplication } from "./EPICApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
 import { TeamApplication } from "./TeamMemberApplication.js";
@@ -42,10 +42,16 @@ export class JiraApplication {
       
       //Buscando elementos
       const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
+      const usWithoutEPIC = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory).filter(us => us.epic == undefined))
       const timeBox = this.model.components.filter(isTimeBox)
 
-      // Criando EPIC, US e TASK
+      // Criando EPIC e suas US e TASK
       await Promise.all(epics.map(async epic => await this.epicApplication.create(epic)));
+
+      // Criando as US que não possuem task
+
+      await Promise.all(usWithoutEPIC.map(async us => await this.uSApplication.createWithOutEpic(us)));
+
       
       // Criando os Sprint
       await Promise.all(timeBox.map(timeBox => this.timeBoxApplication.create(timeBox)));

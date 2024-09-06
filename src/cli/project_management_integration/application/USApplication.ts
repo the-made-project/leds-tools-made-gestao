@@ -23,6 +23,10 @@ export class USApplication extends IssueAbstractApplication {
         
     }
 
+    public async createWithOutEpic(atomicUserStory: AtomicUserStory){
+        console.log (atomicUserStory)
+    }
+
     private async addUSCreated(atomicUserStory: AtomicUserStory, atomicUserStoryDTO: IssueDTO){
        
         this.USCreated.set(atomicUserStory.id.toLocaleLowerCase(),atomicUserStoryDTO)
@@ -33,6 +37,8 @@ export class USApplication extends IssueAbstractApplication {
         }
         
     }  
+
+
     private async createUserStory(epic: Epic, issueDTO: IssueDTO){
         
         const userstories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory).filter(us => us.epic?.ref == epic))
@@ -41,9 +47,12 @@ export class USApplication extends IssueAbstractApplication {
         
     } 
 
-    private async create(atomicUserStory: AtomicUserStory, issueDTO: IssueDTO) { 
-        if (atomicUserStory.epic) {
+    private async create(atomicUserStory: AtomicUserStory, issueDTO?: IssueDTO) { 
+        if (atomicUserStory.epic && issueDTO) {
             await this.createWithEpicOnly(atomicUserStory, issueDTO)
+        }
+        else{
+            await this.create(atomicUserStory)
         }       
         
     }
@@ -59,20 +68,21 @@ export class USApplication extends IssueAbstractApplication {
 
     }
 
-    protected async _create(atomicUserStory: AtomicUserStory, epicDTO: IssueDTO) {
+    protected async _create(atomicUserStory: AtomicUserStory, epicDTO?: IssueDTO) {
                 
         try {
             
             const description = atomicUserStory.description || ""
-            const parent = epicDTO.key
+            const parent = epicDTO?.key ?? ""
             const labels = ["labelx"]
 
             await this.jiraIntegrationService.createUserStory(atomicUserStory.name ?? "", 
                 description, 
                 parent, 
                 labels).then(async (result) => {
-            
-                    const usID = `${epicDTO.internalId}.${atomicUserStory.id.toLocaleLowerCase()}`
+                    const epicID = epicDTO ? `${epicDTO?.internalId}.` : "";
+
+                    const usID = `${epicID}${atomicUserStory.id.toLocaleLowerCase()}`
         
                     const issueDTO: IssueDTO = {
                         internalId: usID,
