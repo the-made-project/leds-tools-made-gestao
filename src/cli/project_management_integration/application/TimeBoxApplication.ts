@@ -2,7 +2,7 @@
 import { isTimeBox, Model, TimeBox } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import { TimeBoxDTO, IssueDTO } from "../dto/models.js";
+import { TimeBoxDTO, IssueDTO, PlannedItemDTO } from "../dto/models.js";
 
 export class TimeBoxApplication extends AbstractApplication {
     
@@ -33,8 +33,6 @@ export class TimeBoxApplication extends AbstractApplication {
 
         this.eventEmitter.on('allTimeBoxesCreated', this.addTimeBoxCreated.bind(this));  
 
-        //Quando todo os USCriados e Todos os SprintCriados podemos mover
-
     }
 
     private async addUSCreated (USCreated: Map<String,IssueDTO>){
@@ -49,22 +47,37 @@ export class TimeBoxApplication extends AbstractApplication {
     private async moveUS(){
         if ((this.USCreated.size > 0) && (this.timeBoxesFullCreated.size >0)){
             let issues: string[] = [];
+            let plannedItem: Map<string,PlannedItemDTO> = new Map();
             let timeboxID: string = ""
-            this.timeBoxesFullCreated.forEach((value , key) => {
+            this.timeBoxesFullCreated.forEach(async (value , key) => {
                 timeboxID = key
                 // Mover sem verificar se já foi movido
                 value.planning?.planningItems.map (planningItem => {
                     const id = planningItem.item?.ref?.id.toLowerCase() || ""
                     const issueDTO = this.USCreated.get(id)
-                    issues.push (issueDTO?.key || "")
+                    if (issueDTO?.key){
+                        const plannedItemDTO : PlannedItemDTO = {
+                            email:planningItem.assignee?.ref?.email ?? "",
+                            startDate:planningItem.startdate?? "",
+                            dueDate:planningItem.duedate ?? "" ,
+                            id: issueDTO.key
+                        }
+
+                        
+
+                        plannedItem.set(issueDTO.key,plannedItemDTO) 
+                        issues.push (issueDTO?.key)
+                    }
+                    
 
                 })
+                if (issues.length > 0) {
+                    await this.jiraIntegrationService.moveIssueToSprint(issues, timeboxID);
+                    this.eventEmitter.emit('plannedItemMoved', plannedItem);  
+                }
             })
-            console.log (`${issues} - ${timeboxID}`)
-
-            if (issues.length > 0) {
-                await this.jiraIntegrationService.moveIssueToSprint(issues, timeboxID);
-            }
+            
+            
         }
 
     }

@@ -37,6 +37,7 @@ PlanningItem:
     ('planned' ':' planned=INT)?
     ('complexity' ':' complexity=INT)?
     ('dueDate' ':' duedate=STRING)?
+    ('startDate' ':' startdate=STRING)?
 ;
 
 

@@ -25,9 +25,7 @@ export async function generateProjectManagement(model: Model,target_folder: stri
 
 
   const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder,model, eventBus)
-  //for (let a = 0 ; a <=2 ; a++){
-    await Jira.createModel()
-  //}
+  await Jira.createModel()
   
   return model.project.name
 }

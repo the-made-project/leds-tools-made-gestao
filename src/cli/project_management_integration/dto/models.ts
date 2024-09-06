@@ -11,6 +11,13 @@ export type IssuesDTO = {
     data: any[];
  };
 
+export type PlannedItemDTO = {
+  email:string;
+  startDate:string;
+  dueDate:string;
+  id: string;
+}
+
 
  export type TimeBoxDTO = {
   internalId: string;

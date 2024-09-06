@@ -1,6 +1,7 @@
 import { isBacklog, isEpic, isTimeBox, Model } from "../../../language/generated/ast.js"
 import { EPICApplication } from "./EPICApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
+import { TeamApplication } from "./TeamMemberApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { USApplication } from "./USApplication.js";
 import { EventEmitter } from 'events'
@@ -11,6 +12,7 @@ export class JiraApplication {
   uSApplication: USApplication
   taskApplication: TaskApplication
   timeBoxApplication: TimeBoxApplication
+  teamApplication: TeamApplication
   model: Model
 
   constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
@@ -24,6 +26,8 @@ export class JiraApplication {
       this.taskApplication = new TaskApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
      
       this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
+
+      this.teamApplication = new TeamApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
     }
     
     

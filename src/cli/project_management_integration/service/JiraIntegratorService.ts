@@ -137,7 +137,7 @@ export class JiraIntegrationService {
     return people 
   }
 
-  public async editMetaData(issueID: string, teamemberID?: string, dueDate?: string){
+  public async editMetaData(issueID: string, teamemberID?: string, startDate?: string, dueDate?: string){
     const URL = this.host + URL_ISSUE + `/${issueID}`;
     let dataFields: any = {};
   
@@ -147,6 +147,11 @@ export class JiraIntegrationService {
     if (dueDate) {
       dueDate = Util.convertDateFormat(dueDate);
       dataFields.duedate = dueDate;
+    }
+
+    if (startDate) {
+      startDate = Util.convertDateFormat(startDate);
+      dataFields.startDate = startDate;
     }
   
     const data = JSON.stringify({ "fields": dataFields });
