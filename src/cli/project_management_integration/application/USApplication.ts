@@ -15,7 +15,7 @@ export class USApplication extends IssueAbstractApplication {
         this.USCreated = new Map();
 
         this.model = model
-
+        
         this.us = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
         
         this.eventEmitter.on('epicCreated', this.createUserStory.bind(this));    
@@ -24,7 +24,7 @@ export class USApplication extends IssueAbstractApplication {
     }
 
     public async createWithOutEpic(atomicUserStory: AtomicUserStory){
-        console.log (atomicUserStory)
+        this.createNewUS (atomicUserStory)
     }
 
     private async addUSCreated(atomicUserStory: AtomicUserStory, atomicUserStoryDTO: IssueDTO){
@@ -43,22 +43,15 @@ export class USApplication extends IssueAbstractApplication {
         
         const userstories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory).filter(us => us.epic?.ref == epic))
         
-        userstories.map (async us => await this.create (us,issueDTO))
+        userstories.map (async us => await this.createNewUS (us,issueDTO))
         
     } 
 
-    private async create(atomicUserStory: AtomicUserStory, issueDTO?: IssueDTO) { 
-        if (atomicUserStory.epic && issueDTO) {
-            await this.createWithEpicOnly(atomicUserStory, issueDTO)
-        }
-        else{
-            await this.create(atomicUserStory)
-        }       
-        
-    }
+    
+    private async createNewUS(atomicUserStory: AtomicUserStory, epicDTO?: IssueDTO) {
+        const epicID = epicDTO ? `${epicDTO?.internalId}.` : "";
 
-    private async createWithEpicOnly(atomicUserStory: AtomicUserStory, epicDTO: IssueDTO) {
-        const id = `${epicDTO.internalId}.${atomicUserStory.id.toLowerCase()}` 
+        const id = `${epicID}${atomicUserStory.id.toLowerCase()}` 
         
         const value = await this._idExists(id)
 

@@ -46,24 +46,30 @@ export class TimeBoxApplication extends AbstractApplication {
 
     private async moveUS(){
         if ((this.USCreated.size > 0) && (this.timeBoxesFullCreated.size >0)){
+            console.log (`${this.USCreated.size} - ${this.timeBoxesFullCreated.size}`) 
+            
             let issues: string[] = [];
+            
             let plannedItem: Map<string,PlannedItemDTO> = new Map();
+            
             let timeboxID: string = ""
+            
             this.timeBoxesFullCreated.forEach(async (value , key) => {
                 timeboxID = key
-                // Mover sem verificar se já foi movido
+                
                 value.planning?.planningItems.map (planningItem => {
                     const id = planningItem.item?.ref?.id.toLowerCase() || ""
+                    
                     const issueDTO = this.USCreated.get(id)
+                    console.log (`${id} - ${issueDTO}`)
                     if (issueDTO?.key){
+                    
                         const plannedItemDTO : PlannedItemDTO = {
                             email:planningItem.assignee?.ref?.email ?? "",
                             startDate:planningItem.startdate?? "",
                             dueDate:planningItem.duedate ?? "" ,
                             id: issueDTO.key
                         }
-
-                        
 
                         plannedItem.set(issueDTO.key,plannedItemDTO) 
                         issues.push (issueDTO?.key)
@@ -72,9 +78,11 @@ export class TimeBoxApplication extends AbstractApplication {
 
                 })
                 if (issues.length > 0) {
+                    console.log (`${issues} - ${timeboxID}`)
                     await this.jiraIntegrationService.moveIssueToSprint(issues, timeboxID);
                     this.eventEmitter.emit('plannedItemMoved', plannedItem);  
                 }
+                issues = []
             })
             
             

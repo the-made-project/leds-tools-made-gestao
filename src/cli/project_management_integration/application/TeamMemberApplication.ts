@@ -9,7 +9,9 @@ export class TeamApplication extends AbstractApplication {
 
     constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, model: Model, eventEmitter: EventEmitter) {
         super(email, apiToken, host, projectKey, target_folder, eventEmitter);  
+        
         this.processUser()
+        
         this.eventEmitter.on('plannedItemMoved', this.assigneeTeammmeber.bind(this));
 
     }
@@ -31,7 +33,9 @@ export class TeamApplication extends AbstractApplication {
 
     private async assigneeTeammmeber(plannedItem: Map<string,PlannedItemDTO>){
         plannedItem.forEach((value, key)=>{
-            console.log (`${value}-${key}`)
+            
+            console.log (`${value.email}-${key}`)
+
             if (value.email){
                 const accountId = this.objectMap.get(value.email);
 
