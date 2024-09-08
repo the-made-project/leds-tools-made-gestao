@@ -1,6 +1,7 @@
 
 import { AtomicUserStory, Epic, isAtomicUserStory, isBacklog, Model } from "../../../language/generated/ast.js";
 import { IssueDTO } from "../dto/models.js";
+import { Util } from "../service/util.js";
 import { IssueAbstractApplication } from "./IssueAbstractApplication.js";
 import { EventEmitter } from 'events';
 export class USApplication extends IssueAbstractApplication {
@@ -67,7 +68,7 @@ export class USApplication extends IssueAbstractApplication {
             
             const description = atomicUserStory.description || ""
             const parent = epicDTO?.key ?? ""
-            const labels = ["labelx"]
+            const labels = atomicUserStory.label ? Util.appendValue(atomicUserStory.label,atomicUserStory.labelx): []
 
             await this.jiraIntegrationService.createUserStory(atomicUserStory.name ?? "", 
                 description, 

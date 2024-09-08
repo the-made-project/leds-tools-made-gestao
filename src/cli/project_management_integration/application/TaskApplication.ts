@@ -1,6 +1,7 @@
 
 import { AtomicUserStory, isBacklog, isTaskBacklog, Model, TaskBacklog } from "../../../language/generated/ast.js";
 import { IssueDTO } from "../dto/models.js";
+import { Util } from "../service/util.js";
 import { IssueAbstractApplication } from "./IssueAbstractApplication.js";
 import { EventEmitter } from 'events';
 
@@ -29,7 +30,7 @@ export class TaskApplication extends IssueAbstractApplication {
     private async createSubTask(task: TaskBacklog, atomicUserStoryDTO: IssueDTO) {        
         
         const parent = atomicUserStoryDTO.key        
-        const labels = ["labelx"]
+        const labels = task.label ? Util.appendValue(task.label,task.labelx): []
 
         try {
             const result = await this.jiraIntegrationService.createSubTask(task.name ?? "", task.description ?? "", parent, labels);
