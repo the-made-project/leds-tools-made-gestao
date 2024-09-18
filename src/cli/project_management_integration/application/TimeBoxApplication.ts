@@ -43,8 +43,9 @@ export class TimeBoxApplication extends AbstractApplication {
         this.timeBoxesFullCreated = timeBoxesCreated
         this.moveUS()
     } 
-
+    //Move os elementos 
     private async moveUS(){
+
         if ((this.USCreated.size > 0) && (this.timeBoxesFullCreated.size >0)){
             console.log (`${this.USCreated.size} - ${this.timeBoxesFullCreated.size}`) 
             
@@ -58,10 +59,12 @@ export class TimeBoxApplication extends AbstractApplication {
                 timeboxID = key
                 
                 value.planning?.planningItems.map (planningItem => {
-                    const id = planningItem.item?.ref?.id.toLowerCase() || ""
                     
+                    //Verificando o ID, pegando apenas US
+                    const id = planningItem.item?.ref?.id.toLowerCase() || ""
+            
                     const issueDTO = this.USCreated.get(id)
-                    console.log (`${id} - ${issueDTO}`)
+            
                     if (issueDTO?.key){
                     
                         const plannedItemDTO : PlannedItemDTO = {
@@ -78,7 +81,7 @@ export class TimeBoxApplication extends AbstractApplication {
 
                 })
                 if (issues.length > 0) {
-                    console.log (`${issues} - ${timeboxID}`)
+                    // Movendo uma história de usuário
                     await this.jiraIntegrationService.moveIssueToSprint(issues, timeboxID);
                     this.eventEmitter.emit('plannedItemMoved', plannedItem);  
                 }

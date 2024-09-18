@@ -18,6 +18,11 @@ export type PlannedItemDTO = {
   id: string;
 }
 
+export type AssigneeDTO = {
+  account:string;
+  issue: string;
+}
+
 
  export type TimeBoxDTO = {
   internalId: string;

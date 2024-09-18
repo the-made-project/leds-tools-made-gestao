@@ -1,5 +1,5 @@
 import { Model } from "../../../language/generated/ast.js";
-import { PlannedItemDTO } from "../dto/models.js";
+import { AssigneeDTO, PlannedItemDTO } from "../dto/models.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 
@@ -11,7 +11,7 @@ export class TeamApplication extends AbstractApplication {
         super(email, apiToken, host, projectKey, target_folder, eventEmitter);  
         
         this.processUser()
-        
+        this.jsonFile = "assignee.json"
         this.eventEmitter.on('plannedItemMoved', this.assigneeTeammmeber.bind(this));
 
     }
@@ -30,16 +30,27 @@ export class TeamApplication extends AbstractApplication {
             console.error('Error processing users:', error);
         }
     }
+    // Associando um item planejado a um pessoa
 
     private async assigneeTeammmeber(plannedItem: Map<string,PlannedItemDTO>){
         plannedItem.forEach((value, key)=>{
-            
-            console.log (`${value.email}-${key}`)
 
             if (value.email){
                 const accountId = this.objectMap.get(value.email);
 
-                this.jiraIntegrationService.editMetaData (key, accountId ?? "", undefined, value.dueDate ?? undefined )
+                this.jiraIntegrationService.editMetaData (key, accountId ?? "", undefined, value.dueDate ?? undefined ).then(async (result)=>{
+                    if (accountId){
+                        
+                        const assigneeDTO: AssigneeDTO = {
+                            account: accountId,
+                            issue: key
+                        };
+        
+                        await this.save(assigneeDTO) 
+                    }
+                })
+
+                 
             }
             
         });

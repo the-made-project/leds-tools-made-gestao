@@ -74,8 +74,8 @@ export class USApplication extends IssueAbstractApplication {
                 description, 
                 parent, 
                 labels).then(async (result) => {
-                    const epicID = epicDTO ? `${epicDTO?.internalId}.` : "";
 
+                    const epicID = epicDTO ? `${epicDTO?.internalId}.` : "";
                     const usID = `${epicID}${atomicUserStory.id.toLocaleLowerCase()}`
         
                     const issueDTO: IssueDTO = {
