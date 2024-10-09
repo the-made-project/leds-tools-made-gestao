@@ -5,6 +5,14 @@ import { Model} from '../../language/generated/ast.js'
 import { JiraApplication } from './application/JiraApplication.js';
 import { EventEmitter } from 'events';
 
+require('dotenv').config();
+
+
+const host = process.env.HOST ? process.env.HOST: ""
+const email = process.env.EMAIL ? process.env.EMAIL: ""
+const apiToken  = process.env.TOKEN ? process.env.TOKEN: ""
+const projectKey = process.env.PROJECTKEY ? process.env.PROJECTKEY: ""
+
 /**
  * Função para gerar a gestão de projetos no Jira a partir de um modelo.
  * 
@@ -15,11 +23,6 @@ import { EventEmitter } from 'events';
 
 export async function generateProjectManagement(model: Model,target_folder: string) : Promise<string> {
   
-  const host = model.project.host; 
-  const email = model.project.email; 
-  const apiToken  = model.project.token; 
-  const projectKey = model.project.Identification;
-
   // Shared EventEmitter instance
   const eventBus = new EventEmitter();  
 
@@ -32,10 +35,6 @@ export async function generateProjectManagement(model: Model,target_folder: stri
 
 export async function generateMadeFile(model: Model,target_folder: string) : Promise<string> {
   
-  const host = model.project.host; 
-  const email = model.project.email; 
-  const apiToken  = model.project.token; 
-  const projectKey = model.project.Identification;
   const eventBus = new EventEmitter();  
   
   const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder,model, eventBus)
