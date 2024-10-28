@@ -178,14 +178,14 @@ export class TimeBoxApplication extends AbstractApplication {
         }
         else{
             await this.save(timeBoxDTO)   
-            console.log (data)
+            
         }
         return true
     }
 
     public async sinchronzied(){
 
-         this.jiraIntegrationService.synchronizedSprint(this);
+        await this.jiraIntegrationService.synchronizedSprint(this);
         
         
     }

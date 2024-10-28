@@ -183,6 +183,17 @@ export class JiraIntegrationService {
     }
   }
 
+
+  public async synchronizedTeamMember(synchronized: Synchronized){
+  
+    const teamMembers = await this.getUsers()
+    
+    teamMembers.forEach(async (data:any) =>{
+      synchronized.execute(data)
+    });
+
+  }
+
   public async synchronizedSprint (synchronized: Synchronized){
     const URL = this.host + '/rest/agile/1.0/board'
     const response = await Util.get(URL,this.email, this.apiToken)

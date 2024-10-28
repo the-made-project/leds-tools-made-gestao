@@ -1,5 +1,5 @@
 import { Model } from "../../../language/generated/ast.js";
-import { AssigneeDTO, PlannedItemDTO } from "../dto/models.js";
+import { AssigneeDTO, personDTO, PlannedItemDTO } from "../dto/models.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 
@@ -56,5 +56,26 @@ export class TeamApplication extends AbstractApplication {
         });
         
 
+    }
+
+    public override async execute(data: any): Promise<boolean> {
+        
+        const assigneeDTO: AssigneeDTO = {
+            account: data.accountId,
+            issue: data.key
+        };
+
+        this.save(assigneeDTO)
+        
+
+        return true
+    }
+
+
+    public async sinchronzied(){
+
+        await this.jiraIntegrationService.synchronizedTeamMember(this);
+        
+        
     }
 }

@@ -1,5 +1,6 @@
 import { isAtomicUserStory, isBacklog, isEpic, isTimeBox, Model } from "../../../language/generated/ast.js"
 import { EPICApplication } from "./EPICApplication.js";
+import { PersonApplication } from "./PersonApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
 import { TeamApplication } from "./TeamMemberApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
@@ -13,6 +14,7 @@ export class JiraApplication {
   taskApplication: TaskApplication
   timeBoxApplication: TimeBoxApplication
   teamApplication: TeamApplication
+  personApplication: PersonApplication
   model: Model
   
 
@@ -29,6 +31,8 @@ export class JiraApplication {
       this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
 
       this.teamApplication = new TeamApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
+
+      this.personApplication = new PersonApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
 
       
     }
@@ -56,6 +60,7 @@ export class JiraApplication {
 
   public async sincronized(){    
     await this.timeBoxApplication.sinchronzied();
+    await this.personApplication.sinchronzied()
   }
     
     

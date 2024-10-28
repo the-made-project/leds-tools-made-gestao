@@ -23,6 +23,14 @@ export type AssigneeDTO = {
   issue: string;
 }
 
+export type personDTO = {
+  id:string;
+  active : string;
+  displayName : string;
+  self  : string;  
+
+}
+
 
  export type TimeBoxDTO = {
   internalId: string;  
