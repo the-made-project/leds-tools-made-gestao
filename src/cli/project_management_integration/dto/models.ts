@@ -25,12 +25,16 @@ export type AssigneeDTO = {
 
 
  export type TimeBoxDTO = {
-  internalId: string;
+  internalId: string;  
   startDate:string;
   endDate: string;
   name: string;
   id: string;
   self: string;
+  state?:string,
+  completeDate?:string,
+  createdDate?:string 
+
   
 };
 

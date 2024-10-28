@@ -1,3 +1,4 @@
+
 import {Util} from './util.js';
 
 const URL_ISSUE = "/rest/api/3/issue"
@@ -6,6 +7,23 @@ const URL_USERS = "/rest/api/3/users/search"
 
 const URL_ASSIGNEE = "/rest/api/3/user/assignable/search"
 
+export interface Synchronized{
+  execute(data: any): Promise<boolean>;
+}
+
+export interface Board {
+  id: number;
+  name: string;
+}
+
+export interface Sprint {
+  id: number;
+  name: string;
+  state: string;
+  self: string;
+  startDate: Date;
+  endDate: Date;
+}
 
 export class JiraIntegrationService {
 
@@ -27,7 +45,7 @@ export class JiraIntegrationService {
 
   public async getAssigneeUsers(){
     const URL = this.host+URL_ASSIGNEE+`?project=${this.projectKey}`
-    console.log(URL)
+    
     const members = await Util.get(URL,this.email, this.apiToken)
     const people = members.filter((member:any) => member.accountType === 'atlassian');
     return people
@@ -132,6 +150,7 @@ export class JiraIntegrationService {
 
   public async getUsers(){
     const URL = this.host+URL_USERS
+    
     const members = await Util.get(URL,this.email, this.apiToken)
     const people = members.filter((member:any) => member.accountType === 'atlassian');
     return people 
@@ -162,6 +181,25 @@ export class JiraIntegrationService {
     } catch (error) {
       throw new Error((error as Error).message);
     }
+  }
+
+  public async synchronizedSprint (synchronized: Synchronized){
+    const URL = this.host + '/rest/agile/1.0/board'
+    const response = await Util.get(URL,this.email, this.apiToken)
+    const boards = response.values;
+    
+    await boards.forEach(async (board: Board) =>{
+      const URL_SPRINT_BOARD = URL + `/${board.id}/sprint`
+      const responseBoard = await Util.get(URL_SPRINT_BOARD,this.email, this.apiToken)            
+      const sprints = responseBoard.values;   
+
+      sprints.forEach(async (sprint:any) =>{
+        synchronized.execute(sprint)
+      });
+    
+    }) 
+
+    
   }
 
   public async createSprint (name:string, goal: string, startDate: string, endDate: string){

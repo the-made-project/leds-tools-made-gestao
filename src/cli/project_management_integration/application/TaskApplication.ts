@@ -33,7 +33,7 @@ export class TaskApplication extends IssueAbstractApplication {
         const labels = task.label ? Util.appendValue(task.label,task.labelx): []
 
         try {
-            const result = await this.jiraIntegrationService.createSubTask(task.name ?? "", task.description ?? "", parent, labels);
+            const result = await this.jiraIntegrationService.createTask(task.name ?? "", task.description ?? "", parent, labels);
             
             const taskID = `${atomicUserStoryDTO.internalId}.${task.id.toLocaleLowerCase()}`
             
@@ -42,8 +42,8 @@ export class TaskApplication extends IssueAbstractApplication {
                 internalId: taskID,
                 id: (result).id,
                 key: (result).key,
-                self: (result).self,                
-                type: "subtask"
+                self: (result).self,                                
+                type: "task"
             };
         
             await this.save(issueDTO)

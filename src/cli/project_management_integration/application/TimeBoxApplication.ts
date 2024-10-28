@@ -4,6 +4,7 @@ import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 import { TimeBoxDTO, IssueDTO, PlannedItemDTO } from "../dto/models.js";
 
+
 export class TimeBoxApplication extends AbstractApplication {
     
     timeBoxesCreated: Map<string,TimeBox>
@@ -107,6 +108,7 @@ export class TimeBoxApplication extends AbstractApplication {
         
     }  
     
+    
 
     public async create(timeBox: TimeBox) {
         
@@ -149,6 +151,42 @@ export class TimeBoxApplication extends AbstractApplication {
             }       
             
         }
+        
+    }
+
+
+    public override async execute(data: any): Promise<boolean> {
+        
+        const id = data.id
+        const result = await this.retriveByExternal(id)
+        const timeBoxDTO: TimeBoxDTO = 
+                    {
+                        internalId: "",
+                        startDate:data.startDate ?? "", 
+                        endDate: data.endDate ?? "",
+                        name: data.name, 
+                        id: data.id,
+                        self: data.self,
+                        state: data.state,
+                        completeDate: data.completeDate,
+                        createdDate: data.createdDate
+                    };
+            
+        if (result){
+            
+            await this.update (id, timeBoxDTO)
+        }
+        else{
+            await this.save(timeBoxDTO)   
+            console.log (data)
+        }
+        return true
+    }
+
+    public async sinchronzied(){
+
+         this.jiraIntegrationService.synchronizedSprint(this);
+        
         
     }
 

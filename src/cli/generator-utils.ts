@@ -1,6 +1,5 @@
 import path from "path";
 import fs from 'fs'
-
 /**
  * Capitaliza uma string
  * 
@@ -28,3 +27,6 @@ export function createPath(...args: string[]) : string {
   }
   return PATH
 }
+
+
+

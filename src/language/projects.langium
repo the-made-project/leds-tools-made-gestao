@@ -1,9 +1,9 @@
 import 'terminals'
 import 'helpers'
 Project:
-    'project' name=STRING'{'
-    (Identification 
-    | Description     
-    )
+    'project' '{'
+    (   Name 
+        | Description     
+    )*
     '}' 
     ;

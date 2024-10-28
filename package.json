@@ -35,6 +35,7 @@
         "@codingame/monaco-vscode-editor-service-override": "1.83.16",
         "@codingame/monaco-vscode-keybindings-service-override": "1.83.16",
         "@types/lowdb": "^1.0.15",
+        "async-mutex": "^0.5.0",
         "chalk": "~5.3.0",
         "commander": "~11.0.0",
         "dotenv": "^16.4.5",
@@ -94,11 +95,7 @@
         "commands": [
             {
                 "command": "made.synchronizeFromMadeToProjectManagement",
-                "title": "Synchronize From Made to Project Management"
-            },
-            {
-                "command": "made.synchronizeFromProjectManagementToMade",
-                "title": "Synchronize From Project Management to Made"
+                "title": "Synchronize"
             },
             {
                 "command": "made.generateDocumentation",
@@ -106,17 +103,13 @@
             },
             {
                 "command": "made.generateAll",
-                "title": "Generate All"
+                "title": "All"
             }
         ],
         "menus": {
             "commandPalette": [
                 {
                     "command": "made.synchronizeFromMadeToProjectManagement",
-                    "when": "editorLangId == made"
-                },
-                {
-                    "command": "made.synchronizeFromProjectManagementToMade",
                     "when": "editorLangId == made"
                 },
                 {
@@ -131,11 +124,6 @@
             "editor/context": [
                 {
                     "command": "made.synchronizeFromMadeToProjectManagement",
-                    "group": "z_commands",
-                    "when": "editorLangId == made"
-                },
-                {
-                    "command": "made.synchronizeFromProjectManagementToMade",
                     "group": "z_commands",
                     "when": "editorLangId == made"
                 },

@@ -14,6 +14,7 @@ export class JiraApplication {
   timeBoxApplication: TimeBoxApplication
   teamApplication: TeamApplication
   model: Model
+  
 
   constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder:string, model: Model, eventEmitter: EventEmitter ){
 
@@ -28,16 +29,11 @@ export class JiraApplication {
       this.timeBoxApplication = new TimeBoxApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
 
       this.teamApplication = new TeamApplication(email,apiToken,host,projectKey,target_folder,model,eventEmitter)
-    }
-    
-    
-    public async GetProjectInformation(model: Model){
+
       
-      console.log("bla") 
-         
     }
-
-
+    
+    
     public async createModel() {
       
       //Buscando elementos
@@ -56,6 +52,10 @@ export class JiraApplication {
       // Criando os Sprint
       await Promise.all(timeBox.map(timeBox => this.timeBoxApplication.create(timeBox)));
       
+  }
+
+  public async sincronized(){    
+    await this.timeBoxApplication.sinchronzied();
   }
     
     

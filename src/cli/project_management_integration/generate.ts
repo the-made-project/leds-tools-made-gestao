@@ -5,13 +5,7 @@ import { Model} from '../../language/generated/ast.js'
 import { JiraApplication } from './application/JiraApplication.js';
 import { EventEmitter } from 'events';
 
-require('dotenv').config();
-
-
-const host = process.env.HOST ? process.env.HOST: ""
-const email = process.env.EMAIL ? process.env.EMAIL: ""
-const apiToken  = process.env.TOKEN ? process.env.TOKEN: ""
-const projectKey = process.env.PROJECTKEY ? process.env.PROJECTKEY: ""
+import { EnvLoader } from './util/envLoader.js';
 
 /**
  * Função para gerar a gestão de projetos no Jira a partir de um modelo.
@@ -21,23 +15,36 @@ const projectKey = process.env.PROJECTKEY ? process.env.PROJECTKEY: ""
  * @returns {Promise<string>} - O nome do projeto.
  */
 
+
+async function createJira( model: Model,target_folder: string): Promise<JiraApplication>{
+  const eventBus = new EventEmitter(); 
+  
+  new EnvLoader(target_folder);
+
+  const host = EnvLoader.getEnvVariable('HOST') ?? "" 
+  const email = EnvLoader.getEnvVariable('EMAIL') ?? ""   
+  const apiToken  = EnvLoader.getEnvVariable('TOKEN') ?? ""  
+  const projectKey = EnvLoader.getEnvVariable('PROJECTKEY') ?? ""   
+  
+  const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder,model, eventBus)
+
+  return Jira
+}
+
+
 export async function generateProjectManagement(model: Model,target_folder: string) : Promise<string> {
   
   // Shared EventEmitter instance
-  const eventBus = new EventEmitter();  
-
-
-  const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder,model, eventBus)
+  const Jira = await createJira(model,target_folder)
+  
   await Jira.createModel()
   
-  return model.project.name
+  return model.project.name ?? ""
 }
 
-export async function generateMadeFile(model: Model,target_folder: string) : Promise<string> {
-  
-  const eventBus = new EventEmitter();  
-  
-  const Jira = new JiraApplication(email,apiToken,host,projectKey,target_folder,model, eventBus)
-  await Jira.GetProjectInformation(model)
-  return model.project.name;
+export async function sincronized(model: Model,target_folder: string):  Promise<string>{
+  // Shared EventEmitter instance
+  const Jira = await createJira(model,target_folder)
+  await Jira.sincronized()
+  return model.project.name ?? ""
 }

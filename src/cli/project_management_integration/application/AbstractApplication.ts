@@ -1,4 +1,4 @@
-import { JiraIntegrationService } from "../service/JiraIntegratorService.js";
+import { JiraIntegrationService, Synchronized } from "../service/JiraIntegratorService.js";
 import { Util } from '../service/util.js';
 import { createPath } from '../../generator-utils.js'
 
@@ -7,10 +7,12 @@ import lodash from 'lodash'
 import { EventEmitter } from 'events';
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
-
+import { Mutex } from 'async-mutex';
 import {IssuesDTO} from '../dto/models.js'
 
-export abstract class AbstractApplication {
+const mutex = new Mutex();
+
+export abstract class AbstractApplication implements Synchronized{
 
   jiraIntegrationService: JiraIntegrationService
   DB_PATH: string  
@@ -58,9 +60,23 @@ export abstract class AbstractApplication {
     
   }
 
+  protected async retriveByExternal(id:string){
+    
+    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
+
+    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
+    const defaultData: IssuesDTO = { data: [] };
+
+    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    await db.read()
+    
+    return lodash.chain(db.data).get('data').find({ id: id }).value();    
+    
+  }
+
 
   protected async save(issueDTO: any) {
-    
+    await mutex.runExclusive(async () => {
     const ISSUEPATH = path.join(this.DB_PATH,  this.jsonFile);    
     const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
     const defaultData: IssuesDTO = { data: [] };
@@ -69,15 +85,41 @@ export abstract class AbstractApplication {
 
     await db.read();
     db.data ||= defaultData;
-    await db.write();
-
     
     if (db.data?.data) {
         db.data.data.push(issueDTO);
      }
     
     await db.write();
+
+   });
+  }
+
+  protected async update(issueId: string, newData: Partial<any>) {
+    await mutex.runExclusive(async () => {
+        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
+        const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
+        const defaultData: IssuesDTO = { data: [] };
+
+        const db = new LowSync<IssuesDTO>(adapter, defaultData);
+        
+        // Ler o banco de dados
+        await db.read();
+        db.data ||= defaultData;
+
+        // Encontra o índice do item que deseja atualizar
+        const issueIndex = db.data.data.findIndex((issue) => issue.id === issueId);
+
+        if (issueIndex !== -1) {
+            // Atualiza o item com os novos dados
+            db.data.data[issueIndex] = { ...db.data.data[issueIndex], ...newData };
+            await db.write();            
+        } 
+    });
+}
+
+   public async execute(data: any): Promise<boolean>{
+    return false
+
    }
-
-
 }
