@@ -18,12 +18,14 @@ export abstract class AbstractApplication implements Synchronized{
   DB_PATH: string  
   eventEmitter: EventEmitter
   jsonFile: string
-  
+  projectKey:string
+
   constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, eventEmitter: EventEmitter) {
         Util.mkdirSync(target_folder)
         
         this.DB_PATH = createPath(target_folder, 'db')
         this.eventEmitter = eventEmitter
+        this.projectKey = projectKey
         this.jiraIntegrationService = new JiraIntegrationService(email, apiToken, host, projectKey);
         this.jsonFile = "data.json"
   }

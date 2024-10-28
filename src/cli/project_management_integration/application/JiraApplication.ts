@@ -61,6 +61,7 @@ export class JiraApplication {
   public async sincronized(){    
     await this.timeBoxApplication.sinchronzied();
     await this.personApplication.sinchronzied()
+    await this.teamApplication.sinchronzied()
   }
     
     

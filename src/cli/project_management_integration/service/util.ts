@@ -63,9 +63,11 @@ export class Util {
                
       }
 
-      public static async get (URL: string, email:string, apitoken:string){
+      public static async get (baseURL: string, email:string, apitoken:string,params?: Record<string, string>){
         try{
-            const response = await fetch(`${URL}`, {
+          const searchParams = new URLSearchParams(params).toString();
+          const fullURL = `${baseURL}?${searchParams}`;
+          const response = await fetch(`${fullURL}`, {
         method: 'GET',
         headers: {
           'Authorization': `Basic ${Buffer.from(`${email}:${apitoken}`).toString('base64')}`,

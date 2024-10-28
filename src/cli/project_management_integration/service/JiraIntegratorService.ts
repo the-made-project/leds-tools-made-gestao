@@ -183,6 +183,17 @@ export class JiraIntegrationService {
     }
   }
 
+  public async synchronizedTeamMemberTask(synchronized: Synchronized, project: string){
+    
+    const URL = this.host+`/rest/api/2/search?jql="Project=\"${project}\""`
+
+    // rest/api/2/search?jql=project=QA
+
+    const result = await Util.get(URL,this.email, this.apiToken)
+    console.log (result.values)
+
+  }
+
 
   public async synchronizedTeamMember(synchronized: Synchronized){
   

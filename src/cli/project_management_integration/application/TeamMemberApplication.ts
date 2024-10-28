@@ -1,5 +1,5 @@
 import { Model } from "../../../language/generated/ast.js";
-import { AssigneeDTO, personDTO, PlannedItemDTO } from "../dto/models.js";
+import { AssigneeDTO, PlannedItemDTO } from "../dto/models.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 
@@ -74,7 +74,7 @@ export class TeamApplication extends AbstractApplication {
 
     public async sinchronzied(){
 
-        await this.jiraIntegrationService.synchronizedTeamMember(this);
+        await this.jiraIntegrationService.synchronizedTeamMemberTask(this, this.projectKey)
         
         
     }
