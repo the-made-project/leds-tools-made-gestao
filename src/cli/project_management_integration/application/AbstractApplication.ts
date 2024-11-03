@@ -76,6 +76,20 @@ export abstract class AbstractApplication implements Synchronized{
     
   }
 
+  protected async retriveByExternalData(data:string){
+    
+    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
+
+    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
+    const defaultData: IssuesDTO = { data: [] };
+
+    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    await db.read()
+    
+    return lodash.chain(db.data).get('data').find(data).value();    
+    
+  }
+
 
   protected async save(issueDTO: any) {
     await mutex.runExclusive(async () => {
@@ -124,4 +138,6 @@ export abstract class AbstractApplication implements Synchronized{
     return false
 
    }
+  
+ 
 }

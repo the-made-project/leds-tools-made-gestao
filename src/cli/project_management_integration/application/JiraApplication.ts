@@ -58,18 +58,24 @@ export class JiraApplication {
       
   }
 
+  
+
   public async sincronized(){    
+
+    
+
+
     // Buscando os sprints
-    await this.timeBoxApplication.sinchronzied();
+    await this.timeBoxApplication.synchronized();
 
     // Buscando as pessoas
-    await this.personApplication.sinchronzied()
+    await this.personApplication.synchronized()
     
     // Buscando as tarefas
-    await this.taskApplication.sinchronzied()
+    await this.taskApplication.synchronized()
     
     // Associando as tarefas as pessoas
-    await this.teamApplication.sinchronzied()
+    await this.teamApplication.synchronized()
     
   }
     
