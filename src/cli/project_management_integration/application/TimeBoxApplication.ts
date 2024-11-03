@@ -185,8 +185,7 @@ export class TimeBoxApplication extends AbstractApplication {
 
     public async sinchronzied(){
 
-        await this.jiraIntegrationService.synchronizedSprint(this);
-        
+        this.jiraIntegrationService.synchronizedSprintTask(this,this.projectKey)
         
     }
 

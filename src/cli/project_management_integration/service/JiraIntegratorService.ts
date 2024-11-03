@@ -15,6 +15,14 @@ interface JiraSearchResponse {
   issues: JiraIssue[];
 }
 
+interface JiraSprint {
+  id: number;
+  name: string;
+  state: 'active' | 'closed' | 'future';
+  startDate?: string;
+  endDate?: string;
+}
+
 interface ProgressInfo {
   fetched: number;
   total: number;
@@ -46,6 +54,16 @@ interface JiraIssueType {
   subtask: boolean;
   hierarchyLevel: number;
 }
+
+interface SprintTasks {
+  sprintName: string;
+  sprintId: number;
+  state: string;
+  startDate?: string;
+  endDate?: string;
+  tasks: JiraIssue[];
+}
+
 
 interface JiraIssue {
   id: string;
@@ -408,6 +426,73 @@ export class JiraIntegrationService {
     return response.data;
   }
 
+
+  async getSprints(projectKey: string, includeState: 'active' | 'closed' | 'future' | 'all' = 'all'): Promise<JiraSprint[]> {
+    try {
+      // Primeiro, precisamos obter o ID do board
+      const boardResponse = await this.axiosInstance.get(`/rest/agile/1.0/board?projectKeyOrId=${projectKey}`);
+      const boardId = boardResponse.data.values[0]?.id;
+
+      if (!boardId) {
+        throw new Error('Board não encontrado para o projeto');
+      }
+
+      // Agora podemos buscar as sprints
+      const response = await this.axiosInstance.get(`/rest/agile/1.0/board/${boardId}/sprint?state=${includeState}`);
+      return response.data.values;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Erro ao buscar sprints: ${error.response?.data?.errorMessages?.[0] || error.message}`);
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Busca todas as tarefas de uma sprint específica
+   */
+  async getSprintTasks(sprintId: number): Promise<JiraIssue[]> {
+    try {
+      const response = await this.axiosInstance.get(`/rest/agile/1.0/sprint/${sprintId}/issue`);
+      return response.data.issues;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Erro ao buscar tarefas da sprint: ${error.response?.data?.errorMessages?.[0] || error.message}`);
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Busca e organiza todas as tarefas de todas as sprints
+   */
+  async getAllSprintTasks(projectKey: string, sprintState: 'active' | 'closed' | 'future' ): Promise<SprintTasks[]> {
+    const sprints = await this.getSprints(projectKey, sprintState);
+    const sprintTasks: SprintTasks[] = [];
+
+    for (const sprint of sprints) {
+      const tasks = await this.getSprintTasks(sprint.id);
+      sprintTasks.push({
+        sprintName: sprint.name,
+        sprintId: sprint.id,
+        state: sprint.state,
+        startDate: sprint.startDate,
+        endDate: sprint.endDate,
+        tasks
+      });
+    }
+
+    return sprintTasks;
+  }
+
+  /**
+   * Imprime as tarefas de cada sprint de forma organizada
+   */
+  
+
+
+
+
 public async synchronizedIssues(synchronized: Synchronized, project: string){
   const tarefas = await this.getAllProjectTasks(project, (progress) => {
     console.log(`Progresso: ${progress.fetched}/${progress.total} tarefas`);
@@ -427,6 +512,26 @@ public async synchronizedIssues(synchronized: Synchronized, project: string){
       synchronized.execute(data)
     });
 
+  }
+
+  public async synchronizedSprintTask (synchronized: Synchronized, project:string){
+    const sprints = await this.getAllSprintTasks(project, 'active');
+    const sprnitsClosed = await this.getAllSprintTasks(project, 'closed');
+    const sprnitsFuture = await this.getAllSprintTasks(project, 'future');
+    
+    sprints.forEach(async (data:any) =>{
+      synchronized.execute (data)
+      console.log(data)
+    });
+
+    sprnitsClosed.forEach(async (data:any) =>{
+      synchronized.execute (data)
+      console.log(data)
+    });
+    sprnitsFuture.forEach(async (data:any) =>{
+      synchronized.execute (data)
+      console.log(data)
+    });
   }
 
   public async synchronizedSprint (synchronized: Synchronized){
