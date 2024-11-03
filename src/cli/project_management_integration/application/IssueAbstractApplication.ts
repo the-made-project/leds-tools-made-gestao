@@ -12,6 +12,9 @@ export  class IssueAbstractApplication extends AbstractApplication {
     }
 
     public override async execute(data: any): Promise<boolean> {
+
+        const id = data.id
+        const result = await this.retriveByExternal(id)
     
         const issueDTO: IssueDTO = {
             internalId: "",
@@ -26,9 +29,14 @@ export  class IssueAbstractApplication extends AbstractApplication {
             dueDate:(data).fields.dueDate ?? ""
         };
         
-        this.save (issueDTO)
-        
-
+        if (result){
+            
+            await this.update (id, issueDTO)
+        }
+        else{
+            await this.save(issueDTO)   
+            
+        }
         
         return true
     }

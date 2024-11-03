@@ -159,7 +159,7 @@ export class TimeBoxApplication extends AbstractApplication {
         
         const id = data.id
         const result = await this.retriveByExternal(id)
-        
+        console.log (data)
         const tasks = new Array<AssigneeDTO>();
 
         data?.tasks.forEach(async (task:any) =>{
@@ -181,8 +181,8 @@ export class TimeBoxApplication extends AbstractApplication {
                         internalId: "",
                         startDate:data.startDate ?? "", 
                         endDate: data.endDate ?? "",
-                        name: data.name, 
-                        id: data.id,
+                        name: data.sprintName, 
+                        id: data.sprintId,
                         self: data.self,
                         state: data.state,
                         completeDate: data.completeDate,
