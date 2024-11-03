@@ -5,6 +5,11 @@ export type IssueDTO = {
     key: string;
     self: string;
     type: string;
+    title?: string;
+    description?:string;
+    status?:string;
+    createdDate?:string,
+    dueDate?:string
   };
   
 export type IssuesDTO = {
@@ -19,6 +24,7 @@ export type PlannedItemDTO = {
 }
 
 export type AssigneeDTO = {
+  name?:string;
   account:string;
   issue: string;
 }

@@ -1,6 +1,7 @@
 
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
+import { IssueDTO } from "../dto/models.js";
 
 export  class IssueAbstractApplication extends AbstractApplication {
 
@@ -8,5 +9,32 @@ export  class IssueAbstractApplication extends AbstractApplication {
 
         super(email,apiToken,host,projectKey,target_folder,eventEmitter)       
         this.jsonFile = "issue.json"
+    }
+
+    public override async execute(data: any): Promise<boolean> {
+        
+        const issueDTO: IssueDTO = {
+            internalId: "",
+            id: (data).id,
+            key: (data).key,
+            self: (data).self,                                
+            type: "task",
+            title:(data).fields.summary ?? "",
+            createdDate:(data).fields.summary ?? "",
+            dueDate:(data).fields.dueDate ?? ""
+        };
+        
+        this.save (issueDTO)
+        
+        return true
+    }
+
+
+
+    public async sinchronzied(){
+
+      this.jiraIntegrationService.synchronizedIssues(this, this.projectKey)
+        
+        
     }
 }

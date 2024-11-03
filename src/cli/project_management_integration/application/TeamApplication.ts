@@ -60,12 +60,17 @@ export class TeamApplication extends AbstractApplication {
 
     public override async execute(data: any): Promise<boolean> {
         
-        const assigneeDTO: AssigneeDTO = {
-            account: data.accountId,
-            issue: data.key
-        };
+        if  (data.fields.assignee?.accountId){
+            const assigneeDTO: AssigneeDTO = {
+                name:data.fields.assignee?.displayName,
+                account: data.fields.assignee?.accountId,
+                issue: data.key
+            };
+    
+            this.save(assigneeDTO)
+        }
 
-        this.save(assigneeDTO)
+      
         
 
         return true
@@ -74,8 +79,8 @@ export class TeamApplication extends AbstractApplication {
 
     public async sinchronzied(){
 
-        await this.jiraIntegrationService.synchronizedTeamMemberTask(this, this.projectKey)
         
+      this.jiraIntegrationService.synchronizedIssues(this, this.projectKey)
         
     }
 }

@@ -2,7 +2,7 @@ import { isAtomicUserStory, isBacklog, isEpic, isTimeBox, Model } from "../../..
 import { EPICApplication } from "./EPICApplication.js";
 import { PersonApplication } from "./PersonApplication.js";
 import { TaskApplication } from "./TaskApplication.js";
-import { TeamApplication } from "./TeamMemberApplication.js";
+import { TeamApplication } from "./TeamApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { USApplication } from "./USApplication.js";
 import { EventEmitter } from 'events'
@@ -59,9 +59,15 @@ export class JiraApplication {
   }
 
   public async sincronized(){    
+    // Buscando os sprints
     await this.timeBoxApplication.sinchronzied();
+    // Buscando as pessoas
     await this.personApplication.sinchronzied()
+    // Buscando as tarefas
+    await this.taskApplication.sinchronzied()
+    // Associando as tarefas as pessoas
     await this.teamApplication.sinchronzied()
+    
   }
     
     

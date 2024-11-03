@@ -36,6 +36,7 @@
         "@codingame/monaco-vscode-keybindings-service-override": "1.83.16",
         "@types/lowdb": "^1.0.15",
         "async-mutex": "^0.5.0",
+        "axios": "^1.7.7",
         "chalk": "~5.3.0",
         "commander": "~11.0.0",
         "dotenv": "^16.4.5",

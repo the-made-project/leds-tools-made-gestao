@@ -1,5 +1,6 @@
 
 import {Util} from './util.js';
+import axios, { AxiosInstance } from 'axios';
 
 const URL_ISSUE = "/rest/api/3/issue"
 const URL_SPRINT = "/rest/agile/1.0/sprint"
@@ -7,8 +8,53 @@ const URL_USERS = "/rest/api/3/users/search"
 
 const URL_ASSIGNEE = "/rest/api/3/user/assignable/search"
 
+interface JiraSearchResponse {
+  startAt: number;
+  maxResults: number;
+  total: number;
+  issues: JiraIssue[];
+}
+
+interface ProgressInfo {
+  fetched: number;
+  total: number;
+}
+
+
 export interface Synchronized{
   execute(data: any): Promise<boolean>;
+}
+
+interface JiraSearchResponse {
+  startAt: number;
+  maxResults: number;
+  total: number;
+  issues: JiraIssue[];
+}
+
+interface JiraIssue {
+  id: string;
+  key: string;
+  fields: {
+    summary: string;
+    description: string;
+    status: {
+      name: string;
+      statusCategory: {
+        name: string;
+      };
+    };
+    priority: {
+      name: string;
+    };
+    assignee?: {
+      displayName: string;
+      emailAddress: string;
+    };
+    created: string;
+    updated: string;
+    duedate?: string;
+  };
 }
 
 export interface Board {
@@ -32,6 +78,8 @@ export class JiraIntegrationService {
   email:string;
   apiToken:string;
   host:string
+  private axiosInstance: AxiosInstance;
+  private readonly MAX_RESULTS_PER_PAGE = 100;
 
   constructor(email: string, apiToken: string, host: string, projectkey: string){
     
@@ -40,7 +88,18 @@ export class JiraIntegrationService {
     this.email = email;
     this.apiToken = apiToken;
     this.host = host;
-      
+
+    const auth = Buffer.from(`${email}:${apiToken}`).toString('base64');
+    
+    this.axiosInstance = axios.create({
+      baseURL: host,
+      headers: {
+        'Authorization': `Basic ${auth}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+    
     }
 
   public async getAssigneeUsers(){
@@ -183,16 +242,142 @@ export class JiraIntegrationService {
     }
   }
 
-  public async synchronizedTeamMemberTask(synchronized: Synchronized, project: string){
-    
-    const URL = this.host+`/rest/api/2/search?jql="Project=\"${project}\""`
+  
 
-    // rest/api/2/search?jql=project=QA
-
-    const result = await Util.get(URL,this.email, this.apiToken)
-    console.log (result.values)
-
+  async getAllProjectTasks(
+    projectKey: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
   }
+
+  /**
+   * Busca todas as tarefas que correspondem a uma query JQL
+   * @param jql - Query JQL personalizada
+   * @param onProgress - Callback opcional para acompanhar o progresso
+   */
+  async getAllTasksByJQL(
+    jql: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    try {
+      // Primeira requisição para obter o total
+      const initialResponse = await this.searchIssues(jql, 0);
+      const totalIssues = initialResponse.total;
+      
+      // Se não houver issues, retorna array vazio
+      if (totalIssues === 0) {
+        return [];
+      }
+
+      // Inicializa array com as primeiras issues
+      let allIssues = initialResponse.issues;
+
+      // Notifica progresso inicial
+      if (onProgress) {
+        onProgress({
+          fetched: allIssues.length,
+          total: totalIssues
+        });
+      }
+
+      // Se ainda houver mais issues para buscar
+      const remainingPages = Math.ceil((totalIssues - allIssues.length) / this.MAX_RESULTS_PER_PAGE);
+      
+      for (let page = 1; page < remainingPages + 1; page++) {
+        const startAt = page * this.MAX_RESULTS_PER_PAGE;
+        const response = await this.searchIssues(jql, startAt);
+        
+        allIssues = [...allIssues, ...response.issues];
+
+        if (onProgress) {
+          onProgress({
+            fetched: allIssues.length,
+            total: totalIssues
+          });
+        }
+      }
+
+      return allIssues;
+
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Erro na busca do Jira: ${error.response?.data?.errorMessages?.[0] || error.message}`);
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Método privado para fazer a busca no Jira
+   * @param jql - Query JQL
+   * @param startAt - Índice inicial para paginação
+   */
+  private async searchIssues(
+    jql: string,
+    startAt: number
+  ): Promise<JiraSearchResponse> {
+    const response = await this.axiosInstance.get<JiraSearchResponse>('/rest/api/3/search', {
+      params: {
+        jql,
+        startAt,
+        maxResults: this.MAX_RESULTS_PER_PAGE,
+        fields: [
+          'summary',
+          'description',
+          'status',
+          'priority',
+          'assignee',
+          'created',
+          'updated',
+          'duedate'
+        ].join(',')
+      }
+    });
+
+    return response.data;
+  }
+
+  /**
+   * Busca tarefas por status
+   * @param projectKey - Chave do projeto
+   * @param status - Status desejado
+   */
+  async getTasksByStatus(
+    projectKey: string,
+    status: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} AND status = "${status}" ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
+  /**
+   * Busca tarefas atribuídas a um usuário específico
+   * @param projectKey - Chave do projeto
+   * @param assigneeEmail - Email do responsável
+   */
+  async getTasksByAssignee(
+    projectKey: string,
+    assigneeEmail: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} AND assignee = "${assigneeEmail}" ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
+
+
+public async synchronizedIssues(synchronized: Synchronized, project: string){
+  const tarefas = await this.getAllProjectTasks(project, (progress) => {
+    console.log(`Progresso: ${progress.fetched}/${progress.total} tarefas`);
+  });
+
+  tarefas.forEach(async (data:any) =>{
+    synchronized.execute(data)
+  });
+}
 
 
   public async synchronizedTeamMember(synchronized: Synchronized){
