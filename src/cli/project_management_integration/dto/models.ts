@@ -47,9 +47,10 @@ export type personDTO = {
   name: string;
   id: string;
   self: string;
-  state?:string,
-  completeDate?:string,
-  createdDate?:string 
+  state?:string;
+  completeDate?:string;
+  createdDate?:string;
+  assignee?:AssigneeDTO[];
 
   
 };
