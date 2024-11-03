@@ -45,9 +45,11 @@ export class EPICApplication extends IssueAbstractApplication {
                 internalId: epicID,
                 id: (result).id,
                 key: (result).key,
-                self: (result).self,                
+                self: (result).self,
+                title: epic.name,        
                 type: "epic"
             };
+
 
             await this.save(issueDTO)   
                   
