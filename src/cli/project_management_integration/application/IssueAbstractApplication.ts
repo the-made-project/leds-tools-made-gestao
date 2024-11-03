@@ -13,8 +13,6 @@ export  class IssueAbstractApplication extends AbstractApplication {
 
     public override async execute(data: any): Promise<boolean> {
         
-        
-
         const issueDTO: IssueDTO = {
             internalId: "",
             id: (data).id,
@@ -27,6 +25,8 @@ export  class IssueAbstractApplication extends AbstractApplication {
         };
         
         this.save (issueDTO)
+        
+
         
         return true
     }
