@@ -1,7 +1,7 @@
 import type { Model } from '../language/generated/ast.js';
 import * as path from 'node:path';
 import { GenerateOptions } from './main.js';
-import { sincronized} from './project_management_integration/generate.js'
+import { sincronized, generateProjectManagement} from './project_management_integration/generate.js'
 import * as vscode from 'vscode';
 
 export async function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): Promise<string> {
@@ -9,9 +9,9 @@ export async function generate(model: Model, filePath: string, destination: stri
     
     if (opts.only_synchronize_from_made_to_projectManagement){
 
-        const x = await sincronized(model, final_destination)        
-        //const name = await generateProjectManagement(model, final_destination)        
-        console.log(`Synchronized ${x}`)
+        await sincronized(model, final_destination)        
+        await generateProjectManagement(model, final_destination)        
+        
     }
     /****
     if (opts.only_project_documentation){

@@ -36,7 +36,6 @@ export async function generateProjectManagement(model: Model,target_folder: stri
   
   // Shared EventEmitter instance
   const Jira = await createJira(model,target_folder)
-  
   await Jira.createModel()
   
   return model.project.name ?? ""
