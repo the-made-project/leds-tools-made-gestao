@@ -5,7 +5,7 @@
       "id": "10541",
       "key": "SLAVE-537",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10541",
-      "type": "task",
+      "type": "História",
       "title": "Testes - Frontend",
       "createdDate": "Testes - Frontend",
       "dueDate": ""
@@ -15,7 +15,7 @@
       "id": "10540",
       "key": "SLAVE-536",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10540",
-      "type": "task",
+      "type": "História",
       "title": "teste, mostrando jira p/ heitor",
       "createdDate": "teste, mostrando jira p/ heitor",
       "dueDate": ""
@@ -25,7 +25,7 @@
       "id": "10539",
       "key": "SLAVE-535",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10539",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Criação e documentação de estratégias para a Gestão dos Times",
       "createdDate": "Criação e documentação de estratégias para a Gestão dos Times",
       "dueDate": ""
@@ -35,7 +35,7 @@
       "id": "10538",
       "key": "SLAVE-534",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10538",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Configuração do ambiente de trabalho da equipe de Design | JIRA, Gitlab e Origami",
       "createdDate": "Configuração do ambiente de trabalho da equipe de Design | JIRA, Gitlab e Origami",
       "dueDate": ""
@@ -45,7 +45,7 @@
       "id": "10537",
       "key": "SLAVE-533",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10537",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar Tela Troca de Senha",
       "createdDate": "Eu, como Desenvolvedor, quero implementar Tela Troca de Senha",
       "dueDate": ""
@@ -55,7 +55,7 @@
       "id": "10536",
       "key": "SLAVE-532",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10536",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar Tela de Detalhes do Projeto",
       "createdDate": "Eu, como Desenvolvedor, quero implementar Tela de Detalhes do Projeto",
       "dueDate": ""
@@ -65,7 +65,7 @@
       "id": "10535",
       "key": "SLAVE-531",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10535",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar funcionalidade de Refresh",
       "createdDate": "Eu, como Desenvolvedor, quero implementar funcionalidade de Refresh",
       "dueDate": ""
@@ -75,7 +75,7 @@
       "id": "10534",
       "key": "SLAVE-530",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10534",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero definir rede privada AWS",
       "createdDate": "Eu, como Desenvolvedor, quero definir rede privada AWS",
       "dueDate": ""
@@ -85,7 +85,7 @@
       "id": "10533",
       "key": "SLAVE-529",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10533",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar regras no CD",
       "createdDate": "Eu, como Desenvolvedor, quero implementar regras no CD",
       "dueDate": ""
@@ -95,7 +95,7 @@
       "id": "10532",
       "key": "SLAVE-528",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10532",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero integrar Back e Front na AWS",
       "createdDate": "Eu, como Desenvolvedor, quero integrar Back e Front na AWS",
       "dueDate": ""
@@ -105,7 +105,7 @@
       "id": "10531",
       "key": "SLAVE-527",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10531",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar funcionalidade Trocar Senha",
       "createdDate": "Eu, como Desenvolvedor, quero implementar funcionalidade Trocar Senha",
       "dueDate": ""
@@ -115,7 +115,7 @@
       "id": "10530",
       "key": "SLAVE-526",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10530",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero associar Usuário ao seus respectivos papéis",
       "createdDate": "Eu, como Desenvolvedor, quero associar Usuário ao seus respectivos papéis",
       "dueDate": ""
@@ -125,7 +125,7 @@
       "id": "10528",
       "key": "SLAVE-525",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10528",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar CD para registro no GitLab",
       "createdDate": "Criar CD para registro no GitLab",
       "dueDate": ""
@@ -135,7 +135,7 @@
       "id": "10527",
       "key": "SLAVE-524",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10527",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Implementar testes automatizados",
       "createdDate": "Implementar testes automatizados",
       "dueDate": ""
@@ -145,7 +145,7 @@
       "id": "10529",
       "key": "SLAVE-523",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10529",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Implementar funcionalidade de Refresh Token",
       "createdDate": "Implementar funcionalidade de Refresh Token",
       "dueDate": ""
@@ -155,7 +155,7 @@
       "id": "10525",
       "key": "SLAVE-522",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10525",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar Category e Fuctions pages + Index",
       "createdDate": "Criar Category e Fuctions pages + Index",
       "dueDate": ""
@@ -165,7 +165,7 @@
       "id": "10526",
       "key": "SLAVE-521",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10526",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar componentes e tela de login",
       "createdDate": "Criar componentes e tela de login",
       "dueDate": ""
@@ -175,7 +175,7 @@
       "id": "10524",
       "key": "SLAVE-520",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10524",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Transformar componentes repetitivos em tabelas",
       "createdDate": "Transformar componentes repetitivos em tabelas",
       "dueDate": ""
@@ -185,7 +185,7 @@
       "id": "10522",
       "key": "SLAVE-519",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10522",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "createdDate": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "dueDate": ""
@@ -195,7 +195,7 @@
       "id": "10523",
       "key": "SLAVE-518",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10523",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "createdDate": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "dueDate": ""
@@ -205,7 +205,7 @@
       "id": "10521",
       "key": "SLAVE-517",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10521",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Implementar funcionalidade de Refresh Token",
       "createdDate": "Implementar funcionalidade de Refresh Token",
       "dueDate": ""
@@ -215,7 +215,7 @@
       "id": "10520",
       "key": "SLAVE-516",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10520",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Implementar testes automatizados",
       "createdDate": "Implementar testes automatizados",
       "dueDate": ""
@@ -225,7 +225,7 @@
       "id": "10519",
       "key": "SLAVE-515",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10519",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar CD para registro no GitLab",
       "createdDate": "Criar CD para registro no GitLab",
       "dueDate": ""
@@ -235,7 +235,7 @@
       "id": "10518",
       "key": "SLAVE-514",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10518",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "createdDate": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "dueDate": ""
@@ -245,7 +245,7 @@
       "id": "10517",
       "key": "SLAVE-513",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10517",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar Category e Fuctions pages + Index",
       "createdDate": "Criar Category e Fuctions pages + Index",
       "dueDate": ""
@@ -255,7 +255,7 @@
       "id": "10516",
       "key": "SLAVE-512",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10516",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Transformar componentes repetitivos em tabelas",
       "createdDate": "Transformar componentes repetitivos em tabelas",
       "dueDate": ""
@@ -265,7 +265,7 @@
       "id": "10515",
       "key": "SLAVE-511",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10515",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar componentes e tela de login",
       "createdDate": "Criar componentes e tela de login",
       "dueDate": ""
@@ -275,7 +275,7 @@
       "id": "10514",
       "key": "SLAVE-510",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10514",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "createdDate": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "dueDate": ""
@@ -285,7 +285,7 @@
       "id": "10508",
       "key": "SLAVE-509",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10508",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Adição de Porta Estática no Docker",
       "createdDate": "Adição de Porta Estática no Docker",
       "dueDate": ""
@@ -295,7 +295,7 @@
       "id": "10510",
       "key": "SLAVE-508",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10510",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Configuração de Controllers de Odata para Retornarem DTOs",
       "createdDate": "Configuração de Controllers de Odata para Retornarem DTOs",
       "dueDate": ""
@@ -305,7 +305,7 @@
       "id": "10512",
       "key": "SLAVE-504",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10512",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Mudança do Método de Validação de Domínio",
       "createdDate": "Mudança do Método de Validação de Domínio",
       "dueDate": ""
@@ -315,7 +315,7 @@
       "id": "10506",
       "key": "SLAVE-503",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10506",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Finalização do Redesign das Páginas",
       "createdDate": "Finalização do Redesign das Páginas",
       "dueDate": ""
@@ -325,7 +325,7 @@
       "id": "10511",
       "key": "SLAVE-502",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10511",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Desenvolvimento de Telas de Login, Logout, Cadastro e Perfil de Usuário",
       "createdDate": "Desenvolvimento de Telas de Login, Logout, Cadastro e Perfil de Usuário",
       "dueDate": ""
@@ -335,7 +335,7 @@
       "id": "10504",
       "key": "SLAVE-501",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10504",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Correção da Configuração de Campos de Data",
       "createdDate": "Correção da Configuração de Campos de Data",
       "dueDate": ""
@@ -345,7 +345,7 @@
       "id": "10505",
       "key": "SLAVE-500",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10505",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Unificação das Rotas dos Controllers",
       "createdDate": "Unificação das Rotas dos Controllers",
       "dueDate": ""
@@ -355,7 +355,7 @@
       "id": "10501",
       "key": "SLAVE-499",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10501",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Adaptação de Componentes de Tela (selects + datas)",
       "createdDate": "Adaptação de Componentes de Tela (selects + datas)",
       "dueDate": ""
@@ -365,7 +365,7 @@
       "id": "10503",
       "key": "SLAVE-498",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10503",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Conclusão da Refatoração: criar service para controle da API",
       "createdDate": "Conclusão da Refatoração: criar service para controle da API",
       "dueDate": ""
@@ -375,7 +375,7 @@
       "id": "10500",
       "key": "SLAVE-496",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10500",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criação de Controller Genérico para Queries",
       "createdDate": "Criação de Controller Genérico para Queries",
       "dueDate": ""
@@ -385,7 +385,7 @@
       "id": "10484",
       "key": "SLAVE-483",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10484",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Finalização do Redesign das Páginas",
       "createdDate": "Finalização do Redesign das Páginas",
       "dueDate": ""
@@ -395,7 +395,7 @@
       "id": "10482",
       "key": "SLAVE-476",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10482",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código desenvolvido até o momento",
       "createdDate": "Eu, como Desenvolvedor, quero realizar a refatoração do código desenvolvido até o momento",
       "dueDate": ""
@@ -405,7 +405,7 @@
       "id": "10479",
       "key": "SLAVE-475",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10479",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
       "createdDate": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
       "dueDate": ""
@@ -415,7 +415,7 @@
       "id": "10477",
       "key": "SLAVE-474",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10477",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Método `remover` não pode retornar uma entidade",
       "createdDate": "Método `remover` não pode retornar uma entidade",
       "dueDate": ""
@@ -425,7 +425,7 @@
       "id": "10478",
       "key": "SLAVE-473",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10478",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Refatorar a Controller para usar o generic types",
       "createdDate": "Refatorar a Controller para usar o generic types",
       "dueDate": ""
@@ -435,7 +435,7 @@
       "id": "10476",
       "key": "SLAVE-472",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10476",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma entidade genérica com ID no domínio e no DTO",
       "createdDate": "Criar uma entidade genérica com ID no domínio e no DTO",
       "dueDate": ""
@@ -445,7 +445,7 @@
       "id": "10474",
       "key": "SLAVE-471",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10474",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Refatorar as classes de Handler para uma classe base",
       "createdDate": "Refatorar as classes de Handler para uma classe base",
       "dueDate": ""
@@ -455,7 +455,7 @@
       "id": "10475",
       "key": "SLAVE-470",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10475",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um service na camada de application e remover as chamadas do controller",
       "createdDate": "Criar um service na camada de application e remover as chamadas do controller",
       "dueDate": ""
@@ -465,7 +465,7 @@
       "id": "10473",
       "key": "SLAVE-469",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10473",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Inserir a validação no domínio para não deixar criar instancias invalidadas",
       "createdDate": "Inserir a validação no domínio para não deixar criar instancias invalidadas",
       "dueDate": ""
@@ -475,7 +475,7 @@
       "id": "10472",
       "key": "SLAVE-468",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10472",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
       "createdDate": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
       "dueDate": ""
@@ -485,7 +485,7 @@
       "id": "10470",
       "key": "SLAVE-466",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10470",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
       "createdDate": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
       "dueDate": ""
@@ -495,7 +495,7 @@
       "id": "10469",
       "key": "SLAVE-465",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10469",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
       "createdDate": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
       "dueDate": ""
@@ -505,7 +505,7 @@
       "id": "10471",
       "key": "SLAVE-464",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10471",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
       "createdDate": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
       "dueDate": ""
@@ -515,7 +515,7 @@
       "id": "10468",
       "key": "SLAVE-467",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10468",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
       "createdDate": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
       "dueDate": ""
@@ -525,7 +525,7 @@
       "id": "10442",
       "key": "SLAVE-437",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10442",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
       "createdDate": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
       "dueDate": ""
@@ -535,7 +535,7 @@
       "id": "10439",
       "key": "SLAVE-435",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10439",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
       "createdDate": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
       "dueDate": ""
@@ -545,7 +545,7 @@
       "id": "10436",
       "key": "SLAVE-434",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10436",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
       "createdDate": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
       "dueDate": ""
@@ -555,7 +555,7 @@
       "id": "10434",
       "key": "SLAVE-430",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10434",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
       "createdDate": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
       "dueDate": ""
@@ -565,7 +565,7 @@
       "id": "10429",
       "key": "SLAVE-429",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10429",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como SCRUM Master, quero gerenciar a Sprint",
       "createdDate": "Eu, como SCRUM Master, quero gerenciar a Sprint",
       "dueDate": ""
@@ -575,7 +575,7 @@
       "id": "10421",
       "key": "SLAVE-417",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10421",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -585,7 +585,7 @@
       "id": "10419",
       "key": "SLAVE-415",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10419",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -595,7 +595,7 @@
       "id": "10418",
       "key": "SLAVE-413",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10418",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -605,7 +605,7 @@
       "id": "10413",
       "key": "SLAVE-410",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10413",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -615,7 +615,7 @@
       "id": "10412",
       "key": "SLAVE-408",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10412",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -625,7 +625,7 @@
       "id": "10402",
       "key": "SLAVE-406",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10402",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -635,7 +635,7 @@
       "id": "10406",
       "key": "SLAVE-404",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10406",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -645,7 +645,7 @@
       "id": "10407",
       "key": "SLAVE-401",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10407",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -655,7 +655,7 @@
       "id": "10403",
       "key": "SLAVE-399",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10403",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -665,7 +665,7 @@
       "id": "10400",
       "key": "SLAVE-396",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10400",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -675,7 +675,7 @@
       "id": "10399",
       "key": "SLAVE-394",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10399",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -685,7 +685,7 @@
       "id": "10397",
       "key": "SLAVE-393",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10397",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -695,7 +695,7 @@
       "id": "10396",
       "key": "SLAVE-392",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10396",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Jira Dashboard",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Jira Dashboard",
       "dueDate": ""
@@ -705,7 +705,7 @@
       "id": "10394",
       "key": "SLAVE-391",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10394",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
       "dueDate": ""
@@ -715,7 +715,7 @@
       "id": "10393",
       "key": "SLAVE-388",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10393",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Métricas Ágeis",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Métricas Ágeis",
       "dueDate": ""
@@ -725,7 +725,7 @@
       "id": "10389",
       "key": "SLAVE-384",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10389",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Vue",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Vue",
       "dueDate": ""
@@ -735,7 +735,7 @@
       "id": "10386",
       "key": "SLAVE-382",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10386",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OData",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OData",
       "dueDate": ""
@@ -745,7 +745,7 @@
       "id": "10383",
       "key": "SLAVE-379",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10383",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
       "createdDate": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
       "dueDate": ""
@@ -755,7 +755,7 @@
       "id": "10382",
       "key": "SLAVE-378",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10382",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero gerenciar os merge requests do projeto",
       "createdDate": "Eu, no papel de Desenvolvedor, quero gerenciar os merge requests do projeto",
       "dueDate": ""
@@ -765,7 +765,7 @@
       "id": "10381",
       "key": "SLAVE-377",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10381",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Gestor, quero gerenciar produtividade do time via Clockify",
       "createdDate": "Eu, no papel de Gestor, quero gerenciar produtividade do time via Clockify",
       "dueDate": ""
@@ -775,7 +775,7 @@
       "id": "10380",
       "key": "SLAVE-376",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10380",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero realizar a integração dos módulos de alocação no backend",
       "createdDate": "Eu, no papel de Desenvolvedor, quero realizar a integração dos módulos de alocação no backend",
       "dueDate": ""
@@ -785,7 +785,7 @@
       "id": "10378",
       "key": "SLAVE-374",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10378",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
       "createdDate": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
       "dueDate": ""
@@ -795,7 +795,7 @@
       "id": "10377",
       "key": "SLAVE-373",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10377",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero revisar os validadores das entidades",
       "createdDate": "Eu, no papel de Desenvolvedor, quero revisar os validadores das entidades",
       "dueDate": ""
@@ -805,7 +805,7 @@
       "id": "10376",
       "key": "SLAVE-372",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10376",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar a alocação de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Criar a alocação de uma organização",
       "dueDate": ""
@@ -815,7 +815,7 @@
       "id": "10375",
       "key": "SLAVE-371",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10375",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar um time em um projeto",
       "createdDate": "Eu, no papel de Coordenador, quero Criar um time em um projeto",
       "dueDate": ""
@@ -825,7 +825,7 @@
       "id": "10374",
       "key": "SLAVE-370",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10374",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as Epics estão finalizadas, a Sprint também é finalizada",
       "createdDate": "Criar automação onde, quando todas as Epics estão finalizadas, a Sprint também é finalizada",
       "dueDate": ""
@@ -835,7 +835,7 @@
       "id": "10373",
       "key": "SLAVE-369",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10373",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as US estão finalizadas, a Epic também é finalizada",
       "createdDate": "Criar automação onde, quando todas as US estão finalizadas, a Epic também é finalizada",
       "dueDate": ""
@@ -845,7 +845,7 @@
       "id": "10372",
       "key": "SLAVE-368",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10372",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as US estão em progresso, a Epic também está em progresso",
       "createdDate": "Criar automação onde, quando todas as US estão em progresso, a Epic também está em progresso",
       "dueDate": ""
@@ -855,7 +855,7 @@
       "id": "10371",
       "key": "SLAVE-367",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10371",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, a US é marcada como concluída quando todas as subtarefas estão feitas",
       "createdDate": "Criar automação onde, a US é marcada como concluída quando todas as subtarefas estão feitas",
       "dueDate": ""
@@ -865,7 +865,7 @@
       "id": "10370",
       "key": "SLAVE-366",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10370",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, quando pelo menos uma task está em progresso, a US é movida para em progresso",
       "createdDate": "Criar automação onde, quando pelo menos uma task está em progresso, a US é movida para em progresso",
       "dueDate": ""
@@ -875,7 +875,7 @@
       "id": "10369",
       "key": "SLAVE-365",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10369",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar automação onde, quando a US está em progresso, uma branch é criada",
       "createdDate": "Criar automação onde, quando a US está em progresso, uma branch é criada",
       "dueDate": ""
@@ -885,7 +885,7 @@
       "id": "10368",
       "key": "SLAVE-364",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10368",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero fazer Code Review",
       "createdDate": "Eu, no papel de Desenvolvedor, quero fazer Code Review",
       "dueDate": ""
@@ -895,7 +895,7 @@
       "id": "10367",
       "key": "SLAVE-363",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10367",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Correção dos atributos da entidade Membro",
       "createdDate": "Correção dos atributos da entidade Membro",
       "dueDate": ""
@@ -905,7 +905,7 @@
       "id": "10366",
       "key": "SLAVE-362",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10366",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Gestor, quero revisar e modificar o workflow caso necessário",
       "createdDate": "Eu, no papel de Gestor, quero revisar e modificar o workflow caso necessário",
       "dueDate": ""
@@ -915,7 +915,7 @@
       "id": "10365",
       "key": "SLAVE-361",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10365",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Gestor, quero automatizar o trabalho via Jira Automations",
       "createdDate": "Eu, no papel de Gestor, quero automatizar o trabalho via Jira Automations",
       "dueDate": ""
@@ -925,7 +925,7 @@
       "id": "10364",
       "key": "SLAVE-360",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10364",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Gestor, quero aprimorar o processo de trabalho via Jira",
       "createdDate": "Eu, no papel de Gestor, quero aprimorar o processo de trabalho via Jira",
       "dueDate": ""
@@ -935,7 +935,7 @@
       "id": "10357",
       "key": "SLAVE-359",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10357",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "Criar uma página para criar a entidade",
       "dueDate": ""
@@ -945,7 +945,7 @@
       "id": "10351",
       "key": "SLAVE-358",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10351",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -955,7 +955,7 @@
       "id": "10361",
       "key": "SLAVE-357",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10361",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -965,7 +965,7 @@
       "id": "10363",
       "key": "SLAVE-356",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10363",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "Criar o controlador que gerenciar a páginas de criar",
       "dueDate": ""
@@ -975,7 +975,7 @@
       "id": "10362",
       "key": "SLAVE-355",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10362",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "dueDate": ""
@@ -985,7 +985,7 @@
       "id": "10360",
       "key": "SLAVE-354",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10360",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "Criar/Atualizar o aplication que cria a entidade",
       "dueDate": ""
@@ -995,7 +995,7 @@
       "id": "10355",
       "key": "SLAVE-353",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10355",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "Criar um controlador para a página de Listar",
       "dueDate": ""
@@ -1005,7 +1005,7 @@
       "id": "10354",
       "key": "SLAVE-352",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10354",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "Criar uma funçao no repositorio da entidade para o listar",
       "dueDate": ""
@@ -1015,7 +1015,7 @@
       "id": "10358",
       "key": "SLAVE-351",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10358",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "Criar/Atualizar o aplication que edite a entidade",
       "dueDate": ""
@@ -1025,7 +1025,7 @@
       "id": "10356",
       "key": "SLAVE-350",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10356",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "dueDate": ""
@@ -1035,7 +1035,7 @@
       "id": "10359",
       "key": "SLAVE-349",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10359",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "Criar o controlador que gerenciar a página de edição",
       "dueDate": ""
@@ -1045,7 +1045,7 @@
       "id": "10346",
       "key": "SLAVE-347",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10346",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "Criar/Atualizar o aplication da entidade para exclusão",
       "dueDate": ""
@@ -1055,7 +1055,7 @@
       "id": "10348",
       "key": "SLAVE-348",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10348",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "Criar uma filtro na página de listar ",
       "dueDate": ""
@@ -1065,7 +1065,7 @@
       "id": "10353",
       "key": "SLAVE-346",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10353",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "Criar/Atualizar o aplication para listar a entidade",
       "dueDate": ""
@@ -1075,7 +1075,7 @@
       "id": "10352",
       "key": "SLAVE-345",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10352",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "Criar uma página que permita listar uma entidade",
       "dueDate": ""
@@ -1085,7 +1085,7 @@
       "id": "10347",
       "key": "SLAVE-344",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10347",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "Criar o controlador que gerenciar a páginas de criar",
       "dueDate": ""
@@ -1095,7 +1095,7 @@
       "id": "10350",
       "key": "SLAVE-343",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10350",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "Criar o controlador que gerenciar a página a exclusão",
       "dueDate": ""
@@ -1105,7 +1105,7 @@
       "id": "10349",
       "key": "SLAVE-341",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10349",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "dueDate": ""
@@ -1115,7 +1115,7 @@
       "id": "10339",
       "key": "SLAVE-342",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10339",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1125,7 +1125,7 @@
       "id": "10342",
       "key": "SLAVE-340",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10342",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "Criar/Atualizar o aplication que cria a entidade",
       "dueDate": ""
@@ -1135,7 +1135,7 @@
       "id": "10345",
       "key": "SLAVE-339",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10345",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1145,7 +1145,7 @@
       "id": "10340",
       "key": "SLAVE-338",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10340",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "dueDate": ""
@@ -1155,7 +1155,7 @@
       "id": "10344",
       "key": "SLAVE-337",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10344",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "Criar uma página para criar a entidade",
       "dueDate": ""
@@ -1165,7 +1165,7 @@
       "id": "10343",
       "key": "SLAVE-336",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10343",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "Criar o controlador que gerenciar a página de edição",
       "dueDate": ""
@@ -1175,7 +1175,7 @@
       "id": "10337",
       "key": "SLAVE-335",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10337",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "Criar/Atualizar o aplication da entidade para exclusão",
       "dueDate": ""
@@ -1185,7 +1185,7 @@
       "id": "10338",
       "key": "SLAVE-334",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10338",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "dueDate": ""
@@ -1195,7 +1195,7 @@
       "id": "10341",
       "key": "SLAVE-332",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10341",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "Criar/Atualizar o aplication que edite a entidade",
       "dueDate": ""
@@ -1205,7 +1205,7 @@
       "id": "10333",
       "key": "SLAVE-333",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10333",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "Criar uma filtro na página de listar ",
       "dueDate": ""
@@ -1215,7 +1215,7 @@
       "id": "10334",
       "key": "SLAVE-331",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10334",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "Criar uma página que permita listar uma entidade",
       "dueDate": ""
@@ -1225,7 +1225,7 @@
       "id": "10336",
       "key": "SLAVE-330",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10336",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "Criar um controlador para a página de Listar",
       "dueDate": ""
@@ -1235,7 +1235,7 @@
       "id": "10331",
       "key": "SLAVE-329",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10331",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "Criar uma funçao no repositorio da entidade para o listar",
       "dueDate": ""
@@ -1245,7 +1245,7 @@
       "id": "10335",
       "key": "SLAVE-328",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10335",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "Criar o controlador que gerenciar a página a exclusão",
       "dueDate": ""
@@ -1255,7 +1255,7 @@
       "id": "10332",
       "key": "SLAVE-327",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10332",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "Criar/Atualizar o aplication para listar a entidade",
       "dueDate": ""
@@ -1265,7 +1265,7 @@
       "id": "10330",
       "key": "SLAVE-326",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10330",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "dueDate": ""
@@ -1275,7 +1275,7 @@
       "id": "10329",
       "key": "SLAVE-325",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10329",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
       "dueDate": ""
@@ -1285,7 +1285,7 @@
       "id": "10328",
       "key": "SLAVE-324",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10328",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  as pessoas de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Excluir  as pessoas de uma organização",
       "dueDate": ""
@@ -1295,7 +1295,7 @@
       "id": "10327",
       "key": "SLAVE-323",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10327",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar as equipes de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Criar as equipes de uma organização",
       "dueDate": ""
@@ -1305,7 +1305,7 @@
       "id": "10324",
       "key": "SLAVE-322",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10324",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
       "dueDate": ""
@@ -1315,7 +1315,7 @@
       "id": "10326",
       "key": "SLAVE-321",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10326",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  as equipes de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Editar  as equipes de uma organização",
       "dueDate": ""
@@ -1325,7 +1325,7 @@
       "id": "10323",
       "key": "SLAVE-320",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10323",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar as pessoas de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Criar as pessoas de uma organização",
       "dueDate": ""
@@ -1335,7 +1335,7 @@
       "id": "10322",
       "key": "SLAVE-319",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10322",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  as pessoas de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Editar  as pessoas de uma organização",
       "dueDate": ""
@@ -1345,7 +1345,7 @@
       "id": "10325",
       "key": "SLAVE-318",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10325",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  as equipes de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Excluir  as equipes de uma organização",
       "dueDate": ""
@@ -1355,7 +1355,7 @@
       "id": "10321",
       "key": "SLAVE-317",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10321",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Gestor, quero gerenciar produtividade a do time via Clockify e Jira",
       "createdDate": "Eu, no papel de Gestor, quero gerenciar produtividade a do time via Clockify e Jira",
       "dueDate": ""
@@ -1365,7 +1365,7 @@
       "id": "10315",
       "key": "SLAVE-313",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10315",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as pessoas de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar as pessoas de uma organização",
       "dueDate": ""
@@ -1375,7 +1375,7 @@
       "id": "10314",
       "key": "SLAVE-311",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10314",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as equipes de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar as equipes de uma organização",
       "dueDate": ""
@@ -1385,7 +1385,7 @@
       "id": "10309",
       "key": "SLAVE-305",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10309",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "Criar uma página para criar a entidade",
       "dueDate": ""
@@ -1395,7 +1395,7 @@
       "id": "10308",
       "key": "SLAVE-304",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10308",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "Criar/Atualizar o aplication que cria a entidade",
       "dueDate": ""
@@ -1405,7 +1405,7 @@
       "id": "10303",
       "key": "SLAVE-303",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10303",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "dueDate": ""
@@ -1415,7 +1415,7 @@
       "id": "10304",
       "key": "SLAVE-302",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10304",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1425,7 +1425,7 @@
       "id": "10302",
       "key": "SLAVE-300",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10302",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "Criar uma página que permita listar uma entidade",
       "dueDate": ""
@@ -1435,7 +1435,7 @@
       "id": "10297",
       "key": "SLAVE-301",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10297",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "Criar uma filtro na página de listar ",
       "dueDate": ""
@@ -1445,7 +1445,7 @@
       "id": "10307",
       "key": "SLAVE-299",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10307",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "Criar o controlador que gerenciar a páginas de criar",
       "dueDate": ""
@@ -1455,7 +1455,7 @@
       "id": "10306",
       "key": "SLAVE-298",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10306",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "dueDate": ""
@@ -1465,7 +1465,7 @@
       "id": "10305",
       "key": "SLAVE-297",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10305",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "Criar um controlador para a página de Listar",
       "dueDate": ""
@@ -1475,7 +1475,7 @@
       "id": "10300",
       "key": "SLAVE-296",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10300",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "Criar uma funçao no repositorio da entidade para o listar",
       "dueDate": ""
@@ -1485,7 +1485,7 @@
       "id": "10298",
       "key": "SLAVE-295",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10298",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "Criar/Atualizar o aplication para listar a entidade",
       "dueDate": ""
@@ -1495,7 +1495,7 @@
       "id": "10301",
       "key": "SLAVE-294",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10301",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "Criar o controlador que gerenciar a página de edição",
       "dueDate": ""
@@ -1505,7 +1505,7 @@
       "id": "10299",
       "key": "SLAVE-293",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10299",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "Criar/Atualizar o aplication que edite a entidade",
       "dueDate": ""
@@ -1515,7 +1515,7 @@
       "id": "10295",
       "key": "SLAVE-292",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10295",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "Criar/Atualizar o aplication da entidade para exclusão",
       "dueDate": ""
@@ -1525,7 +1525,7 @@
       "id": "10294",
       "key": "SLAVE-291",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10294",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "dueDate": ""
@@ -1535,7 +1535,7 @@
       "id": "10296",
       "key": "SLAVE-290",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10296",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "Criar o controlador que gerenciar a página a exclusão",
       "dueDate": ""
@@ -1545,7 +1545,7 @@
       "id": "10293",
       "key": "SLAVE-289",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10293",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1555,7 +1555,7 @@
       "id": "10292",
       "key": "SLAVE-288",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10292",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -1565,7 +1565,7 @@
       "id": "10288",
       "key": "SLAVE-287",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10288",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -1575,7 +1575,7 @@
       "id": "10291",
       "key": "SLAVE-286",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10291",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
       "dueDate": ""
@@ -1585,7 +1585,7 @@
       "id": "10290",
       "key": "SLAVE-285",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10290",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar os projetos de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Criar os projetos de uma organização",
       "dueDate": ""
@@ -1595,7 +1595,7 @@
       "id": "10289",
       "key": "SLAVE-284",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10289",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -1605,7 +1605,7 @@
       "id": "10287",
       "key": "SLAVE-283",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10287",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -1615,7 +1615,7 @@
       "id": "10286",
       "key": "SLAVE-282",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10286",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -1625,7 +1625,7 @@
       "id": "10283",
       "key": "SLAVE-281",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10283",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  os projetos de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Editar  os projetos de uma organização",
       "dueDate": ""
@@ -1635,7 +1635,7 @@
       "id": "10285",
       "key": "SLAVE-280",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10285",
-      "type": "task",
+      "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  os projetos de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Excluir  os projetos de uma organização",
       "dueDate": ""
@@ -1645,7 +1645,7 @@
       "id": "10284",
       "key": "SLAVE-279",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10284",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -1655,7 +1655,7 @@
       "id": "10282",
       "key": "SLAVE-278",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10282",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -1665,7 +1665,7 @@
       "id": "10280",
       "key": "SLAVE-277",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10280",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -1675,7 +1675,7 @@
       "id": "10281",
       "key": "SLAVE-276",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10281",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -1685,7 +1685,7 @@
       "id": "10279",
       "key": "SLAVE-275",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10279",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -1695,7 +1695,7 @@
       "id": "10277",
       "key": "SLAVE-274",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10277",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -1705,7 +1705,7 @@
       "id": "10278",
       "key": "SLAVE-273",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10278",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -1715,7 +1715,7 @@
       "id": "10274",
       "key": "SLAVE-272",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10274",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar os projetos de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar os projetos de uma organização",
       "dueDate": ""
@@ -1725,7 +1725,7 @@
       "id": "10273",
       "key": "SLAVE-271",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10273",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "dueDate": ""
@@ -1735,7 +1735,7 @@
       "id": "10276",
       "key": "SLAVE-270",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10276",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "dueDate": ""
@@ -1745,7 +1745,7 @@
       "id": "10275",
       "key": "SLAVE-268",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10275",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "dueDate": ""
@@ -1755,7 +1755,7 @@
       "id": "10272",
       "key": "SLAVE-269",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10272",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
       "dueDate": ""
@@ -1765,7 +1765,7 @@
       "id": "10267",
       "key": "SLAVE-263",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10267",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero refletir migration no banco de dados",
       "createdDate": "Eu, como Desenvolvedor, quero refletir migration no banco de dados",
       "dueDate": ""
@@ -1775,7 +1775,7 @@
       "id": "10263",
       "key": "SLAVE-259",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10263",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar um Projeto",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar um Projeto",
       "dueDate": ""
@@ -1785,7 +1785,7 @@
       "id": "10262",
       "key": "SLAVE-258",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10262",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar a Pessoa de um projeto",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar a Pessoa de um projeto",
       "dueDate": ""
@@ -1795,7 +1795,7 @@
       "id": "10234",
       "key": "SLAVE-233",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10234",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -1805,7 +1805,7 @@
       "id": "10235",
       "key": "SLAVE-232",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10235",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -1815,7 +1815,7 @@
       "id": "10233",
       "key": "SLAVE-231",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10233",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -1825,7 +1825,7 @@
       "id": "10227",
       "key": "SLAVE-226",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10227",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento sobre automação no Jira com Gitlab",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento sobre automação no Jira com Gitlab",
       "dueDate": ""
@@ -1835,7 +1835,7 @@
       "id": "10224",
       "key": "SLAVE-222",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10224",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1845,7 +1845,7 @@
       "id": "10223",
       "key": "SLAVE-221",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10223",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "Criar o controlador que gerenciar a página de edição",
       "dueDate": ""
@@ -1855,7 +1855,7 @@
       "id": "10222",
       "key": "SLAVE-220",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10222",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "Criar o controlador que gerenciar a página a exclusão",
       "dueDate": ""
@@ -1865,7 +1865,7 @@
       "id": "10221",
       "key": "SLAVE-219",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10221",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "Criar uma filtro na página de listar ",
       "dueDate": ""
@@ -1875,7 +1875,7 @@
       "id": "10220",
       "key": "SLAVE-218",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10220",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "Criar/Atualizar o aplication da entidade para exclusão",
       "dueDate": ""
@@ -1885,7 +1885,7 @@
       "id": "10219",
       "key": "SLAVE-217",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10219",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1895,7 +1895,7 @@
       "id": "10218",
       "key": "SLAVE-216",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10218",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "Criar uma página que permita listar uma entidade",
       "dueDate": ""
@@ -1905,7 +1905,7 @@
       "id": "10217",
       "key": "SLAVE-215",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10217",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "dueDate": ""
@@ -1915,7 +1915,7 @@
       "id": "10214",
       "key": "SLAVE-214",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10214",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "Criar/Atualizar o aplication da entidade para exclusão",
       "dueDate": ""
@@ -1925,7 +1925,7 @@
       "id": "10216",
       "key": "SLAVE-213",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10216",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -1935,7 +1935,7 @@
       "id": "10213",
       "key": "SLAVE-212",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10213",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "dueDate": ""
@@ -1945,7 +1945,7 @@
       "id": "10215",
       "key": "SLAVE-211",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10215",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "Criar/Atualizar o aplication que edite a entidade",
       "dueDate": ""
@@ -1955,7 +1955,7 @@
       "id": "10211",
       "key": "SLAVE-210",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10211",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "Criar uma funçao no repositorio da entidade para o listar",
       "dueDate": ""
@@ -1965,7 +1965,7 @@
       "id": "10212",
       "key": "SLAVE-209",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10212",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar a pasta para o Dominio do projeto",
       "createdDate": "Criar a pasta para o Dominio do projeto",
       "dueDate": ""
@@ -1975,7 +1975,7 @@
       "id": "10209",
       "key": "SLAVE-208",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10209",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "Criar o controlador que gerenciar a página a exclusão",
       "dueDate": ""
@@ -1985,7 +1985,7 @@
       "id": "10210",
       "key": "SLAVE-207",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10210",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "dueDate": ""
@@ -1995,7 +1995,7 @@
       "id": "10207",
       "key": "SLAVE-205",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10207",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Configurar o ORM para criar o banco baseado no modelo de projeto",
       "createdDate": "Configurar o ORM para criar o banco baseado no modelo de projeto",
       "dueDate": ""
@@ -2005,7 +2005,7 @@
       "id": "10208",
       "key": "SLAVE-206",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10208",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "Criar um controlador para a página de Listar",
       "dueDate": ""
@@ -2015,7 +2015,7 @@
       "id": "10206",
       "key": "SLAVE-204",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10206",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Implementar o modelo de projeto",
       "createdDate": "Implementar o modelo de projeto",
       "dueDate": ""
@@ -2025,7 +2025,7 @@
       "id": "10205",
       "key": "SLAVE-203",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10205",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Definir qual a padrão de herença de classes será aplicado no banco de dados",
       "createdDate": "Definir qual a padrão de herença de classes será aplicado no banco de dados",
       "dueDate": ""
@@ -2035,7 +2035,7 @@
       "id": "10204",
       "key": "SLAVE-202",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10204",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar a pasta para os applications do projeto",
       "createdDate": "Criar a pasta para os applications do projeto",
       "dueDate": ""
@@ -2045,7 +2045,7 @@
       "id": "10203",
       "key": "SLAVE-201",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10203",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o Modelo de Projeto baseado no Diagrama de Classes de Domain",
       "createdDate": "Criar o Modelo de Projeto baseado no Diagrama de Classes de Domain",
       "dueDate": ""
@@ -2055,7 +2055,7 @@
       "id": "10201",
       "key": "SLAVE-200",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10201",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar a pasta para os controladores do projeto",
       "createdDate": "Criar a pasta para os controladores do projeto",
       "dueDate": ""
@@ -2065,7 +2065,7 @@
       "id": "10202",
       "key": "SLAVE-199",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10202",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "dueDate": ""
@@ -2075,7 +2075,7 @@
       "id": "10200",
       "key": "SLAVE-198",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10200",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar a pasta para a camada de Repositorio",
       "createdDate": "Criar a pasta para a camada de Repositorio",
       "dueDate": ""
@@ -2085,7 +2085,7 @@
       "id": "10199",
       "key": "SLAVE-197",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10199",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "Criar/Atualizar o aplication para listar a entidade",
       "dueDate": ""
@@ -2095,7 +2095,7 @@
       "id": "10198",
       "key": "SLAVE-196",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10198",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "Criar/Atualizar o aplication que edite a entidade",
       "dueDate": ""
@@ -2105,7 +2105,7 @@
       "id": "10197",
       "key": "SLAVE-195",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10197",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Configurar um docker compose para rodar a aplicação e banco de dados",
       "createdDate": "Configurar um docker compose para rodar a aplicação e banco de dados",
       "dueDate": ""
@@ -2115,7 +2115,7 @@
       "id": "10196",
       "key": "SLAVE-194",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10196",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar a pasta para os views do projeto",
       "createdDate": "Criar a pasta para os views do projeto",
       "dueDate": ""
@@ -2125,7 +2125,7 @@
       "id": "10195",
       "key": "SLAVE-193",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10195",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Configurar cada máquina do desenvolvedor para rodar o padrão de commit",
       "createdDate": "Configurar cada máquina do desenvolvedor para rodar o padrão de commit",
       "dueDate": ""
@@ -2135,7 +2135,7 @@
       "id": "10194",
       "key": "SLAVE-192",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10194",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "Criar/Atualizar o aplication para listar a entidade",
       "dueDate": ""
@@ -2145,7 +2145,7 @@
       "id": "10193",
       "key": "SLAVE-191",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10193",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "Criar uma funçao no repositorio da entidade para o listar",
       "dueDate": ""
@@ -2155,7 +2155,7 @@
       "id": "10191",
       "key": "SLAVE-190",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10191",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "Criar uma filtro na página de listar ",
       "dueDate": ""
@@ -2165,7 +2165,7 @@
       "id": "10190",
       "key": "SLAVE-189",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10190",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "Criar um controlador para a página de Listar",
       "dueDate": ""
@@ -2175,7 +2175,7 @@
       "id": "10192",
       "key": "SLAVE-188",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10192",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "Criar uma página que permita listar uma entidade",
       "dueDate": ""
@@ -2185,7 +2185,7 @@
       "id": "10189",
       "key": "SLAVE-187",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10189",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "dueDate": ""
@@ -2195,7 +2195,7 @@
       "id": "10188",
       "key": "SLAVE-186",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10188",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "Criar o controlador que gerenciar a página de edição",
       "dueDate": ""
@@ -2205,7 +2205,7 @@
       "id": "10187",
       "key": "SLAVE-185",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10187",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "Criar o controlador que gerenciar a páginas de criar",
       "dueDate": ""
@@ -2215,7 +2215,7 @@
       "id": "10184",
       "key": "SLAVE-184",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10184",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "Criar uma página para editar a entidade",
       "dueDate": ""
@@ -2225,7 +2225,7 @@
       "id": "10186",
       "key": "SLAVE-183",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10186",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "Criar uma página para criar a entidade",
       "dueDate": ""
@@ -2235,7 +2235,7 @@
       "id": "10185",
       "key": "SLAVE-182",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10185",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "Criar/Atualizar o aplication que cria a entidade",
       "dueDate": ""
@@ -2245,7 +2245,7 @@
       "id": "10183",
       "key": "SLAVE-181",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10183",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "dueDate": ""
@@ -2255,7 +2255,7 @@
       "id": "10182",
       "key": "SLAVE-180",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10182",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "Criar o controlador que gerenciar a páginas de criar",
       "dueDate": ""
@@ -2265,7 +2265,7 @@
       "id": "10181",
       "key": "SLAVE-179",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10181",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "Criar uma página para criar a entidade",
       "dueDate": ""
@@ -2275,7 +2275,7 @@
       "id": "10180",
       "key": "SLAVE-178",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10180",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "Criar/Atualizar o aplication que cria a entidade",
       "dueDate": ""
@@ -2285,7 +2285,7 @@
       "id": "10179",
       "key": "SLAVE-177",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10179",
-      "type": "task",
+      "type": "História",
       "title": "Excluir uma entidade",
       "createdDate": "Excluir uma entidade",
       "dueDate": ""
@@ -2295,7 +2295,7 @@
       "id": "10177",
       "key": "SLAVE-176",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10177",
-      "type": "task",
+      "type": "História",
       "title": "Editar de uma entidade",
       "createdDate": "Editar de uma entidade",
       "dueDate": ""
@@ -2305,7 +2305,7 @@
       "id": "10178",
       "key": "SLAVE-175",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10178",
-      "type": "task",
+      "type": "História",
       "title": "Excluir uma entidade",
       "createdDate": "Excluir uma entidade",
       "dueDate": ""
@@ -2315,7 +2315,7 @@
       "id": "10176",
       "key": "SLAVE-174",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10176",
-      "type": "task",
+      "type": "História",
       "title": "Criar o Modelo de Dominio baseado no diagrama de classes",
       "createdDate": "Criar o Modelo de Dominio baseado no diagrama de classes",
       "dueDate": ""
@@ -2325,7 +2325,7 @@
       "id": "10174",
       "key": "SLAVE-173",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10174",
-      "type": "task",
+      "type": "História",
       "title": "Criar as pastas que represente as camadas Model-View-Controle",
       "createdDate": "Criar as pastas que represente as camadas Model-View-Controle",
       "dueDate": ""
@@ -2335,7 +2335,7 @@
       "id": "10175",
       "key": "SLAVE-172",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10175",
-      "type": "task",
+      "type": "História",
       "title": "Criar Infraestrura base do projeto",
       "createdDate": "Criar Infraestrura base do projeto",
       "dueDate": ""
@@ -2345,7 +2345,7 @@
       "id": "10173",
       "key": "SLAVE-171",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10173",
-      "type": "task",
+      "type": "História",
       "title": "Listar de uma entidade",
       "createdDate": "Listar de uma entidade",
       "dueDate": ""
@@ -2355,7 +2355,7 @@
       "id": "10172",
       "key": "SLAVE-170",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10172",
-      "type": "task",
+      "type": "História",
       "title": "Editar de uma entidade",
       "createdDate": "Editar de uma entidade",
       "dueDate": ""
@@ -2365,7 +2365,7 @@
       "id": "10171",
       "key": "SLAVE-169",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10171",
-      "type": "task",
+      "type": "História",
       "title": "Listar de uma entidade",
       "createdDate": "Listar de uma entidade",
       "dueDate": ""
@@ -2375,7 +2375,7 @@
       "id": "10170",
       "key": "SLAVE-168",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10170",
-      "type": "task",
+      "type": "História",
       "title": "Criar de uma entidade",
       "createdDate": "Criar de uma entidade",
       "dueDate": ""
@@ -2385,7 +2385,7 @@
       "id": "10169",
       "key": "SLAVE-167",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10169",
-      "type": "task",
+      "type": "História",
       "title": "Criar de uma entidade",
       "createdDate": "Criar de uma entidade",
       "dueDate": ""
@@ -2395,7 +2395,7 @@
       "id": "10168",
       "key": "SLAVE-166",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10168",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de desenvolvedor, quero criar a arquitetura base do proejto",
       "createdDate": "Eu, no papel de desenvolvedor, quero criar a arquitetura base do proejto",
       "dueDate": ""
@@ -2405,7 +2405,7 @@
       "id": "10167",
       "key": "SLAVE-165",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10167",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar a Categoria de um projeto",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar a Categoria de um projeto",
       "dueDate": ""
@@ -2415,7 +2415,7 @@
       "id": "10166",
       "key": "SLAVE-164",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10166",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as funções de uma organização",
       "createdDate": "Eu, no papel de Coordenador, quero Cadastrar as funções de uma organização",
       "dueDate": ""
@@ -2425,7 +2425,7 @@
       "id": "10163",
       "key": "SLAVE-161",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10163",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o Modelo de Estado",
       "createdDate": "Criar o Modelo de Estado",
       "dueDate": ""
@@ -2435,7 +2435,7 @@
       "id": "10162",
       "key": "SLAVE-160",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10162",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Especificar o caso de Uso",
       "createdDate": "Especificar o caso de Uso",
       "dueDate": ""
@@ -2445,7 +2445,7 @@
       "id": "10161",
       "key": "SLAVE-159",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10161",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Definir uma versão para o projeto",
       "createdDate": "Definir uma versão para o projeto",
       "dueDate": ""
@@ -2455,7 +2455,7 @@
       "id": "10159",
       "key": "SLAVE-158",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10159",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Definir a relação entre os requisitos funcionais do projeto e não funcionais",
       "createdDate": "Definir a relação entre os requisitos funcionais do projeto e não funcionais",
       "dueDate": ""
@@ -2465,7 +2465,7 @@
       "id": "10160",
       "key": "SLAVE-157",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10160",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o diagrama de casos de uso",
       "createdDate": "Criar o diagrama de casos de uso",
       "dueDate": ""
@@ -2475,7 +2475,7 @@
       "id": "10158",
       "key": "SLAVE-156",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10158",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Priorizar os equisitos funcionais",
       "createdDate": "Priorizar os equisitos funcionais",
       "dueDate": ""
@@ -2485,7 +2485,7 @@
       "id": "10157",
       "key": "SLAVE-155",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10157",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o diagrama de classes",
       "createdDate": "Criar o diagrama de classes",
       "dueDate": ""
@@ -2495,7 +2495,7 @@
       "id": "10156",
       "key": "SLAVE-154",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10156",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Listar os Requisitos Funcionais e Não funcionais do projeto",
       "createdDate": "Listar os Requisitos Funcionais e Não funcionais do projeto",
       "dueDate": ""
@@ -2505,7 +2505,7 @@
       "id": "10155",
       "key": "SLAVE-153",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10155",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Definir os domínios do requisitos funcionais do sistema",
       "createdDate": "Definir os domínios do requisitos funcionais do sistema",
       "dueDate": ""
@@ -2515,7 +2515,7 @@
       "id": "10142",
       "key": "SLAVE-140",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10142",
-      "type": "task",
+      "type": "História",
       "title": "Modelagem",
       "createdDate": "Modelagem",
       "dueDate": ""
@@ -2525,7 +2525,7 @@
       "id": "10141",
       "key": "SLAVE-139",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10141",
-      "type": "task",
+      "type": "História",
       "title": "Detalhamento dos Casos de USO",
       "createdDate": "Detalhamento dos Casos de USO",
       "dueDate": ""
@@ -2535,7 +2535,7 @@
       "id": "10140",
       "key": "SLAVE-138",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10140",
-      "type": "task",
+      "type": "História",
       "title": "Definir Escopo do Projeto",
       "createdDate": "Definir Escopo do Projeto",
       "dueDate": ""
@@ -2545,7 +2545,7 @@
       "id": "10129",
       "key": "SLAVE-128",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10129",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvoledor, quero definir um alvo do projeto e um solução",
       "createdDate": "Eu, como Desenvoledor, quero definir um alvo do projeto e um solução",
       "dueDate": ""
@@ -2555,7 +2555,7 @@
       "id": "10127",
       "key": "SLAVE-125",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10127",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar a Analise do Projeto",
       "createdDate": "Eu, como Desenvolvedor, quero realizar a Analise do Projeto",
       "dueDate": ""
@@ -2565,7 +2565,7 @@
       "id": "10126",
       "key": "SLAVE-123",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10126",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvoledor, quero definir um prototipo de low code para a solução proposta",
       "createdDate": "Eu, como Desenvoledor, quero definir um prototipo de low code para a solução proposta",
       "dueDate": ""
@@ -2575,7 +2575,7 @@
       "id": "10103",
       "key": "SLAVE-101",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10103",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "createdDate": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "dueDate": ""
@@ -2585,7 +2585,7 @@
       "id": "10090",
       "key": "SLAVE-88",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10090",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -2595,7 +2595,7 @@
       "id": "10088",
       "key": "SLAVE-86",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10088",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -2605,7 +2605,7 @@
       "id": "10085",
       "key": "SLAVE-85",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10085",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -2615,7 +2615,7 @@
       "id": "10084",
       "key": "SLAVE-82",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10084",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -2625,7 +2625,7 @@
       "id": "10082",
       "key": "SLAVE-81",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10082",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -2635,7 +2635,7 @@
       "id": "10083",
       "key": "SLAVE-80",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10083",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "Publicar o conhecimento Adquirido em um local",
       "dueDate": ""
@@ -2645,7 +2645,7 @@
       "id": "10081",
       "key": "SLAVE-79",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10081",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -2655,7 +2655,7 @@
       "id": "10080",
       "key": "SLAVE-78",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10080",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "Registrar o Conhecimento Adquirido",
       "dueDate": ""
@@ -2665,7 +2665,7 @@
       "id": "10079",
       "key": "SLAVE-77",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10079",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "Divulgar o material publicado para os interessado",
       "dueDate": ""
@@ -2675,7 +2675,7 @@
       "id": "10076",
       "key": "SLAVE-76",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10076",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "dueDate": ""
@@ -2685,7 +2685,7 @@
       "id": "10077",
       "key": "SLAVE-75",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10077",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "dueDate": ""
@@ -2695,7 +2695,7 @@
       "id": "10075",
       "key": "SLAVE-73",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10075",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "createdDate": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "dueDate": ""
@@ -2705,7 +2705,7 @@
       "id": "10074",
       "key": "SLAVE-72",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10074",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Estudar Blazor",
       "createdDate": "Estudar Blazor",
       "dueDate": ""
@@ -2715,7 +2715,7 @@
       "id": "10073",
       "key": "SLAVE-71",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10073",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Apresentar o aprendizado sobre Blazor",
       "createdDate": "Apresentar o aprendizado sobre Blazor",
       "dueDate": ""
@@ -2725,7 +2725,7 @@
       "id": "10071",
       "key": "SLAVE-70",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10071",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Apresentar o aprendizado sobre fundamento e Orientação a Objetos em C#",
       "createdDate": "Apresentar o aprendizado sobre fundamento e Orientação a Objetos em C#",
       "dueDate": ""
@@ -2735,7 +2735,7 @@
       "id": "10070",
       "key": "SLAVE-69",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10070",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Estudar Fundamentos de Orientação a Objetos em C#",
       "createdDate": "Estudar Fundamentos de Orientação a Objetos em C#",
       "dueDate": ""
@@ -2745,7 +2745,7 @@
       "id": "10072",
       "key": "SLAVE-68",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10072",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Estudar Fundamento de C#",
       "createdDate": "Estudar Fundamento de C#",
       "dueDate": ""
@@ -2755,7 +2755,7 @@
       "id": "10069",
       "key": "SLAVE-67",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10069",
-      "type": "task",
+      "type": "História",
       "title": "Estudar Blazor",
       "createdDate": "Estudar Blazor",
       "dueDate": ""
@@ -2765,7 +2765,7 @@
       "id": "10068",
       "key": "SLAVE-66",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10068",
-      "type": "task",
+      "type": "História",
       "title": "Estudar Orientaçao Objeto e Fundamento de C#",
       "createdDate": "Estudar Orientaçao Objeto e Fundamento de C#",
       "dueDate": ""
@@ -2775,7 +2775,7 @@
       "id": "10067",
       "key": "SLAVE-65",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10067",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "createdDate": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "dueDate": ""
@@ -2785,7 +2785,7 @@
       "id": "10066",
       "key": "SLAVE-64",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10066",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Desenvolver api com a infraestrutura do projeto BAC",
       "createdDate": "Desenvolver api com a infraestrutura do projeto BAC",
       "dueDate": ""
@@ -2795,7 +2795,7 @@
       "id": "10065",
       "key": "SLAVE-63",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10065",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Reunião com BAC para aprender alguns conceitos Docker",
       "createdDate": "Reunião com BAC para aprender alguns conceitos Docker",
       "dueDate": ""
@@ -2805,7 +2805,7 @@
       "id": "10064",
       "key": "SLAVE-62",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10064",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Configurar ferramentas e executar o docker",
       "createdDate": "Configurar ferramentas e executar o docker",
       "dueDate": ""
@@ -2815,7 +2815,7 @@
       "id": "10063",
       "key": "SLAVE-61",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10063",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar o video do protótipo no quant-ux",
       "createdDate": "Criar o video do protótipo no quant-ux",
       "dueDate": ""
@@ -2825,7 +2825,7 @@
       "id": "10062",
       "key": "SLAVE-60",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10062",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Criar um vídeo de apresentação da ferramenta implementada ",
       "createdDate": "Criar um vídeo de apresentação da ferramenta implementada ",
       "dueDate": ""
@@ -2835,7 +2835,7 @@
       "id": "10061",
       "key": "SLAVE-59",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10061",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Intregrar as telas do appsmith com o strapi ",
       "createdDate": "Intregrar as telas do appsmith com o strapi ",
       "dueDate": ""
@@ -2845,7 +2845,7 @@
       "id": "10060",
       "key": "SLAVE-58",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10060",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Criar os papeis no strapi ",
       "createdDate": "Criar os papeis no strapi ",
       "dueDate": ""
@@ -2855,7 +2855,7 @@
       "id": "10059",
       "key": "SLAVE-57",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10059",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Modelar as entidadades usando o strapi ",
       "createdDate": "Modelar as entidadades usando o strapi ",
       "dueDate": ""
@@ -2865,7 +2865,7 @@
       "id": "10058",
       "key": "SLAVE-56",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10058",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Implementação das telas do protótipo na ferramenta appsmith",
       "createdDate": "Implementação das telas do protótipo na ferramenta appsmith",
       "dueDate": ""
@@ -2875,7 +2875,7 @@
       "id": "10057",
       "key": "SLAVE-55",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10057",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Assistir aos vídeos do projeto de exemplo envolvendo appsmith e strapi ",
       "createdDate": "Assistir aos vídeos do projeto de exemplo envolvendo appsmith e strapi ",
       "dueDate": ""
@@ -2885,7 +2885,7 @@
       "id": "10056",
       "key": "SLAVE-54",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10056",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, no papel de desenvolvedor, quero implementar uma solução prototipada da forma mais rápida para entregar valor ao meu usuário",
       "createdDate": "Eu, no papel de desenvolvedor, quero implementar uma solução prototipada da forma mais rápida para entregar valor ao meu usuário",
       "dueDate": ""
@@ -2895,7 +2895,7 @@
       "id": "10055",
       "key": "SLAVE-53",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10055",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como desenvolvedor, quero realizar o deploy da API de teste",
       "createdDate": "Eu, como desenvolvedor, quero realizar o deploy da API de teste",
       "dueDate": ""
@@ -2905,7 +2905,7 @@
       "id": "10052",
       "key": "SLAVE-50",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10052",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Usar o planning poker para mensurar os story points",
       "createdDate": "Usar o planning poker para mensurar os story points",
       "dueDate": ""
@@ -2915,7 +2915,7 @@
       "id": "10051",
       "key": "SLAVE-49",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10051",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Usar o diário de bordo único para o projeto",
       "createdDate": "Usar o diário de bordo único para o projeto",
       "dueDate": ""
@@ -2925,7 +2925,7 @@
       "id": "10050",
       "key": "SLAVE-48",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10050",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Validação do protótipo junto ao publico alvo (Marcar reunião)",
       "createdDate": "Validação do protótipo junto ao publico alvo (Marcar reunião)",
       "dueDate": ""
@@ -2935,7 +2935,7 @@
       "id": "10049",
       "key": "SLAVE-47",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10049",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Revisão, análise dos feedback e ajuste do protótipo",
       "createdDate": "Revisão, análise dos feedback e ajuste do protótipo",
       "dueDate": ""
@@ -2945,7 +2945,7 @@
       "id": "10048",
       "key": "SLAVE-46",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10048",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Validação do protótipo junto ao público alvo(Marcar reunião)",
       "createdDate": "Validação do protótipo junto ao público alvo(Marcar reunião)",
       "dueDate": ""
@@ -2955,7 +2955,7 @@
       "id": "10047",
       "key": "SLAVE-45",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10047",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Tempo assíncrono para validação do protótipo pelo dono do protótipo",
       "createdDate": "Tempo assíncrono para validação do protótipo pelo dono do protótipo",
       "dueDate": ""
@@ -2965,7 +2965,7 @@
       "id": "10046",
       "key": "SLAVE-44",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10046",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Criação de um protótipo de alta fidelidade",
       "createdDate": "Criação de um protótipo de alta fidelidade",
       "dueDate": ""
@@ -2975,7 +2975,7 @@
       "id": "10045",
       "key": "SLAVE-43",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10045",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Reunião para apresentação e validação do storyboard com dono do protótipo",
       "createdDate": "Reunião para apresentação e validação do storyboard com dono do protótipo",
       "dueDate": ""
@@ -2985,7 +2985,7 @@
       "id": "10044",
       "key": "SLAVE-42",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10044",
-      "type": "task",
+      "type": "Tarefa",
       "title": "Eu, como desenvolvedor, que elaborar storyboards acerca do uso do sistema",
       "createdDate": "Eu, como desenvolvedor, que elaborar storyboards acerca do uso do sistema",
       "dueDate": ""
@@ -2995,7 +2995,7 @@
       "id": "10043",
       "key": "SLAVE-41",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10043",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar Diário de Bordo do projeto Slave One",
       "createdDate": "Criar Diário de Bordo do projeto Slave One",
       "dueDate": ""
@@ -3005,7 +3005,7 @@
       "id": "10042",
       "key": "SLAVE-40",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10042",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar método de medição de produtividade do time",
       "createdDate": "Criar método de medição de produtividade do time",
       "dueDate": ""
@@ -3015,7 +3015,7 @@
       "id": "10041",
       "key": "SLAVE-39",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10041",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Retrospectiva",
       "createdDate": "Reunião de Retrospectiva",
       "dueDate": ""
@@ -3025,7 +3025,7 @@
       "id": "10040",
       "key": "SLAVE-38",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10040",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião Diária",
       "createdDate": "Reunião Diária",
       "dueDate": ""
@@ -3035,7 +3035,7 @@
       "id": "10039",
       "key": "SLAVE-37",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10039",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Revisão",
       "createdDate": "Reunião de Revisão",
       "dueDate": ""
@@ -3045,7 +3045,7 @@
       "id": "10038",
       "key": "SLAVE-36",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10038",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Planejamento",
       "createdDate": "Reunião de Planejamento",
       "dueDate": ""
@@ -3055,7 +3055,7 @@
       "id": "10037",
       "key": "SLAVE-35",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10037",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Scrum Master, quero gerenciar o sprint",
       "createdDate": "Eu, como Scrum Master, quero gerenciar o sprint",
       "dueDate": ""
@@ -3065,7 +3065,7 @@
       "id": "10036",
       "key": "SLAVE-34",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10036",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar o PMC para organizar melhor o plano do projeto",
       "createdDate": "Eu, como desenvolvedor, quero implementar o PMC para organizar melhor o plano do projeto",
       "dueDate": ""
@@ -3075,7 +3075,7 @@
       "id": "10034",
       "key": "SLAVE-32",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10034",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar o prototipo de  alta fidelidade e funcional para apresentar ao meu usuário final, validar e coletar feebacks sobre o protótipo",
       "createdDate": "Eu, como desenvolvedor, quero implementar o prototipo de  alta fidelidade e funcional para apresentar ao meu usuário final, validar e coletar feebacks sobre o protótipo",
       "dueDate": ""
@@ -3085,7 +3085,7 @@
       "id": "10032",
       "key": "SLAVE-30",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10032",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar um storyboard com o fluxo de cadastro de projetos e membros para validar entender o uso do sistema pelo usuário",
       "createdDate": "Eu, como desenvolvedor, quero implementar um storyboard com o fluxo de cadastro de projetos e membros para validar entender o uso do sistema pelo usuário",
       "dueDate": ""
@@ -3095,7 +3095,7 @@
       "id": "10031",
       "key": "SLAVE-29",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10031",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero Planejar de forma Macro o projeto para poder gerencia-lo",
       "createdDate": "Eu, como Desenvolvedor, quero Planejar de forma Macro o projeto para poder gerencia-lo",
       "dueDate": ""
@@ -3105,7 +3105,7 @@
       "id": "10030",
       "key": "SLAVE-28",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10030",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como equipe, quero organizar a forma de trabalho para melhorar a forma de trabalho",
       "createdDate": "Eu, como equipe, quero organizar a forma de trabalho para melhorar a forma de trabalho",
       "dueDate": ""
@@ -3115,7 +3115,7 @@
       "id": "10029",
       "key": "SLAVE-27",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10029",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolveror, quero criar um  protótipo de alta fidelidade para validar a solução proposta",
       "createdDate": "Eu, como Desenvolveror, quero criar um  protótipo de alta fidelidade para validar a solução proposta",
       "dueDate": ""
@@ -3125,7 +3125,7 @@
       "id": "10027",
       "key": "SLAVE-25",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10027",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Gravar e publicar vídeo explicativo do protótipo final",
       "createdDate": "Gravar e publicar vídeo explicativo do protótipo final",
       "dueDate": ""
@@ -3135,7 +3135,7 @@
       "id": "10026",
       "key": "SLAVE-24",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10026",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar Diário de Bordo do projeto Slave One",
       "createdDate": "Criar Diário de Bordo do projeto Slave One",
       "dueDate": ""
@@ -3145,7 +3145,7 @@
       "id": "10025",
       "key": "SLAVE-23",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10025",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Criar método de medição de produtividade do time",
       "createdDate": "Criar método de medição de produtividade do time",
       "dueDate": ""
@@ -3155,7 +3155,7 @@
       "id": "10021",
       "key": "SLAVE-22",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10021",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Retrospectiva",
       "createdDate": "Reunião de Retrospectiva",
       "dueDate": ""
@@ -3165,7 +3165,7 @@
       "id": "10020",
       "key": "SLAVE-21",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10020",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião Diária",
       "createdDate": "Reunião Diária",
       "dueDate": ""
@@ -3175,7 +3175,7 @@
       "id": "10019",
       "key": "SLAVE-20",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10019",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Revisão",
       "createdDate": "Reunião de Revisão",
       "dueDate": ""
@@ -3185,7 +3185,7 @@
       "id": "10018",
       "key": "SLAVE-19",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10018",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Reunião de Planejamento",
       "createdDate": "Reunião de Planejamento",
       "dueDate": ""
@@ -3195,7 +3195,7 @@
       "id": "10016",
       "key": "SLAVE-17",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10016",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Scrum Master, quero gerenciar o sprint",
       "createdDate": "Eu, como Scrum Master, quero gerenciar o sprint",
       "dueDate": ""
@@ -3205,7 +3205,7 @@
       "id": "10015",
       "key": "SLAVE-16",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10015",
-      "type": "task",
+      "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar o Esboço do Projeto",
       "createdDate": "Eu, como Desenvolvedor, quero realizar o Esboço do Projeto",
       "dueDate": ""
@@ -3215,7 +3215,7 @@
       "id": "10014",
       "key": "SLAVE-15",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10014",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Validar o esboço junto ao dono do protótipo",
       "createdDate": "Validar o esboço junto ao dono do protótipo",
       "dueDate": ""
@@ -3225,7 +3225,7 @@
       "id": "10013",
       "key": "SLAVE-14",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10013",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Elaborar um esboço único para a solução com base no crazy eights",
       "createdDate": "Elaborar um esboço único para a solução com base no crazy eights",
       "dueDate": ""
@@ -3235,7 +3235,7 @@
       "id": "10012",
       "key": "SLAVE-13",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10012",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Elaborar esboços em papel usando papel com o crazy eights",
       "createdDate": "Elaborar esboços em papel usando papel com o crazy eights",
       "dueDate": ""
@@ -3245,7 +3245,7 @@
       "id": "10011",
       "key": "SLAVE-12",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10011",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Apresentar telas e ferramentas encontrada",
       "createdDate": "Apresentar telas e ferramentas encontrada",
       "dueDate": ""
@@ -3255,7 +3255,7 @@
       "id": "10010",
       "key": "SLAVE-11",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10010",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Pesquisar soluções existentes",
       "createdDate": "Pesquisar soluções existentes",
       "dueDate": ""
@@ -3265,7 +3265,7 @@
       "id": "10009",
       "key": "SLAVE-10",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10009",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Validar o esboço junto ao dono do protótipo",
       "createdDate": "Validar o esboço junto ao dono do protótipo",
       "dueDate": ""
@@ -3275,7 +3275,7 @@
       "id": "10008",
       "key": "SLAVE-9",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10008",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Elaborar um esboço único para a solução com base no crazy eights",
       "createdDate": "Elaborar um esboço único para a solução com base no crazy eights",
       "dueDate": ""
@@ -3285,7 +3285,7 @@
       "id": "10007",
       "key": "SLAVE-8",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10007",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Elaborar esboços em papel usando papel com o crazy eights",
       "createdDate": "Elaborar esboços em papel usando papel com o crazy eights",
       "dueDate": ""
@@ -3295,7 +3295,7 @@
       "id": "10006",
       "key": "SLAVE-7",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10006",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Apresentar telas e ferramentas encontrada",
       "createdDate": "Apresentar telas e ferramentas encontrada",
       "dueDate": ""
@@ -3305,7 +3305,7 @@
       "id": "10005",
       "key": "SLAVE-6",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10005",
-      "type": "task",
+      "type": "Subtarefa",
       "title": "Pesquisar soluções existentes",
       "createdDate": "Pesquisar soluções existentes",
       "dueDate": ""
@@ -3315,7 +3315,7 @@
       "id": "10004",
       "key": "SLAVE-5",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10004",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar o Esboço da Solução focado no conceito do Projeto e Equipe ",
       "createdDate": "Eu, como Desenvolvedor, quero realizar o Esboço da Solução focado no conceito do Projeto e Equipe ",
       "dueDate": ""
@@ -3325,7 +3325,7 @@
       "id": "10003",
       "key": "SLAVE-4",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10003",
-      "type": "task",
+      "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar o esboço da solução focado no conceito de Team",
       "createdDate": "Eu, como Desenvolvedor, quero realizar o esboço da solução focado no conceito de Team",
       "dueDate": ""

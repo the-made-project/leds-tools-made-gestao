@@ -32,12 +32,36 @@ interface JiraSearchResponse {
   issues: JiraIssue[];
 }
 
+enum IssueType {
+  EPIC = 'Epic',
+  STORY = 'Story',
+  SUBTASK = 'Sub-task',
+  TASK = 'Task',
+  BUG = 'Bug'
+}
+
+interface JiraIssueType {
+  id: string;
+  name: IssueType | string;
+  subtask: boolean;
+  hierarchyLevel: number;
+}
+
 interface JiraIssue {
   id: string;
   key: string;
   fields: {
     summary: string;
     description: string;
+    issuetype: JiraIssueType;
+    parent?: {
+      id: string;
+      key: string;
+      fields: {
+        summary: string;
+        issuetype: JiraIssueType;
+      };
+    };
     status: {
       name: string;
       statusCategory: {
@@ -80,6 +104,19 @@ export class JiraIntegrationService {
   host:string
   private axiosInstance: AxiosInstance;
   private readonly MAX_RESULTS_PER_PAGE = 100;
+
+  private readonly DEFAULT_FIELDS = [
+    'summary',
+    'description',
+    'issuetype',
+    'parent',
+    'status',
+    'priority',
+    'assignee',
+    'created',
+    'updated',
+    'duedate'
+  ];
 
   constructor(email: string, apiToken: string, host: string, projectkey: string){
     
@@ -244,6 +281,9 @@ export class JiraIntegrationService {
 
   
 
+  /**
+   * Busca todas as tarefas de um projeto com paginação automática
+   */
   async getAllProjectTasks(
     projectKey: string,
     onProgress?: (progress: ProgressInfo) => void
@@ -252,29 +292,73 @@ export class JiraIntegrationService {
     return this.getAllTasksByJQL(jql, onProgress);
   }
 
+  async getProjectEpics(
+    projectKey: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} AND issuetype = Epic ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
   /**
-   * Busca todas as tarefas que correspondem a uma query JQL
-   * @param jql - Query JQL personalizada
-   * @param onProgress - Callback opcional para acompanhar o progresso
+   * Busca todas as User Stories de um projeto
    */
+  async getProjectStories(
+    projectKey: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} AND issuetype = Story ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
+  /**
+   * Busca todas as subtarefas de uma tarefa específica
+   */
+  async getTaskSubtasks(
+    parentKey: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `parent = ${parentKey} ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
+  /**
+   * Busca todas as tarefas de uma Epic específica
+   */
+  async getEpicTasks(
+    epicKey: string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `"Epic Link" = ${epicKey} ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
+  /**
+   * Busca tarefas por tipo
+   */
+  async getTasksByType(
+    projectKey: string,
+    issueType: IssueType | string,
+    onProgress?: (progress: ProgressInfo) => void
+  ): Promise<JiraIssue[]> {
+    const jql = `project = ${projectKey} AND issuetype = "${issueType}" ORDER BY created DESC`;
+    return this.getAllTasksByJQL(jql, onProgress);
+  }
+
   async getAllTasksByJQL(
     jql: string,
     onProgress?: (progress: ProgressInfo) => void
   ): Promise<JiraIssue[]> {
     try {
-      // Primeira requisição para obter o total
       const initialResponse = await this.searchIssues(jql, 0);
       const totalIssues = initialResponse.total;
       
-      // Se não houver issues, retorna array vazio
       if (totalIssues === 0) {
         return [];
       }
 
-      // Inicializa array com as primeiras issues
       let allIssues = initialResponse.issues;
 
-      // Notifica progresso inicial
       if (onProgress) {
         onProgress({
           fetched: allIssues.length,
@@ -282,7 +366,6 @@ export class JiraIntegrationService {
         });
       }
 
-      // Se ainda houver mais issues para buscar
       const remainingPages = Math.ceil((totalIssues - allIssues.length) / this.MAX_RESULTS_PER_PAGE);
       
       for (let page = 1; page < remainingPages + 1; page++) {
@@ -309,11 +392,6 @@ export class JiraIntegrationService {
     }
   }
 
-  /**
-   * Método privado para fazer a busca no Jira
-   * @param jql - Query JQL
-   * @param startAt - Índice inicial para paginação
-   */
   private async searchIssues(
     jql: string,
     startAt: number
@@ -323,51 +401,12 @@ export class JiraIntegrationService {
         jql,
         startAt,
         maxResults: this.MAX_RESULTS_PER_PAGE,
-        fields: [
-          'summary',
-          'description',
-          'status',
-          'priority',
-          'assignee',
-          'created',
-          'updated',
-          'duedate'
-        ].join(',')
+        fields: this.DEFAULT_FIELDS.join(',')
       }
     });
 
     return response.data;
   }
-
-  /**
-   * Busca tarefas por status
-   * @param projectKey - Chave do projeto
-   * @param status - Status desejado
-   */
-  async getTasksByStatus(
-    projectKey: string,
-    status: string,
-    onProgress?: (progress: ProgressInfo) => void
-  ): Promise<JiraIssue[]> {
-    const jql = `project = ${projectKey} AND status = "${status}" ORDER BY created DESC`;
-    return this.getAllTasksByJQL(jql, onProgress);
-  }
-
-  /**
-   * Busca tarefas atribuídas a um usuário específico
-   * @param projectKey - Chave do projeto
-   * @param assigneeEmail - Email do responsável
-   */
-  async getTasksByAssignee(
-    projectKey: string,
-    assigneeEmail: string,
-    onProgress?: (progress: ProgressInfo) => void
-  ): Promise<JiraIssue[]> {
-    const jql = `project = ${projectKey} AND assignee = "${assigneeEmail}" ORDER BY created DESC`;
-    return this.getAllTasksByJQL(jql, onProgress);
-  }
-
-
 
 public async synchronizedIssues(synchronized: Synchronized, project: string){
   const tarefas = await this.getAllProjectTasks(project, (progress) => {

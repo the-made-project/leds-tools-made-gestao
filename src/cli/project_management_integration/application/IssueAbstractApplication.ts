@@ -13,12 +13,14 @@ export  class IssueAbstractApplication extends AbstractApplication {
 
     public override async execute(data: any): Promise<boolean> {
         
+        
+
         const issueDTO: IssueDTO = {
             internalId: "",
             id: (data).id,
             key: (data).key,
             self: (data).self,                                
-            type: "task",
+            type: (data).fields.issuetype.name,
             title:(data).fields.summary ?? "",
             createdDate:(data).fields.summary ?? "",
             dueDate:(data).fields.dueDate ?? ""
