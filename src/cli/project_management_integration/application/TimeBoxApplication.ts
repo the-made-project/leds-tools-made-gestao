@@ -3,7 +3,7 @@ import { isTimeBox, Model, TimeBox } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 import { TimeBoxDTO, IssueDTO, PlannedItemDTO, AssigneeDTO } from "../dto/models.js";
-import * as vscode from 'vscode';
+
 
 export class TimeBoxApplication extends AbstractApplication {
     
@@ -190,11 +190,11 @@ export class TimeBoxApplication extends AbstractApplication {
                     };
             
         if (result){
-            console.log ("encontrou")
+            
             await this.update (id, timeBoxDTO)
         }
         else{
-            console.log ("novo")
+            
             await this.save(timeBoxDTO)   
             
         }
@@ -202,61 +202,10 @@ export class TimeBoxApplication extends AbstractApplication {
     }
 
     public async synchronized(){
-        await vscode.window.withProgress({
-            location: vscode.ProgressLocation.Notification,
-            title: "Sincronizando com Jira",
-            cancellable: true
-          }, async (progress, token) => {
-            try {
-              // Etapas da sincronização
-              const steps = [
-                { message: "Conectando ao Jira...", increment: 10 },
-                { message: "Buscando Sprints e Issues...", increment: 30 },
-                { message: "Atualizando dados locais...", increment: 40 },
-                { message: "Finalizando sincronização...", increment: 20 }
-              ];
-      
-              // Para cada etapa
-              for (const step of steps) {
-                if (token.isCancellationRequested) {
-                  vscode.window.showInformationMessage('Sincronização cancelada pelo usuário');
-                  return;
-                }
-      
-                progress.report({
-                  message: step.message,
-                  increment: step.increment
-                });
-      
-                // Executa a sincronização
-                await this.jiraIntegrationService.synchronizedSprintTask(this,this.projectKey)
-              }
-      
-              // Mensagem de sucesso
-              vscode.window.showInformationMessage('✅ Sincronização concluída com sucesso!', 'Ver Detalhes')
-                .then(selection => {
-                  if (selection === 'Ver Detalhes') {
-                    // Aqui você pode adicionar lógica para mostrar mais detalhes
-                    vscode.window.showInformationMessage('Detalhes da sincronização...');
-                  }
-                });
-      
-              return Promise.resolve();
-            } catch (error) {
-              const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
-              vscode.window.showErrorMessage(`❌ Erro na sincronização: ${errorMessage}`, 'Ver Detalhes')
-                .then(selection => {
-                  if (selection === 'Ver Detalhes') {
-                    // Mostra erro detalhado
-                    vscode.window.showErrorMessage(`Detalhes do erro: ${errorMessage}`);
-                  }
-                });
-              throw error;
-            }
-          });
-        }
+      await this.jiraIntegrationService.synchronizedSprintTask(this,this.projectKey)
+    }
 
-        
+           
     }
 
 

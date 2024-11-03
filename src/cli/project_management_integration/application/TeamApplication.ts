@@ -2,7 +2,7 @@ import { Model } from "../../../language/generated/ast.js";
 import { AssigneeDTO, PlannedItemDTO } from "../dto/models.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import * as vscode from 'vscode';
+
 export class TeamApplication extends AbstractApplication {
  
     objectMap: Map<string,string> = new Map();
@@ -84,61 +84,10 @@ export class TeamApplication extends AbstractApplication {
         return true
     }
 
-
-    public async synchronized(): Promise<void> {
-        await vscode.window.withProgress({
-          location: vscode.ProgressLocation.Notification,
-          title: "Sincronizando com Jira",
-          cancellable: true
-        }, async (progress, token) => {
-          try {
-            // Etapas da sincronização
-            const steps = [
-              { message: "Conectando ao Jira...", increment: 10 },
-              { message: "Buscando issues...", increment: 30 },
-              { message: "Atualizando dados locais...", increment: 40 },
-              { message: "Finalizando sincronização...", increment: 20 }
-            ];
+    public async synchronized(){
+      await this.jiraIntegrationService.synchronizedIssues(this, this.projectKey)
+    }
     
-            // Para cada etapa
-            for (const step of steps) {
-              if (token.isCancellationRequested) {
-                vscode.window.showInformationMessage('Sincronização cancelada pelo usuário');
-                return;
-              }
-    
-              progress.report({
-                message: step.message,
-                increment: step.increment
-              });
-    
-              // Executa a sincronização
-              await this.jiraIntegrationService.synchronizedIssues(this, this.projectKey);
-            }
-    
-            // Mensagem de sucesso
-            vscode.window.showInformationMessage('✅ Sincronização concluída com sucesso!', 'Ver Detalhes')
-              .then(selection => {
-                if (selection === 'Ver Detalhes') {
-                  // Aqui você pode adicionar lógica para mostrar mais detalhes
-                  vscode.window.showInformationMessage('Detalhes da sincronização...');
-                }
-              });
-    
-            return Promise.resolve();
-          } catch (error) {
-            const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
-            vscode.window.showErrorMessage(`❌ Erro na sincronização: ${errorMessage}`, 'Ver Detalhes')
-              .then(selection => {
-                if (selection === 'Ver Detalhes') {
-                  // Mostra erro detalhado
-                  vscode.window.showErrorMessage(`Detalhes do erro: ${errorMessage}`);
-                }
-              });
-            throw error;
-          }
-        });
-      }
     }
     
 
