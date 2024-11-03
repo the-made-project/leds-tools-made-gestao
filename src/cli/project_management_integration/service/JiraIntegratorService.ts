@@ -35,7 +35,7 @@ interface JiraSearchResponse {
 enum IssueType {
   EPIC = 'Epic',
   STORY = 'Story',
-  SUBTASK = 'Sub-task',
+  SUBTASK = 'Subtask',
   TASK = 'Task',
   BUG = 'Bug'
 }

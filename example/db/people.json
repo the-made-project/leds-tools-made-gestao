@@ -335,6 +335,90 @@
       "active": false,
       "displayName": "Felipe Frechiani",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=557058:610d01b0-2143-4350-8a72-52cfa07c923a"
+    },
+    {
+      "id": "712020:c6c0a13c-bde7-4dde-97b7-b6440c90eacb",
+      "active": true,
+      "displayName": "Projeto Slave One",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=712020:c6c0a13c-bde7-4dde-97b7-b6440c90eacb"
+    },
+    {
+      "id": "60eda234413fc70069e56470",
+      "active": true,
+      "displayName": "Sofia de Alcantara",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=60eda234413fc70069e56470"
+    },
+    {
+      "id": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+      "active": true,
+      "displayName": "marcela starling ferreira lage",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb"
+    },
+    {
+      "id": "616d6ce6062f4c00691d8d9b",
+      "active": true,
+      "displayName": "Bruno Caxias",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=616d6ce6062f4c00691d8d9b"
+    },
+    {
+      "id": "616d6c46bcb5740068f5a6de",
+      "active": true,
+      "displayName": "Vinícius Estevam",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=616d6c46bcb5740068f5a6de"
+    },
+    {
+      "id": "557058:0d6aff61-301f-4e03-a3cb-b31d32f923d7",
+      "active": true,
+      "displayName": "Paulo Sérgio Santos Junior",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=557058:0d6aff61-301f-4e03-a3cb-b31d32f923d7"
+    },
+    {
+      "id": "557058:610d01b0-2143-4350-8a72-52cfa07c923a",
+      "active": false,
+      "displayName": "Felipe Frechiani",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=557058:610d01b0-2143-4350-8a72-52cfa07c923a"
+    },
+    {
+      "id": "712020:c6c0a13c-bde7-4dde-97b7-b6440c90eacb",
+      "active": true,
+      "displayName": "Projeto Slave One",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=712020:c6c0a13c-bde7-4dde-97b7-b6440c90eacb"
+    },
+    {
+      "id": "60eda234413fc70069e56470",
+      "active": true,
+      "displayName": "Sofia de Alcantara",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=60eda234413fc70069e56470"
+    },
+    {
+      "id": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+      "active": true,
+      "displayName": "marcela starling ferreira lage",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb"
+    },
+    {
+      "id": "616d6ce6062f4c00691d8d9b",
+      "active": true,
+      "displayName": "Bruno Caxias",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=616d6ce6062f4c00691d8d9b"
+    },
+    {
+      "id": "616d6c46bcb5740068f5a6de",
+      "active": true,
+      "displayName": "Vinícius Estevam",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=616d6c46bcb5740068f5a6de"
+    },
+    {
+      "id": "557058:0d6aff61-301f-4e03-a3cb-b31d32f923d7",
+      "active": true,
+      "displayName": "Paulo Sérgio Santos Junior",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=557058:0d6aff61-301f-4e03-a3cb-b31d32f923d7"
+    },
+    {
+      "id": "557058:610d01b0-2143-4350-8a72-52cfa07c923a",
+      "active": false,
+      "displayName": "Felipe Frechiani",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/user?accountId=557058:610d01b0-2143-4350-8a72-52cfa07c923a"
     }
   ]
 }

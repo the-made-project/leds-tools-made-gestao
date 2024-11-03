@@ -8,8 +8,10 @@ export type IssueDTO = {
     title?: string;
     description?:string;
     status?:string;
-    createdDate?:string,
-    dueDate?:string
+    createdDate?:string;
+    dueDate?:string;
+    parentId?:string;
+    parentKey?:string;
   };
   
 export type IssuesDTO = {
