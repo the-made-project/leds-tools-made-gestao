@@ -68,7 +68,7 @@ export class JiraApplication {
         // TimeBox sincronização (25%)
         progress.report({
           increment: 0,
-          message: "Sincronizando TimeBoxes..."
+          message: " Buscando TimeBoxes..."
         });
         await this.timeBoxApplication.synchronized();
         
