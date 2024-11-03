@@ -2,7 +2,7 @@
 import { isTimeBox, Model, TimeBox } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import { TimeBoxDTO, IssueDTO, PlannedItemDTO } from "../dto/models.js";
+import { TimeBoxDTO, IssueDTO, PlannedItemDTO, AssigneeDTO } from "../dto/models.js";
 
 
 export class TimeBoxApplication extends AbstractApplication {
@@ -159,6 +159,23 @@ export class TimeBoxApplication extends AbstractApplication {
         
         const id = data.id
         const result = await this.retriveByExternal(id)
+        
+        const tasks = new Array<AssigneeDTO>();
+
+        data?.tasks.forEach(async (task:any) =>{
+           
+            const assigneeDTO: AssigneeDTO = {
+                name:task.fields.assignee?.displayName,
+                account: task.fields.assignee?.accountId,
+                issue: task.key
+            };
+    
+            tasks.push(assigneeDTO)
+        
+          });
+      
+
+
         const timeBoxDTO: TimeBoxDTO = 
                     {
                         internalId: "",
@@ -169,7 +186,8 @@ export class TimeBoxApplication extends AbstractApplication {
                         self: data.self,
                         state: data.state,
                         completeDate: data.completeDate,
-                        createdDate: data.createdDate
+                        createdDate: data.createdDate,
+                        assignees: tasks
                     };
             
         if (result){

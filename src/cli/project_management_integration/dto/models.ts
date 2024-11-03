@@ -50,7 +50,7 @@ export type personDTO = {
   state?:string;
   completeDate?:string;
   createdDate?:string;
-  assignee?:AssigneeDTO[];
+  assignees?:AssigneeDTO[];
 
   
 };

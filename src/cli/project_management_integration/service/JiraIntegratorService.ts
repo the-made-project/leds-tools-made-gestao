@@ -521,16 +521,16 @@ public async synchronizedIssues(synchronized: Synchronized, project: string){
     
     sprints.forEach(async (data:any) =>{
       synchronized.execute (data)
-      console.log(data)
+      
     });
 
     sprnitsClosed.forEach(async (data:any) =>{
       synchronized.execute (data)
-      console.log(data)
+      
     });
     sprnitsFuture.forEach(async (data:any) =>{
       synchronized.execute (data)
-      console.log(data)
+      
     });
   }
 

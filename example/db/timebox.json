@@ -4,79 +4,717 @@
       "internalId": "",
       "startDate": "2024-04-22T20:26:35.000Z",
       "endDate": "2024-05-03T03:00:00.000Z",
-      "state": "active"
+      "state": "active",
+      "assignees": [
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-531"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-532"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-435"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-437"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-434"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-466"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-468"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-475"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-430"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-429"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-464"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-391"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-269"
+        },
+        {
+          "name": "Automation for Jira",
+          "account": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
+          "issue": "SLAVE-514"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-526"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-527"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-528"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-529"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-533"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-530"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-537"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-01-02T22:03:15.000Z",
       "endDate": "2024-01-05T15:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-5"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-4"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-17"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-01-22T11:00:00.000Z",
       "endDate": "2024-01-26T15:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "issue": "SLAVE-44"
+        },
+        {
+          "issue": "SLAVE-45"
+        },
+        {
+          "issue": "SLAVE-46"
+        },
+        {
+          "issue": "SLAVE-47"
+        },
+        {
+          "issue": "SLAVE-48"
+        },
+        {
+          "issue": "SLAVE-50"
+        },
+        {
+          "issue": "SLAVE-60"
+        },
+        {
+          "issue": "SLAVE-42"
+        },
+        {
+          "issue": "SLAVE-43"
+        },
+        {
+          "issue": "SLAVE-59"
+        },
+        {
+          "issue": "SLAVE-64"
+        },
+        {
+          "issue": "SLAVE-56"
+        },
+        {
+          "issue": "SLAVE-58"
+        },
+        {
+          "issue": "SLAVE-49"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-01-08T20:49:00.000Z",
       "endDate": "2024-01-12T14:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "issue": "SLAVE-30"
+        },
+        {
+          "issue": "SLAVE-32"
+        },
+        {
+          "issue": "SLAVE-34"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-35"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-53"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-01-29T22:49:00.000Z",
       "endDate": "2024-02-02T03:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-67"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-66"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-76"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-75"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-73"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-02-05T22:13:39.841Z",
       "endDate": "2024-02-10T00:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-138"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-02-26T14:12:10.000Z",
       "endDate": "2024-03-09T00:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-259"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-258"
+        },
+        {
+          "issue": "SLAVE-165"
+        },
+        {
+          "issue": "SLAVE-164"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-167"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-170"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-169"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-168"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-171"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-173"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-172"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-174"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-176"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-226"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-03-12T16:11:52.707Z",
       "endDate": "2024-03-15T18:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-263"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-281"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-286"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-280"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-285"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-318"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-324"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-322"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-319"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-323"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-325"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-321"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-320"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-361"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-362"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-364"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-317"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-371"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-372"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-373"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-374"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-376"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-377"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-378"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-379"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-03-19T15:40:31.578Z",
       "endDate": "2024-03-22T03:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-286"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-322"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-325"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-374"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-379"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-03-18T21:30:17.215Z",
       "endDate": "2024-03-23T00:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-382"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-388"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-430"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-391"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-03-25T15:00:40.597Z",
       "endDate": "2024-03-29T19:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-467"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-465"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-466"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-475"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-384"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-430"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-429"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-464"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-04-01T18:00:33.000Z",
       "endDate": "2024-04-12T19:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-435"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-437"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-434"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-467"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-465"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-466"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-468"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-475"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-430"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-429"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-464"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-391"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-269"
+        }
+      ]
     },
     {
       "internalId": "",
       "startDate": "2024-04-15T18:10:44.762Z",
       "endDate": "2024-04-19T22:00:00.000Z",
-      "state": "closed"
+      "state": "closed",
+      "assignees": [
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-435"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-437"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-434"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-466"
+        },
+        {
+          "name": "marcela starling ferreira lage",
+          "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
+          "issue": "SLAVE-510"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-475"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-430"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-429"
+        },
+        {
+          "name": "Sofia de Alcantara",
+          "account": "60eda234413fc70069e56470",
+          "issue": "SLAVE-464"
+        },
+        {
+          "name": "Vinícius Estevam",
+          "account": "616d6c46bcb5740068f5a6de",
+          "issue": "SLAVE-391"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-269"
+        },
+        {
+          "name": "Automation for Jira",
+          "account": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
+          "issue": "SLAVE-514"
+        }
+      ]
     }
   ]
 }
