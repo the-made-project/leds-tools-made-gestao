@@ -10,7 +10,8 @@
       "type": "História",
       "title": "Testes - Frontend",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em análise"
     },
     {
       "internalId": "",
@@ -22,7 +23,8 @@
       "type": "História",
       "title": "teste, mostrando jira p/ heitor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -34,7 +36,8 @@
       "type": "Tarefa",
       "title": "Criação e documentação de estratégias para a Gestão dos Times",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -46,7 +49,8 @@
       "type": "Tarefa",
       "title": "Configuração do ambiente de trabalho da equipe de Design | JIRA, Gitlab e Origami",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -58,7 +62,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar Tela Troca de Senha",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -70,7 +75,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar Tela de Detalhes do Projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -82,7 +88,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar funcionalidade de Refresh",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -94,7 +101,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero definir rede privada AWS",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Reaberto"
     },
     {
       "internalId": "",
@@ -106,7 +114,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar regras no CD",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -118,7 +127,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero integrar Back e Front na AWS",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -130,7 +140,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero implementar funcionalidade Trocar Senha",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -142,7 +153,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero associar Usuário ao seus respectivos papéis",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -154,7 +166,8 @@
       "type": "Subtarefa",
       "title": "Criar CD para registro no GitLab",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -166,7 +179,8 @@
       "type": "Subtarefa",
       "title": "Implementar testes automatizados",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -178,7 +192,8 @@
       "type": "Subtarefa",
       "title": "Implementar funcionalidade de Refresh Token",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -190,7 +205,8 @@
       "type": "Subtarefa",
       "title": "Criar Category e Fuctions pages + Index",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -202,7 +218,8 @@
       "type": "Subtarefa",
       "title": "Criar componentes e tela de login",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -214,7 +231,8 @@
       "type": "Subtarefa",
       "title": "Transformar componentes repetitivos em tabelas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -226,7 +244,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -238,7 +257,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -250,7 +270,8 @@
       "type": "Subtarefa",
       "title": "Implementar funcionalidade de Refresh Token",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -262,7 +283,8 @@
       "type": "Subtarefa",
       "title": "Implementar testes automatizados",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -274,7 +296,8 @@
       "type": "Subtarefa",
       "title": "Criar CD para registro no GitLab",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -286,7 +309,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -298,7 +322,8 @@
       "type": "Subtarefa",
       "title": "Criar Category e Fuctions pages + Index",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -310,7 +335,8 @@
       "type": "Subtarefa",
       "title": "Transformar componentes repetitivos em tabelas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -322,7 +348,8 @@
       "type": "Subtarefa",
       "title": "Criar componentes e tela de login",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -334,7 +361,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -346,7 +374,8 @@
       "type": "Subtarefa",
       "title": "Adição de Porta Estática no Docker",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -358,7 +387,8 @@
       "type": "Subtarefa",
       "title": "Configuração de Controllers de Odata para Retornarem DTOs",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -370,7 +400,8 @@
       "type": "Subtarefa",
       "title": "Mudança do Método de Validação de Domínio",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -382,7 +413,8 @@
       "type": "Subtarefa",
       "title": "Finalização do Redesign das Páginas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -394,7 +426,8 @@
       "type": "Subtarefa",
       "title": "Desenvolvimento de Telas de Login, Logout, Cadastro e Perfil de Usuário",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -406,7 +439,8 @@
       "type": "Subtarefa",
       "title": "Correção da Configuração de Campos de Data",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -418,7 +452,8 @@
       "type": "Subtarefa",
       "title": "Unificação das Rotas dos Controllers",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -430,7 +465,8 @@
       "type": "Subtarefa",
       "title": "Adaptação de Componentes de Tela (selects + datas)",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -442,7 +478,8 @@
       "type": "Subtarefa",
       "title": "Conclusão da Refatoração: criar service para controle da API",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -454,7 +491,8 @@
       "type": "Subtarefa",
       "title": "Criação de Controller Genérico para Queries",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -466,7 +504,8 @@
       "type": "Subtarefa",
       "title": "Finalização do Redesign das Páginas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -478,7 +517,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código desenvolvido até o momento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -490,7 +530,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -502,7 +543,8 @@
       "type": "Subtarefa",
       "title": "Método `remover` não pode retornar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -514,7 +556,8 @@
       "type": "Subtarefa",
       "title": "Refatorar a Controller para usar o generic types",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -526,7 +569,8 @@
       "type": "Subtarefa",
       "title": "Criar uma entidade genérica com ID no domínio e no DTO",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -538,7 +582,8 @@
       "type": "Subtarefa",
       "title": "Refatorar as classes de Handler para uma classe base",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -550,7 +595,8 @@
       "type": "Subtarefa",
       "title": "Criar um service na camada de application e remover as chamadas do controller",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -562,7 +608,8 @@
       "type": "Subtarefa",
       "title": "Inserir a validação no domínio para não deixar criar instancias invalidadas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -574,7 +621,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Reaberto"
     },
     {
       "internalId": "",
@@ -586,7 +634,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -598,7 +647,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -610,7 +660,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -622,7 +673,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -634,7 +686,8 @@
       "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -646,7 +699,8 @@
       "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -658,7 +712,8 @@
       "type": "História",
       "title": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -670,7 +725,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -682,7 +738,8 @@
       "type": "Epic",
       "title": "Eu, como SCRUM Master, quero gerenciar a Sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -694,7 +751,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -706,7 +764,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -718,7 +777,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -730,7 +790,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -742,7 +803,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -754,7 +816,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -766,7 +829,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -778,7 +842,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -790,7 +855,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -802,7 +868,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -814,7 +881,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -826,7 +894,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -838,7 +907,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Jira Dashboard",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -850,7 +920,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -862,7 +933,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Métricas Ágeis",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -874,7 +946,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Vue",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -886,7 +959,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OData",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -898,7 +972,8 @@
       "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -910,7 +985,8 @@
       "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero gerenciar os merge requests do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -922,7 +998,8 @@
       "type": "História",
       "title": "Eu, no papel de Gestor, quero gerenciar produtividade do time via Clockify",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -934,7 +1011,8 @@
       "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero realizar a integração dos módulos de alocação no backend",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -946,7 +1024,8 @@
       "type": "História",
       "title": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -958,7 +1037,8 @@
       "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero revisar os validadores das entidades",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -970,7 +1050,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar a alocação de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -982,7 +1063,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar um time em um projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -994,7 +1076,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as Epics estão finalizadas, a Sprint também é finalizada",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1006,7 +1089,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as US estão finalizadas, a Epic também é finalizada",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1018,7 +1102,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, quando todas as US estão em progresso, a Epic também está em progresso",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1030,7 +1115,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, a US é marcada como concluída quando todas as subtarefas estão feitas",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1042,7 +1128,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, quando pelo menos uma task está em progresso, a US é movida para em progresso",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1054,7 +1141,8 @@
       "type": "Subtarefa",
       "title": "Criar automação onde, quando a US está em progresso, uma branch é criada",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1066,7 +1154,8 @@
       "type": "História",
       "title": "Eu, no papel de Desenvolvedor, quero fazer Code Review",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1078,7 +1167,8 @@
       "type": "Subtarefa",
       "title": "Correção dos atributos da entidade Membro",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1090,7 +1180,8 @@
       "type": "História",
       "title": "Eu, no papel de Gestor, quero revisar e modificar o workflow caso necessário",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1102,7 +1193,8 @@
       "type": "História",
       "title": "Eu, no papel de Gestor, quero automatizar o trabalho via Jira Automations",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1114,7 +1206,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Gestor, quero aprimorar o processo de trabalho via Jira",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1126,7 +1219,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1138,7 +1232,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1150,7 +1245,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1162,7 +1258,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1174,7 +1271,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1186,7 +1284,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1198,7 +1297,8 @@
       "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1210,7 +1310,8 @@
       "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1222,7 +1323,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1234,7 +1336,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1246,7 +1349,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1258,7 +1362,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1270,7 +1375,8 @@
       "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1282,7 +1388,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1294,7 +1401,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1306,7 +1414,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1318,7 +1427,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1330,7 +1440,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1342,7 +1453,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1354,7 +1466,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1366,7 +1479,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1378,7 +1492,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1390,7 +1505,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1402,7 +1518,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1414,7 +1531,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1426,7 +1544,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1438,7 +1557,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1450,7 +1570,8 @@
       "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1462,7 +1583,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1474,7 +1596,8 @@
       "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1486,7 +1609,8 @@
       "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1498,7 +1622,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1510,7 +1635,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1522,7 +1648,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1534,7 +1661,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1546,7 +1674,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  as pessoas de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1558,7 +1687,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar as equipes de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1570,7 +1700,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1582,7 +1713,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  as equipes de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1594,7 +1726,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar as pessoas de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1606,7 +1739,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  as pessoas de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1618,7 +1752,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  as equipes de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1630,7 +1765,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Gestor, quero gerenciar produtividade a do time via Clockify e Jira",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1642,7 +1778,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as pessoas de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1654,7 +1791,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as equipes de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1666,7 +1804,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1678,7 +1817,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1690,7 +1830,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1702,7 +1843,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1714,7 +1856,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1726,7 +1869,8 @@
       "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1738,7 +1882,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1750,7 +1895,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1762,7 +1908,8 @@
       "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1774,7 +1921,8 @@
       "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1786,7 +1934,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1798,7 +1947,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1810,7 +1960,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1822,7 +1973,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1834,7 +1986,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1846,7 +1999,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1858,7 +2012,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1870,7 +2025,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1882,7 +2038,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1894,7 +2051,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1906,7 +2064,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Criar os projetos de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1918,7 +2077,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1930,7 +2090,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1942,7 +2103,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1954,7 +2116,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Editar  os projetos de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1966,7 +2129,8 @@
       "type": "História",
       "title": "Eu, no papel de Coordenador, quero Excluir  os projetos de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -1978,7 +2142,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -1990,7 +2155,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2002,7 +2168,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2014,7 +2181,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2026,7 +2194,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2038,7 +2207,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2050,7 +2220,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2062,7 +2233,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar os projetos de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2074,7 +2246,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2086,7 +2259,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2098,7 +2272,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2110,7 +2285,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2122,7 +2298,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero refletir migration no banco de dados",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2134,7 +2311,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar um Projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -2146,7 +2324,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar a Pessoa de um projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -2158,7 +2337,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2170,7 +2350,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2182,7 +2363,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2194,7 +2376,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento sobre automação no Jira com Gitlab",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2206,7 +2389,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Em andamento"
     },
     {
       "internalId": "",
@@ -2218,7 +2402,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2230,7 +2415,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2242,7 +2428,8 @@
       "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2254,7 +2441,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2266,7 +2454,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2278,7 +2467,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2290,7 +2480,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2302,7 +2493,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication da entidade para exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2314,7 +2506,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2326,7 +2519,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2338,7 +2532,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2350,7 +2545,8 @@
       "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2362,7 +2558,8 @@
       "type": "Subtarefa",
       "title": "Criar a pasta para o Dominio do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2374,7 +2571,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página a exclusão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -2386,7 +2584,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "In test"
     },
     {
       "internalId": "",
@@ -2398,7 +2597,8 @@
       "type": "Subtarefa",
       "title": "Configurar o ORM para criar o banco baseado no modelo de projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2410,7 +2610,8 @@
       "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2422,7 +2623,8 @@
       "type": "Subtarefa",
       "title": "Implementar o modelo de projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2434,7 +2636,8 @@
       "type": "Subtarefa",
       "title": "Definir qual a padrão de herença de classes será aplicado no banco de dados",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2446,7 +2649,8 @@
       "type": "Subtarefa",
       "title": "Criar a pasta para os applications do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2458,7 +2662,8 @@
       "type": "Subtarefa",
       "title": "Criar o Modelo de Projeto baseado no Diagrama de Classes de Domain",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2470,7 +2675,8 @@
       "type": "Subtarefa",
       "title": "Criar a pasta para os controladores do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2482,7 +2688,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2494,7 +2701,8 @@
       "type": "Subtarefa",
       "title": "Criar a pasta para a camada de Repositorio",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2506,7 +2714,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2518,7 +2727,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que edite a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2530,7 +2740,8 @@
       "type": "Subtarefa",
       "title": "Configurar um docker compose para rodar a aplicação e banco de dados",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2542,7 +2753,8 @@
       "type": "Subtarefa",
       "title": "Criar a pasta para os views do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2554,7 +2766,8 @@
       "type": "Subtarefa",
       "title": "Configurar cada máquina do desenvolvedor para rodar o padrão de commit",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2566,7 +2779,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication para listar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2578,7 +2792,8 @@
       "type": "Subtarefa",
       "title": "Criar uma funçao no repositorio da entidade para o listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2590,7 +2805,8 @@
       "type": "Subtarefa",
       "title": "Criar uma filtro na página de listar ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2602,7 +2818,8 @@
       "type": "Subtarefa",
       "title": "Criar um controlador para a página de Listar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2614,7 +2831,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página que permita listar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2626,7 +2844,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita editar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2638,7 +2857,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a página de edição",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2650,7 +2870,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2662,7 +2883,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para editar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2674,7 +2896,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2686,7 +2909,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2698,7 +2922,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o repositorio que permita criar uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2710,7 +2935,8 @@
       "type": "Subtarefa",
       "title": "Criar o controlador que gerenciar a páginas de criar",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2722,7 +2948,8 @@
       "type": "Subtarefa",
       "title": "Criar uma página para criar a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2734,7 +2961,8 @@
       "type": "Subtarefa",
       "title": "Criar/Atualizar o aplication que cria a entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2746,7 +2974,8 @@
       "type": "História",
       "title": "Excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2758,7 +2987,8 @@
       "type": "História",
       "title": "Editar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2770,7 +3000,8 @@
       "type": "História",
       "title": "Excluir uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2782,7 +3013,8 @@
       "type": "História",
       "title": "Criar o Modelo de Dominio baseado no diagrama de classes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2794,7 +3026,8 @@
       "type": "História",
       "title": "Criar as pastas que represente as camadas Model-View-Controle",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2806,7 +3039,8 @@
       "type": "História",
       "title": "Criar Infraestrura base do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2818,7 +3052,8 @@
       "type": "História",
       "title": "Listar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2830,7 +3065,8 @@
       "type": "História",
       "title": "Editar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2842,7 +3078,8 @@
       "type": "História",
       "title": "Listar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2854,7 +3091,8 @@
       "type": "História",
       "title": "Criar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2866,7 +3104,8 @@
       "type": "História",
       "title": "Criar de uma entidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2878,7 +3117,8 @@
       "type": "Epic",
       "title": "Eu, no papel de desenvolvedor, quero criar a arquitetura base do proejto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2890,7 +3130,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar a Categoria de um projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2902,7 +3143,8 @@
       "type": "Epic",
       "title": "Eu, no papel de Coordenador, quero Cadastrar as funções de uma organização",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2914,7 +3156,8 @@
       "type": "Subtarefa",
       "title": "Criar o Modelo de Estado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2926,7 +3169,8 @@
       "type": "Subtarefa",
       "title": "Especificar o caso de Uso",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2938,7 +3182,8 @@
       "type": "Subtarefa",
       "title": "Definir uma versão para o projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2950,7 +3195,8 @@
       "type": "Subtarefa",
       "title": "Definir a relação entre os requisitos funcionais do projeto e não funcionais",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2962,7 +3208,8 @@
       "type": "Subtarefa",
       "title": "Criar o diagrama de casos de uso",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2974,7 +3221,8 @@
       "type": "Subtarefa",
       "title": "Priorizar os equisitos funcionais",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2986,7 +3234,8 @@
       "type": "Subtarefa",
       "title": "Criar o diagrama de classes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -2998,7 +3247,8 @@
       "type": "Subtarefa",
       "title": "Listar os Requisitos Funcionais e Não funcionais do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3010,7 +3260,8 @@
       "type": "Subtarefa",
       "title": "Definir os domínios do requisitos funcionais do sistema",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3022,7 +3273,8 @@
       "type": "História",
       "title": "Modelagem",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3034,7 +3286,8 @@
       "type": "História",
       "title": "Detalhamento dos Casos de USO",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3046,7 +3299,8 @@
       "type": "História",
       "title": "Definir Escopo do Projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3058,7 +3312,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvoledor, quero definir um alvo do projeto e um solução",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -3070,7 +3325,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar a Analise do Projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -3082,7 +3338,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvoledor, quero definir um prototipo de low code para a solução proposta",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "",
@@ -3094,7 +3351,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3106,7 +3364,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3118,7 +3377,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3130,7 +3390,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3142,7 +3403,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3154,7 +3416,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3166,7 +3429,8 @@
       "type": "Subtarefa",
       "title": "Publicar o conhecimento Adquirido em um local",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3178,7 +3442,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3190,7 +3455,8 @@
       "type": "Subtarefa",
       "title": "Registrar o Conhecimento Adquirido",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3202,7 +3468,8 @@
       "type": "Subtarefa",
       "title": "Divulgar o material publicado para os interessado",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3214,7 +3481,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3226,7 +3494,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3238,7 +3507,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3250,7 +3520,8 @@
       "type": "Subtarefa",
       "title": "Estudar Blazor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3262,7 +3533,8 @@
       "type": "Subtarefa",
       "title": "Apresentar o aprendizado sobre Blazor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3274,7 +3546,8 @@
       "type": "Subtarefa",
       "title": "Apresentar o aprendizado sobre fundamento e Orientação a Objetos em C#",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3286,7 +3559,8 @@
       "type": "Subtarefa",
       "title": "Estudar Fundamentos de Orientação a Objetos em C#",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3298,7 +3572,8 @@
       "type": "Subtarefa",
       "title": "Estudar Fundamento de C#",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3310,7 +3585,8 @@
       "type": "História",
       "title": "Estudar Blazor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3322,7 +3598,8 @@
       "type": "História",
       "title": "Estudar Orientaçao Objeto e Fundamento de C#",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3334,7 +3611,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero aprender os conceitos básicos de desenvolvimento Web com C# e Blazor",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3346,7 +3624,8 @@
       "type": "Tarefa",
       "title": "Desenvolver api com a infraestrutura do projeto BAC",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3358,7 +3637,8 @@
       "type": "Tarefa",
       "title": "Reunião com BAC para aprender alguns conceitos Docker",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3370,7 +3650,8 @@
       "type": "Tarefa",
       "title": "Configurar ferramentas e executar o docker",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3382,7 +3663,8 @@
       "type": "Subtarefa",
       "title": "Criar o video do protótipo no quant-ux",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3394,7 +3676,8 @@
       "type": "Tarefa",
       "title": "Criar um vídeo de apresentação da ferramenta implementada ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3406,7 +3689,8 @@
       "type": "Tarefa",
       "title": "Intregrar as telas do appsmith com o strapi ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3418,7 +3702,8 @@
       "type": "Tarefa",
       "title": "Criar os papeis no strapi ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3430,7 +3715,8 @@
       "type": "Tarefa",
       "title": "Modelar as entidadades usando o strapi ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3442,7 +3728,8 @@
       "type": "Tarefa",
       "title": "Implementação das telas do protótipo na ferramenta appsmith",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3454,7 +3741,8 @@
       "type": "Tarefa",
       "title": "Assistir aos vídeos do projeto de exemplo envolvendo appsmith e strapi ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3466,7 +3754,8 @@
       "type": "Epic",
       "title": "Eu, no papel de desenvolvedor, quero implementar uma solução prototipada da forma mais rápida para entregar valor ao meu usuário",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3478,7 +3767,8 @@
       "type": "História",
       "title": "Eu, como desenvolvedor, quero realizar o deploy da API de teste",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3490,7 +3780,8 @@
       "type": "Tarefa",
       "title": "Usar o planning poker para mensurar os story points",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3502,7 +3793,8 @@
       "type": "Tarefa",
       "title": "Usar o diário de bordo único para o projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3514,7 +3806,8 @@
       "type": "Tarefa",
       "title": "Validação do protótipo junto ao publico alvo (Marcar reunião)",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3526,7 +3819,8 @@
       "type": "Tarefa",
       "title": "Revisão, análise dos feedback e ajuste do protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3538,7 +3832,8 @@
       "type": "Tarefa",
       "title": "Validação do protótipo junto ao público alvo(Marcar reunião)",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3550,7 +3845,8 @@
       "type": "Tarefa",
       "title": "Tempo assíncrono para validação do protótipo pelo dono do protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3562,7 +3858,8 @@
       "type": "Tarefa",
       "title": "Criação de um protótipo de alta fidelidade",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3574,7 +3871,8 @@
       "type": "Tarefa",
       "title": "Reunião para apresentação e validação do storyboard com dono do protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3586,7 +3884,8 @@
       "type": "Tarefa",
       "title": "Eu, como desenvolvedor, que elaborar storyboards acerca do uso do sistema",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3598,7 +3897,8 @@
       "type": "Subtarefa",
       "title": "Criar Diário de Bordo do projeto Slave One",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3610,7 +3910,8 @@
       "type": "Subtarefa",
       "title": "Criar método de medição de produtividade do time",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3622,7 +3923,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Retrospectiva",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3634,7 +3936,8 @@
       "type": "Subtarefa",
       "title": "Reunião Diária",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3646,7 +3949,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Revisão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3658,7 +3962,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Planejamento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3670,7 +3975,8 @@
       "type": "História",
       "title": "Eu, como Scrum Master, quero gerenciar o sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3682,7 +3988,8 @@
       "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar o PMC para organizar melhor o plano do projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3694,7 +4001,8 @@
       "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar o prototipo de  alta fidelidade e funcional para apresentar ao meu usuário final, validar e coletar feebacks sobre o protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3706,7 +4014,8 @@
       "type": "História",
       "title": "Eu, como desenvolvedor, quero implementar um storyboard com o fluxo de cadastro de projetos e membros para validar entender o uso do sistema pelo usuário",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3718,7 +4027,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero Planejar de forma Macro o projeto para poder gerencia-lo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3730,7 +4040,8 @@
       "type": "Epic",
       "title": "Eu, como equipe, quero organizar a forma de trabalho para melhorar a forma de trabalho",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3742,7 +4053,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolveror, quero criar um  protótipo de alta fidelidade para validar a solução proposta",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3754,7 +4066,8 @@
       "type": "Subtarefa",
       "title": "Gravar e publicar vídeo explicativo do protótipo final",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3766,7 +4079,8 @@
       "type": "Subtarefa",
       "title": "Criar Diário de Bordo do projeto Slave One",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3778,7 +4092,8 @@
       "type": "Subtarefa",
       "title": "Criar método de medição de produtividade do time",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3790,7 +4105,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Retrospectiva",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3802,7 +4118,8 @@
       "type": "Subtarefa",
       "title": "Reunião Diária",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3814,7 +4131,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Revisão",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3826,7 +4144,8 @@
       "type": "Subtarefa",
       "title": "Reunião de Planejamento",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3838,7 +4157,8 @@
       "type": "História",
       "title": "Eu, como Scrum Master, quero gerenciar o sprint",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3850,7 +4170,8 @@
       "type": "Epic",
       "title": "Eu, como Desenvolvedor, quero realizar o Esboço do Projeto",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3862,7 +4183,8 @@
       "type": "Subtarefa",
       "title": "Validar o esboço junto ao dono do protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3874,7 +4196,8 @@
       "type": "Subtarefa",
       "title": "Elaborar um esboço único para a solução com base no crazy eights",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3886,7 +4209,8 @@
       "type": "Subtarefa",
       "title": "Elaborar esboços em papel usando papel com o crazy eights",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3898,7 +4222,8 @@
       "type": "Subtarefa",
       "title": "Apresentar telas e ferramentas encontrada",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3910,7 +4235,8 @@
       "type": "Subtarefa",
       "title": "Pesquisar soluções existentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3922,7 +4248,8 @@
       "type": "Subtarefa",
       "title": "Validar o esboço junto ao dono do protótipo",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3934,7 +4261,8 @@
       "type": "Subtarefa",
       "title": "Elaborar um esboço único para a solução com base no crazy eights",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3946,7 +4274,8 @@
       "type": "Subtarefa",
       "title": "Elaborar esboços em papel usando papel com o crazy eights",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3958,7 +4287,8 @@
       "type": "Subtarefa",
       "title": "Apresentar telas e ferramentas encontrada",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3970,7 +4300,8 @@
       "type": "Subtarefa",
       "title": "Pesquisar soluções existentes",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3982,7 +4313,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar o Esboço da Solução focado no conceito do Projeto e Equipe ",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     },
     {
       "internalId": "",
@@ -3994,7 +4326,8 @@
       "type": "História",
       "title": "Eu, como Desenvolvedor, quero realizar o esboço da solução focado no conceito de Team",
       "createdDate": "",
-      "dueDate": ""
+      "dueDate": "",
+      "status": "Concluído"
     }
   ]
 }

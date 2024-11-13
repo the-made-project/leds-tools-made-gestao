@@ -57,9 +57,10 @@ export class MarkdownBacklogService {
 
         const db = new LowSync<IssuesDTO>(adapter, defaultData);
         await db.read();
-
         
-        return db.data.data;  
+        return db.data.data.sort((a, b) => {
+            return Number(a.id) - Number(b.id);
+        }); 
         
       }
 

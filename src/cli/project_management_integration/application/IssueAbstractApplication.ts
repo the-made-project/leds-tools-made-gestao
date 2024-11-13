@@ -18,15 +18,16 @@ export  class IssueAbstractApplication extends AbstractApplication {
         
         const issueDTO: IssueDTO = {
             internalId: "",
-            id: (data).id,
-            key: (data).key,
-            parentId:(data).parent?.id ?? "",
-            parentKey:(data).parent?.key ?? "",
-            self: (data).self,                                
-            type: (data).fields.issuetype.name,
-            title:(data).fields.summary ?? "",
-            createdDate:(data).fields.createdDate ?? "",
-            dueDate:(data).fields.dueDate ?? ""
+            id: data.id,
+            key: data.key,
+            parentId:data.parent?.id ?? "",
+            parentKey:data.parent?.key ?? "",
+            self: data.self,                                
+            type: data.fields.issuetype.name,
+            title:data.fields.summary ?? "",
+            createdDate:data.fields.createdDate ?? "",
+            dueDate:data.fields.dueDate ?? "",
+            status: data.fields.status.name ?? ""
         };
         
         if (result){
