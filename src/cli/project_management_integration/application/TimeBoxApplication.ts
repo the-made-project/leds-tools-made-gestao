@@ -166,7 +166,11 @@ export class TimeBoxApplication extends AbstractApplication {
             const assigneeDTO: AssigneeDTO = {
                 name:task.fields.assignee?.displayName,
                 account: task.fields.assignee?.accountId,
-                issue: task.key
+                issue: task.key,
+                startDate:task.fields.created ?? "",
+                dueDate:task.fields.duedate ?? "",
+                issueName: task.fields.summary ?? "",
+                status: task.fields.status.name ?? ""
             };
     
             tasks.push(assigneeDTO)

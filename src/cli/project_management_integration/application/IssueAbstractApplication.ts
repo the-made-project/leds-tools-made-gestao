@@ -15,7 +15,7 @@ export  class IssueAbstractApplication extends AbstractApplication {
 
         const id = data.id
         const result = await this.retriveByExternal(id)
-    
+        
         const issueDTO: IssueDTO = {
             internalId: "",
             id: (data).id,
@@ -25,7 +25,7 @@ export  class IssueAbstractApplication extends AbstractApplication {
             self: (data).self,                                
             type: (data).fields.issuetype.name,
             title:(data).fields.summary ?? "",
-            createdDate:(data).fields.summary ?? "",
+            createdDate:(data).fields.createdDate ?? "",
             dueDate:(data).fields.dueDate ?? ""
         };
         

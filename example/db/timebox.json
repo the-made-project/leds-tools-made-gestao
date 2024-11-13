@@ -11,107 +11,191 @@
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-531"
+          "issue": "SLAVE-531",
+          "startDate": "2024-04-23T15:53:59.031-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero implementar funcionalidade de Refresh",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-532"
+          "issue": "SLAVE-532",
+          "startDate": "2024-04-23T15:54:28.398-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero implementar Tela de Detalhes do Projeto",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-435"
+          "issue": "SLAVE-435",
+          "startDate": "2024-03-19T18:01:41.228-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-437"
+          "issue": "SLAVE-437",
+          "startDate": "2024-03-19T18:01:41.230-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-434"
+          "issue": "SLAVE-434",
+          "startDate": "2024-03-19T18:01:41.202-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-466"
+          "issue": "SLAVE-466",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-468"
+          "issue": "SLAVE-468",
+          "startDate": "2024-03-26T13:54:48.510-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
+          "status": "Reaberto"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-475"
+          "issue": "SLAVE-475",
+          "startDate": "2024-03-26T19:50:35.968-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-430"
+          "issue": "SLAVE-430",
+          "startDate": "2024-03-19T18:01:40.198-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-429"
+          "issue": "SLAVE-429",
+          "startDate": "2024-03-19T18:01:40.176-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-464"
+          "issue": "SLAVE-464",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-391"
+          "issue": "SLAVE-391",
+          "startDate": "2024-03-19T13:53:34.867-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-269"
+          "issue": "SLAVE-269",
+          "startDate": "2024-03-11T16:39:25.359-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "status": "Concluído"
         },
         {
           "name": "Automation for Jira",
           "account": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
-          "issue": "SLAVE-514"
+          "issue": "SLAVE-514",
+          "startDate": "2024-04-17T11:18:11.144-0300",
+          "dueDate": "2024-04-25",
+          "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-526"
+          "issue": "SLAVE-526",
+          "startDate": "2024-04-23T15:48:01.860-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero associar Usuário ao seus respectivos papéis",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-527"
+          "issue": "SLAVE-527",
+          "startDate": "2024-04-23T15:48:07.962-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero implementar funcionalidade Trocar Senha",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-528"
+          "issue": "SLAVE-528",
+          "startDate": "2024-04-23T15:48:13.599-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero integrar Back e Front na AWS",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-529"
+          "issue": "SLAVE-529",
+          "startDate": "2024-04-23T15:48:18.679-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero implementar regras no CD",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-533"
+          "issue": "SLAVE-533",
+          "startDate": "2024-04-23T15:54:51.823-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero implementar Tela Troca de Senha",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-530"
+          "issue": "SLAVE-530",
+          "startDate": "2024-04-23T15:48:24.469-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero definir rede privada AWS",
+          "status": "Reaberto"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-537"
+          "issue": "SLAVE-537",
+          "startDate": "2024-05-16T11:58:59.372-0300",
+          "dueDate": "",
+          "issueName": "Testes - Frontend",
+          "status": "Em análise"
         }
       ]
     },
@@ -126,17 +210,29 @@
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-5"
+          "issue": "SLAVE-5",
+          "startDate": "2024-01-02T19:00:11.070-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar o Esboço da Solução focado no conceito do Projeto e Equipe ",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-4"
+          "issue": "SLAVE-4",
+          "startDate": "2024-01-02T19:00:11.063-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar o esboço da solução focado no conceito de Team",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-17"
+          "issue": "SLAVE-17",
+          "startDate": "2024-01-02T19:10:43.031-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Scrum Master, quero gerenciar o sprint",
+          "status": "Concluído"
         }
       ]
     },
@@ -149,46 +245,102 @@
       "state": "closed",
       "assignees": [
         {
-          "issue": "SLAVE-44"
+          "issue": "SLAVE-44",
+          "startDate": "2024-01-05T17:57:00.897-0300",
+          "dueDate": "",
+          "issueName": "Criação de um protótipo de alta fidelidade",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-45"
+          "issue": "SLAVE-45",
+          "startDate": "2024-01-05T17:57:06.570-0300",
+          "dueDate": "",
+          "issueName": "Tempo assíncrono para validação do protótipo pelo dono do protótipo",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-46"
+          "issue": "SLAVE-46",
+          "startDate": "2024-01-05T17:57:11.444-0300",
+          "dueDate": "",
+          "issueName": "Validação do protótipo junto ao público alvo(Marcar reunião)",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-47"
+          "issue": "SLAVE-47",
+          "startDate": "2024-01-05T17:57:31.699-0300",
+          "dueDate": "",
+          "issueName": "Revisão, análise dos feedback e ajuste do protótipo",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-48"
+          "issue": "SLAVE-48",
+          "startDate": "2024-01-05T17:57:37.149-0300",
+          "dueDate": "",
+          "issueName": "Validação do protótipo junto ao publico alvo (Marcar reunião)",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-50"
+          "issue": "SLAVE-50",
+          "startDate": "2024-01-05T17:57:49.044-0300",
+          "dueDate": "",
+          "issueName": "Usar o planning poker para mensurar os story points",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-60"
+          "issue": "SLAVE-60",
+          "startDate": "2024-01-12T10:03:48.865-0300",
+          "dueDate": "",
+          "issueName": "Criar um vídeo de apresentação da ferramenta implementada ",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-42"
+          "issue": "SLAVE-42",
+          "startDate": "2024-01-05T17:56:47.682-0300",
+          "dueDate": "",
+          "issueName": "Eu, como desenvolvedor, que elaborar storyboards acerca do uso do sistema",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-43"
+          "issue": "SLAVE-43",
+          "startDate": "2024-01-05T17:56:54.827-0300",
+          "dueDate": "",
+          "issueName": "Reunião para apresentação e validação do storyboard com dono do protótipo",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-59"
+          "issue": "SLAVE-59",
+          "startDate": "2024-01-12T10:03:43.841-0300",
+          "dueDate": "",
+          "issueName": "Intregrar as telas do appsmith com o strapi ",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-64"
+          "issue": "SLAVE-64",
+          "startDate": "2024-01-19T10:53:08.887-0300",
+          "dueDate": "",
+          "issueName": "Desenvolver api com a infraestrutura do projeto BAC",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-56"
+          "issue": "SLAVE-56",
+          "startDate": "2024-01-12T10:03:26.884-0300",
+          "dueDate": "",
+          "issueName": "Implementação das telas do protótipo na ferramenta appsmith",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-58"
+          "issue": "SLAVE-58",
+          "startDate": "2024-01-12T10:03:36.790-0300",
+          "dueDate": "",
+          "issueName": "Criar os papeis no strapi ",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-49"
+          "issue": "SLAVE-49",
+          "startDate": "2024-01-05T17:57:44.094-0300",
+          "dueDate": "",
+          "issueName": "Usar o diário de bordo único para o projeto",
+          "status": "Concluído"
         }
       ]
     },
@@ -201,23 +353,43 @@
       "state": "closed",
       "assignees": [
         {
-          "issue": "SLAVE-30"
+          "issue": "SLAVE-30",
+          "startDate": "2024-01-05T17:33:57.560-0300",
+          "dueDate": "",
+          "issueName": "Eu, como desenvolvedor, quero implementar um storyboard com o fluxo de cadastro de projetos e membros para validar entender o uso do sistema pelo usuário",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-32"
+          "issue": "SLAVE-32",
+          "startDate": "2024-01-05T17:35:38.614-0300",
+          "dueDate": "",
+          "issueName": "Eu, como desenvolvedor, quero implementar o prototipo de  alta fidelidade e funcional para apresentar ao meu usuário final, validar e coletar feebacks sobre o protótipo",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-34"
+          "issue": "SLAVE-34",
+          "startDate": "2024-01-05T17:37:33.250-0300",
+          "dueDate": "",
+          "issueName": "Eu, como desenvolvedor, quero implementar o PMC para organizar melhor o plano do projeto",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-35"
+          "issue": "SLAVE-35",
+          "startDate": "2024-01-05T17:43:12.163-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Scrum Master, quero gerenciar o sprint",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-53"
+          "issue": "SLAVE-53",
+          "startDate": "2024-01-09T11:53:51.546-0300",
+          "dueDate": "",
+          "issueName": "Eu, como desenvolvedor, quero realizar o deploy da API de teste",
+          "status": "Concluído"
         }
       ]
     },
@@ -232,27 +404,47 @@
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-67"
+          "issue": "SLAVE-67",
+          "startDate": "2024-01-26T13:22:08.505-0300",
+          "dueDate": "",
+          "issueName": "Estudar Blazor",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-66"
+          "issue": "SLAVE-66",
+          "startDate": "2024-01-26T13:22:08.505-0300",
+          "dueDate": "",
+          "issueName": "Estudar Orientaçao Objeto e Fundamento de C#",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-76"
+          "issue": "SLAVE-76",
+          "startDate": "2024-01-26T13:41:18.179-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-75"
+          "issue": "SLAVE-75",
+          "startDate": "2024-01-26T13:41:18.178-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-73"
+          "issue": "SLAVE-73",
+          "startDate": "2024-01-26T13:41:18.165-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
+          "status": "Concluído"
         }
       ]
     },
@@ -267,7 +459,11 @@
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-138"
+          "issue": "SLAVE-138",
+          "startDate": "2024-02-08T19:33:09.400-0300",
+          "dueDate": "",
+          "issueName": "Definir Escopo do Projeto",
+          "status": "Concluído"
         }
       ]
     },
@@ -282,68 +478,124 @@
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-259"
+          "issue": "SLAVE-259",
+          "startDate": "2024-03-07T15:02:10.997-0300",
+          "dueDate": "2024-03-15",
+          "issueName": "Eu, no papel de Coordenador, quero Cadastrar um Projeto",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-258"
+          "issue": "SLAVE-258",
+          "startDate": "2024-03-07T15:01:58.090-0300",
+          "dueDate": "2024-03-15",
+          "issueName": "Eu, no papel de Coordenador, quero Cadastrar a Pessoa de um projeto",
+          "status": "Em andamento"
         },
         {
-          "issue": "SLAVE-165"
+          "issue": "SLAVE-165",
+          "startDate": "2024-02-24T11:12:16.216-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Cadastrar a Categoria de um projeto",
+          "status": "Concluído"
         },
         {
-          "issue": "SLAVE-164"
-        },
-        {
-          "name": "Bruno Caxias",
-          "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-167"
-        },
-        {
-          "name": "Bruno Caxias",
-          "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-170"
-        },
-        {
-          "name": "Bruno Caxias",
-          "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-169"
+          "issue": "SLAVE-164",
+          "startDate": "2024-02-24T11:12:16.158-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Cadastrar as funções de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-168"
+          "issue": "SLAVE-167",
+          "startDate": "2024-02-24T11:12:17.383-0300",
+          "dueDate": "",
+          "issueName": "Criar de uma entidade",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-171"
+          "issue": "SLAVE-170",
+          "startDate": "2024-02-24T11:12:17.559-0300",
+          "dueDate": "",
+          "issueName": "Editar de uma entidade",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-173"
+          "issue": "SLAVE-169",
+          "startDate": "2024-02-24T11:12:17.556-0300",
+          "dueDate": "",
+          "issueName": "Listar de uma entidade",
+          "status": "Concluído"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-168",
+          "startDate": "2024-02-24T11:12:17.537-0300",
+          "dueDate": "",
+          "issueName": "Criar de uma entidade",
+          "status": "Concluído"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-171",
+          "startDate": "2024-02-24T11:12:17.678-0300",
+          "dueDate": "",
+          "issueName": "Listar de uma entidade",
+          "status": "Concluído"
+        },
+        {
+          "name": "Bruno Caxias",
+          "account": "616d6ce6062f4c00691d8d9b",
+          "issue": "SLAVE-173",
+          "startDate": "2024-02-24T11:12:17.842-0300",
+          "dueDate": "",
+          "issueName": "Criar as pastas que represente as camadas Model-View-Controle",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-172"
+          "issue": "SLAVE-172",
+          "startDate": "2024-02-24T11:12:17.837-0300",
+          "dueDate": "",
+          "issueName": "Criar Infraestrura base do projeto",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-174"
+          "issue": "SLAVE-174",
+          "startDate": "2024-02-24T11:12:17.895-0300",
+          "dueDate": "",
+          "issueName": "Criar o Modelo de Dominio baseado no diagrama de classes",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-176"
+          "issue": "SLAVE-176",
+          "startDate": "2024-02-24T11:12:18.120-0300",
+          "dueDate": "",
+          "issueName": "Editar de uma entidade",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-226"
+          "issue": "SLAVE-226",
+          "startDate": "2024-02-28T21:49:21.996-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento sobre automação no Jira com Gitlab",
+          "status": "Concluído"
         }
       ]
     },
@@ -358,127 +610,227 @@
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-263"
+          "issue": "SLAVE-263",
+          "startDate": "2024-03-11T16:03:18.922-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero refletir migration no banco de dados",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-281"
+          "issue": "SLAVE-281",
+          "startDate": "2024-03-11T16:39:26.265-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Editar  os projetos de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-286"
+          "issue": "SLAVE-286",
+          "startDate": "2024-03-11T16:39:26.304-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-280"
+          "issue": "SLAVE-280",
+          "startDate": "2024-03-11T16:39:26.258-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Excluir  os projetos de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-285"
+          "issue": "SLAVE-285",
+          "startDate": "2024-03-11T16:39:26.298-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Criar os projetos de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-318"
+          "issue": "SLAVE-318",
+          "startDate": "2024-03-11T17:22:12.785-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Excluir  as equipes de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-324"
+          "issue": "SLAVE-324",
+          "startDate": "2024-03-11T17:22:12.828-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Excluir  as pessoas de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-322"
+          "issue": "SLAVE-322",
+          "startDate": "2024-03-11T17:22:12.800-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-319"
+          "issue": "SLAVE-319",
+          "startDate": "2024-03-11T17:22:12.790-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Editar  as pessoas de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-323"
+          "issue": "SLAVE-323",
+          "startDate": "2024-03-11T17:22:12.815-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Criar as equipes de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-325"
+          "issue": "SLAVE-325",
+          "startDate": "2024-03-11T17:22:12.832-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-321"
+          "issue": "SLAVE-321",
+          "startDate": "2024-03-11T17:22:12.795-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Editar  as equipes de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-320"
+          "issue": "SLAVE-320",
+          "startDate": "2024-03-11T17:22:12.794-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Criar as pessoas de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-361"
+          "issue": "SLAVE-361",
+          "startDate": "2024-03-11T17:39:17.767-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero automatizar o trabalho via Jira Automations",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-362"
+          "issue": "SLAVE-362",
+          "startDate": "2024-03-11T17:39:39.356-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero revisar e modificar o workflow caso necessário",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-364"
+          "issue": "SLAVE-364",
+          "startDate": "2024-03-12T10:40:20.854-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero fazer Code Review",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-317"
+          "issue": "SLAVE-317",
+          "startDate": "2024-03-11T17:22:12.104-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero gerenciar produtividade a do time via Clockify e Jira",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-371"
+          "issue": "SLAVE-371",
+          "startDate": "2024-03-12T13:25:26.279-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Criar um time em um projeto",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-372"
+          "issue": "SLAVE-372",
+          "startDate": "2024-03-12T13:25:54.363-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Criar a alocação de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-373"
+          "issue": "SLAVE-373",
+          "startDate": "2024-03-12T13:42:27.882-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero revisar os validadores das entidades",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-374"
+          "issue": "SLAVE-374",
+          "startDate": "2024-03-12T14:39:51.484-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-376"
+          "issue": "SLAVE-376",
+          "startDate": "2024-03-12T18:34:18.036-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração dos módulos de alocação no backend",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-377"
+          "issue": "SLAVE-377",
+          "startDate": "2024-03-13T07:24:26.850-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero gerenciar produtividade do time via Clockify",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-378"
+          "issue": "SLAVE-378",
+          "startDate": "2024-03-13T14:27:12.683-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero gerenciar os merge requests do projeto",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-379"
+          "issue": "SLAVE-379",
+          "startDate": "2024-03-14T12:59:46.119-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
+          "status": "Concluído"
         }
       ]
     },
@@ -493,27 +845,47 @@
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-286"
+          "issue": "SLAVE-286",
+          "startDate": "2024-03-11T16:39:26.304-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-322"
+          "issue": "SLAVE-322",
+          "startDate": "2024-03-11T17:22:12.800-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-325"
+          "issue": "SLAVE-325",
+          "startDate": "2024-03-11T17:22:12.832-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-374"
+          "issue": "SLAVE-374",
+          "startDate": "2024-03-12T14:39:51.484-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-379"
+          "issue": "SLAVE-379",
+          "startDate": "2024-03-14T12:59:46.119-0300",
+          "dueDate": "",
+          "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
+          "status": "Concluído"
         }
       ]
     },
@@ -528,22 +900,38 @@
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-382"
+          "issue": "SLAVE-382",
+          "startDate": "2024-03-15T13:47:49.095-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OData",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-388"
+          "issue": "SLAVE-388",
+          "startDate": "2024-03-19T13:53:34.858-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Métricas Ágeis",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-430"
+          "issue": "SLAVE-430",
+          "startDate": "2024-03-19T18:01:40.198-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-391"
+          "issue": "SLAVE-391",
+          "startDate": "2024-03-19T13:53:34.867-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "status": "Concluído"
         }
       ]
     },
@@ -558,42 +946,74 @@
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-467"
+          "issue": "SLAVE-467",
+          "startDate": "2024-03-26T13:54:48.496-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-465"
+          "issue": "SLAVE-465",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-466"
+          "issue": "SLAVE-466",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-475"
+          "issue": "SLAVE-475",
+          "startDate": "2024-03-26T19:50:35.968-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "status": "Em andamento"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-384"
+          "issue": "SLAVE-384",
+          "startDate": "2024-03-19T13:53:34.833-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Vue",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-430"
+          "issue": "SLAVE-430",
+          "startDate": "2024-03-19T18:01:40.198-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-429"
+          "issue": "SLAVE-429",
+          "startDate": "2024-03-19T18:01:40.176-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-464"
+          "issue": "SLAVE-464",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "status": "Em andamento"
         }
       ]
     },
@@ -608,67 +1028,119 @@
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-435"
+          "issue": "SLAVE-435",
+          "startDate": "2024-03-19T18:01:41.228-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-437"
+          "issue": "SLAVE-437",
+          "startDate": "2024-03-19T18:01:41.230-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-434"
+          "issue": "SLAVE-434",
+          "startDate": "2024-03-19T18:01:41.202-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-467"
+          "issue": "SLAVE-467",
+          "startDate": "2024-03-26T13:54:48.496-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-465"
+          "issue": "SLAVE-465",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-466"
+          "issue": "SLAVE-466",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-468"
+          "issue": "SLAVE-468",
+          "startDate": "2024-03-26T13:54:48.510-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
+          "status": "Reaberto"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-475"
+          "issue": "SLAVE-475",
+          "startDate": "2024-03-26T19:50:35.968-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-430"
+          "issue": "SLAVE-430",
+          "startDate": "2024-03-19T18:01:40.198-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-429"
+          "issue": "SLAVE-429",
+          "startDate": "2024-03-19T18:01:40.176-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-464"
+          "issue": "SLAVE-464",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-391"
+          "issue": "SLAVE-391",
+          "startDate": "2024-03-19T13:53:34.867-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-269"
+          "issue": "SLAVE-269",
+          "startDate": "2024-03-11T16:39:25.359-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "status": "Concluído"
         }
       ]
     },
@@ -683,62 +1155,110 @@
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-435"
+          "issue": "SLAVE-435",
+          "startDate": "2024-03-19T18:01:41.228-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "status": "Concluído"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-437"
+          "issue": "SLAVE-437",
+          "startDate": "2024-03-19T18:01:41.230-0300",
+          "dueDate": "2024-04-22",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-434"
+          "issue": "SLAVE-434",
+          "startDate": "2024-03-19T18:01:41.202-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-466"
+          "issue": "SLAVE-466",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "status": "Concluído"
         },
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
-          "issue": "SLAVE-510"
+          "issue": "SLAVE-510",
+          "startDate": "2024-04-17T11:15:20.301-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
+          "status": "Concluído"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-475"
+          "issue": "SLAVE-475",
+          "startDate": "2024-03-26T19:50:35.968-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-430"
+          "issue": "SLAVE-430",
+          "startDate": "2024-03-19T18:01:40.198-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-429"
+          "issue": "SLAVE-429",
+          "startDate": "2024-03-19T18:01:40.176-0300",
+          "dueDate": "2024-04-29",
+          "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "status": "Em andamento"
         },
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
-          "issue": "SLAVE-464"
+          "issue": "SLAVE-464",
+          "startDate": "2024-03-26T13:54:48.497-0300",
+          "dueDate": "",
+          "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "status": "Em andamento"
         },
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
-          "issue": "SLAVE-391"
+          "issue": "SLAVE-391",
+          "startDate": "2024-03-19T13:53:34.867-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "status": "Concluído"
         },
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
-          "issue": "SLAVE-269"
+          "issue": "SLAVE-269",
+          "startDate": "2024-03-11T16:39:25.359-0300",
+          "dueDate": "2024-04-26",
+          "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "status": "Concluído"
         },
         {
           "name": "Automation for Jira",
           "account": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
-          "issue": "SLAVE-514"
+          "issue": "SLAVE-514",
+          "startDate": "2024-04-17T11:18:11.144-0300",
+          "dueDate": "2024-04-25",
+          "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
+          "status": "Em andamento"
         }
       ]
     }

@@ -29,6 +29,11 @@ export type AssigneeDTO = {
   name?:string;
   account:string;
   issue: string;
+  issueName?: string;
+  startDate?: string;
+  dueDate?: string
+  endDate?: string;
+  status?: string;
 }
 
 export type personDTO = {
