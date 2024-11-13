@@ -26,7 +26,7 @@ export class MarkdownService {
         fs.mkdirSync(this.target_folder, {recursive:true})
 
         this.markdownProcessService = new MarkdownProcessService(model,this.DOC_PATH)
-        this.markdownBacklogService = new MarkdownBacklogService(model,this.DOC_PATH)
+        this.markdownBacklogService = new MarkdownBacklogService(model,this.DOC_PATH,this.DB_PATH)
         this.markdownTimeBoxService = new MarkdownTimeBoxService(model, this.DOC_PATH, this.DB_PATH)
 
         this.config()
@@ -57,6 +57,7 @@ export class MarkdownService {
 
     public createManagementDocumenation(){
         this.markdownTimeBoxService.create()
+        this.markdownBacklogService.create()
     }
 
     

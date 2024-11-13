@@ -21,7 +21,7 @@ export class MarkdownTimeBoxService {
         this.model = model
         this.target_folder = target_folder
         this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
-        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'Timeboxes')
+        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'timeboxes')
         this.jsonFile = "timebox.json"
         this.DB_PATH = db_path
     }
@@ -31,7 +31,7 @@ export class MarkdownTimeBoxService {
 
         const timeBoxes = await this.retrive();
         timeBoxes.forEach (timebox  =>{
-            console.log (timebox)
+            
             fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
         } );
                 
