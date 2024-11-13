@@ -51,7 +51,7 @@ export class MarkdownBacklogService {
     private showLoadingMessage() {
         vscode.window.withProgress({
             location: vscode.ProgressLocation.Notification,
-            title: "Creating Planning Orizuru...",
+            title: "Creating Planning ...",
             cancellable: false
         }, async (progress, token) => {
             // Simule um atraso de 2 segundos (você pode substituir isso com sua lógica de carregamento real)

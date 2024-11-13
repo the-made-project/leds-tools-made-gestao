@@ -48,6 +48,7 @@ export abstract class AbstractApplication implements Synchronized{
 
   }
 
+  
   protected async retrive(id:string){
     
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
@@ -61,6 +62,8 @@ export abstract class AbstractApplication implements Synchronized{
     return lodash.chain(db.data).get('data').find({ internalId: id }).value();    
     
   }
+
+
 
   protected async retriveByExternal(id:string){
     

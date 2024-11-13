@@ -5,6 +5,7 @@ import path from 'path'
 import { MarkdownProcessService } from "./MarkdownProcessService.js";
 import { MarkdownBacklogService } from "./MarkdownBacklogService.js";
 import { expandToStringWithNL } from "langium/generate";
+import { MarkdownTimeBoxService } from "./MarkdownTimeBoxService.js";
 
 
 export class MarkdownService {
@@ -12,18 +13,21 @@ export class MarkdownService {
     model: Model
     target_folder:string
     DOC_PATH:string
-
+    DB_PATH: string
     markdownProcessService: MarkdownProcessService
     markdownBacklogService: MarkdownBacklogService
+    markdownTimeBoxService: MarkdownTimeBoxService
 
     constructor (model: Model, target_folder:string){
         this.model = model
         this.target_folder = target_folder
         this.DOC_PATH = createPath(this.target_folder,'docs')
+        this.DB_PATH = createPath(this.target_folder,'db')
         fs.mkdirSync(this.target_folder, {recursive:true})
 
         this.markdownProcessService = new MarkdownProcessService(model,this.DOC_PATH)
         this.markdownBacklogService = new MarkdownBacklogService(model,this.DOC_PATH)
+        this.markdownTimeBoxService = new MarkdownTimeBoxService(model, this.DOC_PATH, this.DB_PATH)
 
         this.config()
     }
@@ -52,7 +56,7 @@ export class MarkdownService {
     }
 
     public createManagementDocumenation(){
-        this.markdownBacklogService.create()
+        this.markdownTimeBoxService.create()
     }
 
     
