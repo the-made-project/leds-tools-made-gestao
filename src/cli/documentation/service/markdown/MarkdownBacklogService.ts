@@ -31,8 +31,6 @@ export class MarkdownBacklogService {
 
         const backlog = await this.retrive();
 
-        console.log (backlog)
-
         fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlog))
 
     }
@@ -44,9 +42,9 @@ export class MarkdownBacklogService {
         sidebar_position: 1
         ---
         |ID |Nome |Descrição | Type | Status|
-        |:----    |:----|:--------  |:-------:| :----------:  | :---: |
-        ${backlog.map(issue=> `|[${issue.key.toLocaleUpperCase()}](${issue.self})|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase()}|${issue.status?.toLocaleUpperCase()}|`).join("\n")}
-         `
+        |:--|:----|:-------- |:----:| :---: |
+        ${backlog.map(issue=> `|[${issue.key.toLocaleUpperCase()}](${issue.self})|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
+        `
     }
 
     
