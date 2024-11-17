@@ -9,6 +9,7 @@ export type IssueDTO = {
     description?:string;
     status?:string;
     createdDate?:string;
+    completedDate?:string;
     dueDate?:string;
     parentId?:string;
     parentKey?:string;
@@ -31,7 +32,8 @@ export type AssigneeDTO = {
   issue: string;
   issueName?: string;
   startDate?: string;
-  dueDate?: string
+  dueDate?: string;
+  completedDate?:string;
   endDate?: string;
   status?: string;
 }

@@ -26,6 +26,7 @@ export  class IssueAbstractApplication extends AbstractApplication {
             type: data.fields.issuetype.name,
             title:data.fields.summary ?? "",
             createdDate:data.fields.createdDate ?? "",
+            completedDate: data.fields.resolutiondate ?? "", 
             dueDate:data.fields.dueDate ?? "",
             status: data.fields.status.name ?? ""
         };

@@ -15,6 +15,7 @@
           "startDate": "2024-04-23T15:53:59.031-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero implementar funcionalidade de Refresh",
+          "completedDate": "2024-05-08T12:45:23.826-0300",
           "status": "Concluído"
         },
         {
@@ -24,6 +25,7 @@
           "startDate": "2024-04-23T15:54:28.398-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero implementar Tela de Detalhes do Projeto",
+          "completedDate": "2024-04-30T15:35:47.576-0300",
           "status": "Concluído"
         },
         {
@@ -33,6 +35,7 @@
           "startDate": "2024-03-19T18:01:41.228-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "completedDate": "2024-04-25T13:15:13.328-0300",
           "status": "Concluído"
         },
         {
@@ -42,6 +45,7 @@
           "startDate": "2024-03-19T18:01:41.230-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -51,6 +55,7 @@
           "startDate": "2024-03-19T18:01:41.202-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -60,6 +65,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "completedDate": "2024-04-25T13:10:34.462-0300",
           "status": "Concluído"
         },
         {
@@ -69,6 +75,7 @@
           "startDate": "2024-03-26T13:54:48.510-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
+          "completedDate": "",
           "status": "Reaberto"
         },
         {
@@ -78,6 +85,7 @@
           "startDate": "2024-03-26T19:50:35.968-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -87,6 +95,7 @@
           "startDate": "2024-03-19T18:01:40.198-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -96,6 +105,7 @@
           "startDate": "2024-03-19T18:01:40.176-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -105,6 +115,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -114,6 +125,7 @@
           "startDate": "2024-03-19T13:53:34.867-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "completedDate": "2024-05-06T09:40:29.365-0300",
           "status": "Concluído"
         },
         {
@@ -123,6 +135,7 @@
           "startDate": "2024-03-11T16:39:25.359-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "completedDate": "2024-04-25T10:52:01.385-0300",
           "status": "Concluído"
         },
         {
@@ -132,6 +145,7 @@
           "startDate": "2024-04-17T11:18:11.144-0300",
           "dueDate": "2024-04-25",
           "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -141,6 +155,7 @@
           "startDate": "2024-04-23T15:48:01.860-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero associar Usuário ao seus respectivos papéis",
+          "completedDate": "2024-04-25T15:59:46.290-0300",
           "status": "Concluído"
         },
         {
@@ -150,6 +165,7 @@
           "startDate": "2024-04-23T15:48:07.962-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero implementar funcionalidade Trocar Senha",
+          "completedDate": "2024-04-25T23:00:04.412-0300",
           "status": "Concluído"
         },
         {
@@ -159,6 +175,7 @@
           "startDate": "2024-04-23T15:48:13.599-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero integrar Back e Front na AWS",
+          "completedDate": "2024-05-03T15:08:01.427-0300",
           "status": "Concluído"
         },
         {
@@ -168,6 +185,7 @@
           "startDate": "2024-04-23T15:48:18.679-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero implementar regras no CD",
+          "completedDate": "2024-04-25T15:59:56.354-0300",
           "status": "Concluído"
         },
         {
@@ -177,6 +195,7 @@
           "startDate": "2024-04-23T15:54:51.823-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero implementar Tela Troca de Senha",
+          "completedDate": "2024-05-13T14:39:04.697-0300",
           "status": "Concluído"
         },
         {
@@ -186,6 +205,7 @@
           "startDate": "2024-04-23T15:48:24.469-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero definir rede privada AWS",
+          "completedDate": "",
           "status": "Reaberto"
         },
         {
@@ -195,6 +215,7 @@
           "startDate": "2024-05-16T11:58:59.372-0300",
           "dueDate": "",
           "issueName": "Testes - Frontend",
+          "completedDate": "",
           "status": "Em análise"
         }
       ]
@@ -214,6 +235,7 @@
           "startDate": "2024-01-02T19:00:11.070-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar o Esboço da Solução focado no conceito do Projeto e Equipe ",
+          "completedDate": "2024-01-05T17:27:25.932-0300",
           "status": "Concluído"
         },
         {
@@ -223,6 +245,7 @@
           "startDate": "2024-01-02T19:00:11.063-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar o esboço da solução focado no conceito de Team",
+          "completedDate": "2024-01-05T17:45:16.378-0300",
           "status": "Concluído"
         },
         {
@@ -232,6 +255,7 @@
           "startDate": "2024-01-02T19:10:43.031-0300",
           "dueDate": "",
           "issueName": "Eu, como Scrum Master, quero gerenciar o sprint",
+          "completedDate": "2024-01-05T17:27:38.160-0300",
           "status": "Concluído"
         }
       ]
@@ -249,6 +273,7 @@
           "startDate": "2024-01-05T17:57:00.897-0300",
           "dueDate": "",
           "issueName": "Criação de um protótipo de alta fidelidade",
+          "completedDate": "2024-01-09T11:49:45.077-0300",
           "status": "Concluído"
         },
         {
@@ -256,6 +281,7 @@
           "startDate": "2024-01-05T17:57:06.570-0300",
           "dueDate": "",
           "issueName": "Tempo assíncrono para validação do protótipo pelo dono do protótipo",
+          "completedDate": "2024-01-11T10:53:25.833-0300",
           "status": "Concluído"
         },
         {
@@ -263,6 +289,7 @@
           "startDate": "2024-01-05T17:57:11.444-0300",
           "dueDate": "",
           "issueName": "Validação do protótipo junto ao público alvo(Marcar reunião)",
+          "completedDate": "2024-01-11T10:53:28.887-0300",
           "status": "Concluído"
         },
         {
@@ -270,6 +297,7 @@
           "startDate": "2024-01-05T17:57:31.699-0300",
           "dueDate": "",
           "issueName": "Revisão, análise dos feedback e ajuste do protótipo",
+          "completedDate": "2024-01-19T10:13:32.233-0300",
           "status": "Concluído"
         },
         {
@@ -277,6 +305,7 @@
           "startDate": "2024-01-05T17:57:37.149-0300",
           "dueDate": "",
           "issueName": "Validação do protótipo junto ao publico alvo (Marcar reunião)",
+          "completedDate": "2024-01-26T11:51:38.807-0300",
           "status": "Concluído"
         },
         {
@@ -284,6 +313,7 @@
           "startDate": "2024-01-05T17:57:49.044-0300",
           "dueDate": "",
           "issueName": "Usar o planning poker para mensurar os story points",
+          "completedDate": "2024-01-26T11:51:42.096-0300",
           "status": "Concluído"
         },
         {
@@ -291,6 +321,7 @@
           "startDate": "2024-01-12T10:03:48.865-0300",
           "dueDate": "",
           "issueName": "Criar um vídeo de apresentação da ferramenta implementada ",
+          "completedDate": "2024-01-25T09:11:24.197-0300",
           "status": "Concluído"
         },
         {
@@ -298,6 +329,7 @@
           "startDate": "2024-01-05T17:56:47.682-0300",
           "dueDate": "",
           "issueName": "Eu, como desenvolvedor, que elaborar storyboards acerca do uso do sistema",
+          "completedDate": "2024-01-08T11:47:20.513-0300",
           "status": "Concluído"
         },
         {
@@ -305,6 +337,7 @@
           "startDate": "2024-01-05T17:56:54.827-0300",
           "dueDate": "",
           "issueName": "Reunião para apresentação e validação do storyboard com dono do protótipo",
+          "completedDate": "2024-01-09T11:57:43.133-0300",
           "status": "Concluído"
         },
         {
@@ -312,6 +345,7 @@
           "startDate": "2024-01-12T10:03:43.841-0300",
           "dueDate": "",
           "issueName": "Intregrar as telas do appsmith com o strapi ",
+          "completedDate": "2024-01-25T12:12:08.784-0300",
           "status": "Concluído"
         },
         {
@@ -319,6 +353,7 @@
           "startDate": "2024-01-19T10:53:08.887-0300",
           "dueDate": "",
           "issueName": "Desenvolver api com a infraestrutura do projeto BAC",
+          "completedDate": "2024-01-22T09:17:01.680-0300",
           "status": "Concluído"
         },
         {
@@ -326,6 +361,7 @@
           "startDate": "2024-01-12T10:03:26.884-0300",
           "dueDate": "",
           "issueName": "Implementação das telas do protótipo na ferramenta appsmith",
+          "completedDate": "2024-01-25T12:12:05.613-0300",
           "status": "Concluído"
         },
         {
@@ -333,6 +369,7 @@
           "startDate": "2024-01-12T10:03:36.790-0300",
           "dueDate": "",
           "issueName": "Criar os papeis no strapi ",
+          "completedDate": "2024-01-25T09:10:24.409-0300",
           "status": "Concluído"
         },
         {
@@ -340,6 +377,7 @@
           "startDate": "2024-01-05T17:57:44.094-0300",
           "dueDate": "",
           "issueName": "Usar o diário de bordo único para o projeto",
+          "completedDate": "2024-01-10T11:24:43.341-0300",
           "status": "Concluído"
         }
       ]
@@ -357,6 +395,7 @@
           "startDate": "2024-01-05T17:33:57.560-0300",
           "dueDate": "",
           "issueName": "Eu, como desenvolvedor, quero implementar um storyboard com o fluxo de cadastro de projetos e membros para validar entender o uso do sistema pelo usuário",
+          "completedDate": "2024-01-09T08:14:36.192-0300",
           "status": "Concluído"
         },
         {
@@ -364,6 +403,7 @@
           "startDate": "2024-01-05T17:35:38.614-0300",
           "dueDate": "",
           "issueName": "Eu, como desenvolvedor, quero implementar o prototipo de  alta fidelidade e funcional para apresentar ao meu usuário final, validar e coletar feebacks sobre o protótipo",
+          "completedDate": "2024-01-15T09:48:01.921-0300",
           "status": "Concluído"
         },
         {
@@ -371,6 +411,7 @@
           "startDate": "2024-01-05T17:37:33.250-0300",
           "dueDate": "",
           "issueName": "Eu, como desenvolvedor, quero implementar o PMC para organizar melhor o plano do projeto",
+          "completedDate": "2024-01-08T11:33:59.523-0300",
           "status": "Concluído"
         },
         {
@@ -380,6 +421,7 @@
           "startDate": "2024-01-05T17:43:12.163-0300",
           "dueDate": "",
           "issueName": "Eu, como Scrum Master, quero gerenciar o sprint",
+          "completedDate": "2024-01-19T10:11:32.675-0300",
           "status": "Concluído"
         },
         {
@@ -389,6 +431,7 @@
           "startDate": "2024-01-09T11:53:51.546-0300",
           "dueDate": "",
           "issueName": "Eu, como desenvolvedor, quero realizar o deploy da API de teste",
+          "completedDate": "2024-01-10T12:03:42.109-0300",
           "status": "Concluído"
         }
       ]
@@ -408,6 +451,7 @@
           "startDate": "2024-01-26T13:22:08.505-0300",
           "dueDate": "",
           "issueName": "Estudar Blazor",
+          "completedDate": "2024-02-04T20:33:54.737-0300",
           "status": "Concluído"
         },
         {
@@ -417,6 +461,7 @@
           "startDate": "2024-01-26T13:22:08.505-0300",
           "dueDate": "",
           "issueName": "Estudar Orientaçao Objeto e Fundamento de C#",
+          "completedDate": "2024-02-02T08:52:40.839-0300",
           "status": "Concluído"
         },
         {
@@ -426,6 +471,7 @@
           "startDate": "2024-01-26T13:41:18.179-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em Docker",
+          "completedDate": "2024-02-01T12:04:05.483-0300",
           "status": "Concluído"
         },
         {
@@ -435,6 +481,7 @@
           "startDate": "2024-01-26T13:41:18.178-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em trabalhar com ferramentas de Low Code em Equipe Distribuida",
+          "completedDate": "2024-02-04T20:34:27.535-0300",
           "status": "Concluído"
         },
         {
@@ -444,6 +491,7 @@
           "startDate": "2024-01-26T13:41:18.165-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AppSmith",
+          "completedDate": "2024-02-05T08:52:00.243-0300",
           "status": "Concluído"
         }
       ]
@@ -463,6 +511,7 @@
           "startDate": "2024-02-08T19:33:09.400-0300",
           "dueDate": "",
           "issueName": "Definir Escopo do Projeto",
+          "completedDate": "2024-02-09T19:14:14.653-0300",
           "status": "Concluído"
         }
       ]
@@ -482,6 +531,7 @@
           "startDate": "2024-03-07T15:02:10.997-0300",
           "dueDate": "2024-03-15",
           "issueName": "Eu, no papel de Coordenador, quero Cadastrar um Projeto",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -491,6 +541,7 @@
           "startDate": "2024-03-07T15:01:58.090-0300",
           "dueDate": "2024-03-15",
           "issueName": "Eu, no papel de Coordenador, quero Cadastrar a Pessoa de um projeto",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -498,6 +549,7 @@
           "startDate": "2024-02-24T11:12:16.216-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Cadastrar a Categoria de um projeto",
+          "completedDate": "2024-03-07T16:01:16.453-0300",
           "status": "Concluído"
         },
         {
@@ -505,6 +557,7 @@
           "startDate": "2024-02-24T11:12:16.158-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Cadastrar as funções de uma organização",
+          "completedDate": "2024-03-07T16:01:21.853-0300",
           "status": "Concluído"
         },
         {
@@ -514,6 +567,7 @@
           "startDate": "2024-02-24T11:12:17.383-0300",
           "dueDate": "",
           "issueName": "Criar de uma entidade",
+          "completedDate": "2024-02-27T15:39:50.728-0300",
           "status": "Concluído"
         },
         {
@@ -523,6 +577,7 @@
           "startDate": "2024-02-24T11:12:17.559-0300",
           "dueDate": "",
           "issueName": "Editar de uma entidade",
+          "completedDate": "2024-02-27T15:39:52.786-0300",
           "status": "Concluído"
         },
         {
@@ -532,6 +587,7 @@
           "startDate": "2024-02-24T11:12:17.556-0300",
           "dueDate": "",
           "issueName": "Listar de uma entidade",
+          "completedDate": "2024-02-27T15:39:57.252-0300",
           "status": "Concluído"
         },
         {
@@ -541,6 +597,7 @@
           "startDate": "2024-02-24T11:12:17.537-0300",
           "dueDate": "",
           "issueName": "Criar de uma entidade",
+          "completedDate": "2024-02-27T16:06:58.989-0300",
           "status": "Concluído"
         },
         {
@@ -550,6 +607,7 @@
           "startDate": "2024-02-24T11:12:17.678-0300",
           "dueDate": "",
           "issueName": "Listar de uma entidade",
+          "completedDate": "2024-02-27T16:07:01.221-0300",
           "status": "Concluído"
         },
         {
@@ -559,6 +617,7 @@
           "startDate": "2024-02-24T11:12:17.842-0300",
           "dueDate": "",
           "issueName": "Criar as pastas que represente as camadas Model-View-Controle",
+          "completedDate": "2024-02-27T16:13:22.147-0300",
           "status": "Concluído"
         },
         {
@@ -568,6 +627,7 @@
           "startDate": "2024-02-24T11:12:17.837-0300",
           "dueDate": "",
           "issueName": "Criar Infraestrura base do projeto",
+          "completedDate": "2024-03-04T18:52:33.901-0300",
           "status": "Concluído"
         },
         {
@@ -577,6 +637,7 @@
           "startDate": "2024-02-24T11:12:17.895-0300",
           "dueDate": "",
           "issueName": "Criar o Modelo de Dominio baseado no diagrama de classes",
+          "completedDate": "2024-03-04T18:52:35.627-0300",
           "status": "Concluído"
         },
         {
@@ -586,6 +647,7 @@
           "startDate": "2024-02-24T11:12:18.120-0300",
           "dueDate": "",
           "issueName": "Editar de uma entidade",
+          "completedDate": "2024-02-27T16:07:19.413-0300",
           "status": "Concluído"
         },
         {
@@ -595,6 +657,7 @@
           "startDate": "2024-02-28T21:49:21.996-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento sobre automação no Jira com Gitlab",
+          "completedDate": "2024-03-07T18:02:21.847-0300",
           "status": "Concluído"
         }
       ]
@@ -614,6 +677,7 @@
           "startDate": "2024-03-11T16:03:18.922-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero refletir migration no banco de dados",
+          "completedDate": "2024-03-18T08:24:40.775-0300",
           "status": "Concluído"
         },
         {
@@ -623,6 +687,7 @@
           "startDate": "2024-03-11T16:39:26.265-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Editar  os projetos de uma organização",
+          "completedDate": "2024-03-18T08:29:34.049-0300",
           "status": "Concluído"
         },
         {
@@ -632,6 +697,7 @@
           "startDate": "2024-03-11T16:39:26.304-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
+          "completedDate": "2024-03-19T14:08:15.820-0300",
           "status": "Concluído"
         },
         {
@@ -641,6 +707,7 @@
           "startDate": "2024-03-11T16:39:26.258-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Excluir  os projetos de uma organização",
+          "completedDate": "2024-03-18T08:31:03.832-0300",
           "status": "Concluído"
         },
         {
@@ -650,6 +717,7 @@
           "startDate": "2024-03-11T16:39:26.298-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Criar os projetos de uma organização",
+          "completedDate": "2024-03-18T08:32:33.904-0300",
           "status": "Concluído"
         },
         {
@@ -659,6 +727,7 @@
           "startDate": "2024-03-11T17:22:12.785-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Excluir  as equipes de uma organização",
+          "completedDate": "2024-03-18T08:59:36.863-0300",
           "status": "Concluído"
         },
         {
@@ -668,6 +737,7 @@
           "startDate": "2024-03-11T17:22:12.828-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Excluir  as pessoas de uma organização",
+          "completedDate": "2024-03-18T08:47:02.893-0300",
           "status": "Concluído"
         },
         {
@@ -677,6 +747,7 @@
           "startDate": "2024-03-11T17:22:12.800-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
+          "completedDate": "2024-03-19T14:08:13.612-0300",
           "status": "Concluído"
         },
         {
@@ -686,6 +757,7 @@
           "startDate": "2024-03-11T17:22:12.790-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Editar  as pessoas de uma organização",
+          "completedDate": "2024-03-18T08:49:09.620-0300",
           "status": "Concluído"
         },
         {
@@ -695,6 +767,7 @@
           "startDate": "2024-03-11T17:22:12.815-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Criar as equipes de uma organização",
+          "completedDate": "2024-03-18T08:50:13.089-0300",
           "status": "Concluído"
         },
         {
@@ -704,6 +777,7 @@
           "startDate": "2024-03-11T17:22:12.832-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
+          "completedDate": "2024-03-19T14:08:17.701-0300",
           "status": "Concluído"
         },
         {
@@ -713,6 +787,7 @@
           "startDate": "2024-03-11T17:22:12.795-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Editar  as equipes de uma organização",
+          "completedDate": "2024-03-18T08:51:58.968-0300",
           "status": "Concluído"
         },
         {
@@ -722,6 +797,7 @@
           "startDate": "2024-03-11T17:22:12.794-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Criar as pessoas de uma organização",
+          "completedDate": "2024-03-18T08:33:04.205-0300",
           "status": "Concluído"
         },
         {
@@ -731,6 +807,7 @@
           "startDate": "2024-03-11T17:39:17.767-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero automatizar o trabalho via Jira Automations",
+          "completedDate": "2024-03-14T20:30:47.054-0300",
           "status": "Concluído"
         },
         {
@@ -740,6 +817,7 @@
           "startDate": "2024-03-11T17:39:39.356-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero revisar e modificar o workflow caso necessário",
+          "completedDate": "2024-03-14T20:30:59.851-0300",
           "status": "Concluído"
         },
         {
@@ -749,6 +827,7 @@
           "startDate": "2024-03-12T10:40:20.854-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero fazer Code Review",
+          "completedDate": "2024-03-18T08:28:37.115-0300",
           "status": "Concluído"
         },
         {
@@ -758,6 +837,7 @@
           "startDate": "2024-03-11T17:22:12.104-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero gerenciar produtividade a do time via Clockify e Jira",
+          "completedDate": "2024-03-14T20:30:50.991-0300",
           "status": "Concluído"
         },
         {
@@ -767,6 +847,7 @@
           "startDate": "2024-03-12T13:25:26.279-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Criar um time em um projeto",
+          "completedDate": "2024-03-18T08:34:09.022-0300",
           "status": "Concluído"
         },
         {
@@ -776,6 +857,7 @@
           "startDate": "2024-03-12T13:25:54.363-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Criar a alocação de uma organização",
+          "completedDate": "2024-03-13T15:26:46.727-0300",
           "status": "Concluído"
         },
         {
@@ -785,6 +867,7 @@
           "startDate": "2024-03-12T13:42:27.882-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero revisar os validadores das entidades",
+          "completedDate": "2024-03-18T08:33:57.988-0300",
           "status": "Concluído"
         },
         {
@@ -794,6 +877,7 @@
           "startDate": "2024-03-12T14:39:51.484-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
+          "completedDate": "2024-03-19T14:08:19.492-0300",
           "status": "Concluído"
         },
         {
@@ -803,6 +887,7 @@
           "startDate": "2024-03-12T18:34:18.036-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração dos módulos de alocação no backend",
+          "completedDate": "2024-03-13T14:25:40.910-0300",
           "status": "Concluído"
         },
         {
@@ -812,6 +897,7 @@
           "startDate": "2024-03-13T07:24:26.850-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero gerenciar produtividade do time via Clockify",
+          "completedDate": "2024-03-13T11:50:22.828-0300",
           "status": "Concluído"
         },
         {
@@ -821,6 +907,7 @@
           "startDate": "2024-03-13T14:27:12.683-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero gerenciar os merge requests do projeto",
+          "completedDate": "2024-03-18T08:33:41.270-0300",
           "status": "Concluído"
         },
         {
@@ -830,6 +917,7 @@
           "startDate": "2024-03-14T12:59:46.119-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
+          "completedDate": "2024-03-19T14:08:21.484-0300",
           "status": "Concluído"
         }
       ]
@@ -849,6 +937,7 @@
           "startDate": "2024-03-11T16:39:26.304-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  os projetos de uma organização",
+          "completedDate": "2024-03-19T14:08:15.820-0300",
           "status": "Concluído"
         },
         {
@@ -858,6 +947,7 @@
           "startDate": "2024-03-11T17:22:12.800-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  as pessoas de uma organização",
+          "completedDate": "2024-03-19T14:08:13.612-0300",
           "status": "Concluído"
         },
         {
@@ -867,6 +957,7 @@
           "startDate": "2024-03-11T17:22:12.832-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Coordenador, quero Listar  as equipes de uma organização",
+          "completedDate": "2024-03-19T14:08:17.701-0300",
           "status": "Concluído"
         },
         {
@@ -876,6 +967,7 @@
           "startDate": "2024-03-12T14:39:51.484-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Gestor, quero aprimorar os slides das Sprints Reviews/Retrospective, visando maior produtividade da tarefa",
+          "completedDate": "2024-03-19T14:08:19.492-0300",
           "status": "Concluído"
         },
         {
@@ -885,6 +977,7 @@
           "startDate": "2024-03-14T12:59:46.119-0300",
           "dueDate": "",
           "issueName": "Eu, no papel de Desenvolvedor, quero realizar a integração do backend com frontend",
+          "completedDate": "2024-03-19T14:08:21.484-0300",
           "status": "Concluído"
         }
       ]
@@ -904,6 +997,7 @@
           "startDate": "2024-03-15T13:47:49.095-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OData",
+          "completedDate": "2024-03-26T11:56:57.384-0300",
           "status": "Concluído"
         },
         {
@@ -913,6 +1007,7 @@
           "startDate": "2024-03-19T13:53:34.858-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Métricas Ágeis",
+          "completedDate": "2024-03-22T15:26:17.081-0300",
           "status": "Concluído"
         },
         {
@@ -922,6 +1017,7 @@
           "startDate": "2024-03-19T18:01:40.198-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -931,6 +1027,7 @@
           "startDate": "2024-03-19T13:53:34.867-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "completedDate": "2024-05-06T09:40:29.365-0300",
           "status": "Concluído"
         }
       ]
@@ -950,6 +1047,7 @@
           "startDate": "2024-03-26T13:54:48.496-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
+          "completedDate": "2024-04-09T17:15:40.976-0300",
           "status": "Concluído"
         },
         {
@@ -959,6 +1057,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
+          "completedDate": "2024-04-03T14:38:25.747-0300",
           "status": "Concluído"
         },
         {
@@ -968,6 +1067,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "completedDate": "2024-04-25T13:10:34.462-0300",
           "status": "Concluído"
         },
         {
@@ -977,6 +1077,7 @@
           "startDate": "2024-03-26T19:50:35.968-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -986,6 +1087,7 @@
           "startDate": "2024-03-19T13:53:34.833-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em Vue",
+          "completedDate": "2024-04-01T14:55:14.031-0300",
           "status": "Concluído"
         },
         {
@@ -995,6 +1097,7 @@
           "startDate": "2024-03-19T18:01:40.198-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1004,6 +1107,7 @@
           "startDate": "2024-03-19T18:01:40.176-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1013,6 +1117,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "completedDate": "",
           "status": "Em andamento"
         }
       ]
@@ -1032,6 +1137,7 @@
           "startDate": "2024-03-19T18:01:41.228-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "completedDate": "2024-04-25T13:15:13.328-0300",
           "status": "Concluído"
         },
         {
@@ -1041,6 +1147,7 @@
           "startDate": "2024-03-19T18:01:41.230-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1050,6 +1157,7 @@
           "startDate": "2024-03-19T18:01:41.202-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1059,6 +1167,7 @@
           "startDate": "2024-03-26T13:54:48.496-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar a integração do backend e frontend da solução",
+          "completedDate": "2024-04-09T17:15:40.976-0300",
           "status": "Concluído"
         },
         {
@@ -1068,6 +1177,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código BackEnd desenvolvido até o momento",
+          "completedDate": "2024-04-03T14:38:25.747-0300",
           "status": "Concluído"
         },
         {
@@ -1077,6 +1187,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "completedDate": "2024-04-25T13:10:34.462-0300",
           "status": "Concluído"
         },
         {
@@ -1086,6 +1197,7 @@
           "startDate": "2024-03-26T13:54:48.510-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero prosseguir os estudos sobre Métricas Ágeis",
+          "completedDate": "",
           "status": "Reaberto"
         },
         {
@@ -1095,6 +1207,7 @@
           "startDate": "2024-03-26T19:50:35.968-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1104,6 +1217,7 @@
           "startDate": "2024-03-19T18:01:40.198-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1113,6 +1227,7 @@
           "startDate": "2024-03-19T18:01:40.176-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1122,6 +1237,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1131,6 +1247,7 @@
           "startDate": "2024-03-19T13:53:34.867-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "completedDate": "2024-05-06T09:40:29.365-0300",
           "status": "Concluído"
         },
         {
@@ -1140,6 +1257,7 @@
           "startDate": "2024-03-11T16:39:25.359-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "completedDate": "2024-04-25T10:52:01.385-0300",
           "status": "Concluído"
         }
       ]
@@ -1159,6 +1277,7 @@
           "startDate": "2024-03-19T18:01:41.228-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Planejamento da Sprint",
+          "completedDate": "2024-04-25T13:15:13.328-0300",
           "status": "Concluído"
         },
         {
@@ -1168,6 +1287,7 @@
           "startDate": "2024-03-19T18:01:41.230-0300",
           "dueDate": "2024-04-22",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Retrospectiva da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1177,6 +1297,7 @@
           "startDate": "2024-03-19T18:01:41.202-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como Scrum Master, quero conduzir a reunião de Revisão da Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1186,6 +1307,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero realizar a refatoração do código FrontEnd desenvolvido até o momento",
+          "completedDate": "2024-04-25T13:10:34.462-0300",
           "status": "Concluído"
         },
         {
@@ -1195,6 +1317,7 @@
           "startDate": "2024-04-17T11:15:20.301-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de frontend pendentes",
+          "completedDate": "2024-04-23T13:51:42.629-0300",
           "status": "Concluído"
         },
         {
@@ -1204,6 +1327,7 @@
           "startDate": "2024-03-26T19:50:35.968-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero gerenciar os merge request ao longo da semana",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1213,6 +1337,7 @@
           "startDate": "2024-03-19T18:01:40.198-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero obter conhecimento sobre OData, Vue, OAUTH2 e Métricas Ágeis",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1222,6 +1347,7 @@
           "startDate": "2024-03-19T18:01:40.176-0300",
           "dueDate": "2024-04-29",
           "issueName": "Eu, como SCRUM Master, quero gerenciar a Sprint",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1231,6 +1357,7 @@
           "startDate": "2024-03-26T13:54:48.497-0300",
           "dueDate": "",
           "issueName": "Eu, como Desenvolvedor, quero refatorar o código desenvolvido até o momento",
+          "completedDate": "",
           "status": "Em andamento"
         },
         {
@@ -1240,6 +1367,7 @@
           "startDate": "2024-03-19T13:53:34.867-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizado em OAUTH2",
+          "completedDate": "2024-05-06T09:40:29.365-0300",
           "status": "Concluído"
         },
         {
@@ -1249,6 +1377,7 @@
           "startDate": "2024-03-11T16:39:25.359-0300",
           "dueDate": "2024-04-26",
           "issueName": "Eu, como Desenvolvedor, quero fazer a gestão de conhecimento do meu aprendizagem em AWS",
+          "completedDate": "2024-04-25T10:52:01.385-0300",
           "status": "Concluído"
         },
         {
@@ -1258,6 +1387,7 @@
           "startDate": "2024-04-17T11:18:11.144-0300",
           "dueDate": "2024-04-25",
           "issueName": "Eu, como Desenvolvedor, quero realizar as tarefas de backend pendentes",
+          "completedDate": "",
           "status": "Em andamento"
         }
       ]

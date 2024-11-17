@@ -176,6 +176,13 @@ const sprintDataMC: SprintDataMC = {
         ${timeBox.assignees?.map(assignee => `|${assignee.issue.toLocaleUpperCase()}|${assignee.issueName?.toLocaleUpperCase() ?? "-"}|${assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
 
         ${monteCarloAnalysis}
+
+        # Metricas
+        ## Throughput
+        ![Exemplo de SVG](./charts/throughput-${timeBox.id}.svg)
+        ##  Cumulate Flow
+        ![Exemplo de SVG](./charts/cfd-${timeBox.id}.svg)
+
         `
     }
 

@@ -170,6 +170,7 @@ export class TimeBoxApplication extends AbstractApplication {
                 startDate:task.fields.created ?? "",
                 dueDate:task.fields.duedate ?? "",
                 issueName: task.fields.summary ?? "",
+                completedDate:task.fields.resolutiondate ?? "",
                 status: task.fields.status.name ?? ""
             };
     
