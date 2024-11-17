@@ -15,6 +15,7 @@ export class MarkdownTimeBoxService {
     target_folder:string
     MANAGEMENT_PATH :string
     TIMEBOX_PATH :string
+    TIMEBOX_CHARTS_PATH :string
     jsonFile: string
     DB_PATH: string
     
@@ -23,6 +24,7 @@ export class MarkdownTimeBoxService {
         this.target_folder = target_folder
         this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
         this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'timeboxes')
+        this.TIMEBOX_CHARTS_PATH = createPath(this.TIMEBOX_PATH,'charts')
         this.jsonFile = "timebox.json"
         this.DB_PATH = db_path
     }
@@ -95,11 +97,11 @@ const sprintDatax: SprintData = {
             
             fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
             
-            const generator = new ThroughputGenerator(sprintData,this.TIMEBOX_PATH+`/throughput-${timebox.id}.svg`);
+            const generator = new ThroughputGenerator(sprintData,this.TIMEBOX_CHARTS_PATH+`/throughput-${timebox.id}.svg`);
             generator.generate();
                         
             // Gerar o CFD
-            const generatorx = new CumulativeFlowDiagram(sprintDatax,this.TIMEBOX_PATH+`/cfd-${timebox.id}.svg`);
+            const generatorx = new CumulativeFlowDiagram(sprintDatax,this.TIMEBOX_CHARTS_PATH+`/cfd-${timebox.id}.svg`);
             generatorx.generate();   
         } );
                 

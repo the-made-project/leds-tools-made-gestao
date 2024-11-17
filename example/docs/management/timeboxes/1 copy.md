@@ -1,22 +1,20 @@
 ---
-title: "SPRINT 2 - PROTOTIPAÇÃO"
-sidebar_position: 5
+title: "SPRINT 1 - ALVO E ESBOÇO"
+sidebar_position: 1
 ---
 ## Dados do Sprint
 * **Goal**: -
-* **Data Início**: 08/01/2024
-* **Data Fim**: 12/01/2024
+* **Data Início**: 02/01/2024
+* **Data Fim**: 05/01/2024
 * **Status**: CLOSED
 
 ## Sprint Backlog
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|SLAVE-30|EU, COMO DESENVOLVEDOR, QUERO IMPLEMENTAR UM STORYBOARD COM O FLUXO DE CADASTRO DE PROJETOS E MEMBROS PARA VALIDAR ENTENDER O USO DO SISTEMA PELO USUÁRIO|undefined|05/01/2024|-|CONCLUÍDO|
-|SLAVE-32|EU, COMO DESENVOLVEDOR, QUERO IMPLEMENTAR O PROTOTIPO DE  ALTA FIDELIDADE E FUNCIONAL PARA APRESENTAR AO MEU USUÁRIO FINAL, VALIDAR E COLETAR FEEBACKS SOBRE O PROTÓTIPO|undefined|05/01/2024|-|CONCLUÍDO|
-|SLAVE-34|EU, COMO DESENVOLVEDOR, QUERO IMPLEMENTAR O PMC PARA ORGANIZAR MELHOR O PLANO DO PROJETO|undefined|05/01/2024|-|CONCLUÍDO|
-|SLAVE-35|EU, COMO SCRUM MASTER, QUERO GERENCIAR O SPRINT|SOFIA DE ALCANTARA|05/01/2024|-|CONCLUÍDO|
-|SLAVE-53|EU, COMO DESENVOLVEDOR, QUERO REALIZAR O DEPLOY DA API DE TESTE|VINÍCIUS ESTEVAM|09/01/2024|-|CONCLUÍDO|
+|SLAVE-5|EU, COMO DESENVOLVEDOR, QUERO REALIZAR O ESBOÇO DA SOLUÇÃO FOCADO NO CONCEITO DO PROJETO E EQUIPE |SOFIA DE ALCANTARA|02/01/2024|-|CONCLUÍDO|
+|SLAVE-4|EU, COMO DESENVOLVEDOR, QUERO REALIZAR O ESBOÇO DA SOLUÇÃO FOCADO NO CONCEITO DE TEAM|SOFIA DE ALCANTARA|02/01/2024|-|CONCLUÍDO|
+|SLAVE-17|EU, COMO SCRUM MASTER, QUERO GERENCIAR O SPRINT|SOFIA DE ALCANTARA|02/01/2024|-|CONCLUÍDO|
 
 # Relatório de Previsão da Sprint - Sprint 3 - Low Code
 
@@ -24,7 +22,7 @@ sidebar_position: 5
 
 ### ⚠️ RISCO MODERADO DE ATRASO NA SPRINT
 
-- **Probabilidade de conclusão no prazo**: 75.7%
+- **Probabilidade de conclusão no prazo**: 75.5%
 - **Data mais provável de conclusão**: qua., 20/11/2024
 - **Dias em relação ao planejado**: 299 dias
 - **Status**: ❌ Atraso Crítico
@@ -42,8 +40,8 @@ sidebar_position: 5
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| qua., 20/11/2024 | 75.7% | ❌ Atraso Crítico | 📍 Data mais provável |
-| qui., 21/11/2024 | 24.3% | ❌ Atraso Crítico |  |
+| qua., 20/11/2024 | 75.5% | ❌ Atraso Crítico | 📍 Data mais provável |
+| qui., 21/11/2024 | 24.5% | ❌ Atraso Crítico |  |
 
 ### 📋 Status das Tarefas
 
@@ -68,4 +66,4 @@ sidebar_position: 5
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 16/11/2024, 22:30:03*
+*Relatório gerado em 16/11/2024, 22:26:07*

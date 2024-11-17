@@ -14,12 +14,6 @@ export interface SprintDataMC {
   tasks: SprintTaskMC[];
 }
 
-interface SimulationResult {
-  tasksCompleted: number;
-  frequency: number;
-  probability: number;
-  cumulativeProbability: number;
-}
 
 interface SprintMetrics {
   totalTasks: number;
@@ -40,16 +34,13 @@ interface CompletionDate {
 export class SprintMonteCarlo {
   private data: SprintDataMC;
   private readonly simulations: number;
-  
 
   constructor(
     sprintData: SprintDataMC,
     simulations: number = 10000,
-    
   ) {
     this.data = sprintData;
     this.simulations = simulations;
-    
   }
 
   private calculateDailyVelocity(): number[] {
@@ -149,50 +140,6 @@ export class SprintMonteCarlo {
     return results;
   }
 
-  private runSimulation(): SimulationResult[] {
-    const velocities = this.calculateDailyVelocity();
-    const metrics = this.getSprintMetrics();
-    const results: number[] = [];
-
-    for (let i = 0; i < this.simulations; i++) {
-      let simulatedCompleted = metrics.completedTasks;
-      
-      for (let day = 0; day < metrics.remainingDays; day++) {
-        const dailyVelocity = velocities[Math.floor(Math.random() * velocities.length)];
-        simulatedCompleted += dailyVelocity;
-        
-        if (simulatedCompleted >= metrics.totalTasks) {
-          simulatedCompleted = metrics.totalTasks;
-          break;
-        }
-      }
-      
-      results.push(simulatedCompleted);
-    }
-
-    const frequencyMap = new Map<number, number>();
-    results.forEach(result => {
-      frequencyMap.set(result, (frequencyMap.get(result) || 0) + 1);
-    });
-
-    const processedResults: SimulationResult[] = [];
-    let cumulativeFrequency = 0;
-
-    Array.from(frequencyMap.entries())
-      .sort(([a], [b]) => a - b)
-      .forEach(([tasksCompleted, frequency]) => {
-        cumulativeFrequency += frequency;
-        processedResults.push({
-          tasksCompleted,
-          frequency,
-          probability: (frequency / this.simulations) * 100,
-          cumulativeProbability: (cumulativeFrequency / this.simulations) * 100
-        });
-      });
-
-    return processedResults;
-  }
-
   private formatDate(date: Date): string {
     return date.toLocaleDateString('pt-BR', {
       weekday: 'short',
@@ -212,92 +159,106 @@ export class SprintMonteCarlo {
     return '❌ Atraso Crítico';
   }
 
-  private getScenario(probability: number): string {
-    if (probability <= 25) return '🟢 Otimista';
-    if (probability <= 50) return '🟡 Moderado';
-    if (probability <= 75) return '🟠 Conservador';
-    if (probability <= 90) return '🔴 Pessimista';
-    return '⚫ Muito Pessimista';
+  private getCompletionStatus(probability: number): string {
+    if (probability >= 85) return "✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO";
+    if (probability >= 50) return "⚠️ RISCO MODERADO DE ATRASO NA SPRINT";
+    return "❌ ALTO RISCO DE ATRASO NA SPRINT";
   }
 
   public generateMarkdownReport(): string {
     const completionDates = this.simulateCompletionDates();
     const metrics = this.getSprintMetrics();
-    const results = this.runSimulation();
-
-    let markdown = `## Relatório de Simulação Monte Carlo\n\n`;
+    const sprintEndDate = new Date(this.data.endDate);
+    const onTimeProb = completionDates.find(d => d.date > sprintEndDate)?.cumulativeProbability || 100;
     
-    // Métricas Atuais
-    markdown += `### 📊 Métricas Atuais\n\n`;
-    markdown += `| Métrica | Valor |\n`;
-    markdown += `|---------|-------|\n`;
-    markdown += `| Total de Tarefas | ${metrics.totalTasks} |\n`;
-    markdown += `| Tarefas Concluídas | ${metrics.completedTasks} |\n`;
-    markdown += `| Tarefas Restantes | ${metrics.remainingTasks} |\n`;
-    markdown += `| Dias Restantes | ${metrics.remainingDays} |\n`;
-    markdown += `| Velocidade Média | ${metrics.avgVelocity.toFixed(1)} tarefas/dia |\n`;
-    markdown += `| Data de Término Planejada | ${this.formatDate(new Date(this.data.endDate))} |\n\n`;
+    const mostLikelyDate = completionDates.reduce((prev, current) => 
+      current.probability > prev.probability ? current : prev
+    );
 
-    // Status Atual
-    markdown += `### 📈 Status Atual\n\n`;
-    const tasksByStatus = {
-      "A Fazer": this.data.tasks.filter(t => t.status === "A Fazer").length,
-      "Em Andamento": this.data.tasks.filter(t => t.status === "Em Andamento").length,
-      "Concluído": this.data.tasks.filter(t => t.status === "Concluído").length
-    };
+    let markdown = `# Relatório de Previsão da Sprint baseado no Método de Monte Carlo\n\n`;
+    markdown += `## 🎯 Conclusão Principal\n\n`;
+    markdown += `### ${this.getCompletionStatus(onTimeProb)}\n\n`;
 
-    markdown += `| Status | Quantidade |\n`;
-    markdown += `|--------|------------|\n`;
-    Object.entries(tasksByStatus).forEach(([status, count]) => {
-      markdown += `| ${status} | ${count} |\n`;
-    });
-    markdown += `\n`;
+    markdown += `- **Probabilidade de conclusão no prazo**: ${onTimeProb.toFixed(1)}%\n`;
+    markdown += `- **Data mais provável de conclusão**: ${this.formatDate(mostLikelyDate.date)}\n`;
+    
+    const diffDays = Math.round((mostLikelyDate.date.getTime() - sprintEndDate.getTime()) / (1000 * 60 * 60 * 24));
+    markdown += `- **Dias em relação ao planejado**: ${diffDays} dias\n`;
+    markdown += `- **Status**: ${this.getDateStatus(mostLikelyDate.date, sprintEndDate)}\n\n`;
 
-    // Previsões
-    markdown += `### 🎯 Previsões de Conclusão\n\n`;
-    markdown += `| Data | Probabilidade | Prob. Acumulada | Status |\n`;
-    markdown += `|------|---------------|-----------------|--------|\n`;
+    // Métricas Críticas
+    markdown += `### 📊 Métricas Críticas\n\n`;
+    markdown += `| Métrica | Valor | Status |\n`;
+    markdown += `|---------|--------|--------|\n`;
+    
+    const velocidadeNecessaria = metrics.remainingTasks / metrics.remainingDays;
+    const velocidadeStatus = metrics.avgVelocity >= velocidadeNecessaria ? "✅" : "❌";
+    
+    markdown += `| Velocidade Atual | ${metrics.avgVelocity.toFixed(1)} tarefas/dia | ${velocidadeStatus} |\n`;
+    markdown += `| Velocidade Necessária | ${velocidadeNecessaria.toFixed(1)} tarefas/dia | - |\n`;
+    markdown += `| Dias Restantes | ${metrics.remainingDays} dias | - |\n`;
+    markdown += `| Tarefas Restantes | ${metrics.remainingTasks} tarefas | - |\n\n`;
+
+    // Previsões de Data
+    markdown += `### 📅 Previsões de Data de Conclusão\n\n`;
+    markdown += `| Data | Probabilidade | Status | Observação |\n`;
+    markdown += `|------|---------------|---------|------------|\n`;
     
     completionDates.forEach(result => {
-      markdown += `| ${this.formatDate(result.date)} | ${result.probability.toFixed(1)}% | ${result.cumulativeProbability.toFixed(1)}% | ${this.getDateStatus(result.date, new Date(this.data.endDate))} |\n`;
+      const diffDays = Math.round((result.date.getTime() - sprintEndDate.getTime()) / (1000 * 60 * 60 * 24));
+      let observation = "";
+      if (result.probability === Math.max(...completionDates.map(d => d.probability))) {
+        observation = "📍 Data mais provável";
+      } else if (diffDays <= 0) {
+        observation = "🎯 Dentro da sprint";
+      }
+      
+      markdown += `| ${this.formatDate(result.date)} | ${result.probability.toFixed(1)}% | ${this.getDateStatus(result.date, sprintEndDate)} | ${observation} |\n`;
     });
     markdown += `\n`;
 
-    // Cenários
-    markdown += `### 🎲 Cenários de Probabilidade\n\n`;
-    markdown += `| Tarefas Concluídas | Probabilidade | Cenário |\n`;
-    markdown += `|-------------------|---------------|----------|\n`;
-    
-    results.forEach(result => {
-      markdown += `| ${result.tasksCompleted} | ${result.cumulativeProbability.toFixed(1)}% | ${this.getScenario(result.cumulativeProbability)} |\n`;
+    // Status das Tarefas
+    markdown += `### 📋 Status das Tarefas\n\n`;
+    const tasksByStatus = {
+      "Concluído": this.data.tasks.filter(t => t.status === "Concluído").length,
+      "Em Andamento": this.data.tasks.filter(t => t.status === "Em Andamento").length,
+      "A Fazer": this.data.tasks.filter(t => t.status === "A Fazer").length
+    };
+
+    markdown += `| Status | Quantidade | Porcentagem |\n`;
+    markdown += `|--------|------------|-------------|\n`;
+    Object.entries(tasksByStatus).forEach(([status, count]) => {
+      const percentage = (count / metrics.totalTasks * 100).toFixed(1);
+      markdown += `| ${status} | ${count} | ${percentage}% |\n`;
     });
     markdown += `\n`;
-
-    // Análise de Risco
-    const plannedEndDate = new Date(this.data.endDate);
-    const onTimeProb = completionDates.find(d => d.date > plannedEndDate)?.cumulativeProbability || 100;
-    
-    markdown += `### ⚠️ Análise de Risco\n\n`;
-    markdown += `- Probabilidade de conclusão no prazo: **${onTimeProb.toFixed(1)}%**\n`;
-    markdown += `- Velocidade necessária: **${(metrics.remainingTasks / metrics.remainingDays).toFixed(1)}** tarefas/dia\n`;
-    markdown += `- Velocidade atual: **${metrics.currentVelocity.toFixed(1)}** tarefas/dia\n\n`;
 
     // Recomendações
-    markdown += `### 💡 Recomendações\n\n`;
+    markdown += `## 💡 Recomendações\n\n`;
     if (onTimeProb >= 85) {
-      markdown += `✅ **Sprint em bom progresso**\n`;
-      markdown += `- Continue mantendo o ritmo atual\n`;
-      markdown += `- Monitore possíveis impedimentos\n`;
+      markdown += `1. ✅ Mantenha o ritmo atual de ${metrics.avgVelocity.toFixed(1)} tarefas/dia\n`;
+      markdown += `2. ✅ Continue monitorando impedimentos\n`;
+      markdown += `3. ✅ Prepare-se para a próxima sprint\n`;
     } else if (onTimeProb >= 50) {
-      markdown += `⚠️ **Atenção necessária**\n`;
-      markdown += `- Identifique possíveis gargalos\n`;
-      markdown += `- Considere priorizar tarefas críticas\n`;
+      markdown += `1. ⚠️ Aumente a velocidade para ${velocidadeNecessaria.toFixed(1)} tarefas/dia\n`;
+      markdown += `2. ⚠️ Priorize as tarefas críticas\n`;
+      markdown += `3. ⚠️ Remova impedimentos imediatamente\n`;
     } else {
-      markdown += `❌ **Risco Alto de Atraso**\n`;
-      markdown += `- Reavalie o escopo da sprint\n`;
-      markdown += `- Considere remover tarefas não essenciais\n`;
-      markdown += `- Identifique e remova impedimentos\n`;
+      markdown += `1. ❌ Realize reunião emergencial\n`;
+      markdown += `2. ❌ Reavalie o escopo da sprint\n`;
+      markdown += `3. ❌ Considere remover tarefas\n`;
     }
+    markdown += `\n`;
+
+    // Informações da Sprint
+    markdown += `## ℹ️ Informações da Sprint\n\n`;
+    markdown += `- **Sprint**: ${this.data.name}\n`;
+    markdown += `- **Início**: ${this.formatDate(new Date(this.data.startDate))}\n`;
+    markdown += `- **Término Planejado**: ${this.formatDate(new Date(this.data.endDate))}\n`;
+    markdown += `- **Total de Tarefas**: ${metrics.totalTasks}\n`;
+    markdown += `- **Simulações Realizadas**: ${this.simulations.toLocaleString()}\n\n`;
+
+    markdown += `---\n*Relatório gerado em ${new Date().toLocaleString('pt-BR')}*`;
 
     return markdown
   }
