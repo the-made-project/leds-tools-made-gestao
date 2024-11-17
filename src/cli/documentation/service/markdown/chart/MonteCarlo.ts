@@ -14,14 +14,14 @@ export interface SprintDataMC {
   tasks: SprintTaskMC[];
 }
 
-export interface SimulationResult {
+interface SimulationResult {
   tasksCompleted: number;
   frequency: number;
   probability: number;
   cumulativeProbability: number;
 }
 
-export interface SprintMetrics {
+interface SprintMetrics {
   totalTasks: number;
   completedTasks: number;
   remainingTasks: number;
@@ -225,9 +225,8 @@ export class SprintMonteCarlo {
     const metrics = this.getSprintMetrics();
     const results = this.runSimulation();
 
-    let markdown = `# Relatório de Simulação Monte Carlo\n\n`;
-    markdown += `## ${this.data.name}\n\n`;
-
+    let markdown = `## Relatório de Simulação Monte Carlo\n\n`;
+    
     // Métricas Atuais
     markdown += `### 📊 Métricas Atuais\n\n`;
     markdown += `| Métrica | Valor |\n`;

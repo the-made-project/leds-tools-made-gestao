@@ -5,8 +5,9 @@
             text { font-family: Arial, sans-serif; }
             .title { font-size: 24px; font-weight: bold; }
             .label { font-size: 14px; }
-            .value { font-size: 12px; }
+            .value { font-size: 12px; fill: #666666; }
             .axis { font-size: 12px; }
+            .legend { font-size: 14px; }
           </style>
         </defs>
 
@@ -27,16 +28,9 @@
               x="60" 
               y="50" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >10000</text>
-            <text 
-              x="1060" 
-              y="50" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >100%</text>
+            >14</text>
           
             <line 
               x1="70" 
@@ -50,16 +44,9 @@
               x="60" 
               y="95" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >9000</text>
-            <text 
-              x="1060" 
-              y="95" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >90%</text>
+            >13</text>
           
             <line 
               x1="70" 
@@ -73,16 +60,9 @@
               x="60" 
               y="140" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >8000</text>
-            <text 
-              x="1060" 
-              y="140" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >80%</text>
+            >11</text>
           
             <line 
               x1="70" 
@@ -96,16 +76,9 @@
               x="60" 
               y="185" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >7000</text>
-            <text 
-              x="1060" 
-              y="185" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >70%</text>
+            >10</text>
           
             <line 
               x1="70" 
@@ -119,16 +92,9 @@
               x="60" 
               y="230" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >6000</text>
-            <text 
-              x="1060" 
-              y="230" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >60%</text>
+            >8</text>
           
             <line 
               x1="70" 
@@ -142,16 +108,9 @@
               x="60" 
               y="275" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >5000</text>
-            <text 
-              x="1060" 
-              y="275" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >50%</text>
+            >7</text>
           
             <line 
               x1="70" 
@@ -165,16 +124,9 @@
               x="60" 
               y="320" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >4000</text>
-            <text 
-              x="1060" 
-              y="320" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >40%</text>
+            >6</text>
           
             <line 
               x1="70" 
@@ -188,16 +140,9 @@
               x="60" 
               y="365" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >3000</text>
-            <text 
-              x="1060" 
-              y="365" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >30%</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -211,16 +156,9 @@
               x="60" 
               y="410" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >2000</text>
-            <text 
-              x="1060" 
-              y="410" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >20%</text>
+            >3</text>
           
             <line 
               x1="70" 
@@ -234,16 +172,9 @@
               x="60" 
               y="455" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
-            >1000</text>
-            <text 
-              x="1060" 
-              y="455" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >10%</text>
+            >1</text>
           
             <line 
               x1="70" 
@@ -257,36 +188,26 @@
               x="60" 
               y="500" 
               text-anchor="end" 
-              class="axis"
+              class="axis" 
               dominant-baseline="middle"
             >0</text>
-            <text 
-              x="1060" 
-              y="500" 
-              text-anchor="start" 
-              class="axis"
-              dominant-baseline="middle"
-            >0%</text>
           
 
-        <!-- Barras de Frequência -->
-        
-          <rect 
-            x="886.6666666666667" 
-            y="50" 
-            width="326.6666666666667" 
-            height="450" 
-            fill="#3b82f6" 
-            opacity="0.6"
-          />
-        
-
-        <!-- Linha de Probabilidade -->
+        <!-- Áreas -->
         <path 
-          d="M 1050 50" 
-          stroke="#ef4444" 
-          stroke-width="2" 
-          fill="none"
+          d="M70,339.2857142857143 L315,242.85714285714283 L560,146.4285714285714 L805,82.14285714285711 L1050,49.99999999999994 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          fill="#ef4444" 
+          opacity="0.8"
+        />
+        <path 
+          d="M70,500 L315,403.57142857142856 L560,307.1428571428571 L805,242.85714285714283 L1050,210.71428571428567 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          fill="#f59e0b" 
+          opacity="0.8"
+        />
+        <path 
+          d="M70,500 L315,467.85714285714283 L560,403.57142857142856 L805,339.2857142857143 L1050,307.1428571428571 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          fill="#22c55e" 
+          opacity="0.8"
         />
 
         <!-- Eixos -->
@@ -307,21 +228,65 @@
           stroke-width="2"
         />
 
-        <!-- Labels -->
+        <!-- Labels dos dias -->
+        
+            <text 
+              transform="rotate(-45 70 520)"
+              x="70"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >seg. 22/01</text>
+          
+            <text 
+              transform="rotate(-45 315 520)"
+              x="315"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >ter. 23/01</text>
+          
+            <text 
+              transform="rotate(-45 560 520)"
+              x="560"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >qua. 24/01</text>
+          
+            <text 
+              transform="rotate(-45 805 520)"
+              x="805"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >qui. 25/01</text>
+          
+            <text 
+              transform="rotate(-45 1050 520)"
+              x="1050"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >sex. 26/01</text>
+          
+
+        <!-- Label Eixo Y -->
         <text 
           transform="rotate(-90 30 300)" 
           x="30" 
           y="300" 
           text-anchor="middle" 
           class="label"
-        >Frequência</text>
+        >Número de Tarefas</text>
 
+        <!-- Label Eixo X -->
         <text 
           x="600" 
           y="580" 
           text-anchor="middle" 
           class="label"
-        >Número de Tarefas Completadas</text>
+        >Dias da Sprint</text>
 
         <!-- Título -->
         <text 
@@ -329,23 +294,26 @@
           y="30" 
           text-anchor="middle" 
           class="title"
-        >Sprint 3 - Low Code - Previsão de Conclusão</text>
+        >Sprint 3 - Low Code - Cumulative Flow Diagram</text>
 
-        <!-- Informações -->
+        <!-- Legenda -->
         <g transform="translate(1070, 50)">
-          <text x="0" y="0" class="label">Métricas da Sprint</text>
-          <text x="0" y="30" class="value">Total de Tarefas: 6</text>
-          <text x="0" y="50" class="value">Concluídas: 3</text>
-          <text x="0" y="70" class="value">Restantes: 3</text>
-          <text x="0" y="90" class="value">Dias Restantes: 0</text>
-          <text x="0" y="110" class="value">Velocidade Média: 1.5 tarefas/dia</text>
+          <rect width="15" height="15" fill="#ef4444" rx="2"/>
+          <text x="25" y="12" class="legend">A Fazer</text>
           
-          <text x="0" y="140" class="label">Probabilidades de Conclusão</text>
+          <rect y="25" width="15" height="15" fill="#f59e0b" rx="2"/>
+          <text x="25" y="37" class="legend">Em Progresso</text>
           
-              <text x="0" y="170" class="value">
-                100% chance de completar 3 tarefas
-              </text>
-            
+          <rect y="50" width="15" height="15" fill="#22c55e" rx="2"/>
+          <text x="25" y="62" class="legend">Concluído</text>
+          
+          <text x="0" y="90" class="value">
+            Período: 22/01/2024 - 
+            26/01/2024
+          </text>
+          <text x="0" y="110" class="value">
+            Total de Issues: 14
+          </text>
         </g>
       </svg>
     

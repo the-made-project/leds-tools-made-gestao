@@ -31,56 +31,41 @@ export class MarkdownTimeBoxService {
     public async create(){
 
         const timeBoxes = await this.retrive();
-        timeBoxes.forEach (timebox  =>{
-            
-            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
-        } );
-                
-    }
 
-    private createTimeBoxExport(timeBox: TimeBoxDTO):string {
-
-        // Exemplo de uso
-// Exemplo de uso
-const sprintData: SprintData = {
-    startDate: "2024-01-22T11:00:00.000Z",
-    endDate: "2024-01-26T15:00:00.000Z",
-    name: "Sprint 3 - Low Code",
-    assignees: [
-      {
-        issue: "SLAVE-44",
-        startDate: "2024-01-22T09:00:00.000Z",
-        status: "Concluído"
-      },
-      {
-        issue: "SLAVE-45",
-        startDate: "2024-01-22T09:00:00.000Z",
-        status: "Concluído"
-      },
-      {
-        issue: "SLAVE-46",
-        startDate: "2024-01-22T09:00:00.000Z",
-        status: "Em Andamento"
-      },
-      {
-        issue: "SLAVE-47",
-        startDate: "2024-01-22T09:00:00.000Z",
-        status: "A Fazer"
-      },
-      {
-        issue: "SLAVE-48",
-        startDate: "2024-01-22T09:00:00.000Z",
-        status: "A Fazer"
-      }
-    ]
-  };
-  
-  // Gerar o gráfico
-  const generator = new ThroughputGenerator(sprintData,this.TIMEBOX_PATH+"/throughput.svg");
-  generator.generate();   
-
-
-  // Dados de exemplo
+        const sprintData: SprintData = {
+          startDate: "2024-01-22T11:00:00.000Z",
+          endDate: "2024-01-26T15:00:00.000Z",
+          name: "Sprint 3 - Low Code",
+          assignees: [
+            {
+              issue: "SLAVE-44",
+              startDate: "2024-01-22T09:00:00.000Z",
+              status: "Concluído"
+            },
+            {
+              issue: "SLAVE-45",
+              startDate: "2024-01-22T09:00:00.000Z",
+              status: "Concluído"
+            },
+            {
+              issue: "SLAVE-46",
+              startDate: "2024-01-22T09:00:00.000Z",
+              status: "Em Andamento"
+            },
+            {
+              issue: "SLAVE-47",
+              startDate: "2024-01-22T09:00:00.000Z",
+              status: "A Fazer"
+            },
+            {
+              issue: "SLAVE-48",
+              startDate: "2024-01-22T09:00:00.000Z",
+              status: "A Fazer"
+            }
+          ]
+        };
+      
+         // Dados de exemplo
 const sprintDatax: SprintData = {
   startDate: "2024-01-22T11:00:00.000Z",
   endDate: "2024-01-26T15:00:00.000Z",
@@ -103,10 +88,28 @@ const sprintDatax: SprintData = {
   ]
 };
 
-// Gerar o CFD
-const generatorx = new CumulativeFlowDiagram(sprintDatax,this.TIMEBOX_PATH+"/cfd.svg");
-generatorx.generate();
 
+
+
+        timeBoxes.forEach (timebox  =>{
+            
+            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
+            
+            const generator = new ThroughputGenerator(sprintData,this.TIMEBOX_PATH+`/throughput-${timebox.id}.svg`);
+            generator.generate();
+                        
+            // Gerar o CFD
+            const generatorx = new CumulativeFlowDiagram(sprintDatax,this.TIMEBOX_PATH+`/cfd-${timebox.id}.svg`);
+            generatorx.generate();   
+        } );
+                
+    }
+
+    private createTimeBoxExport(timeBox: TimeBoxDTO):string {
+
+
+
+ 
 // Exemplo de uso
 const sprintDataMC: SprintDataMC = {
   startDate: "2024-01-22T11:00:00.000Z",
@@ -149,9 +152,9 @@ const sprintDataMC: SprintDataMC = {
   ]
 };
 
-// Gerar simulação
-const monteCarlo = new SprintMonteCarlo(sprintDataMC,10000);
-const value = monteCarlo.generateMarkdownReport();
+      // Gerar simulação
+      const monteCarlo = new SprintMonteCarlo(sprintDataMC,10000);
+      const monteCarloAnalysis = monteCarlo.generateMarkdownReport();
 
         return expandToStringWithNL`
         ---
@@ -170,15 +173,7 @@ const value = monteCarlo.generateMarkdownReport();
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
         ${timeBox.assignees?.map(assignee => `|${assignee.issue.toLocaleUpperCase()}|${assignee.issueName?.toLocaleUpperCase() ?? "-"}|${assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
 
-        ## Throughput
-
-        **Legenda**
-
-        ## Cumulative Flow Diagram
-
-        ## Monte Carlo
-
-        ${value}
+        ${monteCarloAnalysis}
         `
     }
 
