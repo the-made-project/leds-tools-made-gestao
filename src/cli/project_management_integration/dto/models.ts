@@ -57,7 +57,7 @@ export type personDTO = {
   state?:string;
   completeDate?:string;
   createdDate?:string;
-  assignees?:AssigneeDTO[];
+  tasks:AssigneeDTO[];
 
   
 };

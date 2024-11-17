@@ -1,24 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-export interface SprintIssue {
-  issue: string;
-  startDate: string;
-  status: string;
-}
-
-export interface SprintData {
-  startDate: string;
-  endDate: string;
-  name: string;
-  assignees: SprintIssue[];
-}
+import { TimeBoxDTO } from '../../../../project_management_integration/dto/models.js';
 
 export class ThroughputGenerator {
-  private data: SprintData;
+  private data: TimeBoxDTO;
   private readonly outputPath: string;
 
-  constructor(sprintData: SprintData, outputPath: string = './throughput.svg') {
+  constructor(sprintData: TimeBoxDTO, outputPath: string = './throughput.svg') {
     this.data = sprintData;
     this.outputPath = outputPath;
   }
@@ -38,8 +26,8 @@ export class ThroughputGenerator {
     while (currentDate <= endDate) {
       const weekDay = currentDate.toLocaleDateString('pt-BR', { weekday: 'short' });
       const formattedDate = formatDate(currentDate);
-      const issuesUntilDay = this.data.assignees.filter(issue => 
-        new Date(issue.startDate) <= currentDate
+      const issuesUntilDay = this.data.tasks.filter(issue => 
+        new Date(issue.startDate ?? "") <= currentDate
       );
 
       days.push({
@@ -69,7 +57,7 @@ export class ThroughputGenerator {
     };
 
     const dailyData = this.processData();
-    const totalIssues = this.data.assignees.length;
+    const totalIssues = this.data.tasks.length;
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
     const barWidth = (chartWidth / dailyData.length) * 0.8;

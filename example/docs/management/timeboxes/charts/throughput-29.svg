@@ -30,7 +30,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >5</text>
+            >21</text>
           
             <line 
               x1="70" 
@@ -46,7 +46,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >5</text>
+            >19</text>
           
             <line 
               x1="70" 
@@ -62,7 +62,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >4</text>
+            >17</text>
           
             <line 
               x1="70" 
@@ -78,7 +78,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >4</text>
+            >15</text>
           
             <line 
               x1="70" 
@@ -94,7 +94,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >3</text>
+            >13</text>
           
             <line 
               x1="70" 
@@ -110,7 +110,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >3</text>
+            >11</text>
           
             <line 
               x1="70" 
@@ -126,7 +126,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >8</text>
           
             <line 
               x1="70" 
@@ -142,7 +142,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >6</text>
           
             <line 
               x1="70" 
@@ -158,7 +158,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -174,7 +174,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -233,168 +233,305 @@
             <g>
               <!-- A Fazer -->
               <rect 
-                x="89.6" 
-                y="320" 
-                width="156.8" 
-                height="180" 
+                x="78.9090909090909" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
               
               <!-- Em Progresso -->
               <rect 
-                x="89.6" 
-                y="230" 
-                width="156.8" 
-                height="90" 
+                x="78.9090909090909" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
               
               <!-- Concluído -->
               <rect 
-                x="89.6" 
-                y="50" 
-                width="156.8" 
-                height="180" 
+                x="78.9090909090909" 
+                y="414.2857142857143" 
+                width="71.27272727272728" 
+                height="85.71428571428571" 
                 fill="#22c55e"
                 rx="4"
               />
               
               <!-- Label do Dia -->
               <text 
-                transform="rotate(-45 168 520)" 
+                transform="rotate(-45 114.54545454545455 520)" 
+                x="114.54545454545455" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >seg. 22/04</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="114.54545454545455" 
+                  y="457.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >4</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
                 x="168" 
-                y="520" 
-                text-anchor="end" 
-                class="axis"
-              >seg. 22/01</text>
-              
-              <!-- Valores -->
-              
-                <text 
-                  x="168" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
-              
-              
-              
-                <text 
-                  x="168" 
-                  y="275" 
-                  text-anchor="middle" 
-                  class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="168" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
-              
-            </g>
-          
-            <g>
-              <!-- A Fazer -->
-              <rect 
-                x="285.6" 
-                y="320" 
-                width="156.8" 
-                height="180" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
               
               <!-- Em Progresso -->
               <rect 
-                x="285.6" 
-                y="230" 
-                width="156.8" 
-                height="90" 
+                x="168" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
               
               <!-- Concluído -->
               <rect 
-                x="285.6" 
-                y="50" 
-                width="156.8" 
-                height="180" 
+                x="168" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
                 fill="#22c55e"
                 rx="4"
               />
               
               <!-- Label do Dia -->
               <text 
-                transform="rotate(-45 364 520)" 
-                x="364" 
+                transform="rotate(-45 203.63636363636363 520)" 
+                x="203.63636363636363" 
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >ter. 23/01</text>
+              >ter. 23/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="364" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
-                  x="364" 
-                  y="275" 
+                  x="203.63636363636363" 
+                  y="382.14285714285717" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="364" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >11</text>
               
             </g>
           
             <g>
               <!-- A Fazer -->
               <rect 
-                x="481.6" 
-                y="320" 
-                width="156.8" 
-                height="180" 
+                x="257.0909090909091" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
               
               <!-- Em Progresso -->
               <rect 
-                x="481.6" 
-                y="230" 
-                width="156.8" 
-                height="90" 
+                x="257.0909090909091" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
               
               <!-- Concluído -->
               <rect 
-                x="481.6" 
-                y="50" 
-                width="156.8" 
-                height="180" 
+                x="257.0909090909091" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 292.72727272727275 520)" 
+                x="292.72727272727275" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >qua. 24/04</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="292.72727272727275" 
+                  y="382.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="346.1818181818182" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="346.1818181818182" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="346.1818181818182" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 381.8181818181818 520)" 
+                x="381.8181818181818" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >qui. 25/04</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="381.8181818181818" 
+                  y="382.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="435.2727272727273" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="435.2727272727273" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="435.2727272727273" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 470.90909090909093 520)" 
+                x="470.90909090909093" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >sex. 26/04</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="470.90909090909093" 
+                  y="382.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="524.3636363636364" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="524.3636363636364" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="524.3636363636364" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -406,172 +543,295 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >qua. 24/01</text>
+              >sáb. 27/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="560" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="560" 
-                  y="275" 
+                  y="382.14285714285717" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="560" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >11</text>
               
             </g>
           
             <g>
               <!-- A Fazer -->
               <rect 
-                x="677.6" 
-                y="320" 
-                width="156.8" 
-                height="180" 
+                x="613.4545454545454" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
               
               <!-- Em Progresso -->
               <rect 
-                x="677.6" 
-                y="230" 
-                width="156.8" 
-                height="90" 
+                x="613.4545454545454" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
               
               <!-- Concluído -->
               <rect 
-                x="677.6" 
-                y="50" 
-                width="156.8" 
-                height="180" 
+                x="613.4545454545454" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
                 fill="#22c55e"
                 rx="4"
               />
               
               <!-- Label do Dia -->
               <text 
-                transform="rotate(-45 756 520)" 
-                x="756" 
+                transform="rotate(-45 649.090909090909 520)" 
+                x="649.090909090909" 
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >qui. 25/01</text>
+              >dom. 28/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="756" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
-                  x="756" 
-                  y="275" 
+                  x="649.090909090909" 
+                  y="382.14285714285717" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="756" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >11</text>
               
             </g>
           
             <g>
               <!-- A Fazer -->
               <rect 
-                x="873.6" 
-                y="320" 
-                width="156.8" 
-                height="180" 
+                x="702.5454545454545" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
               
               <!-- Em Progresso -->
               <rect 
-                x="873.6" 
-                y="230" 
-                width="156.8" 
-                height="90" 
+                x="702.5454545454545" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
               
               <!-- Concluído -->
               <rect 
-                x="873.6" 
-                y="50" 
-                width="156.8" 
-                height="180" 
+                x="702.5454545454545" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
                 fill="#22c55e"
                 rx="4"
               />
               
               <!-- Label do Dia -->
               <text 
-                transform="rotate(-45 952 520)" 
-                x="952" 
+                transform="rotate(-45 738.1818181818181 520)" 
+                x="738.1818181818181" 
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >sex. 26/01</text>
+              >seg. 29/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="952" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
-                  x="952" 
-                  y="275" 
+                  x="738.1818181818181" 
+                  y="382.14285714285717" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="791.6363636363636" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="791.6363636363636" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="791.6363636363636" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 827.2727272727273 520)" 
+                x="827.2727272727273" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >ter. 30/04</text>
+              
+              <!-- Valores -->
+              
+              
               
               
               
                 <text 
-                  x="952" 
-                  y="140" 
+                  x="827.2727272727273" 
+                  y="382.14285714285717" 
                   text-anchor="middle" 
                   class="value"
-                >2</text>
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="880.7272727272727" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="880.7272727272727" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="880.7272727272727" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 916.3636363636364 520)" 
+                x="916.3636363636364" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >qua. 01/05</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="916.3636363636364" 
+                  y="382.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >11</text>
+              
+            </g>
+          
+            <g>
+              <!-- A Fazer -->
+              <rect 
+                x="969.8181818181819" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#ef4444"
+                rx="4"
+              />
+              
+              <!-- Em Progresso -->
+              <rect 
+                x="969.8181818181819" 
+                y="500" 
+                width="71.27272727272728" 
+                height="0" 
+                fill="#f59e0b"
+                rx="4"
+              />
+              
+              <!-- Concluído -->
+              <rect 
+                x="969.8181818181819" 
+                y="264.28571428571433" 
+                width="71.27272727272728" 
+                height="235.7142857142857" 
+                fill="#22c55e"
+                rx="4"
+              />
+              
+              <!-- Label do Dia -->
+              <text 
+                transform="rotate(-45 1005.4545454545455 520)" 
+                x="1005.4545454545455" 
+                y="520" 
+                text-anchor="end" 
+                class="axis"
+              >qui. 02/05</text>
+              
+              <!-- Valores -->
+              
+              
+              
+              
+              
+                <text 
+                  x="1005.4545454545455" 
+                  y="382.14285714285717" 
+                  text-anchor="middle" 
+                  class="value"
+                >11</text>
               
             </g>
           
@@ -582,7 +842,7 @@
           y="30" 
           text-anchor="middle" 
           class="title"
-        >Sprint 3 - Low Code - Throughput</text>
+        >Sprint 12 - Throughput</text>
         
         <!-- Legenda -->
         <g transform="translate(1070, 50)">
@@ -596,11 +856,11 @@
           <text x="25" y="62" class="legend">Concluído</text>
           
           <text x="0" y="90" class="value">
-            Período: 22/01/2024 - 
-            26/01/2024
+            Período: 22/04/2024 - 
+            03/05/2024
           </text>
           <text x="0" y="110" class="value">
-            Total de Issues: 5
+            Total de Issues: 21
           </text>
         </g>
       </svg>

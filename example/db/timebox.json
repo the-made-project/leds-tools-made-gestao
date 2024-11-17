@@ -7,7 +7,7 @@
       "name": "Sprint 12",
       "id": 29,
       "state": "active",
-      "assignees": [
+      "tasks": [
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
@@ -227,7 +227,7 @@
       "name": "Sprint 1 - Alvo e Esboço",
       "id": 1,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
@@ -267,7 +267,7 @@
       "name": "Sprint 3 - Low Code",
       "id": 4,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "issue": "SLAVE-44",
           "startDate": "2024-01-05T17:57:00.897-0300",
@@ -389,7 +389,7 @@
       "name": "Sprint 2 - Prototipação",
       "id": 5,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "issue": "SLAVE-30",
           "startDate": "2024-01-05T17:33:57.560-0300",
@@ -443,7 +443,7 @@
       "name": "Spike de DotNet",
       "id": 9,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "marcela starling ferreira lage",
           "account": "712020:40cf468d-cce5-4e02-ab3b-866a53c6c0cb",
@@ -503,7 +503,7 @@
       "name": "Analise",
       "id": 12,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
@@ -523,7 +523,7 @@
       "name": "Categoria e Funcao",
       "id": 17,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
@@ -669,7 +669,7 @@
       "name": "Projeto",
       "id": 19,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
@@ -929,7 +929,7 @@
       "name": "NovaSprint",
       "id": 21,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Vinícius Estevam",
           "account": "616d6c46bcb5740068f5a6de",
@@ -989,7 +989,7 @@
       "name": "Spike 2",
       "id": 22,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Bruno Caxias",
           "account": "616d6ce6062f4c00691d8d9b",
@@ -1039,7 +1039,7 @@
       "name": "Refatoração & Integração 2",
       "id": 24,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
@@ -1129,7 +1129,7 @@
       "name": "Refatoração 3",
       "id": 25,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",
@@ -1269,7 +1269,7 @@
       "name": "Gordura",
       "id": 26,
       "state": "closed",
-      "assignees": [
+      "tasks": [
         {
           "name": "Sofia de Alcantara",
           "account": "60eda234413fc70069e56470",

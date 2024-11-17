@@ -1,3 +1,4 @@
+import { TimeBoxDTO } from "../../../../project_management_integration/dto/models.js";
 
 
 export interface SprintTaskMC {
@@ -32,11 +33,11 @@ interface CompletionDate {
 }
 
 export class SprintMonteCarlo {
-  private data: SprintDataMC;
+  private data: TimeBoxDTO;
   private readonly simulations: number;
 
   constructor(
-    sprintData: SprintDataMC,
+    sprintData: TimeBoxDTO,
     simulations: number = 10000,
   ) {
     this.data = sprintData;
@@ -44,7 +45,7 @@ export class SprintMonteCarlo {
   }
 
   private calculateDailyVelocity(): number[] {
-    const completedTasks = this.data.tasks.filter(task => task.completedDate);
+    const completedTasks = this.data.tasks?.filter(task => task.completedDate);
     const velocities: number[] = [];
     
     if (completedTasks.length > 0) {
@@ -220,9 +221,9 @@ export class SprintMonteCarlo {
     // Status das Tarefas
     markdown += `### 📋 Status das Tarefas\n\n`;
     const tasksByStatus = {
-      "Concluído": this.data.tasks.filter(t => t.status === "Concluído").length,
-      "Em Andamento": this.data.tasks.filter(t => t.status === "Em Andamento").length,
-      "A Fazer": this.data.tasks.filter(t => t.status === "A Fazer").length
+      "Concluído": this.data.tasks?.filter(t => t.status === "Concluído").length,
+      "Em Andamento": this.data.tasks?.filter(t => t.status === "Em Andamento").length,
+      "A Fazer": this.data.tasks?.filter(t => t.status === "A Fazer").length
     };
 
     markdown += `| Status | Quantidade | Porcentagem |\n`;

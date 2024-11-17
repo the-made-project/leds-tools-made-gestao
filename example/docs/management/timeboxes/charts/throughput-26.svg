@@ -30,7 +30,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >5</text>
+            >12</text>
           
             <line 
               x1="70" 
@@ -46,7 +46,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >5</text>
+            >11</text>
           
             <line 
               x1="70" 
@@ -62,7 +62,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >4</text>
+            >10</text>
           
             <line 
               x1="70" 
@@ -78,7 +78,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >4</text>
+            >8</text>
           
             <line 
               x1="70" 
@@ -94,7 +94,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >3</text>
+            >7</text>
           
             <line 
               x1="70" 
@@ -110,7 +110,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >3</text>
+            >6</text>
           
             <line 
               x1="70" 
@@ -126,7 +126,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >5</text>
           
             <line 
               x1="70" 
@@ -142,7 +142,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -158,7 +158,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -234,9 +234,9 @@
               <!-- A Fazer -->
               <rect 
                 x="89.6" 
-                y="320" 
+                y="500" 
                 width="156.8" 
-                height="180" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
@@ -244,9 +244,9 @@
               <!-- Em Progresso -->
               <rect 
                 x="89.6" 
-                y="230" 
+                y="500" 
                 width="156.8" 
-                height="90" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
@@ -254,9 +254,9 @@
               <!-- Concluído -->
               <rect 
                 x="89.6" 
-                y="50" 
+                y="350" 
                 width="156.8" 
-                height="180" 
+                height="150" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -268,34 +268,20 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >seg. 22/01</text>
+              >seg. 15/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="168" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="168" 
-                  y="275" 
+                  y="425" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="168" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >4</text>
               
             </g>
           
@@ -303,9 +289,9 @@
               <!-- A Fazer -->
               <rect 
                 x="285.6" 
-                y="320" 
+                y="500" 
                 width="156.8" 
-                height="180" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
@@ -313,9 +299,9 @@
               <!-- Em Progresso -->
               <rect 
                 x="285.6" 
-                y="230" 
+                y="500" 
                 width="156.8" 
-                height="90" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
@@ -323,9 +309,9 @@
               <!-- Concluído -->
               <rect 
                 x="285.6" 
-                y="50" 
+                y="350" 
                 width="156.8" 
-                height="180" 
+                height="150" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -337,34 +323,20 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >ter. 23/01</text>
+              >ter. 16/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="364" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="364" 
-                  y="275" 
+                  y="425" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="364" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >4</text>
               
             </g>
           
@@ -372,9 +344,9 @@
               <!-- A Fazer -->
               <rect 
                 x="481.6" 
-                y="320" 
+                y="500" 
                 width="156.8" 
-                height="180" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
@@ -382,9 +354,9 @@
               <!-- Em Progresso -->
               <rect 
                 x="481.6" 
-                y="230" 
+                y="500" 
                 width="156.8" 
-                height="90" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
@@ -392,9 +364,9 @@
               <!-- Concluído -->
               <rect 
                 x="481.6" 
-                y="50" 
+                y="312.5" 
                 width="156.8" 
-                height="180" 
+                height="187.5" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -406,34 +378,20 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >qua. 24/01</text>
+              >qua. 17/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="560" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="560" 
-                  y="275" 
+                  y="406.25" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="560" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >5</text>
               
             </g>
           
@@ -441,9 +399,9 @@
               <!-- A Fazer -->
               <rect 
                 x="677.6" 
-                y="320" 
+                y="500" 
                 width="156.8" 
-                height="180" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
@@ -451,9 +409,9 @@
               <!-- Em Progresso -->
               <rect 
                 x="677.6" 
-                y="230" 
+                y="500" 
                 width="156.8" 
-                height="90" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
@@ -461,9 +419,9 @@
               <!-- Concluído -->
               <rect 
                 x="677.6" 
-                y="50" 
+                y="312.5" 
                 width="156.8" 
-                height="180" 
+                height="187.5" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -475,34 +433,20 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >qui. 25/01</text>
+              >qui. 18/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="756" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="756" 
-                  y="275" 
+                  y="406.25" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="756" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >5</text>
               
             </g>
           
@@ -510,9 +454,9 @@
               <!-- A Fazer -->
               <rect 
                 x="873.6" 
-                y="320" 
+                y="500" 
                 width="156.8" 
-                height="180" 
+                height="0" 
                 fill="#ef4444"
                 rx="4"
               />
@@ -520,9 +464,9 @@
               <!-- Em Progresso -->
               <rect 
                 x="873.6" 
-                y="230" 
+                y="500" 
                 width="156.8" 
-                height="90" 
+                height="0" 
                 fill="#f59e0b"
                 rx="4"
               />
@@ -530,9 +474,9 @@
               <!-- Concluído -->
               <rect 
                 x="873.6" 
-                y="50" 
+                y="312.5" 
                 width="156.8" 
-                height="180" 
+                height="187.5" 
                 fill="#22c55e"
                 rx="4"
               />
@@ -544,34 +488,20 @@
                 y="520" 
                 text-anchor="end" 
                 class="axis"
-              >sex. 26/01</text>
+              >sex. 19/04</text>
               
               <!-- Valores -->
               
-                <text 
-                  x="952" 
-                  y="410" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+              
               
               
               
                 <text 
                   x="952" 
-                  y="275" 
+                  y="406.25" 
                   text-anchor="middle" 
                   class="value"
-                >1</text>
-              
-              
-              
-                <text 
-                  x="952" 
-                  y="140" 
-                  text-anchor="middle" 
-                  class="value"
-                >2</text>
+                >5</text>
               
             </g>
           
@@ -582,7 +512,7 @@
           y="30" 
           text-anchor="middle" 
           class="title"
-        >Sprint 3 - Low Code - Throughput</text>
+        >Gordura - Throughput</text>
         
         <!-- Legenda -->
         <g transform="translate(1070, 50)">
@@ -596,11 +526,11 @@
           <text x="25" y="62" class="legend">Concluído</text>
           
           <text x="0" y="90" class="value">
-            Período: 22/01/2024 - 
-            26/01/2024
+            Período: 15/04/2024 - 
+            19/04/2024
           </text>
           <text x="0" y="110" class="value">
-            Total de Issues: 5
+            Total de Issues: 12
           </text>
         </g>
       </svg>

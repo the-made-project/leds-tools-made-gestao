@@ -30,7 +30,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >14</text>
+            >21</text>
           
             <line 
               x1="70" 
@@ -46,7 +46,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >13</text>
+            >19</text>
           
             <line 
               x1="70" 
@@ -62,7 +62,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >11</text>
+            >17</text>
           
             <line 
               x1="70" 
@@ -78,7 +78,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >10</text>
+            >15</text>
           
             <line 
               x1="70" 
@@ -94,7 +94,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >8</text>
+            >13</text>
           
             <line 
               x1="70" 
@@ -110,7 +110,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >7</text>
+            >11</text>
           
             <line 
               x1="70" 
@@ -126,7 +126,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >6</text>
+            >8</text>
           
             <line 
               x1="70" 
@@ -142,7 +142,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >4</text>
+            >6</text>
           
             <line 
               x1="70" 
@@ -158,7 +158,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >3</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -174,7 +174,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -195,17 +195,17 @@
 
         <!-- Áreas -->
         <path 
-          d="M70,339.2857142857143 L315,242.85714285714283 L560,146.4285714285714 L805,82.14285714285711 L1050,49.99999999999994 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          d="M70,414.2857142857143 L168,264.28571428571433 L266,264.28571428571433 L364,264.28571428571433 L462,264.28571428571433 L560,264.28571428571433 L658,264.28571428571433 L756,264.28571428571433 L854,264.28571428571433 L952,264.28571428571433 L1050,264.28571428571433 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#ef4444" 
           opacity="0.8"
         />
         <path 
-          d="M70,500 L315,403.57142857142856 L560,307.1428571428571 L805,242.85714285714283 L1050,210.71428571428567 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          d="M70,414.2857142857143 L168,264.28571428571433 L266,264.28571428571433 L364,264.28571428571433 L462,264.28571428571433 L560,264.28571428571433 L658,264.28571428571433 L756,264.28571428571433 L854,264.28571428571433 L952,264.28571428571433 L1050,264.28571428571433 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#f59e0b" 
           opacity="0.8"
         />
         <path 
-          d="M70,500 L315,467.85714285714283 L560,403.57142857142856 L805,339.2857142857143 L1050,307.1428571428571 L1050,500 L805,500 L560,500 L315,500 L70,500 Z" 
+          d="M70,414.2857142857143 L168,264.28571428571433 L266,264.28571428571433 L364,264.28571428571433 L462,264.28571428571433 L560,264.28571428571433 L658,264.28571428571433 L756,264.28571428571433 L854,264.28571428571433 L952,264.28571428571433 L1050,264.28571428571433 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#22c55e" 
           opacity="0.8"
         />
@@ -236,15 +236,39 @@
               y="520"
               text-anchor="end"
               class="axis"
-            >seg. 22/01</text>
+            >seg. 22/04</text>
           
             <text 
-              transform="rotate(-45 315 520)"
-              x="315"
+              transform="rotate(-45 168 520)"
+              x="168"
               y="520"
               text-anchor="end"
               class="axis"
-            >ter. 23/01</text>
+            >ter. 23/04</text>
+          
+            <text 
+              transform="rotate(-45 266 520)"
+              x="266"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >qua. 24/04</text>
+          
+            <text 
+              transform="rotate(-45 364 520)"
+              x="364"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >qui. 25/04</text>
+          
+            <text 
+              transform="rotate(-45 462 520)"
+              x="462"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >sex. 26/04</text>
           
             <text 
               transform="rotate(-45 560 520)"
@@ -252,15 +276,39 @@
               y="520"
               text-anchor="end"
               class="axis"
-            >qua. 24/01</text>
+            >sáb. 27/04</text>
           
             <text 
-              transform="rotate(-45 805 520)"
-              x="805"
+              transform="rotate(-45 658 520)"
+              x="658"
               y="520"
               text-anchor="end"
               class="axis"
-            >qui. 25/01</text>
+            >dom. 28/04</text>
+          
+            <text 
+              transform="rotate(-45 756 520)"
+              x="756"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >seg. 29/04</text>
+          
+            <text 
+              transform="rotate(-45 854 520)"
+              x="854"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >ter. 30/04</text>
+          
+            <text 
+              transform="rotate(-45 952 520)"
+              x="952"
+              y="520"
+              text-anchor="end"
+              class="axis"
+            >qua. 01/05</text>
           
             <text 
               transform="rotate(-45 1050 520)"
@@ -268,7 +316,7 @@
               y="520"
               text-anchor="end"
               class="axis"
-            >sex. 26/01</text>
+            >qui. 02/05</text>
           
 
         <!-- Label Eixo Y -->
@@ -294,7 +342,7 @@
           y="30" 
           text-anchor="middle" 
           class="title"
-        >Sprint 3 - Low Code - Cumulative Flow Diagram</text>
+        >Sprint 12 - Cumulative Flow Diagram</text>
 
         <!-- Legenda -->
         <g transform="translate(1070, 50)">
@@ -308,11 +356,11 @@
           <text x="25" y="62" class="legend">Concluído</text>
           
           <text x="0" y="90" class="value">
-            Período: 22/01/2024 - 
-            26/01/2024
+            Período: 22/04/2024 - 
+            03/05/2024
           </text>
           <text x="0" y="110" class="value">
-            Total de Issues: 14
+            Total de Issues: 21
           </text>
         </g>
       </svg>

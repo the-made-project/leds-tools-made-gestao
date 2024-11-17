@@ -130,11 +130,12 @@ export class TimeBoxApplication extends AbstractApplication {
                     const timeBoxDTO: TimeBoxDTO = 
                     {
                         internalId: timeBoxID,
-                        startDate:timeBox.startDate ?? "", 
+                        startDate: timeBox.startDate ?? "",
                         endDate: timeBox.endDate ?? "",
-                        name: timeBox.name ??timeBox.id, 
+                        name: timeBox.name ?? timeBox.id,
                         id: (result).id,
                         self: (result).self,
+                        tasks: []
                     };
         
                     await this.save(timeBoxDTO)   
@@ -191,7 +192,7 @@ export class TimeBoxApplication extends AbstractApplication {
                         state: data.state,
                         completeDate: data.completeDate,
                         createdDate: data.createdDate,
-                        assignees: tasks
+                        tasks: tasks
                     };
             
         if (result){
