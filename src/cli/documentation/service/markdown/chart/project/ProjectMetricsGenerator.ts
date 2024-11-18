@@ -3,6 +3,7 @@ import path from 'path';
 import { AssigneeDTO, TimeBoxDTO } from '../../../../../project_management_integration/dto/models.js';
 import { ProjectCFD } from './ProjectCFD .js';
 import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
+import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
 
 interface SprintStatus {
   completed: number;
@@ -128,11 +129,6 @@ export class ProjectMetricsGenerator {
   private generateMarkdownReport(): string {
 
     let markdown = '# Resumo do Projeto \n\n' 
-    markdown += '## Cumulative Flow \n'
-    markdown +='![ Cumulative Flow](./project-cfd.svg)\n\n'
-    
-    markdown += '## Throughput \n'
-    markdown +='![ Throughput Flow](./project-throughput.svg)\n\n'
     
     // Adiciona a tabela de métricas
     markdown += this.generateSummaryTable() + '\n';
@@ -158,6 +154,18 @@ export class ProjectMetricsGenerator {
       year: 'numeric' 
     })}*`;
 
+    
+    markdown += '## Cumulative Flow \n'
+    markdown +='![ Cumulative Flow](./project-cfd.svg)\n\n'
+    
+    markdown += '## Throughput \n'
+    markdown +='![ Throughput Flow](./project-throughput.svg)\n\n'
+
+    const projectAnalysis = new ProjectMonteCarlo(this.sprints);
+    const report = projectAnalysis.generateMarkdownReport();
+    markdown += report
+
+    
     return markdown;
   }
 

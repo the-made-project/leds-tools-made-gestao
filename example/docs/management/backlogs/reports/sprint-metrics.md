@@ -1,11 +1,5 @@
 # Resumo do Projeto 
 
-## Cumulative Flow 
-![ Cumulative Flow](./project-cfd.svg)
-
-## Throughput 
-![ Throughput Flow](./project-throughput.svg)
-
 ## Métricas Consolidadas
 
 | Sprint | Período | Duração | Total Tasks | Concluídas | Em Progresso | Pendentes | Velocidade | Eficiência |
@@ -34,4 +28,74 @@
 - Período Total: 02/01 - 03/05
 - Média de Duração das Sprints: 6 dias
 
-*Última atualização: novembro de 2024*
+*Última atualização: novembro de 2024*## Cumulative Flow 
+![ Cumulative Flow](./project-cfd.svg)
+
+## Throughput 
+![ Throughput Flow](./project-throughput.svg)
+
+
+
+ ## Relatório de Previsão do Projeto - Método Monte Carlo
+
+## 🎯 Conclusão Principal
+
+### ❌ ALTO RISCO DE ATRASO NO PROJETO
+
+- **Probabilidade de conclusão no prazo**: 0.3%
+- **Data mais provável de conclusão**: seg., 02/12/2024
+- **Dias em relação ao planejado**: 214 dias
+- **Status**: ❌ Atraso Crítico
+
+### 📊 Métricas do Projeto
+
+| Métrica | Valor | Status |
+|---------|--------|--------|
+| Velocidade Atual | 2.9 tarefas/dia | ❌ |
+| Velocidade Necessária | Infinity tarefas/dia | - |
+| Dias Restantes | 0 dias | - |
+| Tarefas Restantes | 31 tarefas | - |
+
+### 📅 Previsões de Data de Conclusão
+
+| Data | Probabilidade | Status | Observação |
+|------|---------------|---------|------------|
+| qua., 20/11/2024 | 0.3% | ❌ Atraso Crítico |  |
+| qui., 21/11/2024 | 1.2% | ❌ Atraso Crítico |  |
+| sex., 22/11/2024 | 2.4% | ❌ Atraso Crítico |  |
+| seg., 25/11/2024 | 3.6% | ❌ Atraso Crítico |  |
+| ter., 26/11/2024 | 5.1% | ❌ Atraso Crítico |  |
+| qua., 27/11/2024 | 7.4% | ❌ Atraso Crítico |  |
+| qui., 28/11/2024 | 8.8% | ❌ Atraso Crítico |  |
+| sex., 29/11/2024 | 11.0% | ❌ Atraso Crítico |  |
+| seg., 02/12/2024 | 11.0% | ❌ Atraso Crítico | 📍 Data mais provável |
+| ter., 03/12/2024 | 10.9% | ❌ Atraso Crítico |  |
+| qua., 04/12/2024 | 9.5% | ❌ Atraso Crítico |  |
+| qui., 05/12/2024 | 7.6% | ❌ Atraso Crítico |  |
+| sex., 06/12/2024 | 6.3% | ❌ Atraso Crítico |  |
+| seg., 09/12/2024 | 5.2% | ❌ Atraso Crítico |  |
+| ter., 10/12/2024 | 3.8% | ❌ Atraso Crítico |  |
+| qua., 11/12/2024 | 2.8% | ❌ Atraso Crítico |  |
+| qui., 12/12/2024 | 1.7% | ❌ Atraso Crítico |  |
+| sex., 13/12/2024 | 0.9% | ❌ Atraso Crítico |  |
+| seg., 16/12/2024 | 0.3% | ❌ Atraso Crítico |  |
+| ter., 17/12/2024 | 0.2% | ❌ Atraso Crítico |  |
+| qua., 18/12/2024 | 0.1% | ❌ Atraso Crítico |  |
+| qui., 19/12/2024 | 0.0% | ❌ Atraso Crítico |  |
+
+## 💡 Recomendações
+
+1. ❌ Realizar reunião de emergência
+2. ❌ Reavaliar escopo do projeto
+3. ❌ Considerar adição de recursos ou redução de escopo
+
+## ℹ️ Informações do Projeto
+
+- **Total de Sprints**: 13
+- **Início**: ter., 02/01/2024
+- **Término Planejado**: sex., 03/05/2024
+- **Total de Tarefas**: 130
+- **Simulações Realizadas**: 10,000
+
+---
+*Relatório gerado em 18/11/2024, 11:10:37*
