@@ -187,7 +187,7 @@ export class ProjectMetricsGenerator {
 
       // Gerar markdown com referência ao SVG
       const markdown = this.generateMarkdownReport();
-      const markdownPath = path.join(outputDir, 'sprint-metrics.md');
+      const markdownPath = path.join(outputDir, 'readme.md');
       await fs.promises.writeFile(markdownPath, markdown, 'utf-8');
 
       console.log(`Arquivos gerados com sucesso em: ${outputDir}`);
