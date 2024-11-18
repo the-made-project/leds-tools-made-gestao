@@ -42,7 +42,7 @@
 
 ### ❌ ALTO RISCO DE ATRASO NO PROJETO
 
-- **Probabilidade de conclusão no prazo**: 0.3%
+- **Probabilidade de conclusão no prazo**: 0.1%
 - **Data mais provável de conclusão**: seg., 02/12/2024
 - **Dias em relação ao planejado**: 214 dias
 - **Status**: ❌ Atraso Crítico
@@ -60,26 +60,26 @@
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| qua., 20/11/2024 | 0.3% | ❌ Atraso Crítico |  |
-| qui., 21/11/2024 | 1.2% | ❌ Atraso Crítico |  |
-| sex., 22/11/2024 | 2.4% | ❌ Atraso Crítico |  |
-| seg., 25/11/2024 | 3.6% | ❌ Atraso Crítico |  |
-| ter., 26/11/2024 | 5.1% | ❌ Atraso Crítico |  |
-| qua., 27/11/2024 | 7.4% | ❌ Atraso Crítico |  |
-| qui., 28/11/2024 | 8.8% | ❌ Atraso Crítico |  |
-| sex., 29/11/2024 | 11.0% | ❌ Atraso Crítico |  |
-| seg., 02/12/2024 | 11.0% | ❌ Atraso Crítico | 📍 Data mais provável |
-| ter., 03/12/2024 | 10.9% | ❌ Atraso Crítico |  |
-| qua., 04/12/2024 | 9.5% | ❌ Atraso Crítico |  |
+| qua., 20/11/2024 | 0.1% | ❌ Atraso Crítico |  |
+| qui., 21/11/2024 | 1.1% | ❌ Atraso Crítico |  |
+| sex., 22/11/2024 | 2.3% | ❌ Atraso Crítico |  |
+| seg., 25/11/2024 | 4.0% | ❌ Atraso Crítico |  |
+| ter., 26/11/2024 | 5.3% | ❌ Atraso Crítico |  |
+| qua., 27/11/2024 | 6.7% | ❌ Atraso Crítico |  |
+| qui., 28/11/2024 | 9.2% | ❌ Atraso Crítico |  |
+| sex., 29/11/2024 | 10.8% | ❌ Atraso Crítico |  |
+| seg., 02/12/2024 | 11.1% | ❌ Atraso Crítico | 📍 Data mais provável |
+| ter., 03/12/2024 | 10.5% | ❌ Atraso Crítico |  |
+| qua., 04/12/2024 | 9.3% | ❌ Atraso Crítico |  |
 | qui., 05/12/2024 | 7.6% | ❌ Atraso Crítico |  |
-| sex., 06/12/2024 | 6.3% | ❌ Atraso Crítico |  |
+| sex., 06/12/2024 | 7.0% | ❌ Atraso Crítico |  |
 | seg., 09/12/2024 | 5.2% | ❌ Atraso Crítico |  |
-| ter., 10/12/2024 | 3.8% | ❌ Atraso Crítico |  |
-| qua., 11/12/2024 | 2.8% | ❌ Atraso Crítico |  |
-| qui., 12/12/2024 | 1.7% | ❌ Atraso Crítico |  |
+| ter., 10/12/2024 | 3.9% | ❌ Atraso Crítico |  |
+| qua., 11/12/2024 | 2.9% | ❌ Atraso Crítico |  |
+| qui., 12/12/2024 | 1.6% | ❌ Atraso Crítico |  |
 | sex., 13/12/2024 | 0.9% | ❌ Atraso Crítico |  |
-| seg., 16/12/2024 | 0.3% | ❌ Atraso Crítico |  |
-| ter., 17/12/2024 | 0.2% | ❌ Atraso Crítico |  |
+| seg., 16/12/2024 | 0.4% | ❌ Atraso Crítico |  |
+| ter., 17/12/2024 | 0.1% | ❌ Atraso Crítico |  |
 | qua., 18/12/2024 | 0.1% | ❌ Atraso Crítico |  |
 | qui., 19/12/2024 | 0.0% | ❌ Atraso Crítico |  |
 
@@ -98,4 +98,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 18/11/2024, 11:10:37*
+*Relatório gerado em 18/11/2024, 11:13:16*
