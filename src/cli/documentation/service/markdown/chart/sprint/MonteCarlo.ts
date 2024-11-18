@@ -1,4 +1,4 @@
-import { TimeBoxDTO } from "../../../../project_management_integration/dto/models.js";
+import { TimeBoxDTO } from "../../../../../project_management_integration/dto/models.js";
 
 
 export interface SprintTaskMC {

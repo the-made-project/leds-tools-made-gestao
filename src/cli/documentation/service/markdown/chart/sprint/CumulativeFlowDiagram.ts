@@ -1,12 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { TimeBoxDTO } from '../../../../project_management_integration/dto/models.js';
+import { TimeBoxDTO } from '../../../../../project_management_integration/dto/models.js';
 
-export class ThroughputGenerator {
+export class CumulativeFlowDiagram {
   private data: TimeBoxDTO;
   private readonly outputPath: string;
 
-  constructor(sprintData: TimeBoxDTO, outputPath: string = './throughput.svg') {
+  constructor(sprintData: TimeBoxDTO, outputPath: string = './cfd.svg') {
     this.data = sprintData;
     this.outputPath = outputPath;
   }
@@ -32,6 +32,7 @@ export class ThroughputGenerator {
 
       days.push({
         day: `${weekDay} ${formattedDate}`,
+        date: new Date(currentDate),
         todo: issuesUntilDay.filter(issue => issue.status === "A Fazer").length,
         inProgress: issuesUntilDay.filter(issue => issue.status === "Em Andamento").length,
         done: issuesUntilDay.filter(issue => issue.status === "Concluído").length
@@ -60,10 +61,36 @@ export class ThroughputGenerator {
     const totalIssues = this.data.tasks.length;
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
-    const barWidth = (chartWidth / dailyData.length) * 0.8;
-    const barSpacing = (chartWidth / dailyData.length) * 0.2;
 
-    let svg = `
+    // Cálculo dos pontos para as áreas
+    const xScale = (date: Date) => {
+      const startDate = new Date(this.data.startDate);
+      const totalDays = dailyData.length - 1;
+      const dayIndex = Math.floor((date.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+      return margin.left + (dayIndex * (chartWidth / totalDays));
+    };
+
+    const yScale = (value: number) => {
+      return height - margin.bottom - (value * (chartHeight / totalIssues));
+    };
+
+    // Gerar paths para as áreas
+    const generateArea = (data: any[], getValue: (d: any) => number) => {
+      const points = data.map((d, i) => {
+        const x = xScale(d.date);
+        const y = yScale(getValue(d));
+        return `${x},${y}`;
+      });
+
+      const bottomPoints = data.map((d, i) => {
+        const x = xScale(d.date);
+        return `${x},${height - margin.bottom}`;
+      }).reverse();
+
+      return `M${points.join(' L')} L${bottomPoints.join(' L')} Z`;
+    };
+
+    const svg = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
         <defs>
           <style>
@@ -75,11 +102,11 @@ export class ThroughputGenerator {
             .legend { font-size: 14px; }
           </style>
         </defs>
-        
+
         <!-- Fundo -->
         <rect width="${width}" height="${height}" fill="white"/>
-        
-        <!-- Grid Horizontal -->
+
+        <!-- Grid -->
         ${Array.from({ length: 11 }, (_, i) => {
           const y = margin.top + (i * (chartHeight / 10));
           return `
@@ -100,7 +127,24 @@ export class ThroughputGenerator {
             >${Math.round(totalIssues - (i * (totalIssues / 10)))}</text>
           `;
         }).join('')}
-        
+
+        <!-- Áreas -->
+        <path 
+          d="${generateArea(dailyData, d => d.todo + d.inProgress + d.done)}" 
+          fill="${colors.todo}" 
+          opacity="0.8"
+        />
+        <path 
+          d="${generateArea(dailyData, d => d.inProgress + d.done)}" 
+          fill="${colors.inProgress}" 
+          opacity="0.8"
+        />
+        <path 
+          d="${generateArea(dailyData, d => d.done)}" 
+          fill="${colors.done}" 
+          opacity="0.8"
+        />
+
         <!-- Eixos -->
         <line 
           x1="${margin.left}" 
@@ -118,7 +162,21 @@ export class ThroughputGenerator {
           stroke="black" 
           stroke-width="2"
         />
-        
+
+        <!-- Labels dos dias -->
+        ${dailyData.map((d, i) => {
+          const x = xScale(d.date);
+          return `
+            <text 
+              transform="rotate(-45 ${x} ${height - margin.bottom + 20})"
+              x="${x}"
+              y="${height - margin.bottom + 20}"
+              text-anchor="end"
+              class="axis"
+            >${d.day}</text>
+          `;
+        }).join('')}
+
         <!-- Label Eixo Y -->
         <text 
           transform="rotate(-90 ${margin.left - 40} ${height/2})" 
@@ -127,7 +185,7 @@ export class ThroughputGenerator {
           text-anchor="middle" 
           class="label"
         >Número de Tarefas</text>
-        
+
         <!-- Label Eixo X -->
         <text 
           x="${width/2}" 
@@ -135,96 +193,15 @@ export class ThroughputGenerator {
           text-anchor="middle" 
           class="label"
         >Dias da Sprint</text>
-        
-        <!-- Barras e Labels -->
-        ${dailyData.map((day, i) => {
-          const x = margin.left + (i * (chartWidth / dailyData.length)) + barSpacing/2;
-          const barHeight = chartHeight / totalIssues;
-          
-          const todoHeight = day.todo * barHeight;
-          const inProgressHeight = day.inProgress * barHeight;
-          const doneHeight = day.done * barHeight;
-          
-          return `
-            <g>
-              <!-- A Fazer -->
-              <rect 
-                x="${x}" 
-                y="${height - margin.bottom - todoHeight}" 
-                width="${barWidth}" 
-                height="${todoHeight}" 
-                fill="${colors.todo}"
-                rx="4"
-              />
-              
-              <!-- Em Progresso -->
-              <rect 
-                x="${x}" 
-                y="${height - margin.bottom - todoHeight - inProgressHeight}" 
-                width="${barWidth}" 
-                height="${inProgressHeight}" 
-                fill="${colors.inProgress}"
-                rx="4"
-              />
-              
-              <!-- Concluído -->
-              <rect 
-                x="${x}" 
-                y="${height - margin.bottom - todoHeight - inProgressHeight - doneHeight}" 
-                width="${barWidth}" 
-                height="${doneHeight}" 
-                fill="${colors.done}"
-                rx="4"
-              />
-              
-              <!-- Label do Dia -->
-              <text 
-                transform="rotate(-45 ${x + barWidth/2} ${height - margin.bottom + 20})" 
-                x="${x + barWidth/2}" 
-                y="${height - margin.bottom + 20}" 
-                text-anchor="end" 
-                class="axis"
-              >${day.day}</text>
-              
-              <!-- Valores -->
-              ${day.todo > 0 ? `
-                <text 
-                  x="${x + barWidth/2}" 
-                  y="${height - margin.bottom - todoHeight/2}" 
-                  text-anchor="middle" 
-                  class="value"
-                >${day.todo}</text>
-              ` : ''}
-              
-              ${day.inProgress > 0 ? `
-                <text 
-                  x="${x + barWidth/2}" 
-                  y="${height - margin.bottom - todoHeight - inProgressHeight/2}" 
-                  text-anchor="middle" 
-                  class="value"
-                >${day.inProgress}</text>
-              ` : ''}
-              
-              ${day.done > 0 ? `
-                <text 
-                  x="${x + barWidth/2}" 
-                  y="${height - margin.bottom - todoHeight - inProgressHeight - doneHeight/2}" 
-                  text-anchor="middle" 
-                  class="value"
-                >${day.done}</text>
-              ` : ''}
-            </g>
-          `;
-        }).join('')}
-        
+
         <!-- Título -->
         <text 
           x="${width/2}" 
           y="30" 
           text-anchor="middle" 
           class="title"
-        >${this.data.name} - Throughput</text>
-        
+        >${this.data.name} - Cumulative Flow Diagram</text>
+
         <!-- Legenda -->
         <g transform="translate(${width - margin.right + 20}, ${margin.top})">
           <rect width="15" height="15" fill="${colors.todo}" rx="2"/>
@@ -253,6 +230,7 @@ export class ThroughputGenerator {
   public generate(): void {
     const svg = this.generateSVG();
     fs.writeFileSync(this.outputPath, svg);
-    console.log(`Gráfico SVG gerado em: ${path.resolve(this.outputPath)}`);
+    console.log(`CFD gerado em: ${path.resolve(this.outputPath)}`);
   }
 }
+
