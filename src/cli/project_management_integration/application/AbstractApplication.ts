@@ -1,32 +1,28 @@
-import { JiraIntegrationService, Synchronized } from "../service/JiraIntegratorService.js";
 import { Util } from '../service/util.js';
 import { createPath } from '../../generator-utils.js'
 
 import path from "path";
 import lodash from 'lodash'
-import { EventEmitter } from 'events';
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
 import {IssuesDTO} from '../../model/models.js'
+import { Model } from '../../../language/generated/ast.js';
 
 const mutex = new Mutex();
 
-export abstract class AbstractApplication implements Synchronized{
+export abstract class AbstractApplication {
 
-  jiraIntegrationService: JiraIntegrationService
+  
   DB_PATH: string  
-  eventEmitter: EventEmitter
+  model: Model  
   jsonFile: string
-  projectKey:string
+  
 
-  constructor(email: string, apiToken: string, host: string, projectKey: string, target_folder: string, eventEmitter: EventEmitter) {
+  constructor(target_folder: string, model: Model ) {
         Util.mkdirSync(target_folder)
-        
-        this.DB_PATH = createPath(target_folder, 'db')
-        this.eventEmitter = eventEmitter
-        this.projectKey = projectKey
-        this.jiraIntegrationService = new JiraIntegrationService(email, apiToken, host, projectKey);
+        this.model = model
+        this.DB_PATH = createPath(target_folder, 'db')        
         this.jsonFile = "data.json"
   }
 

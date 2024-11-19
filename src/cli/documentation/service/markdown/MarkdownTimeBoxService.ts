@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {IssuesDTO, TimeBoxDTO} from '../../../model/models.js'
+import {IssuesDTO, TimeBox} from '../../../model/models.js'
 import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";
@@ -29,14 +29,9 @@ export class MarkdownTimeBoxService {
         this.DB_PATH = db_path
     }
 
-
     public async create(){
 
         const timeBoxes = await this.retrive();
-
-        
- 
-
 
         timeBoxes.forEach (timebox  =>{
             
@@ -52,7 +47,7 @@ export class MarkdownTimeBoxService {
                 
     }
 
-    private createTimeBoxExport(timeBox: TimeBoxDTO):string {
+    private createTimeBoxExport(timeBox: TimeBox):string {
 
 
      // Gerar simulação
@@ -68,13 +63,12 @@ export class MarkdownTimeBoxService {
         * **Goal**: - 
         * **Data Início**: ${this.convertToBrazilianDate(timeBox.startDate)}
         * **Data Fim**: ${this.convertToBrazilianDate(timeBox.endDate)}
-        * **Status**: ${timeBox.state?.toUpperCase()}
         
         ## Sprint Backlog
 
         |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-        ${timeBox.tasks?.map(assignee => `|${assignee.issue.toLocaleUpperCase()}|${assignee.issueName?.toLocaleUpperCase() ?? "-"}|${assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
+        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.toLocaleUpperCase()}|${assignee.issueName?.toLocaleUpperCase() ?? "-"}|${assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
 
         ${monteCarloAnalysis}
 

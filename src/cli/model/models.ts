@@ -1,64 +1,47 @@
 
-export type IssueDTO = {
-    internalId: string;
+export type Issue = {
     id: string;
-    key: string;
-    self: string;
+    externalId?: string;
+    key?: string;
+    self?: string;
     type: string;
     title?: string;
     description?:string;
     status?:string;
-    createdDate?:string;
-    completedDate?:string;
-    dueDate?:string;
-    parentId?:string;
-    parentKey?:string;
+    createdDate?:string;            
+    parent?:Issue
+    depends?: [Issue];
+    labels?: string[];
   };
   
 export type IssuesDTO = {
     data: any[];
  };
 
-export type PlannedItemDTO = {
-  email:string;
-  startDate:string;
-  dueDate:string;
+export type SprintItem = {
   id: string;
-}
-
-export type AssigneeDTO = {
-  name?:string;
-  account:string;
-  issue: string;
-  issueName?: string;
+  person:Person;
+  issue: Issue;  
   startDate?: string;
   dueDate?: string;
   completedDate?:string;
   endDate?: string;
-  status?: string;
+  status?: string;  
 }
 
-export type personDTO = {
-  id:string;
-  active : string;
-  displayName : string;
-  self  : string;  
-
+export type Person = {
+  id:string;  
+  email: string;
+  name : string;  
 }
 
 
- export type TimeBoxDTO = {
-  internalId: string;  
+ export type TimeBox = {
+  id?: string;  
   startDate:string;
   endDate: string;
-  name: string;
-  id: string;
-  self: string;
-  state?:string;
-  completeDate?:string;
-  createdDate?:string;
-  tasks:AssigneeDTO[];
-
-  
+  name: string;      
+  completeDate?:string;  
+  sprintItems?:SprintItem[];
 };
 

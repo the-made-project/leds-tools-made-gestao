@@ -20,5 +20,14 @@ backlog Produto {
     task criarapresentacao {name: "Criar uma apresentacao dos artigos sobre NISS" description: "criar uma apresentacao o artigo x e y" userstory: Produto.estudo depends: Produto.ler_artigos}
 }
 
+timebox xx {
+    name: "xxx"
+    description: "xxx"
+    startDate: "20/01/2024"
+    endDate: "20/01/2024"
+    
+}
+
+
 
 
