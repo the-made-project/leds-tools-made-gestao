@@ -59,7 +59,7 @@ export class MarkdownBacklogService {
         ---
         |ID |Nome |Descrição | Type | Status|
         |:--|:----|:-------- |:----:| :---: |
-        ${backlog.map(issue=> `|[${issue.key.toLocaleUpperCase()}](${issue.self})|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
+        ${backlog.map(issue=> `|[${issue.key?.toLocaleUpperCase() ?? "-"}](${issue.self})|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
         `
         
     }

@@ -1,5 +1,4 @@
 import type { Model } from '../language/generated/ast.js';
-import chalk from 'chalk';
 import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';

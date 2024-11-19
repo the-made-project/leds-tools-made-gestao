@@ -1,6 +1,6 @@
 import { AstNode, AstNodeDescription, DefaultScopeComputation, LangiumDocument } from "langium";
 import { CancellationToken } from "vscode-languageclient";
-import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam, isTaskBacklog, TaskBacklog } from "./generated/ast.js";
+import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam, isTaskBacklog } from "./generated/ast.js";
 
 export class CustomScopeComputation extends DefaultScopeComputation {
     override async computeExports(document: LangiumDocument<AstNode>, cancelToken?: CancellationToken): Promise<AstNodeDescription[]> {
