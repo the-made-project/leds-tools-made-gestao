@@ -1,5 +1,34 @@
 project  {
-    name: "xxx"
-    description: "xxx"
+    name: "Modulo de Autentication, Autorization e Accounting"
+    description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
     
 }
+
+team blackops {
+    name: "Team Black Ops"
+    description: "Equipe responsável por produzir artefatos de segurança"
+    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael.emerick@blackops.com.br"}
+    teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br"}
+    teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
+  
+}
+
+backlog Produto {
+    epic autenticacao {name: "Criar Módulo de autorização"}
+    userstory estudo {name: "Estudar a arquitetura de autorização proposta pelo NIS" description: "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao" epic: Produto.autenticacao}
+    task ler_artigos {name: "Ler os artigos sobre NISS" description: "Ler o artigo x e y" userstory: Produto.estudo}
+    task criarapresentacao {name: "Criar uma apresentacao dos artigos sobre NISS" description: "criar uma apresentacao o artigo x e y" userstory: Produto.estudo depends: Produto.ler_artigos}
+}
+
+timebox Spike {
+    name: "Spike de Conhecimento"
+    description: "Sprint para aprender sobre Módilo de Autorizacao"
+    startDate: "20/11/2024"
+    endDate: "22/11/2024"
+
+    planning {
+        item : Produto.estudo assignee: blackops.joaomarcos dueDate: "22/11/2024"
+    }
+}
+
+

@@ -4661,6 +4661,29 @@
       "completedDate": "",
       "dueDate": "",
       "status": "Concluído"
+    },
+    {
+      "internalId": "autenticacao",
+      "id": "10542",
+      "key": "SLAVE-538",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10542",
+      "title": "Criar Módulo de autorização",
+      "type": "epic"
+    },
+    {
+      "internalId": "autenticacao.estudo",
+      "id": "10543",
+      "key": "SLAVE-539",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10543",
+      "type": "atomicuserstory"
+    },
+    {
+      "internalId": "autenticacao.estudo.criarapresentacao",
+      "type": "task"
+    },
+    {
+      "internalId": "autenticacao.estudo.ler_artigos",
+      "type": "task"
     }
   ]
 }
