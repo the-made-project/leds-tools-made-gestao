@@ -1,6 +1,6 @@
 
 import { AtomicUserStory, isBacklog, isTaskBacklog, Model, TaskBacklog } from "../../../language/generated/ast.js";
-import { IssueDTO } from "../dto/models.js";
+import { IssueDTO } from "../../model/models.js";
 import { Util } from "../service/util.js";
 import { IssueAbstractApplication } from "./IssueAbstractApplication.js";
 import { EventEmitter } from 'events';

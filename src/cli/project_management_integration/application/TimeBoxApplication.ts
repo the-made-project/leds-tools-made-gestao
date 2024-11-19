@@ -2,7 +2,7 @@
 import { isTimeBox, Model, TimeBox } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import { TimeBoxDTO, IssueDTO, PlannedItemDTO, AssigneeDTO } from "../dto/models.js";
+import { TimeBoxDTO, IssueDTO, PlannedItemDTO, AssigneeDTO } from "../../model/models.js";
 
 
 export class TimeBoxApplication extends AbstractApplication {

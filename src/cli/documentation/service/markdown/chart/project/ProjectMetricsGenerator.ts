@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { AssigneeDTO, TimeBoxDTO } from '../../../../../project_management_integration/dto/models.js';
-import { ProjectCFD } from './ProjectCFD .js';
+import { AssigneeDTO, TimeBoxDTO } from '../../../../../model/models.js';
+import { ProjectCFD } from './ProjectCFD.js';
 import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
 import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
 

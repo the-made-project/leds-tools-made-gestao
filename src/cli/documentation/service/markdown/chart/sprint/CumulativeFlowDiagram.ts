@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { TimeBoxDTO } from '../../../../../project_management_integration/dto/models.js';
+import { TimeBoxDTO } from '../../../../../model/models.js';
 
 export class CumulativeFlowDiagram {
   private data: TimeBoxDTO;

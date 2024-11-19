@@ -8,7 +8,7 @@ import { EventEmitter } from 'events';
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
-import {IssuesDTO} from '../dto/models.js'
+import {IssuesDTO} from '../../model/models.js'
 
 const mutex = new Mutex();
 

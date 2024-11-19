@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {IssuesDTO, TimeBoxDTO} from '../../../project_management_integration/dto/models.js'
+import {IssuesDTO, TimeBoxDTO} from '../../../model/models.js'
 import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";

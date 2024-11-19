@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {IssueDTO, IssuesDTO,TimeBoxDTO} from '../../../project_management_integration/dto/models.js'
+import {IssueDTO, IssuesDTO,TimeBoxDTO} from '../../../model/models.js'
 import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
 
 

@@ -1,7 +1,7 @@
 
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
-import { IssueDTO } from "../dto/models.js";
+import { IssueDTO } from "../../model/models.js";
 
 export  class IssueAbstractApplication extends AbstractApplication {
 

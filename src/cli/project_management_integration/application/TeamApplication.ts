@@ -1,5 +1,5 @@
 import { Model } from "../../../language/generated/ast.js";
-import { AssigneeDTO, PlannedItemDTO } from "../dto/models.js";
+import { AssigneeDTO, PlannedItemDTO } from "../../model/models.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { EventEmitter } from 'events';
 
