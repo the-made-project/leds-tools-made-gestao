@@ -247,6 +247,6 @@ export class ProjectThroughputGenerator {
     public generate(): void {
       const svg = this.generateSVG();
       fs.writeFileSync(this.outputPath, svg);
-      console.log(`Project Throughput gerado em: ${path.resolve(this.outputPath)}`);
+      
     }
   }

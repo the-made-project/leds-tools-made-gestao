@@ -4663,19 +4663,32 @@
       "status": "Concluído"
     },
     {
-      "internalId": "autenticacao",
+      "internalId": "",
       "id": "10542",
       "key": "SLAVE-538",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10542",
       "title": "Criar Módulo de autorização",
-      "type": "epic"
+      "type": "Epic",
+      "parentId": "",
+      "parentKey": "",
+      "createdDate": "",
+      "completedDate": "",
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
-      "internalId": "autenticacao.estudo",
+      "internalId": "",
       "id": "10543",
       "key": "SLAVE-539",
       "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10543",
-      "type": "atomicuserstory"
+      "type": "História",
+      "parentId": "",
+      "parentKey": "",
+      "title": "Estudar a arquitetura de autorização proposta pelo NIS",
+      "createdDate": "",
+      "completedDate": "",
+      "dueDate": "",
+      "status": "Aberto"
     },
     {
       "internalId": "autenticacao.estudo.criarapresentacao",
@@ -4683,6 +4696,65 @@
     },
     {
       "internalId": "autenticacao.estudo.ler_artigos",
+      "type": "task"
+    },
+    {
+      "internalId": "",
+      "id": "10546",
+      "key": "SLAVE-540",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10546",
+      "title": "Criar Módulo de autorização",
+      "type": "Epic",
+      "parentId": "",
+      "parentKey": "",
+      "createdDate": "",
+      "completedDate": "",
+      "dueDate": "",
+      "status": "Aberto"
+    },
+    {
+      "internalId": "",
+      "id": "10547",
+      "key": "SLAVE-541",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10547",
+      "type": "História",
+      "parentId": "",
+      "parentKey": "",
+      "title": "Estudar a arquitetura de autorização proposta pelo NIS",
+      "createdDate": "",
+      "completedDate": "",
+      "dueDate": "",
+      "status": "Aberto"
+    },
+    {
+      "internalId": "autenticacao.estudo.ler_artigos",
+      "type": "task"
+    },
+    {
+      "internalId": "autenticacao.estudo.criarapresentacao",
+      "type": "task"
+    },
+    {
+      "internalId": "autenticacao",
+      "id": "10550",
+      "key": "SLAVE-542",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10550",
+      "title": "Criar Módulo de autorização",
+      "type": "epic"
+    },
+    {
+      "internalId": "autenticacao.estudo",
+      "id": "10551",
+      "key": "SLAVE-543",
+      "self": "https://slaveone-leds.atlassian.net/rest/api/3/issue/10551",
+      "type": "atomicuserstory"
+    },
+    {
+      "internalId": "autenticacao.estudo.ler_artigos",
+      "type": "task"
+    },
+    {
+      "internalId": "autenticacao.estudo.criarapresentacao",
       "type": "task"
     }
   ]

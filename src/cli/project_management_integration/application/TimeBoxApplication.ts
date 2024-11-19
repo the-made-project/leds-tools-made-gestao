@@ -48,7 +48,7 @@ export class TimeBoxApplication extends AbstractApplication {
     private async moveUS(){
 
         if ((this.USCreated.size > 0) && (this.timeBoxesFullCreated.size >0)){
-            console.log (`${this.USCreated.size} - ${this.timeBoxesFullCreated.size}`) 
+         
             
             let issues: string[] = [];
             

@@ -226,6 +226,6 @@ export class ProjectCFD {
   public generate(): void {
     const svg = this.generateSVG();
     fs.writeFileSync(this.outputPath, svg);
-    console.log(`Project CFD gerado em: ${path.resolve(this.outputPath)}`);
+  
   }
 }

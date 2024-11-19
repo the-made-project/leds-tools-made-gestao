@@ -190,7 +190,7 @@ export class ProjectMetricsGenerator {
       const markdownPath = path.join(outputDir, 'readme.md');
       await fs.promises.writeFile(markdownPath, markdown, 'utf-8');
 
-      console.log(`Arquivos gerados com sucesso em: ${outputDir}`);
+      
     } catch (error) {
       console.error('Erro ao gerar arquivos:', error);
       throw error;

@@ -495,7 +495,7 @@ export class JiraIntegrationService {
 
 public async synchronizedIssues(synchronized: Synchronized, project: string){
   const tarefas = await this.getAllProjectTasks(project, (progress) => {
-    console.log(`Progresso: ${progress.fetched}/${progress.total} tarefas`);
+   
   });
 
   tarefas.forEach(async (data:any) =>{

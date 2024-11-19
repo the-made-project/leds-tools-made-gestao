@@ -43,7 +43,7 @@ export class MarkdownBacklogService {
   
         try {
             await generator.generateFiles(outputDir);
-            console.log('Relatórios gerados com sucesso!');
+           
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);
         }
@@ -83,7 +83,7 @@ export class MarkdownBacklogService {
     protected async retrive(){
     
         const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-        console.log (ISSUEPATH)
+        
         const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
         const defaultData: IssuesDTO = { data: [] };
 

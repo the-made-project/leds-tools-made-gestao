@@ -253,6 +253,6 @@ export class ThroughputGenerator {
   public generate(): void {
     const svg = this.generateSVG();
     fs.writeFileSync(this.outputPath, svg);
-    console.log(`Gráfico SVG gerado em: ${path.resolve(this.outputPath)}`);
+    
   }
 }

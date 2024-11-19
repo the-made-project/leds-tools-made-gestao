@@ -1,6 +1,6 @@
 import { AstNode, AstNodeDescription, DefaultScopeComputation, LangiumDocument } from "langium";
 import { CancellationToken } from "vscode-languageclient";
-import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam } from "./generated/ast.js";
+import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam, isTaskBacklog, TaskBacklog } from "./generated/ast.js";
 
 export class CustomScopeComputation extends DefaultScopeComputation {
     override async computeExports(document: LangiumDocument<AstNode>, cancelToken?: CancellationToken): Promise<AstNodeDescription[]> {
@@ -15,12 +15,15 @@ export class CustomScopeComputation extends DefaultScopeComputation {
         // Process Epics and User Stories
         const epics = this.getEpics(root, document);
         const userStories = this.getUserStories(root, document);
+        const taskBacklog = this.getTaskBacklog(root, document)
+
         const processes = this.getProcesses(root, document);
         const activities = this.getActivities(root, document);
         const tasks = this.getTasks(root, document);
+        
         const people = this.getPeople(root, document);
 
-        return defaultGlobal.concat(epics, processes, userStories, activities, tasks, people);
+        return defaultGlobal.concat(epics, userStories, taskBacklog, processes,  activities, tasks, people);
     }
 
     private getEpics(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
@@ -37,6 +40,12 @@ export class CustomScopeComputation extends DefaultScopeComputation {
             .map(atomicUserStory => this.descriptions.createDescription(atomicUserStory, `${atomicUserStory.$container.id}.${atomicUserStory.id}`, document));
     }
 
+    private getTaskBacklog(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
+        return root.components
+            .filter(isBacklog)
+            .flatMap(backlog => backlog.userstories.filter(isTaskBacklog))
+            .map(taskBacklog => this.descriptions.createDescription(taskBacklog, `${taskBacklog.$container.id}.${taskBacklog.id}`, document));
+    }
     private getProcesses(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
         return root.components
             .filter(isProcess)

@@ -103,7 +103,7 @@ export class MarkdownTimeBoxService {
     protected async retrive(){
     
         const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-        console.log (ISSUEPATH)
+    
         const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
         const defaultData: IssuesDTO = { data: [] };
 

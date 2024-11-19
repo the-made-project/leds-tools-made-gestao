@@ -60,7 +60,7 @@ export class TeamApplication extends AbstractApplication {
 
     
     public override async execute(data: any): Promise<boolean> {
-        console.log (data)
+      
         if  (data.fields.assignee?.accountId){
             const assigneeDTO: AssigneeDTO = {
                 name:data.fields.assignee?.displayName,

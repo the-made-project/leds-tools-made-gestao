@@ -20,5 +20,15 @@ backlog Produto {
     task criarapresentacao {name: "Criar uma apresentacao dos artigos sobre NISS" description: "criar uma apresentacao o artigo x e y" userstory: Produto.estudo depends: Produto.ler_artigos}
 }
 
+timebox Spike {
+    name: "Spike de Conhecimento"
+    description: "Sprint para aprender sobre Módilo de Autorizacao"
+    startDate: "20/11/2024"
+    endDate: "22/11/2024"
+
+    planning {
+        item : Produto.estudo assignee: blackops.joaomarcos dueDate: "22/11/2024"
+    }
+}
 
 
