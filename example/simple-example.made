@@ -11,6 +11,7 @@ team blackops {
     teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br"}
     teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
   
+  
 }
 
 backlog Produto {

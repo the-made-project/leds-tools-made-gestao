@@ -1,8 +1,6 @@
 
-import { isBacklog, isEpic, Model } from "../../../language/generated/ast.js";
+import { isAtomicUserStory, isBacklog,  isEpic, isTaskBacklog, Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import {Issue} from "../../model/models.js"
-
 export  class IssueApplication extends AbstractApplication {
 
     constructor(target_folder:string, model: Model) {
@@ -11,25 +9,27 @@ export  class IssueApplication extends AbstractApplication {
         this.jsonFile = "issue.json"
     }
 
-    public create(){
-        const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
+    public async create(){
+        const epcis = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
+        const atomicUserStories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
+        const tasks = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isTaskBacklog));
         
-        epics.map (async epic => {
-            const value = await this.retrive(epic.id)
-            console.log (value)
-            if (!value) {
-                const issue: Issue = {
-                    id: typeof epic.id === "string" ? epic.id.toLocaleLowerCase() : "",
-                    type: "epic",
-                    title: epic.name ?? "",
-                    description: epic.description ?? "",
-                };
-                this.save(issue)
-            }
-            
-        });
+        
+        epcis.map (async value => {
+            await this.createAndSave(value)
+        })
+
+        atomicUserStories.map (async value => {
+            await this.createAndSave(value)
+        })
+
+        tasks.map (async value => {
+            await this.createAndSave(value)
+        })
 
     }
+
+    
 
     
 

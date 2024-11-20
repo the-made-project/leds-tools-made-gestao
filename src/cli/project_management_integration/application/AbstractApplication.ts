@@ -6,7 +6,7 @@ import lodash from 'lodash'
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
-import {IssuesDTO} from '../../model/models.js'
+import {IssuesDTO,Issue} from '../../model/models.js'
 import { Model } from '../../../language/generated/ast.js';
 
 const mutex = new Mutex();
@@ -89,6 +89,40 @@ export abstract class AbstractApplication {
     
   }
 
+  protected async createAndSave(data: any){
+    const issue = await this.createIssue (data)
+    await this.saveorUpdate (issue)
+  }
+
+  protected async createIssue (data: any){
+    const issue: Issue = {
+      id: data.id,
+      title: data.name,
+      description: data.description ?? "",
+      type: data.$type
+    }
+    if (data.epic?.ref || data.userstory?.ref){
+      issue.parent = await this.createIssue(data.epic?.ref || data.userstory?.ref) ?? undefined 
+    }
+    if (data.depends){
+      issue.depends = await Promise.all(data.depends?.map(async (value:any) => 
+        await this.createIssue(value))) ?? undefined
+    }
+
+    return issue
+  }
+
+
+  protected async saveorUpdate (data: any){
+    const value = await this.retrive(data.id)
+    if (!value){
+      this.save (data)
+
+    }
+    else{
+      this.update(data.id, data)
+    }
+  }
 
   protected async save(issueDTO: any) {
     await mutex.runExclusive(async () => {

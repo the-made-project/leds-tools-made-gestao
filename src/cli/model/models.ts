@@ -1,3 +1,10 @@
+export type Backlog = {
+  id: string;
+  name: string
+  description: string
+  issues?:Issue[];
+  
+}
 
 export type Issue = {
     id: string;
@@ -10,7 +17,7 @@ export type Issue = {
     status?:string;
     createdDate?:string;            
     parent?:Issue
-    depends?: [Issue];
+    depends?: Issue[];
     labels?: string[];
   };
   
@@ -27,6 +34,13 @@ export type SprintItem = {
   completedDate?:string;
   endDate?: string;
   status?: string;  
+}
+
+export type Team = {
+  id:string;  
+  name : string;
+  description: string
+  teammebers: Person[] 
 }
 
 export type Person = {
