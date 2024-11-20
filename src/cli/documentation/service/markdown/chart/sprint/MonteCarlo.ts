@@ -1,4 +1,4 @@
-import { TimeBoxDTO } from "../../../../../model/models.js";
+import { TimeBox } from "../../../../../model/models.js";
 
 
 export interface SprintTaskMC {
@@ -33,11 +33,11 @@ interface CompletionDate {
 }
 
 export class SprintMonteCarlo {
-  private data: TimeBoxDTO;
+  private data: TimeBox;
   private readonly simulations: number;
 
   constructor(
-    sprintData: TimeBoxDTO,
+    sprintData: TimeBox,
     simulations: number = 10000,
   ) {
     this.data = sprintData;
@@ -45,7 +45,7 @@ export class SprintMonteCarlo {
   }
 
   private calculateDailyVelocity(): number[] {
-    const completedTasks = this.data.tasks?.filter(task => task.completedDate);
+    const completedTasks = this.data.sprintItems?.filter(task => task.completedDate);
     const velocities: number[] = [];
     
     if (completedTasks.length > 0) {
@@ -73,8 +73,8 @@ export class SprintMonteCarlo {
   }
 
   private getSprintMetrics(): SprintMetrics {
-    const totalTasks = this.data.tasks.length;
-    const completedTasks = this.data.tasks.filter(t => t.status === "Concluído").length;
+    const totalTasks = this.data.sprintItems.length;
+    const completedTasks = this.data.sprintItems.filter(t => t.status === "Concluído").length;
     const remainingTasks = totalTasks - completedTasks;
     const remainingDays = this.calculateRemainingWorkdays();
     const velocities = this.calculateDailyVelocity();
@@ -221,9 +221,9 @@ export class SprintMonteCarlo {
     // Status das Tarefas
     markdown += `### 📋 Status das Tarefas\n\n`;
     const tasksByStatus = {
-      "Concluído": this.data.tasks?.filter(t => t.status === "Concluído").length,
-      "Em Andamento": this.data.tasks?.filter(t => t.status === "Em Andamento").length,
-      "A Fazer": this.data.tasks?.filter(t => t.status === "A Fazer").length
+      "Concluído": this.data.sprintItems?.filter(t => t.status === "Concluído").length,
+      "Em Andamento": this.data.sprintItems?.filter(t => t.status === "Em Andamento").length,
+      "A Fazer": this.data.sprintItems?.filter(t => t.status === "A Fazer").length
     };
 
     markdown += `| Status | Quantidade | Porcentagem |\n`;

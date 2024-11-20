@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {IssueDTO, IssuesDTO,TimeBoxDTO} from '../../../model/models.js'
+import {Issue, IssuesDTO,TimeBox} from '../../../model/models.js'
 import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
 
 
@@ -18,7 +18,7 @@ export class MarkdownBacklogService {
     jsonFile: string
     jsonFileTimeBox:string
     DB_PATH: string
-    sprintData: TimeBoxDTO[] 
+    sprintData: TimeBox[] 
     
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
@@ -51,7 +51,7 @@ export class MarkdownBacklogService {
 
 
 
-    protected createDocument(backlog:IssueDTO[]){
+    protected createDocument(backlog:Issue[]){
         return expandToStringWithNL`
         ---
         title: "Backlog Geral"

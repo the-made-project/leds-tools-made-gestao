@@ -1,11 +1,11 @@
-import { TimeBoxDTO } from '../../../../../model/models.js';
+import { TimeBox } from '../../../../../model/models.js';
 
 
 export class ProjectMonteCarlo {
-    private sprints: TimeBoxDTO[];
+    private sprints: TimeBox[];
     private readonly simulations: number;
   
-    constructor(sprintsData: TimeBoxDTO[], simulations: number = 10000) {
+    constructor(sprintsData: TimeBox[], simulations: number = 10000) {
       this.sprints = sprintsData.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
       this.simulations = simulations;
     }
@@ -13,7 +13,7 @@ export class ProjectMonteCarlo {
     private calculateDailyVelocity(): number[] {
       const velocities: number[] = [];
       const completedTasks = this.sprints.flatMap(sprint => 
-        sprint.tasks.filter(task => task.completedDate)
+        sprint.sprintItems.filter(task => task.completedDate)
       );
       
       if (completedTasks.length > 0) {
@@ -33,9 +33,9 @@ export class ProjectMonteCarlo {
     }
   
     private getProjectMetrics() {
-      const totalTasks = this.sprints.reduce((sum, sprint) => sum + sprint.tasks.length, 0);
+      const totalTasks = this.sprints.reduce((sum, sprint) => sum + sprint.sprintItems.length, 0);
       const completedTasks = this.sprints.reduce((sum, sprint) => 
-        sum + sprint.tasks.filter(t => t.status === "Concluído").length, 0
+        sum + sprint.sprintItems.filter(t => t.status === "Concluído").length, 0
       );
       const remainingTasks = totalTasks - completedTasks;
       

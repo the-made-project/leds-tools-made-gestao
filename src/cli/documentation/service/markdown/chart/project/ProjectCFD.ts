@@ -1,11 +1,11 @@
 import * as fs from 'fs';
-import { TimeBoxDTO } from '../../../../../model/models.js';
+import { TimeBox } from '../../../../../model/models.js';
 
 export class ProjectCFD {
-  private sprints: TimeBoxDTO[];
+  private sprints: TimeBox[];
   private readonly outputPath: string;
 
-  constructor(sprints: TimeBoxDTO[], outputPath: string = './project-cfd.svg') {
+  constructor(sprints: TimeBox[], outputPath: string = './project-cfd.svg') {
     this.sprints = sprints.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
     this.outputPath = outputPath;
   }
@@ -27,7 +27,7 @@ export class ProjectCFD {
       const formattedDate = formatDate(currentDate);
       
       const allTasksUntilDay = this.sprints.flatMap(sprint => 
-        sprint.tasks.filter(task => new Date(task.startDate ?? "") <= currentDate)
+        sprint.sprintItems.filter(task => new Date(task.startDate ?? "") <= currentDate)
       );
 
       days.push({
@@ -58,7 +58,7 @@ export class ProjectCFD {
     };
 
     const dailyData = this.processData();
-    const totalTasks = this.sprints.reduce((sum, sprint) => sum + sprint.tasks.length, 0);
+    const totalTasks = this.sprints.reduce((sum, sprint) => sum + sprint.sprintItems.length, 0);
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
 

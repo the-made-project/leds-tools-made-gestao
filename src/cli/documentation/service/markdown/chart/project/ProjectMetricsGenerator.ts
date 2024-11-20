@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { AssigneeDTO, TimeBoxDTO } from '../../../../../model/models.js';
+import { SprintItem, TimeBox } from '../../../../../model/models.js';
 import { ProjectCFD } from './ProjectCFD.js';
 import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
 import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
@@ -12,9 +12,9 @@ interface SprintStatus {
 }
 
 export class ProjectMetricsGenerator {
-  private sprints: TimeBoxDTO[];
+  private sprints: TimeBox[];
 
-  constructor(sprints: TimeBoxDTO[]) {
+  constructor(sprints: TimeBox[]) {
     this.sprints = sprints;
   }
 
@@ -31,7 +31,7 @@ export class ProjectMetricsGenerator {
     );
   }
 
-  private analyzeTaskStatus(tasks: AssigneeDTO[]): SprintStatus {
+  private analyzeTaskStatus(tasks: SprintItem[]): SprintStatus {
     return {
       completed: tasks.filter(task => task.status === "Concluído").length,
       inProgress: tasks.filter(task => 
@@ -43,22 +43,22 @@ export class ProjectMetricsGenerator {
     };
   }
 
-  private calculateVelocity(tasks: AssigneeDTO[], duration: number): number {
+  private calculateVelocity(tasks: SprintItem[], duration: number): number {
     const completedTasks = tasks.filter(task => task.status === "Concluído").length;
     return Number((completedTasks / duration).toFixed(2));
   }
 
-  public generateSprintSVG(sprints: TimeBoxDTO[]): string {
+  public generateSprintSVG(sprints: TimeBox[]): string {
     const width = 800;
     const height = 400;
     const margin = { top: 40, right: 40, bottom: 60, left: 60 };
     const graphWidth = width - margin.left - margin.right;
     const graphHeight = height - margin.top - margin.bottom;
 
-    const getCompletedTasks = (tasks: AssigneeDTO[]) => 
+    const getCompletedTasks = (tasks: SprintItem[]) => 
         tasks.filter(t => t.status === "Concluído").length;
 
-    const maxTasks = Math.max(...sprints.map(s => s.tasks.length));
+    const maxTasks = Math.max(...sprints.map(s => s.sprintItems.length));
     const barWidth = graphWidth / (sprints.length * 2);
 
     let svg = `
@@ -86,7 +86,7 @@ export class ProjectMetricsGenerator {
 
     // Add bars and labels
     sprints.forEach((sprint, i) => {
-        const completedTasks = getCompletedTasks(sprint.tasks);
+        const completedTasks = getCompletedTasks(sprint.sprintItems);
         const barHeight = (completedTasks / maxTasks) * graphHeight;
         const x = (i * graphWidth) / sprints.length;
 
@@ -94,7 +94,7 @@ export class ProjectMetricsGenerator {
             <g>
                 <rect x="${x + barWidth/2}" y="${graphHeight - barHeight}"
                       width="${barWidth}" height="${barHeight}" class="bar">
-                    <title>${sprint.name}: ${completedTasks}/${sprint.tasks.length} tasks completed</title>
+                    <title>${sprint.name}: ${completedTasks}/${sprint.sprintItems.length} tasks completed</title>
                 </rect>
                 <text x="${x + barWidth}" y="${graphHeight + 20}"
                       text-anchor="middle" class="label"
@@ -116,11 +116,11 @@ export class ProjectMetricsGenerator {
 
     this.sprints.forEach(sprint => {
       const duration = this.calculateDuration(sprint.startDate, sprint.endDate);
-      const status = this.analyzeTaskStatus(sprint.tasks);
-      const velocity = this.calculateVelocity(sprint.tasks, duration);
-      const efficiency = ((status.completed / sprint.tasks.length) * 100).toFixed(1);
+      const status = this.analyzeTaskStatus(sprint.sprintItems);
+      const velocity = this.calculateVelocity(sprint.sprintItems, duration);
+      const efficiency = ((status.completed / sprint.sprintItems.length) * 100).toFixed(1);
 
-      markdown += `| ${sprint.name} | ${this.formatDate(sprint.startDate)} - ${this.formatDate(sprint.endDate)} | ${duration} dias | ${sprint.tasks.length} | ${status.completed} (${efficiency}%) | ${status.inProgress} | ${status.pending} | ${velocity}/dia | ${efficiency}% |\n`;
+      markdown += `| ${sprint.name} | ${this.formatDate(sprint.startDate)} - ${this.formatDate(sprint.endDate)} | ${duration} dias | ${sprint.sprintItems.length} | ${status.completed} (${efficiency}%) | ${status.inProgress} | ${status.pending} | ${velocity}/dia | ${efficiency}% |\n`;
     });
 
     return markdown;
@@ -134,8 +134,8 @@ export class ProjectMetricsGenerator {
     markdown += this.generateSummaryTable() + '\n';
     
     // Análise geral
-    const totalTasks = this.sprints.reduce((acc, sprint) => acc + sprint.tasks.length, 0);
-    const totalStatus = this.analyzeTaskStatus(this.sprints.flatMap(s => s.tasks));
+    const totalTasks = this.sprints.reduce((acc, sprint) => acc + sprint.sprintItems.length, 0);
+    const totalStatus = this.analyzeTaskStatus(this.sprints.flatMap(s => s.sprintItems));
     const globalEfficiency = ((totalStatus.completed / totalTasks) * 100).toFixed(1);
 
     markdown += '## Análise Geral\n\n';

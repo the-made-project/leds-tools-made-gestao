@@ -68,7 +68,7 @@ export class MarkdownTimeBoxService {
 
         |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.toLocaleUpperCase()}|${assignee.issueName?.toLocaleUpperCase() ?? "-"}|${assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
+        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleUpperCase()}|${assignee.issue.title?.toLocaleUpperCase() ?? "-"}|${assignee.person.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
 
         ${monteCarloAnalysis}
 

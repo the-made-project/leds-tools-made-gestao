@@ -1,11 +1,11 @@
 import * as fs from 'fs';
-import { TimeBoxDTO } from '../../../../../model/models.js';
+import { TimeBox } from '../../../../../model/models.js';
 
 export class ThroughputGenerator {
-  private data: TimeBoxDTO;
+  private data: TimeBox;
   private readonly outputPath: string;
 
-  constructor(sprintData: TimeBoxDTO, outputPath: string = './throughput.svg') {
+  constructor(sprintData: TimeBox, outputPath: string = './throughput.svg') {
     this.data = sprintData;
     this.outputPath = outputPath;
   }
@@ -25,7 +25,7 @@ export class ThroughputGenerator {
     while (currentDate <= endDate) {
       const weekDay = currentDate.toLocaleDateString('pt-BR', { weekday: 'short' });
       const formattedDate = formatDate(currentDate);
-      const issuesUntilDay = this.data.tasks.filter(issue => 
+      const issuesUntilDay = this.data.sprintItems.filter(issue => 
         new Date(issue.startDate ?? "") <= currentDate
       );
 
@@ -56,7 +56,7 @@ export class ThroughputGenerator {
     };
 
     const dailyData = this.processData();
-    const totalIssues = this.data.tasks.length;
+    const totalIssues = this.data.sprintItems.length;
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
     const barWidth = (chartWidth / dailyData.length) * 0.8;

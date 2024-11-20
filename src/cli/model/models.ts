@@ -42,6 +42,6 @@ export type Person = {
   endDate: string;
   name: string;      
   completeDate?:string;  
-  sprintItems?:SprintItem[];
+  sprintItems:SprintItem[];
 };
 
