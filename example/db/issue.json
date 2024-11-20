@@ -1,15 +1,10 @@
 {
   "data": [
-    {},
-    {},
-    {},
-    {},
     {
       "id": "autenticacao",
       "title": "Criar Módulo de autorização",
       "description": "",
-      "type": "epic",
-      "depends": []
+      "type": "epic"
     },
     {
       "id": "estudo",
@@ -20,10 +15,8 @@
         "id": "autenticacao",
         "title": "Criar Módulo de autorização",
         "description": "",
-        "type": "epic",
-        "depends": []
-      },
-      "depends": []
+        "type": "epic"
+      }
     },
     {
       "id": "ler_artigos",
@@ -39,12 +32,9 @@
           "id": "autenticacao",
           "title": "Criar Módulo de autorização",
           "description": "",
-          "type": "epic",
-          "depends": []
-        },
-        "depends": []
-      },
-      "depends": []
+          "type": "epic"
+        }
+      }
     },
     {
       "id": "criarapresentacao",
@@ -60,12 +50,12 @@
           "id": "autenticacao",
           "title": "Criar Módulo de autorização",
           "description": "",
-          "type": "epic",
-          "depends": []
-        },
-        "depends": []
+          "type": "epic"
+        }
       },
-      "depends": []
+      "depends": [
+        {}
+      ]
     }
   ]
 }

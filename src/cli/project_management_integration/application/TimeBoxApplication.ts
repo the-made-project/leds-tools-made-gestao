@@ -20,6 +20,7 @@ export class TimeBoxApplication extends AbstractApplication {
        const sprints = this.model.components.filter(isTimeBox)
 
        sprints.map (sprint => {
+
         const instance: TimeBox = {
             id: sprint.id,
             name: sprint.name?? "",

@@ -105,10 +105,17 @@ export abstract class AbstractApplication {
     if (data.epic?.ref || data.userstory?.ref){
       issue.parent = await this.createIssue(data.epic?.ref || data.userstory?.ref) ?? undefined 
     }
+    
     if (data.depends){
-      issue.depends = await Promise.all(data.depends?.map(async (value:any) => 
-        await this.createIssue(value))) ?? undefined
+      if (data.depends.length >0){
+        issue.depends = await data.depends?.map(async (value:any) =>  ({
+          id: "x",
+          type: "xx"
+        } as Issue)) ??[]
     }
+  }
+
+
 
     return issue
   }
