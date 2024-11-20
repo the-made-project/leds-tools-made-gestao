@@ -27,12 +27,11 @@ export type IssuesDTO = {
 
 export type SprintItem = {
   id: string;
-  person:Person;
+  assignee:Person;
   issue: Issue;  
   startDate?: string;
   dueDate?: string;
   completedDate?:string;
-  endDate?: string;
   status?: string;  
 }
 
@@ -52,6 +51,7 @@ export type Person = {
 
  export type TimeBox = {
   id?: string;  
+  description:string;
   startDate:string;
   endDate: string;
   name: string;      

@@ -11,6 +11,7 @@ export class LocalApplication {
   teamApplication: TeamApplication
   issueApplication: IssueApplication
   backlogApplication: BacklogApplication
+
   model: Model
   
 
@@ -25,7 +26,6 @@ export class LocalApplication {
       this.issueApplication = new  IssueApplication(target_folder,model)
 
       this.backlogApplication = new BacklogApplication(target_folder,model)
-      
     }
     
     
@@ -33,6 +33,7 @@ export class LocalApplication {
       await this.teamApplication.create()
       await this.issueApplication.create()
       await this.backlogApplication.create()
+      await this.timeBoxApplication.create()
     }
     
 

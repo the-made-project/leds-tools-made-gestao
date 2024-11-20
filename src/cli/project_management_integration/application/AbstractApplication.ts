@@ -95,11 +95,12 @@ export abstract class AbstractApplication {
   }
 
   protected async createIssue (data: any){
+
     const issue: Issue = {
-      id: data.id,
+      id: data.id.toLocaleLowerCase(),
       title: data.name,
       description: data.description ?? "",
-      type: data.$type
+      type: data.$type.toLocaleLowerCase()
     }
     if (data.epic?.ref || data.userstory?.ref){
       issue.parent = await this.createIssue(data.epic?.ref || data.userstory?.ref) ?? undefined 

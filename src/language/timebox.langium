@@ -4,46 +4,33 @@ import 'team'
 type timeBoxTask = Epic| AtomicUserStory| TaskBacklog; 
 
 TimeBox:
-    'timebox' id=ID '{'
+    'sprint' id=ID '{'
         (Name 
         | Description 
-        | planning=Planning
-        | performed=Performed
+        | sprintBacklog =SprintBacklog
         | 'startDate' ':' startDate=STRING 
         | 'endDate' ':' endDate=STRING 
-        | 'responsible' ':' responsible=[TeamMember:QualifiedName]
         | 'comment' ':' comment=STRING
         | Label)*
     '}'
 ;
 
 
-Planning: 
-    'planning' '{' 
+SprintBacklog: 
+    'sprintbacklog' id=ID '{' 
         (planningItems+=PlanningItem)*
     '}' 
 ;
-
-Performed:
-    'performed' '{' 
-        (performedItems+=PerfomedItem)*
-    '}' 
+ 
+PlanningItem: 'item' id=[timeBoxTask:QualifiedName] '{'
+    
+    ('assignee' ':' assignee=[TeamMember:QualifiedName]
+        |'complexity' ':' complexity=('EASY'|'MEDIUM|HARD|SPIKE')
+        |'dueDate' ':' duedate=STRING
+        |'startDate' ':' startdate=STRING
+        |'completedDate' ':' completedDate=STRING
+        |'status' ':' status=('TODO'|'DOING|DONE')
+    )*
+'}'  
 ;
-
-
-PlanningItem:
-    'item' ':' (item=[timeBoxTask:QualifiedName] | itemString=STRING)?
-    ('assignee' ':' (assignee=[TeamMember:QualifiedName] | assigneeString=STRING))?
-    ('planned' ':' planned=INT)?
-    ('complexity' ':' complexity=INT)?
-    ('dueDate' ':' duedate=STRING)?
-    ('startDate' ':' startdate=STRING)?
-;
-
-
-PerfomedItem:
-    'item' ':' (item=[timeBoxTask:QualifiedName] | itemString=STRING)?
-    ('performed' ':' performed=INT)?
-    ('complexity' ':' complexity=INT)?
-    ('status' ':' status=('DOING'|'DONE'))?
-;
+    
