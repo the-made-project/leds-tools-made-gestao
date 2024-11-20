@@ -55,7 +55,7 @@ export abstract class AbstractApplication {
     const db = new LowSync<IssuesDTO>(adapter,defaultData)
     await db.read()
     
-    return lodash.chain(db.data).get('data').find({ internalId: id }).value();    
+    return lodash.chain(db.data).get('data').find({ id: id }).value();    
     
   }
 

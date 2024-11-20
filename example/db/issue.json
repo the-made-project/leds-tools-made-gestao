@@ -1,32 +1,10 @@
 {
   "data": [
     {
-      "internalId": "autenticacao",
+      "id": "autenticacao",
+      "type": "epic",
       "title": "Criar Módulo de autorização",
-      "labels": [],
-      "type": "epic"
-    },
-    {
-      "internalId": "autenticacao.estudo",
-      "type": "atomicuserstory",
-      "parentId": "",
-      "title": "Estudar a arquitetura de autorização proposta pelo NIS",
-      "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
-      "labels": []
-    },
-    {
-      "internalId": "autenticacao.estudo.ler_artigos",
-      "title": "Ler os artigos sobre NISS",
-      "description": "Ler o artigo x e y",
-      "labels": [],
-      "type": "task"
-    },
-    {
-      "internalId": "autenticacao.estudo.criarapresentacao",
-      "title": "Criar uma apresentacao dos artigos sobre NISS",
-      "description": "criar uma apresentacao o artigo x e y",
-      "labels": [],
-      "type": "task"
+      "description": "Descrição não definida"
     }
   ]
 }
