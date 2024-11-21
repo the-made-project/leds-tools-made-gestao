@@ -28,7 +28,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >5</text>
           
             <line 
               x1="70" 
@@ -44,7 +44,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >5</text>
           
             <line 
               x1="70" 
@@ -60,7 +60,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >2</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -76,7 +76,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >4</text>
           
             <line 
               x1="70" 
@@ -92,7 +92,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >3</text>
           
             <line 
               x1="70" 
@@ -108,7 +108,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >3</text>
           
             <line 
               x1="70" 
@@ -124,7 +124,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -140,7 +140,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -156,7 +156,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >0</text>
+            >1</text>
           
             <line 
               x1="70" 
@@ -172,7 +172,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >0</text>
+            >1</text>
           
             <line 
               x1="70" 
@@ -192,17 +192,17 @@
           
 
         <path 
-          d="M70,50 L168,50 L266,50 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+          d="M70,140 L168,140 L266,140 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#ef4444" 
           opacity="0.8"
         />
         <path 
-          d="M70,275 L168,275 L266,275 L364,275 L462,275 L560,275 L658,275 L756,275 L854,275 L952,275 L1050,275 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+          d="M70,320 L168,320 L266,320 L364,230 L462,230 L560,230 L658,230 L756,230 L854,230 L952,230 L1050,230 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#f59e0b" 
           opacity="0.8"
         />
         <path 
-          d="M70,275 L168,275 L266,275 L364,275 L462,275 L560,275 L658,275 L756,275 L854,275 L952,275 L1050,275 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+          d="M70,320 L168,320 L266,320 L364,320 L462,320 L560,320 L658,320 L756,320 L854,320 L952,320 L1050,320 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#22c55e" 
           opacity="0.8"
         />
@@ -311,10 +311,10 @@
             30/11/2024
           </text>
           <text x="0" y="110" class="value">
-            Total de Tasks: 2
+            Total de Tasks: 5
           </text>
           <text x="0" y="130" class="value">
-            Total de Sprints: 1
+            Total de Sprints: 2
           </text>
         </g>
       </svg>

@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >5</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >5</text>
             
               <line 
                 x1="70" 
@@ -60,7 +60,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >4</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >4</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -124,7 +124,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -140,7 +140,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -156,7 +156,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -172,7 +172,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -212,16 +212,16 @@
                 <g>
                   <rect 
                     x="78.9090909090909" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="78.9090909090909" 
-                    y="275" 
+                    y="320" 
                     width="50" 
                     height="0" 
                     fill="#f59e0b"
@@ -230,9 +230,9 @@
                   
                   <rect 
                     x="78.9090909090909" 
-                    y="50" 
+                    y="140" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -248,11 +248,11 @@
                   
                     <text 
                       x="103.9090909090909" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
@@ -260,27 +260,27 @@
                   
                     <text 
                       x="103.9090909090909" 
-                      y="162.5" 
+                      y="230" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="168" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="168" 
-                    y="275" 
+                    y="320" 
                     width="50" 
                     height="0" 
                     fill="#f59e0b"
@@ -289,9 +289,9 @@
                   
                   <rect 
                     x="168" 
-                    y="50" 
+                    y="140" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -307,11 +307,11 @@
                   
                     <text 
                       x="193" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
@@ -319,27 +319,27 @@
                   
                     <text 
                       x="193" 
-                      y="162.5" 
+                      y="230" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="257.0909090909091" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="257.0909090909091" 
-                    y="275" 
+                    y="320" 
                     width="50" 
                     height="0" 
                     fill="#f59e0b"
@@ -348,9 +348,9 @@
                   
                   <rect 
                     x="257.0909090909091" 
-                    y="50" 
+                    y="140" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -366,11 +366,11 @@
                   
                     <text 
                       x="282.0909090909091" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
@@ -378,29 +378,29 @@
                   
                     <text 
                       x="282.0909090909091" 
-                      y="162.5" 
+                      y="230" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="346.1818181818182" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="346.1818181818182" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -409,7 +409,7 @@
                     x="346.1818181818182" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -425,41 +425,49 @@
                   
                     <text 
                       x="371.1818181818182" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="371.1818181818182" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="371.1818181818182" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="435.2727272727273" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="435.2727272727273" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -468,7 +476,7 @@
                     x="435.2727272727273" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -484,41 +492,49 @@
                   
                     <text 
                       x="460.2727272727273" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="460.2727272727273" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="460.2727272727273" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="524.3636363636364" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="524.3636363636364" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -527,7 +543,7 @@
                     x="524.3636363636364" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -543,41 +559,49 @@
                   
                     <text 
                       x="549.3636363636364" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="549.3636363636364" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="549.3636363636364" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="613.4545454545454" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="613.4545454545454" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -586,7 +610,7 @@
                     x="613.4545454545454" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -602,41 +626,49 @@
                   
                     <text 
                       x="638.4545454545454" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="638.4545454545454" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="638.4545454545454" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="702.5454545454545" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="702.5454545454545" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -645,7 +677,7 @@
                     x="702.5454545454545" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -661,41 +693,49 @@
                   
                     <text 
                       x="727.5454545454545" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="727.5454545454545" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="727.5454545454545" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="791.6363636363636" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="791.6363636363636" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -704,7 +744,7 @@
                     x="791.6363636363636" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -720,41 +760,49 @@
                   
                     <text 
                       x="816.6363636363636" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="816.6363636363636" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="816.6363636363636" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="880.7272727272727" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="880.7272727272727" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -763,7 +811,7 @@
                     x="880.7272727272727" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -779,41 +827,49 @@
                   
                     <text 
                       x="905.7272727272727" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="905.7272727272727" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="905.7272727272727" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
                     x="969.8181818181819" 
-                    y="275" 
+                    y="320" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#ef4444"
                     rx="4"
                   />
                   
                   <rect 
                     x="969.8181818181819" 
-                    y="275" 
+                    y="230" 
                     width="50" 
-                    height="0" 
+                    height="90" 
                     fill="#f59e0b"
                     rx="4"
                   />
@@ -822,7 +878,7 @@
                     x="969.8181818181819" 
                     y="50" 
                     width="50" 
-                    height="225" 
+                    height="180" 
                     fill="#22c55e"
                     rx="4"
                   />
@@ -838,23 +894,31 @@
                   
                     <text 
                       x="994.8181818181819" 
-                      y="387.5" 
+                      y="410" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
-                  
-                  
+                    >2</text>
                   
                   
                   
                     <text 
                       x="994.8181818181819" 
-                      y="162.5" 
+                      y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
                     >1</text>
+                  
+                  
+                  
+                    <text 
+                      x="994.8181818181819" 
+                      y="140" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
@@ -896,10 +960,10 @@
               30/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Tasks: 2
+              Total de Tasks: 5
             </text>
             <text x="0" y="130" class="value">
-              Total de Sprints: 1
+              Total de Sprints: 2
             </text>
           </g>
         </svg>

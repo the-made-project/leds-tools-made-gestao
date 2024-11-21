@@ -23,14 +23,15 @@ backlog Produto {
     task criarapresentacao {name: "Criar uma apresentacao dos artigos sobre NISS" description: "criar uma apresentacao o artigo x e y" userstory: Produto.estudo depends: Produto.ler_artigos,Produto.ler_artigos2}
 }
 
-sprint xx {
-    name: "xxx"
-    description: "xxx"
+sprint estudo {
+    name: "estudo"
+    description: "estudoooo"
     startDate: "20/11/2024"
     endDate: "30/11/2024"
     
-    sprintbacklog xxx {
+    sprintbacklog estudo {
         item Produto.autenticacao {assignee: blackops.rafaelemerick startDate: "20/11/2024" dueDate: "30/11/2024" status: TODO}
+        item Produto.estudo {assignee: blackops.rafaelemerick startDate: "23/11/2024" dueDate: "30/11/2024" status: DOING}
         item Produto.estudo {assignee: blackops.rafaelemerick startDate: "20/11/2024" dueDate: "30/11/2024" status: DONE}
     }
     comment: "xxxx"

@@ -35,7 +35,7 @@ export class MarkdownBacklogService {
     public async create(){
 
         const backlogs = await this.retrive(this.jsonFileBacklog);        
-        fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlogs))
+        fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/readme.md`), this.createDocument(backlogs))
         
         this.sprintData = await this.retrive(this.jsonTimeBox); 
         const generator = new ProjectMetricsGenerator(this.sprintData);
