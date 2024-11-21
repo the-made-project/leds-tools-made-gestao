@@ -35,10 +35,11 @@ export class TimeBoxApplication extends AbstractApplication {
                     email: item.assignee?.ref?.email
                 } as Person,
                 issue: {
-                    id: item.id.ref?.id.toLocaleLowerCase(),
-                    title: item.id.ref?.name,
+                    id: item.id.ref?.id.toLocaleLowerCase() ?? "",
+                    title: item.id.ref?.name ?? "" ,
                     description: item.id.ref?.description ?? "",
-                    type: item.id.ref?.$type.toLocaleLowerCase()},
+                    type: item.id.ref?.$type.toLocaleLowerCase() ?? ""
+                },
 
                 startDate: item.startdate,
                 dueDate: item.duedate,

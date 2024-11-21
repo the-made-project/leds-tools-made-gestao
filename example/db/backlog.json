@@ -42,6 +42,24 @@
           }
         },
         {
+          "id": "ler_artigos2",
+          "title": "Ler os artigos sobre NISS",
+          "description": "Ler o artigo x e y",
+          "type": "taskbacklog",
+          "parent": {
+            "id": "estudo",
+            "title": "Estudar a arquitetura de autorização proposta pelo NIS",
+            "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
+            "type": "atomicuserstory",
+            "parent": {
+              "id": "autenticacao",
+              "title": "Criar Módulo de autorização",
+              "description": "",
+              "type": "epic"
+            }
+          }
+        },
+        {
           "id": "criarapresentacao",
           "title": "Criar uma apresentacao dos artigos sobre NISS",
           "description": "criar uma apresentacao o artigo x e y",
@@ -59,7 +77,42 @@
             }
           },
           "depends": [
-            {}
+            {
+              "id": "ler_artigos2",
+              "title": "Ler os artigos sobre NISS",
+              "description": "Ler o artigo x e y",
+              "type": "taskbacklog",
+              "parent": {
+                "id": "estudo",
+                "title": "Estudar a arquitetura de autorização proposta pelo NIS",
+                "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
+                "type": "atomicuserstory",
+                "parent": {
+                  "id": "autenticacao",
+                  "title": "Criar Módulo de autorização",
+                  "description": "",
+                  "type": "epic"
+                }
+              }
+            },
+            {
+              "id": "ler_artigos",
+              "title": "Ler os artigos sobre NISS",
+              "description": "Ler o artigo x e y",
+              "type": "taskbacklog",
+              "parent": {
+                "id": "estudo",
+                "title": "Estudar a arquitetura de autorização proposta pelo NIS",
+                "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
+                "type": "atomicuserstory",
+                "parent": {
+                  "id": "autenticacao",
+                  "title": "Criar Módulo de autorização",
+                  "description": "",
+                  "type": "epic"
+                }
+              }
+            }
           ]
         }
       ]

@@ -108,10 +108,11 @@ export abstract class AbstractApplication {
     
     if (data.depends){
       if (data.depends.length >0){
-        issue.depends = await data.depends?.map(async (value:any) =>  ({
-          id: "x",
-          type: "xx"
-        } as Issue)) ??[]
+        issue.depends = await Promise.all(data.depends?.map(async (value:any) => await this.createIssue(value.ref))) ??[]
+    }
+
+    if (data.depend){
+      issue.depends = issue.depends?.concat (await this.createIssue(data.depend.ref))
     }
   }
 
