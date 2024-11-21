@@ -50,7 +50,7 @@ export class MarkdownBacklogService {
         }*/
     }
 
-
+    // Colocar o status de cada Issue no backlog, varrendo o sprints
 
     protected createDocument(backlog:Issue[]){
         return expandToStringWithNL`
