@@ -15,6 +15,7 @@ team blackops {
 }
 
 backlog Produto {
+    name: "Produto"
     epic autenticacao {name: "Criar Módulo de autorização"}
     userstory estudo {name: "Estudar a arquitetura de autorização proposta pelo NIS" description: "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao" epic: Produto.autenticacao}
     task ler_artigos {name: "Ler os artigos sobre NISS" description: "Ler o artigo x e y" userstory: Produto.estudo}
@@ -30,7 +31,7 @@ sprint xx {
     
     sprintbacklog xxx {
         item Produto.autenticacao {assignee: blackops.rafaelemerick startDate: "20/11/2222" dueDate: "22/11/2222" status: TODO}
-        item Produto.estudo {assignee: blackops.rafaelemerick startDate: "20/11/2222" dueDate: "22/11/2222" status: TODO}
+        item Produto.estudo {assignee: blackops.rafaelemerick startDate: "20/11/2222" dueDate: "22/11/2222" status: DOING|DONE}
     }
     comment: "xxxx"
 }

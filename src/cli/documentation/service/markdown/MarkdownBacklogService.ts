@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {Issue, IssuesDTO,TimeBox} from '../../../model/models.js'
+import {Backlog, IssuesDTO,TimeBox} from '../../../model/models.js'
 //import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
 
 
@@ -16,7 +16,7 @@ export class MarkdownBacklogService {
     MANAGEMENT_PATH :string
     TIMEBOX_PATH :string
     jsonFile: string
-    jsonFileTimeBox:string
+    jsonFileBacklog:string
     DB_PATH: string
     sprintData: TimeBox[] 
     
@@ -26,7 +26,7 @@ export class MarkdownBacklogService {
         this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
         this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'backlogs')
         this.jsonFile = "issue.json"
-        this.jsonFileTimeBox = "timebox.json"
+        this.jsonFileBacklog = "backlog.json"
         this.DB_PATH = db_path
         this.sprintData = []
     }
@@ -34,9 +34,8 @@ export class MarkdownBacklogService {
 
     public async create(){
 
-        const backlog = await this.retrive();
-
-        fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlog))
+        const backlogs = await this.retrive(this.jsonFileBacklog);        
+        fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlogs))
         
         /*this.sprintData = await this.retrive_timebox()
         const generator = new ProjectMetricsGenerator(this.sprintData);
@@ -52,37 +51,28 @@ export class MarkdownBacklogService {
 
     // Colocar o status de cada Issue no backlog, varrendo o sprints
 
-    protected createDocument(backlog:Issue[]){
+    private createDocument(backlogs:Backlog[]){
         return expandToStringWithNL`
         ---
-        title: "Backlog Geral"
+        title: "Backlog"
         sidebar_position: 1
         ---
-        |ID |Nome |Descrição | Type | Status|
-        |:--|:----|:-------- |:----:| :---: |
-        ${backlog.map(issue=> `|${issue.id.toLocaleUpperCase() ?? "-"}|${issue.title?.toLocaleUpperCase()}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
+        ${backlogs.map(backlog => this.createBacklog(backlog)).join(`\n`)}       
         `
     }
 
-    protected async retrive_timebox(){
-    
-        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFileTimeBox);
-        
-        const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
-        const defaultData: IssuesDTO = { data: [] };
-
-        const db = new LowSync<IssuesDTO>(adapter, defaultData);
-        await db.read();
-        
-        return db.data.data.sort((a, b) => {
-            return Number(a.id) - Number(b.id);
-        }); 
-        
+    private createBacklog (backlog: Backlog){
+        return expandToStringWithNL`
+        ## ${backlog.name?.toLocaleUpperCase() ?? backlog.id.toLocaleUpperCase()}
+        |ID |Nome |Descrição | Type | Status|
+        |:--|:----|:-------- |:----:| :---: |
+        ${backlog.issues?.map(issue=> `|${issue.id.toLocaleUpperCase() ?? "-"}|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
+        `
     }
 
-    protected async retrive(){
+    protected async retrive(database: string){
     
-        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
+        const ISSUEPATH = path.join(this.DB_PATH, database);
         
         const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
         const defaultData: IssuesDTO = { data: [] };
@@ -94,8 +84,7 @@ export class MarkdownBacklogService {
             return Number(a.id) - Number(b.id);
         }); 
         
-      }
-
+    }   
    
 
 }

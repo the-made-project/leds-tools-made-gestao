@@ -29,7 +29,7 @@ PlanningItem: 'item' id=[timeBoxTask:QualifiedName] '{'
         |'dueDate' ':' duedate=STRING
         |'startDate' ':' startdate=STRING
         |'completedDate' ':' completedDate=STRING
-        |'status' ':' status=('TODO'|'DOING|DONE')
+        |'status' ':' status=('TODO'|'DOING'|'DONE')
     )*
 '}'  
 ;
