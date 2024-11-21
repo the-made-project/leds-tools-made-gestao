@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { SprintItem, TimeBox } from '../../../../../model/models.js';
-import { ProjectCFD } from './ProjectCFD.js';
-import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
-import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
+//import { ProjectCFD } from './ProjectCFD.js';
+//import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
+//import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
 
 interface SprintStatus {
   completed: number;
@@ -18,33 +18,87 @@ export class ProjectMetricsGenerator {
     this.sprints = sprints;
   }
 
-  private formatDate(date: string): string {
-    return new Date(date).toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit'
-    });
+  private parseBrazilianDate(dateStr: string): Date {
+    if (!dateStr) {
+      throw new Error('Data não fornecida');
+    }
+
+    dateStr = dateStr.trim();
+    const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const match = dateStr.match(dateRegex);
+
+    if (!match) {
+      throw new Error(`Data inválida: ${dateStr}. Formato esperado: dd/mm/yyyy`);
+    }
+
+    const [, day, month, year] = match;
+    const date = new Date(`${year}-${month}-${day}`);
+
+    if (isNaN(date.getTime())) {
+      throw new Error(`Data inválida após conversão: ${dateStr}`);
+    }
+
+    return date;
   }
 
-  private calculateDuration(startDate: string, endDate: string): number {
-    return Math.ceil(
-      (new Date(endDate).getTime() - new Date(startDate).getTime()) / (1000 * 60 * 60 * 24)
-    );
+  private formatDate(date: string): string {
+    try {
+      const parsedDate = this.parseBrazilianDate(date);
+      return parsedDate.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit'
+      });
+    } catch (error) {
+      console.error(`Erro ao formatar data: ${this.getErrorMessage(error)}`);
+      return date;
+    }
   }
+  private calculateDuration(startDate: string, endDate: string): number {
+    try {
+      const start = this.parseBrazilianDate(startDate);
+      const end = this.parseBrazilianDate(endDate);
+      
+      const startTime = start.getTime();
+      const endTime = end.getTime();
+
+      if (endTime < startTime) {
+        throw new Error('Data de fim é anterior à data de início');
+      }
+
+      return Math.ceil((endTime - startTime) / (1000 * 60 * 60 * 24));
+    } catch (error) {
+      console.error(`Erro ao calcular duração entre ${startDate} e ${endDate}: ${this.getErrorMessage(error)}`);
+      throw new Error(`Erro ao calcular duração: ${this.getErrorMessage(error)}`);
+    }
+  }
+  
+  private getErrorMessage(error: unknown): string {
+      if (error instanceof Error) {
+        return error.message;
+      }
+      if (typeof error === 'string') {
+        return error;
+      }
+      if (error && typeof error === 'object' && 'toString' in error) {
+        return error.toString();
+      }
+      return 'Erro desconhecido';
+    }
 
   private analyzeTaskStatus(tasks: SprintItem[]): SprintStatus {
     return {
-      completed: tasks.filter(task => task.status === "Concluído").length,
+      completed: tasks.filter(task => task.status === "DONE").length,
       inProgress: tasks.filter(task => 
-        task.status !== "Concluído" && task.startDate
+        task.status !== "DONE" && task.startDate
       ).length,
       pending: tasks.filter(task => 
-        task.status !== "Concluído" && !task.startDate
+        task.status !== "DONE" && !task.startDate
       ).length
     };
   }
 
   private calculateVelocity(tasks: SprintItem[], duration: number): number {
-    const completedTasks = tasks.filter(task => task.status === "Concluído").length;
+    const completedTasks = tasks.filter(task => task.status === "DONE").length;
     return Number((completedTasks / duration).toFixed(2));
   }
 
@@ -161,9 +215,9 @@ export class ProjectMetricsGenerator {
     markdown += '## Throughput \n'
     markdown +='![ Throughput Flow](./project-throughput.svg)\n\n'
 
-    const projectAnalysis = new ProjectMonteCarlo(this.sprints);
-    const report = projectAnalysis.generateMarkdownReport();
-    markdown += report
+    //const projectAnalysis = new ProjectMonteCarlo(this.sprints);
+    //const report = projectAnalysis.generateMarkdownReport();
+    //markdown += report
 
     
     return markdown;
@@ -178,12 +232,12 @@ export class ProjectMetricsGenerator {
 
       // Gerar e salvar SVG primeiro
       
-      const svgPath = path.join(outputDir, 'project-cfd.svg');
-      const projectCFD = new ProjectCFD(this.sprints,svgPath )
-      projectCFD.generate();
-      const svgPathTP = path.join(outputDir, 'project-throughput.svg')
-      const throughput = new ProjectThroughputGenerator(this.sprints,svgPathTP);
-      throughput.generate();
+      //const svgPath = path.join(outputDir, 'project-cfd.svg');
+      //const projectCFD = new ProjectCFD(this.sprints,svgPath )
+      //projectCFD.generate();
+      //const svgPathTP = path.join(outputDir, 'project-throughput.svg')
+      //const throughput = new ProjectThroughputGenerator(this.sprints,svgPathTP);
+      //throughput.generate();
 
       // Gerar markdown com referência ao SVG
       const markdown = this.generateMarkdownReport();

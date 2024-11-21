@@ -4,8 +4,8 @@
       "id": "xx",
       "name": "xxx",
       "description": "xxx",
-      "startDate": "20/01/2024",
-      "endDate": "20/01/2024",
+      "startDate": "20/11/2024",
+      "endDate": "30/11/2024",
       "sprintItems": [
         {
           "id": "produto.autenticacao",
@@ -20,8 +20,8 @@
             "description": "",
             "type": "epic"
           },
-          "startDate": "20/11/2222",
-          "dueDate": "22/11/2222",
+          "startDate": "20/11/2024",
+          "dueDate": "30/11/2024",
           "status": "TODO"
         },
         {
@@ -37,8 +37,8 @@
             "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
             "type": "atomicuserstory"
           },
-          "startDate": "20/11/2222",
-          "dueDate": "22/11/2222",
+          "startDate": "20/11/2024",
+          "dueDate": "30/11/2024",
           "status": "DONE"
         }
       ]

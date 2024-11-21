@@ -6,7 +6,7 @@ import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
 import {Backlog, IssuesDTO,TimeBox} from '../../../model/models.js'
-//import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
+import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
 
 
 export class MarkdownBacklogService {
@@ -15,7 +15,7 @@ export class MarkdownBacklogService {
     target_folder:string
     MANAGEMENT_PATH :string
     TIMEBOX_PATH :string
-    jsonFile: string
+    jsonTimeBox: string
     jsonFileBacklog:string
     DB_PATH: string
     sprintData: TimeBox[] 
@@ -25,7 +25,7 @@ export class MarkdownBacklogService {
         this.target_folder = target_folder
         this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
         this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'backlogs')
-        this.jsonFile = "issue.json"
+        this.jsonTimeBox = "timebox.json"
         this.jsonFileBacklog = "backlog.json"
         this.DB_PATH = db_path
         this.sprintData = []
@@ -37,7 +37,7 @@ export class MarkdownBacklogService {
         const backlogs = await this.retrive(this.jsonFileBacklog);        
         fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlogs))
         
-        /*this.sprintData = await this.retrive_timebox()
+        this.sprintData = await this.retrive(this.jsonTimeBox); 
         const generator = new ProjectMetricsGenerator(this.sprintData);
         const outputDir = path.join(this.TIMEBOX_PATH, 'reports');
   
@@ -46,7 +46,7 @@ export class MarkdownBacklogService {
            
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);
-        }*/
+        }
     }
 
     // Colocar o status de cada Issue no backlog, varrendo o sprints
