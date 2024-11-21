@@ -192,17 +192,17 @@
           
 
         <path 
-          d="M L Z" 
+          d="M70,50 L168,50 L266,50 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#ef4444" 
           opacity="0.8"
         />
         <path 
-          d="M L Z" 
+          d="M70,275 L168,275 L266,275 L364,275 L462,275 L560,275 L658,275 L756,275 L854,275 L952,275 L1050,275 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#f59e0b" 
           opacity="0.8"
         />
         <path 
-          d="M L Z" 
+          d="M70,275 L168,275 L266,275 L364,275 L462,275 L560,275 L658,275 L756,275 L854,275 L952,275 L1050,275 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#22c55e" 
           opacity="0.8"
         />
@@ -225,6 +225,54 @@
         />
 
         
+              <text 
+                transform="rotate(-45 70 520)"
+                x="70"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >qua. 20/11</text>
+            
+              <text 
+                transform="rotate(-45 266 520)"
+                x="266"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >sex. 22/11</text>
+            
+              <text 
+                transform="rotate(-45 462 520)"
+                x="462"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >dom. 24/11</text>
+            
+              <text 
+                transform="rotate(-45 658 520)"
+                x="658"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >ter. 26/11</text>
+            
+              <text 
+                transform="rotate(-45 854 520)"
+                x="854"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >qui. 28/11</text>
+            
+              <text 
+                transform="rotate(-45 1050 520)"
+                x="1050"
+                y="520"
+                text-anchor="end"
+                class="axis"
+              >sáb. 30/11</text>
+            
 
         <text 
           transform="rotate(-90 30 300)" 
@@ -250,17 +298,17 @@
 
         <g transform="translate(1070, 50)">
           <rect width="15" height="15" fill="#ef4444" rx="2"/>
-          <text x="25" y="12" class="legend">A Fazer</text>
+          <text x="25" y="12" class="legend">TODO</text>
           
           <rect y="25" width="15" height="15" fill="#f59e0b" rx="2"/>
-          <text x="25" y="37" class="legend">Em Progresso</text>
+          <text x="25" y="37" class="legend">DOING</text>
           
           <rect y="50" width="15" height="15" fill="#22c55e" rx="2"/>
-          <text x="25" y="62" class="legend">Concluído</text>
+          <text x="25" y="62" class="legend">DONE</text>
           
           <text x="0" y="90" class="value">
-            Período: Invalid Date - 
-            Invalid Date
+            Período: 20/11/2024 - 
+            30/11/2024
           </text>
           <text x="0" y="110" class="value">
             Total de Tasks: 2

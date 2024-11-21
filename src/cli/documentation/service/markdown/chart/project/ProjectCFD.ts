@@ -6,8 +6,20 @@ export class ProjectCFD {
   private readonly outputPath: string;
 
   constructor(sprints: TimeBox[], outputPath: string = './project-cfd.svg') {
-    this.sprints = sprints.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
+    this.sprints = this.sortSprints(sprints);
     this.outputPath = outputPath;
+  }
+
+  private parseBrazilianDate(dateString: string): Date {
+    const [day, month, year] = dateString.split('/').map(Number);
+    return new Date(year, month - 1, day);
+  }
+
+  private sortSprints(sprints: TimeBox[]): TimeBox[] {
+    return sprints.sort((a, b) => 
+      this.parseBrazilianDate(a.startDate).getTime() - 
+      this.parseBrazilianDate(b.startDate).getTime()
+    );
   }
 
   private processData() {
@@ -17,8 +29,8 @@ export class ProjectCFD {
       return `${dia}/${mes}`;
     };
 
-    const startDate = new Date(this.sprints[0].startDate);
-    const endDate = new Date(this.sprints[this.sprints.length - 1].endDate);
+    const startDate = this.parseBrazilianDate(this.sprints[0].startDate);
+    const endDate = this.parseBrazilianDate(this.sprints[this.sprints.length - 1].endDate);
     const days = [];
     
     let currentDate = new Date(startDate);
@@ -26,16 +38,21 @@ export class ProjectCFD {
       const weekDay = currentDate.toLocaleDateString('pt-BR', { weekday: 'short' });
       const formattedDate = formatDate(currentDate);
       
-      const allTasksUntilDay = this.sprints.flatMap(sprint => 
-        sprint.sprintItems.filter(task => new Date(task.startDate ?? "") <= currentDate)
-      );
+      const allTasksUntilDay = this.sprints.flatMap(sprint => {
+        return sprint.sprintItems.filter(task => {
+          const taskStartDate = task.startDate ? this.parseBrazilianDate(task.startDate) : null;
+          return taskStartDate ? taskStartDate <= currentDate : true;
+        });
+      });
 
       days.push({
         day: `${weekDay} ${formattedDate}`,
         date: new Date(currentDate),
-        todo: allTasksUntilDay.filter(task => task.status === "A Fazer").length,
-        inProgress: allTasksUntilDay.filter(task => task.status === "Em Andamento").length,
-        done: allTasksUntilDay.filter(task => task.status === "Concluído").length
+        todo: allTasksUntilDay.filter(task => task.status === "TODO").length,
+        inProgress: allTasksUntilDay.filter(task => 
+          task.status === "IN_PROGRESS" || task.status === "DOING"
+        ).length,
+        done: allTasksUntilDay.filter(task => task.status === "DONE").length
       });
 
       currentDate.setDate(currentDate.getDate() + 1);
@@ -59,21 +76,28 @@ export class ProjectCFD {
 
     const dailyData = this.processData();
     const totalTasks = this.sprints.reduce((sum, sprint) => sum + sprint.sprintItems.length, 0);
+    
+    if (totalTasks === 0) {
+      throw new Error('Não há tarefas para gerar o gráfico');
+    }
+
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
 
     const xScale = (date: Date) => {
-      const startDate = new Date(this.sprints[0].startDate);
-      const totalDays = dailyData.length - 1;
+      const startDate = this.parseBrazilianDate(this.sprints[0].startDate);
+      const totalDays = Math.max(1, dailyData.length - 1);  // Evita divisão por zero
       const dayIndex = Math.floor((date.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
       return margin.left + (dayIndex * (chartWidth / totalDays));
     };
 
     const yScale = (value: number) => {
-      return height - margin.bottom - (value * (chartHeight / totalTasks));
+      return height - margin.bottom - (value * (chartHeight / Math.max(1, totalTasks)));
     };
 
     const generateArea = (data: any[], getValue: (d: any) => number) => {
+      if (data.length === 0) return '';
+
       const points = data.map(d => {
         const x = xScale(d.date);
         const y = yScale(getValue(d));
@@ -158,7 +182,7 @@ export class ProjectCFD {
         />
 
         ${dailyData.map((d, i) => {
-          if (i % 7 === 0) {  // Show only weekly labels to avoid clutter
+          if (i % 2 === 0) {  // Mostra mais labels para períodos curtos
             const x = xScale(d.date);
             return `
               <text 
@@ -197,17 +221,17 @@ export class ProjectCFD {
 
         <g transform="translate(${width - margin.right + 20}, ${margin.top})">
           <rect width="15" height="15" fill="${colors.todo}" rx="2"/>
-          <text x="25" y="12" class="legend">A Fazer</text>
+          <text x="25" y="12" class="legend">TODO</text>
           
           <rect y="25" width="15" height="15" fill="${colors.inProgress}" rx="2"/>
-          <text x="25" y="37" class="legend">Em Progresso</text>
+          <text x="25" y="37" class="legend">DOING</text>
           
           <rect y="50" width="15" height="15" fill="${colors.done}" rx="2"/>
-          <text x="25" y="62" class="legend">Concluído</text>
+          <text x="25" y="62" class="legend">DONE</text>
           
           <text x="0" y="90" class="value">
-            Período: ${new Date(this.sprints[0].startDate).toLocaleDateString('pt-BR')} - 
-            ${new Date(this.sprints[this.sprints.length - 1].endDate).toLocaleDateString('pt-BR')}
+            Período: ${this.sprints[0].startDate} - 
+            ${this.sprints[this.sprints.length - 1].endDate}
           </text>
           <text x="0" y="110" class="value">
             Total de Tasks: ${totalTasks}
@@ -223,8 +247,13 @@ export class ProjectCFD {
   }
 
   public generate(): void {
-    const svg = this.generateSVG();
-    fs.writeFileSync(this.outputPath, svg);
-  
+    try {
+      const svg = this.generateSVG();
+      fs.writeFileSync(this.outputPath, svg);
+      console.log(`CFD gerado com sucesso em: ${this.outputPath}`);
+    } catch (error) {
+      console.error('Erro ao gerar CFD:', error);
+      throw error;
+    }
   }
 }

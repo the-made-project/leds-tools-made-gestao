@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { SprintItem, TimeBox } from '../../../../../model/models.js';
-//import { ProjectCFD } from './ProjectCFD.js';
-//import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
-//import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
+import { ProjectCFD } from './ProjectCFD.js';
+import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
+import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
 
 interface SprintStatus {
   completed: number;
@@ -209,15 +209,15 @@ export class ProjectMetricsGenerator {
     })}*`;
 
     
-    markdown += '## Cumulative Flow \n'
+    markdown += '\n\n## Cumulative Flow \n'
     markdown +='![ Cumulative Flow](./project-cfd.svg)\n\n'
     
     markdown += '## Throughput \n'
     markdown +='![ Throughput Flow](./project-throughput.svg)\n\n'
 
-    //const projectAnalysis = new ProjectMonteCarlo(this.sprints);
-    //const report = projectAnalysis.generateMarkdownReport();
-    //markdown += report
+    const projectAnalysis = new ProjectMonteCarlo(this.sprints);
+    const report = projectAnalysis.generateMarkdownReport();
+    markdown += report
 
     
     return markdown;
@@ -232,12 +232,12 @@ export class ProjectMetricsGenerator {
 
       // Gerar e salvar SVG primeiro
       
-      //const svgPath = path.join(outputDir, 'project-cfd.svg');
-      //const projectCFD = new ProjectCFD(this.sprints,svgPath )
-      //projectCFD.generate();
-      //const svgPathTP = path.join(outputDir, 'project-throughput.svg')
-      //const throughput = new ProjectThroughputGenerator(this.sprints,svgPathTP);
-      //throughput.generate();
+      const svgPath = path.join(outputDir, 'project-cfd.svg');
+      const projectCFD = new ProjectCFD(this.sprints,svgPath )
+      projectCFD.generate();
+      const svgPathTP = path.join(outputDir, 'project-throughput.svg')
+      const throughput = new ProjectThroughputGenerator(this.sprints,svgPathTP);
+      throughput.generate();
 
       // Gerar markdown com referência ao SVG
       const markdown = this.generateMarkdownReport();

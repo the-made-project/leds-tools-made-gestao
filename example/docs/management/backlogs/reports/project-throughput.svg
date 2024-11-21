@@ -209,6 +209,655 @@
           />
           
           
+                <g>
+                  <rect 
+                    x="78.9090909090909" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="78.9090909090909" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="78.9090909090909" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 103.9090909090909 520)" 
+                    x="103.9090909090909" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >qua. 20/11</text>
+                  
+                  
+                    <text 
+                      x="103.9090909090909" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="103.9090909090909" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="168" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="168" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="168" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 193 520)" 
+                    x="193" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >qui. 21/11</text>
+                  
+                  
+                    <text 
+                      x="193" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="193" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="257.0909090909091" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="257.0909090909091" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="257.0909090909091" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 282.0909090909091 520)" 
+                    x="282.0909090909091" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >sex. 22/11</text>
+                  
+                  
+                    <text 
+                      x="282.0909090909091" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="282.0909090909091" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="346.1818181818182" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="346.1818181818182" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="346.1818181818182" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 371.1818181818182 520)" 
+                    x="371.1818181818182" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >sáb. 23/11</text>
+                  
+                  
+                    <text 
+                      x="371.1818181818182" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="371.1818181818182" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="435.2727272727273" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="435.2727272727273" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="435.2727272727273" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 460.2727272727273 520)" 
+                    x="460.2727272727273" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >dom. 24/11</text>
+                  
+                  
+                    <text 
+                      x="460.2727272727273" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="460.2727272727273" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="524.3636363636364" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="524.3636363636364" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="524.3636363636364" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 549.3636363636364 520)" 
+                    x="549.3636363636364" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >seg. 25/11</text>
+                  
+                  
+                    <text 
+                      x="549.3636363636364" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="549.3636363636364" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="613.4545454545454" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="613.4545454545454" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="613.4545454545454" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 638.4545454545454 520)" 
+                    x="638.4545454545454" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >ter. 26/11</text>
+                  
+                  
+                    <text 
+                      x="638.4545454545454" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="638.4545454545454" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="702.5454545454545" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="702.5454545454545" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="702.5454545454545" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 727.5454545454545 520)" 
+                    x="727.5454545454545" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >qua. 27/11</text>
+                  
+                  
+                    <text 
+                      x="727.5454545454545" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="727.5454545454545" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="791.6363636363636" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="791.6363636363636" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="791.6363636363636" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 816.6363636363636 520)" 
+                    x="816.6363636363636" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >qui. 28/11</text>
+                  
+                  
+                    <text 
+                      x="816.6363636363636" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="816.6363636363636" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="880.7272727272727" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="880.7272727272727" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="880.7272727272727" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 905.7272727272727 520)" 
+                    x="905.7272727272727" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >sex. 29/11</text>
+                  
+                  
+                    <text 
+                      x="905.7272727272727" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="905.7272727272727" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="969.8181818181819" 
+                    y="275" 
+                    width="50" 
+                    height="225" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="969.8181818181819" 
+                    y="275" 
+                    width="50" 
+                    height="0" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="969.8181818181819" 
+                    y="50" 
+                    width="50" 
+                    height="225" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 994.8181818181819 520)" 
+                    x="994.8181818181819" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >sáb. 30/11</text>
+                  
+                  
+                    <text 
+                      x="994.8181818181819" 
+                      y="387.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                  
+                  
+                  
+                  
+                    <text 
+                      x="994.8181818181819" 
+                      y="162.5" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >1</text>
+                  
+                </g>
+              
           
           <text 
             transform="rotate(-90 30 300)" 
@@ -234,17 +883,17 @@
           
           <g transform="translate(1070, 50)">
             <rect width="15" height="15" fill="#ef4444" rx="2"/>
-            <text x="25" y="12" class="legend">A Fazer</text>
+            <text x="25" y="12" class="legend">TODO</text>
             
             <rect y="25" width="15" height="15" fill="#f59e0b" rx="2"/>
-            <text x="25" y="37" class="legend">Em Progresso</text>
+            <text x="25" y="37" class="legend">DOING</text>
             
             <rect y="50" width="15" height="15" fill="#22c55e" rx="2"/>
-            <text x="25" y="62" class="legend">Concluído</text>
+            <text x="25" y="62" class="legend">DONE</text>
             
             <text x="0" y="90" class="value">
-              Período: Invalid Date - 
-              Invalid Date
+              Período: 20/11/2024 - 
+              30/11/2024
             </text>
             <text x="0" y="110" class="value">
               Total de Tasks: 2
