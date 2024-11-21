@@ -67,4 +67,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 21/11/2024, 20:17:33*
+*Relatório gerado em 21/11/2024, 20:44:37*

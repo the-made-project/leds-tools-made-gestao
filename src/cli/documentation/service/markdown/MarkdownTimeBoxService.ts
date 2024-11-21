@@ -9,6 +9,7 @@ import {IssuesDTO, TimeBox} from '../../../model/models.js'
 import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";
+
 export class MarkdownTimeBoxService {
 
     model: Model
@@ -60,17 +61,16 @@ export class MarkdownTimeBoxService {
         sidebar_position: ${timeBox.id}
         ---
         ## Dados do Sprint
-        * **Goal**: - 
-        * **Data Início**: ${this.convertToBrazilianDate(timeBox.startDate)}
-        * **Data Fim**: ${this.convertToBrazilianDate(timeBox.endDate)}
+        * **Goal**:  ${timeBox.description}
+        * **Data Início**: ${timeBox.startDate}
+        * **Data Fim**: ${timeBox.endDate}
         
         ## Sprint Backlog
 
         |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleUpperCase()}|${assignee.issue.title?.toLocaleUpperCase() ?? "-"}|${assignee.assignee.name?.toLocaleUpperCase()}|${this.convertToBrazilianDate(assignee.startDate?? "")}|${this.convertToBrazilianDate(assignee.dueDate ?? "")}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
-
-        ${monteCarloAnalysis}
+        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleUpperCase()}|${assignee.issue.title?.toLocaleUpperCase() ?? "-"}|${assignee.assignee.name?.toLocaleUpperCase()}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
+      
 
         # Gráficos
         ## Throughput
@@ -78,22 +78,10 @@ export class MarkdownTimeBoxService {
         ## Cumulative Flow
         ![ Cumulative Flow](./charts/cfd-${timeBox.id}.svg)
 
+         ${monteCarloAnalysis}
         `
     }
 
-    private convertToBrazilianDate(dateString: string): string {
-        if (dateString.trim().length != 0){
-            const date = new Date(dateString);
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const year = date.getFullYear();
-            
-            return `${day}/${month}/${year}`;
-        }
-
-        return "-"
-        
-    }
     protected async retrive(){
     
         const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
