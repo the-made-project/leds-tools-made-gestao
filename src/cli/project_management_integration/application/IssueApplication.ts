@@ -27,6 +27,8 @@ export  class IssueApplication extends AbstractApplication {
             await this.createAndSave(value)
         })
 
+        
+
     }
 
     

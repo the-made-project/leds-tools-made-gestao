@@ -6,7 +6,7 @@ import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
 import {Issue, IssuesDTO,TimeBox} from '../../../model/models.js'
-import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
+//import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
 
 
 export class MarkdownBacklogService {
@@ -37,7 +37,8 @@ export class MarkdownBacklogService {
         const backlog = await this.retrive();
 
         fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/backlog.md`), this.createDocument(backlog))
-        this.sprintData = await this.retrive_timebox()
+        
+        /*this.sprintData = await this.retrive_timebox()
         const generator = new ProjectMetricsGenerator(this.sprintData);
         const outputDir = path.join(this.TIMEBOX_PATH, 'reports');
   
@@ -46,7 +47,7 @@ export class MarkdownBacklogService {
            
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);
-        }
+        }*/
     }
 
 
@@ -59,9 +60,8 @@ export class MarkdownBacklogService {
         ---
         |ID |Nome |Descrição | Type | Status|
         |:--|:----|:-------- |:----:| :---: |
-        ${backlog.map(issue=> `|[${issue.key?.toLocaleUpperCase() ?? "-"}](${issue.self})|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
+        ${backlog.map(issue=> `|${issue.id.toLocaleUpperCase() ?? "-"}|${issue.title?.toLocaleUpperCase()}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
         `
-        
     }
 
     protected async retrive_timebox(){

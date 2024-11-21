@@ -5,7 +5,7 @@ export function generateDocumentation(model: Model,target_folder: string) : void
   
     const markdownService = new MarkdownService(model,target_folder)
 
-    markdownService.createProcessDocumentation()
+    //markdownService.createProcessDocumentation()
     markdownService.createManagementDocumenation()
     
 }
