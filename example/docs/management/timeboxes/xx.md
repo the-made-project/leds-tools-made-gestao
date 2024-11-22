@@ -28,8 +28,8 @@ sidebar_position: xx
  ### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
  - **Probabilidade de conclusão no prazo**: 100.0%
- - **Data mais provável de conclusão**: qui., 21/11/2024
- - **Dias em relação ao planejado**: -8 dias
+ - **Data mais provável de conclusão**: sex., 22/11/2024
+ - **Dias em relação ao planejado**: -7 dias
  - **Status**: ✅ Antes do Prazo
 
  ### 📊 Métricas Críticas
@@ -45,7 +45,7 @@ sidebar_position: xx
 
  | Data | Probabilidade | Status | Observação |
  |------|---------------|---------|------------|
- | qui., 21/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+ | sex., 22/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
  ### 📋 Status das Tarefas
 
@@ -70,4 +70,4 @@ sidebar_position: xx
  - **Simulações Realizadas**: 10,000
 
  ---
- *Relatório gerado em 21/11/2024, 20:50:15*
+ *Relatório gerado em 21/11/2024, 22:08:21*
