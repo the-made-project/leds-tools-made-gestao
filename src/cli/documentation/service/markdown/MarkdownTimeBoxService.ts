@@ -5,10 +5,11 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {IssuesDTO, TimeBox} from '../../../model/models.js'
+import {Issue, IssuesDTO, TimeBox} from '../../../model/models.js'
 import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";
+import { ProjectDependencyAnalyzer } from "./chart/sprint/ProjectDependencyAnalyzer.js";
 
 export class MarkdownTimeBoxService {
 
@@ -24,7 +25,7 @@ export class MarkdownTimeBoxService {
         this.model = model
         this.target_folder = target_folder
         this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
-        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'timeboxes')
+        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'sprints')
         this.TIMEBOX_CHARTS_PATH = createPath(this.TIMEBOX_PATH,'charts')
         this.jsonFile = "timebox.json"
         this.DB_PATH = db_path
@@ -32,11 +33,13 @@ export class MarkdownTimeBoxService {
 
     public async create(){
 
-        const timeBoxes = await this.retrive();
+        const timeBoxes = await this.retrive(this.jsonFile);
+
+        const issues = await this.retrive("issue.json")
 
         timeBoxes.forEach (timebox  =>{
             
-            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
+            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox, issues))
             
             const generator = new ThroughputGenerator(timebox,this.TIMEBOX_CHARTS_PATH+`/throughput-${timebox.id}.svg`);
             generator.generate();
@@ -48,12 +51,15 @@ export class MarkdownTimeBoxService {
                 
     }
 
-    private createTimeBoxExport(timeBox: TimeBox):string {
+    private createTimeBoxExport(timeBox: TimeBox, issues: Issue[]):string {
 
 
      // Gerar simulação
       const monteCarlo = new SprintMonteCarlo(timeBox,10000);
       const monteCarloAnalysis = monteCarlo.generateMarkdownReport();
+
+      const analyzer = new ProjectDependencyAnalyzer(timeBox, issues);
+      const dependencyAnalysis = analyzer.generateAnalysis();
 
         return expandToStringWithNL`
         ---
@@ -71,32 +77,33 @@ export class MarkdownTimeBoxService {
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
         ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleUpperCase()}|${assignee.issue.title?.toLocaleUpperCase() ?? "-"}|${assignee.assignee.name?.toLocaleUpperCase()}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
       
-
-        # Gráficos
-        ## Throughput
+        ${dependencyAnalysis}
+        
+        ## Gráficos
+        ### Throughput
         ![Throughput](./charts/throughput-${timeBox.id}.svg)
-        ## Cumulative Flow
+        ### Cumulative Flow
         ![ Cumulative Flow](./charts/cfd-${timeBox.id}.svg)
 
-         ${monteCarloAnalysis}
+        ${monteCarloAnalysis}
         `
     }
 
-    protected async retrive(){
+    protected async retrive(database: string){
     
-        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-    
+        const ISSUEPATH = path.join(this.DB_PATH, database);
+        
         const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
         const defaultData: IssuesDTO = { data: [] };
 
         const db = new LowSync<IssuesDTO>(adapter, defaultData);
         await db.read();
-
+        
         return db.data.data.sort((a, b) => {
             return Number(a.id) - Number(b.id);
         }); 
         
-      }
+    }  
 
    
 
