@@ -8,54 +8,42 @@ Backlog:
         (   Name
             |Label
             |Description
-            |userstories += (Epic| AtomicUserStory| TaskBacklog))*
-    '}' 
-    ;
+            |items += (Epic| AtomicUserStory| TaskBacklog)
+        )*
+    '}'
+;
 
 Epic :
     'epic' id=ID '{'
-        (Name  
+        (Name 
         |Description
-        |DefinitionDone
-        |'replace' ':' replace=STRING
-        |DefinitionReady
         |Label 
-        |Learning
+        |userstories +=AtomicUserStory
+        |'process' ':' process=[Process:QualifiedName]
         |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?
-        |'process' ':' process=[Process:QualifiedName])* 
+        )*
        
-        '}'
+    '}'
 ;
 
 AtomicUserStory :
-    'userstory' id=ID '{' 
+    'story' id=ID '{' 
         (Name 
         |Description
-        |DefinitionDone
-        |DefinitionReady
-        |Learning
-        |Label
-        |'epic' ':' epic=[Epic:QualifiedName] 
+        |Label        
         |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?
-        |'activity' ':' activity=[Activity:QualifiedName]
-        )*'}'
+        |'activity' ':' activity+=[Activity:QualifiedName]
+        |tasks +=TaskBacklog
+        )*
+    '}'
 ;
 
 TaskBacklog:
     'task' id=ID '{'
         (Name 
         |Description
-        |DefinitionDone
-        |DefinitionReady
-        |Learning 
         |Label
-        |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?
-        |'userstory'':'  userstory=[AtomicUserStory:QualifiedName]
+        |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?        
         |'task' ':' task=[Task:QualifiedName])* 
-        '}'
+       '}'
 ;
-    
-
-
-
-

@@ -10,9 +10,9 @@ export  class IssueApplication extends AbstractApplication {
     }
 
     public async create(){
-        const epcis = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isEpic));
-        const atomicUserStories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isAtomicUserStory));
-        const tasks = this.model.components.filter(isBacklog).flatMap(backlog => backlog.userstories.filter(isTaskBacklog));
+        const epcis = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isEpic));
+        const atomicUserStories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isAtomicUserStory));
+        const tasks = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isTaskBacklog));
         
         
         epcis.map (async value => {

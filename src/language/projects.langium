@@ -3,7 +3,10 @@ import 'helpers'
 Project:
     'project' '{'
     (   Name 
-        | Description     
+        | Description  
+        |'dueDate' ':' duedate=STRING
+        |'startDate' ':' startdate=STRING
+        |'completedDate' ':' completedDate=STRING
     )*
     '}' 
     ;

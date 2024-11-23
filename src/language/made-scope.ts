@@ -29,21 +29,21 @@ export class CustomScopeComputation extends DefaultScopeComputation {
     private getEpics(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
         return root.components
             .filter(isBacklog)
-            .flatMap(backlog => backlog.userstories.filter(isEpic))
+            .flatMap(backlog => backlog.items.filter(isEpic))
             .map(epic => this.descriptions.createDescription(epic, `${epic.$container.id}.${epic.id}`, document));
     }
 
     private getUserStories(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
         return root.components
             .filter(isBacklog)
-            .flatMap(backlog => backlog.userstories.filter(isAtomicUserStory))
+            .flatMap(backlog => backlog.items.filter(isAtomicUserStory))
             .map(atomicUserStory => this.descriptions.createDescription(atomicUserStory, `${atomicUserStory.$container.id}.${atomicUserStory.id}`, document));
     }
 
     private getTaskBacklog(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
         return root.components
             .filter(isBacklog)
-            .flatMap(backlog => backlog.userstories.filter(isTaskBacklog))
+            .flatMap(backlog => backlog.items.filter(isTaskBacklog))
             .map(taskBacklog => this.descriptions.createDescription(taskBacklog, `${taskBacklog.$container.id}.${taskBacklog.id}`, document));
     }
     private getProcesses(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {

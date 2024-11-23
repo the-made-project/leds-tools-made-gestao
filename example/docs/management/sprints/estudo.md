@@ -17,7 +17,7 @@ sidebar_position: estudo
 
 # Análise de Dependências do Projeto e Sprint
 
-Análise gerada em: 22/11/2024, 20:07:08
+Análise gerada em: 22/11/2024, 21:39:35
 
 ## 📊 Resumo por Status
 
@@ -68,8 +68,8 @@ graph TD
 ### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: seg., 25/11/2024
-- **Dias em relação ao planejado**: -4 dias
+- **Data mais provável de conclusão**: ter., 26/11/2024
+- **Dias em relação ao planejado**: -3 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas Críticas
@@ -85,7 +85,7 @@ graph TD
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| seg., 25/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| ter., 26/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -110,4 +110,4 @@ graph TD
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 22/11/2024, 20:07:08*
+*Relatório gerado em 22/11/2024, 21:39:35*

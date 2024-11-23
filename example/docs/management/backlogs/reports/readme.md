@@ -34,8 +34,8 @@
 ### ✅ PROJETO PROVAVELMENTE SERÁ CONCLUÍDO NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: seg., 25/11/2024
-- **Dias em relação ao planejado**: -4 dias
+- **Data mais provável de conclusão**: ter., 26/11/2024
+- **Dias em relação ao planejado**: -3 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas do Projeto
@@ -51,7 +51,7 @@
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| seg., 25/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| ter., 26/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ## 💡 Recomendações
 
@@ -68,4 +68,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 22/11/2024, 20:07:09*
+*Relatório gerado em 22/11/2024, 21:39:35*
