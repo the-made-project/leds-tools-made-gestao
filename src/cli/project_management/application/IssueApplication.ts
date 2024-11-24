@@ -16,15 +16,15 @@ export  class IssueApplication extends AbstractApplication {
         
         
         epcis.map (async value => {
-            await this.createAndSave(value)
+            await this.createAndSave(value.$container.id.toLocaleLowerCase(), value)
         })
 
         atomicUserStories.map (async value => {
-            await this.createAndSave(value)
+            await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
         })
 
         tasks.map (async value => {
-            await this.createAndSave(value)
+            await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
         })
 
         

@@ -89,16 +89,16 @@ export abstract class AbstractApplication {
     
   }
 
-  protected async createAndSave(data: any){
-    const issue = await this.createIssue (data)
+  protected async createAndSave(parentID: string, data: any){
+    const issue = await this.createIssue (parentID, data)
     await this.saveorUpdate (issue)
   }
 
-  protected async createIssue (data: any){
-
+  protected async createIssue (parentID: string, data: any){
+    const id = parentID+"."+data.id.toLocaleLowerCase()
     const issue: Issue = {
       
-      id: data.id.toLocaleLowerCase(),
+      id: id,
       title: data.name,
       description: data.description ?? "",
       type: data.$type.toLocaleLowerCase()
@@ -106,25 +106,25 @@ export abstract class AbstractApplication {
     
    if (data.userstories){
       if (data.userstories.length >0){    
-       issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(value))) ??[]
+       issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[]
     }
   }
 
   if (data.tasks){
     if (data.tasks.length >0){    
-     issue.issues = await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(value))) ??[]
+     issue.issues = await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(id, value))) ??[]
   }
 }
 
-    /**if (data.depends){
+    if (data.depends){
       if (data.depends.length >0){
-        issue.depends = await Promise.all(data.depends?.map(async (value:any) => await this.createIssue(value.ref))) ??[]
+        issue.depends = await Promise.all(data.depends?.map(async (value:any) => await this.createIssue(id, value.ref))) ??[]
     }
 
     if (data.depend){
-      issue.depends = issue.depends?.concat (await this.createIssue(data.depend.ref))
+      issue.depends = issue.depends?.concat (await this.createIssue(id, data.depend.ref))
     }
-  }**/
+  }
 
 
 

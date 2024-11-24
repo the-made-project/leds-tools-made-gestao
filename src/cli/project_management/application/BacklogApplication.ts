@@ -22,7 +22,7 @@ export  class BacklogApplication extends AbstractApplication {
             name: backlog.name  ?? "",
             description: backlog.description ?? "", 
             issues: await Promise.all(backlog.items?.map(async (issue) => 
-                await this.createIssue(issue))) ?? [] 
+                await this.createIssue(issue.$container.id, issue))) ?? [] 
          }
 
          await this.saveorUpdate (instance)
