@@ -1,9 +1,9 @@
 ---
-title: "ESTUDO"
+title: "ESTUDAR AUTORIZACAO"
 sidebar_position: estudo
 ---
 ## Dados do Sprint
-* **Goal**:  estudoooo
+* **Goal**:  Realizar estudos sobre autorizacao
 * **Data Início**: 20/11/2024
 * **Data Fim**: 30/11/2024
 
@@ -11,17 +11,18 @@ sidebar_position: estudo
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|EPIC1|EPCI1|JOÃO MARCOS |22/22/2222||TODO|
+|SPIKE.EPIC1.STORY1.APRESENTAR|ESTUDAR A ARQUITETURA PROPOSTA PELO OPA|JOÃO MARCOS |20/11/2024|30/11/2024|TODO|
+|SPIKE.EPIC1.STORY2.ESTUDAR|ESTUDAR A ARQUITETURA PROPOSTA PELO OPENFGA|JOÃO MARCOS |20/11/2024|30/11/2024|TODO|
 
 # Análise de Dependências do Projeto e Sprint
 
-Análise gerada em: 24/11/2024, 16:43:00
+Análise gerada em: 24/11/2024, 17:43:09
 
 ## 📊 Resumo por Status
 
 | Status | Quantidade |
 |--------|------------|
-| TODO | 2 |
+| TODO | 3 |
 
 ## 🔍 Grafo de Dependências
 
@@ -31,7 +32,8 @@ graph TD
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;
     classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
-    epic1["epic1\nepci1\nTODO\nResp: João Marcos "]:::sprint
+    spike.epic1.story1.apresentar["spike.epic1.story1.apresentar\nEstudar a arquitetura proposta pelo OPA\nTODO\nResp: João Marcos "]:::sprint
+    spike.epic1.story2.estudar["spike.epic1.story2.estudar\nEstudar a arquitetura proposta pelo OpenFGA\nTODO\nResp: João Marcos "]:::sprint
 ```
 
 **Legenda:**
@@ -47,7 +49,8 @@ graph TD
 
 | Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |
 |-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|
-| epic1 | epci1 | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
+| spike.epic1.story1.apresentar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
+| spike.epic1.story2.estudar | Estudar a arquitetura proposta pelo OpenFGA | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
 
 
 ## Gráficos
@@ -63,8 +66,8 @@ graph TD
 ### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: seg., 25/11/2024
-- **Dias em relação ao planejado**: -4 dias
+- **Data mais provável de conclusão**: ter., 26/11/2024
+- **Dias em relação ao planejado**: -3 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas Críticas
@@ -72,15 +75,15 @@ graph TD
 | Métrica | Valor | Status |
 |---------|--------|--------|
 | Velocidade Atual | 1.0 tarefas/dia | ✅ |
-| Velocidade Necessária | 0.2 tarefas/dia | - |
+| Velocidade Necessária | 0.3 tarefas/dia | - |
 | Dias Restantes | 6 dias | - |
-| Tarefas Restantes | 1 tarefas | - |
+| Tarefas Restantes | 2 tarefas | - |
 
 ### 📅 Previsões de Data de Conclusão
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| seg., 25/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| ter., 26/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -88,7 +91,7 @@ graph TD
 |--------|------------|-------------|
 | Concluído | 0 | 0.0% |
 | Em Andamento | 0 | 0.0% |
-| A Fazer | 1 | 100.0% |
+| A Fazer | 2 | 100.0% |
 
 ## 💡 Recomendações
 
@@ -98,11 +101,11 @@ graph TD
 
 ## ℹ️ Informações da Sprint
 
-- **Sprint**: estudo
+- **Sprint**: Estudar Autorizacao
 - **Início**: qua., 20/11/2024
 - **Término Planejado**: sáb., 30/11/2024
-- **Total de Tarefas**: 1
+- **Total de Tarefas**: 2
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 16:43:00*
+*Relatório gerado em 24/11/2024, 17:43:09*

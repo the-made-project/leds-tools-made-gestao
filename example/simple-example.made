@@ -14,78 +14,46 @@ team blackops {
   
 }
 
-process xx {
-    name: "xxx"
-    description: "xxxxx"
-
-    activity xxx 
-    {
-    name: "xxx" 
-    description:"xxxx"
-      task yyy   {name: "xxx" }
-    } 
-    activity yyy {name: "xxx" 
-        name: "xxx" 
-        description:"xxxx"    
-      task yyy   {name: "xxx" }
-      depends: xx.xxx
-    }   
-    
-}
-
-
-
-
-backlog Produto {
-   name: "Teste"
-   description: "zzzz"
+backlog Spike {
+   name: "Backlog de Estudo"
+   description: "Backlog dedicado a estudo da equipe"
    epic epic1 {
-    name: "epci1"
-    description: "descroption1"
+    name: "Estudar sobre Autorização"
+    description: "Estudo sobre autorização de usuários a recursos de redes"
     story story1 {
-        name: "xxxx"
-        task zzzz {
-            name: "ppppppp"
+        name: "Estudar a arquitetura proposta pelo OPA"
+        task estudar {
+            name: "Estudar sobre OPA"
+            }
+        task apresentar {
+            name: "Apresentar o estudo"                        
             }
         }
-    }
-
-               
-}
-
-roadmap xxx {
-    name: "xxxx"
-    description: "yyyyy"
-    milestone yyy {
-        name: "xxx"
-        description: "xxx"
-        startDate: 20/11/2022
-        dueDate: 20/11/2022
-        status: IN_PROGRESS
-        depends: xxx.yyy
-        
-        release zzz {
-             name: "xxx"
-             description: "xxx"
-             version: "xx"
-             dueDate: 22/11/2022
-             releasedDate: 22/11/2022
-             status: RELEASED
-             item : Produto.epic1
+        story story2 {
+        name: "Estudar a arquitetura proposta pelo OpenFGA"
+        task estudar {
+            name: "Estudar sobre OPA"            
+            }
+        task apresentar {
+            name: "Apresentar o estudo"
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                        
+            }
         }
+    }    
     }
-}
+
 
 sprint estudo {
-    name: "estudo"
-    description: "estudoooo"
+    name: "Estudar Autorizacao"
+    description: "Realizar estudos sobre autorizacao"
     startDate: 20/11/2024
     endDate: 30/11/2024
     
     sprintbacklog estudo {
-        item Produto.epic1 {assignee: blackops.joaomarcos startDate: 22/22/2222} 
+        item Spike.epic1.story1.apresentar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024}         
+        item Spike.epic1.story2.estudar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024}         
     }
-    comment: "xxxx"
+    
 }
 
 

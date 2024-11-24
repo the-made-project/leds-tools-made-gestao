@@ -28,14 +28,16 @@ export class TimeBoxApplication extends AbstractApplication {
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
             sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
-                id: item.id.ref?.$container.id.toLocaleLowerCase().concat("."+item.id.ref.id.toLocaleLowerCase()),
+                
+                
+                id: item.id.$refNode?.text.toLocaleLowerCase(),
                 assignee: {
                     id: item.assignee?.ref?.id,  
                     name: item.assignee?.ref?.name,
                     email: item.assignee?.ref?.email
                 } as Person,
                 issue: {
-                    id: item.id.ref?.id.toLocaleLowerCase() ?? "",
+                    id: item.id.$refNode?.text.toLocaleLowerCase() ?? "",
                     title: item.id.ref?.name ?? "" ,
                     description: item.id.ref?.description ?? "",
                     type: item.id.ref?.$type.toLocaleLowerCase() ?? ""

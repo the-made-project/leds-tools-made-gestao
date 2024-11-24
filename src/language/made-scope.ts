@@ -17,6 +17,9 @@ export class CustomScopeComputation extends DefaultScopeComputation {
         const userStories = this.getUserStories(root, document);
         const taskBacklog = this.getTaskBacklog(root, document)
 
+        const USEpic = this.getUSEpics(root,document);
+        const taskUSEPIC = this.getTaskUSEpics(root,document)
+
         const processes = this.getProcesses(root, document);
         const activities = this.getActivities(root, document);
         const tasks = this.getTasks(root, document);
@@ -24,7 +27,7 @@ export class CustomScopeComputation extends DefaultScopeComputation {
         const people = this.getPeople(root, document);
         const milestones = this.getMileStone(root, document)
 
-        return defaultGlobal.concat(epics, userStories, taskBacklog, processes,  activities, tasks, people,milestones);
+        return defaultGlobal.concat(epics, userStories, taskBacklog, processes,  activities, tasks, people,milestones, USEpic,taskUSEPIC);
     }
 
     private getMileStone(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
@@ -39,6 +42,20 @@ export class CustomScopeComputation extends DefaultScopeComputation {
             .filter(isBacklog)
             .flatMap(backlog => backlog.items.filter(isEpic))
             .map(epic => this.descriptions.createDescription(epic, `${epic.$container.id}.${epic.id}`, document));
+    }
+
+    private getUSEpics(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
+        return root.components
+            .filter(isBacklog)
+            .flatMap(backlog => backlog.items.filter(isEpic))
+            .flatMap(epic => epic.userstories.map (us => this.descriptions.createDescription(us, `${epic.$container.id}.${epic.id}.${us.id}`, document)));
+    }
+
+    private getTaskUSEpics(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
+        return root.components
+            .filter(isBacklog)
+            .flatMap(backlog => backlog.items.filter(isEpic))
+            .flatMap(epic => epic.userstories.flatMap (us => us.tasks.map(task => this.descriptions.createDescription(us, `${epic.$container.id}.${epic.id}.${us.id}.${task.id}`, document))));
     }
 
     private getUserStories(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {

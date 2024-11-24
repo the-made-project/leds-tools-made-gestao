@@ -46,7 +46,7 @@ export type Issue = {
   description?:string;
   status?:string;
   createdDate?:string;            
-  parent?:Issue
+  issues?:  Issue[]; 
   depends?: Issue[];
   labels?: string[];
 };

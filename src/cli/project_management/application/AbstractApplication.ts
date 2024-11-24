@@ -97,16 +97,26 @@ export abstract class AbstractApplication {
   protected async createIssue (data: any){
 
     const issue: Issue = {
+      
       id: data.id.toLocaleLowerCase(),
       title: data.name,
       description: data.description ?? "",
       type: data.$type.toLocaleLowerCase()
     }
-    if (data.epic?.ref || data.userstory?.ref){
-      issue.parent = await this.createIssue(data.epic?.ref || data.userstory?.ref) ?? undefined 
-    }
     
-    if (data.depends){
+   if (data.userstories){
+      if (data.userstories.length >0){    
+       issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(value))) ??[]
+    }
+  }
+
+  if (data.tasks){
+    if (data.tasks.length >0){    
+     issue.issues = await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(value))) ??[]
+  }
+}
+
+    /**if (data.depends){
       if (data.depends.length >0){
         issue.depends = await Promise.all(data.depends?.map(async (value:any) => await this.createIssue(value.ref))) ??[]
     }
@@ -114,7 +124,7 @@ export abstract class AbstractApplication {
     if (data.depend){
       issue.depends = issue.depends?.concat (await this.createIssue(data.depend.ref))
     }
-  }
+  }**/
 
 
 
