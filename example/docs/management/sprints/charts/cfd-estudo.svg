@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -156,7 +156,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -350,7 +350,7 @@
               Período: 20/11/2024 - 30/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Issues: 2
+              Total de Issues: 3
             </text>
           </g>
         </svg>

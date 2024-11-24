@@ -26,7 +26,7 @@
                 },
                 {
                   "id": "Spike.epic1.story1.apresentar",
-                  "title": "Apresentar o estudo",
+                  "title": "Apresentar o estudo OPA",
                   "description": "",
                   "type": "taskbacklog",
                   "depends": []
@@ -42,14 +42,14 @@
               "issues": [
                 {
                   "id": "Spike.epic1.story2.estudar",
-                  "title": "Estudar sobre OPA",
+                  "title": "Estudar sobre OpenFGA",
                   "description": "",
                   "type": "taskbacklog",
                   "depends": []
                 },
                 {
                   "id": "Spike.epic1.story2.apresentar",
-                  "title": "Apresentar o estudo",
+                  "title": "Apresentar o estudo OpenFGA",
                   "description": "",
                   "type": "taskbacklog",
                   "depends": [

@@ -75,7 +75,7 @@ export class MarkdownTimeBoxService {
 
         |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
         |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleUpperCase()}|${assignee.issue.title?.toLocaleUpperCase() ?? "-"}|${assignee.assignee.name?.toLocaleUpperCase()}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
+        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleLowerCase()}|${assignee.issue.title ?? "-"}|${assignee.assignee.name}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
       
         ${dependencyAnalysis}
         

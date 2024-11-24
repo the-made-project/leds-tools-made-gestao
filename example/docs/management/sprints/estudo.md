@@ -11,18 +11,19 @@ sidebar_position: estudo
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|SPIKE.EPIC1.STORY1.APRESENTAR|ESTUDAR A ARQUITETURA PROPOSTA PELO OPA|JOÃO MARCOS |20/11/2024|30/11/2024|TODO|
-|SPIKE.EPIC1.STORY2.ESTUDAR|ESTUDAR A ARQUITETURA PROPOSTA PELO OPENFGA|JOÃO MARCOS |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story1.estudar|Estudar a arquitetura proposta pelo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story1.apresentar|Estudar a arquitetura proposta pelo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story2.apresentar|Estudar a arquitetura proposta pelo OpenFGA|João Marcos |20/11/2024|30/11/2024|TODO|
 
 # Análise de Dependências do Projeto e Sprint
 
-Análise gerada em: 24/11/2024, 19:37:59
+Análise gerada em: 24/11/2024, 20:24:25
 
 ## 📊 Resumo por Status
 
 | Status | Quantidade |
 |--------|------------|
-| TODO | 4 |
+| TODO | 5 |
 
 ## 🔍 Grafo de Dependências
 
@@ -32,8 +33,13 @@ graph TD
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;
     classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
-    spike.epic1.story1.apresentar["spike.epic1.story1.apresentar\nEstudar a arquitetura proposta pelo OPA\nTODO\nResp: João Marcos "]:::sprint
-    spike.epic1.story2.estudar["spike.epic1.story2.estudar\nEstudar a arquitetura proposta pelo OpenFGA\nTODO\nResp: João Marcos "]:::sprint
+    spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    Spike.epic1.story1.estudar["🔍 Identificador: Spike.epic1.story1.estudar<br>📝 Tarefa: <br>📊 Estado: TODO<br>👤 Sem responsável"]:::pending
+    spike.epic1.story1.estudar -.-> Spike.epic1.story1.estudar
+    spike.epic1.story1.apresentar -.-> Spike.epic1.story1.estudar
+    spike.epic1.story2.apresentar -.-> Spike.epic1.story1.estudar
 ```
 
 **Legenda:**
@@ -49,8 +55,10 @@ graph TD
 
 | Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |
 |-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|
-| spike.epic1.story1.apresentar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
-| spike.epic1.story2.estudar | Estudar a arquitetura proposta pelo OpenFGA | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
+| spike.epic1.story1.estudar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
+| spike.epic1.story1.apresentar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
+| spike.epic1.story2.apresentar | Estudar a arquitetura proposta pelo OpenFGA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
+| Spike.epic1.story1.estudar | N/A | TODO | ⚠️ Fora do Sprint | N/A | 0 | 0 | - | spike.epic1.story1.estudar🟢, spike.epic1.story1.apresentar🟢, spike.epic1.story2.apresentar🟢 |
 
 
 ## Gráficos
@@ -66,8 +74,8 @@ graph TD
 ### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: ter., 26/11/2024
-- **Dias em relação ao planejado**: -3 dias
+- **Data mais provável de conclusão**: qua., 27/11/2024
+- **Dias em relação ao planejado**: -2 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas Críticas
@@ -75,15 +83,15 @@ graph TD
 | Métrica | Valor | Status |
 |---------|--------|--------|
 | Velocidade Atual | 1.0 tarefas/dia | ✅ |
-| Velocidade Necessária | 0.3 tarefas/dia | - |
+| Velocidade Necessária | 0.5 tarefas/dia | - |
 | Dias Restantes | 6 dias | - |
-| Tarefas Restantes | 2 tarefas | - |
+| Tarefas Restantes | 3 tarefas | - |
 
 ### 📅 Previsões de Data de Conclusão
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| ter., 26/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| qua., 27/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -91,7 +99,7 @@ graph TD
 |--------|------------|-------------|
 | Concluído | 0 | 0.0% |
 | Em Andamento | 0 | 0.0% |
-| A Fazer | 2 | 100.0% |
+| A Fazer | 3 | 100.0% |
 
 ## 💡 Recomendações
 
@@ -104,8 +112,8 @@ graph TD
 - **Sprint**: Estudar Autorizacao
 - **Início**: qua., 20/11/2024
 - **Término Planejado**: sáb., 30/11/2024
-- **Total de Tarefas**: 2
+- **Total de Tarefas**: 3
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 19:37:59*
+*Relatório gerado em 24/11/2024, 20:24:25*

@@ -1,7 +1,7 @@
 import 'helpers'
 import 'backlog'
 import 'team'
-type timeBoxTask = Epic| AtomicUserStory| TaskBacklog; 
+
 
 TimeBox:
     'sprint' id=ID '{'
@@ -22,7 +22,7 @@ SprintBacklog:
     '}' 
 ;
  
-PlanningItem: 'item' id=[timeBoxTask:QualifiedName] '{'
+PlanningItem: 'item' backlogItem=[backlogItem:QualifiedName] '{'
     
     ('assignee' ':' assignee=[TeamMember:QualifiedName]
         |'complexity' ':' complexity=('EASY'|'MEDIUM|HARD|SPIKE')

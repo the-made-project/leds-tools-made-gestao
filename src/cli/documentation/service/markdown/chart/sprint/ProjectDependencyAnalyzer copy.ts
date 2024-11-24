@@ -1,3 +1,4 @@
+
 import { Issue, SprintItem, TimeBox, Person } from '../../../../../model/models.js';
 
 interface IssueStatus {
@@ -15,8 +16,13 @@ export class ProjectDependencyAnalyzer {
     private issueStatus: Map<string, IssueStatus>;
 
     constructor(sprint: TimeBox, allProjectIssues: Issue[]) {
-        this.validateInputs(sprint);
-        
+        this.validateInputs(sprint, allProjectIssues);
+        if (!allProjectIssues || allProjectIssues.length === 0) {
+            throw new Error('Nenhuma issue do projeto fornecida');
+        }
+        if (!sprint) {
+            throw new Error('Sprint não fornecido');
+        }
         this.allIssues = new Map();
         this.sprintItems = new Map();
         this.graph = new Map();
@@ -27,21 +33,30 @@ export class ProjectDependencyAnalyzer {
     }
 
     private parseDate(dateString: string): Date {
+        // Tenta diferentes formatos de data
+        let date: Date | null = null;
+
+        // Remove qualquer caracter que não seja número ou separador
         const cleanDate = dateString.replace(/[^\d/-]/g, '');
-        
+
+        // Tenta formato yyyy-mm-dd ou yyyy/mm/dd
+        if (cleanDate.match(/^\d{4}[-/]\d{2}[-/]\d{2}$/)) {
+            date = new Date(cleanDate);
+        }
         // Tenta formato dd/mm/yyyy ou dd-mm-yyyy
-        if (cleanDate.match(/^\d{2}[-/]\d{2}[-/]\d{4}$/)) {
+        else if (cleanDate.match(/^\d{2}[-/]\d{2}[-/]\d{4}$/)) {
             const [dia, mes, ano] = cleanDate.split(/[-/]/).map(Number);
-            const date = new Date(ano, mes - 1, dia);
-            if (!isNaN(date.getTime())) {
-                return date;
-            }
+            date = new Date(ano, mes - 1, dia);
         }
 
-        throw new Error(`Data inválida: ${dateString}. Use o formato dd/mm/yyyy`);
+        if (!date || isNaN(date.getTime())) {
+            throw new Error(`Data inválida: ${dateString}. Use o formato dd/mm/yyyy ou yyyy-mm-dd`);
+        }
+
+        return date;
     }
 
-    private validateInputs(sprint: TimeBox): void {
+    private validateInputs(sprint: TimeBox, allProjectIssues: Issue[]): void {
         if (!sprint.sprintItems) {
             throw new Error('Sprint não contém array de items');
         }
@@ -71,10 +86,14 @@ export class ProjectDependencyAnalyzer {
             if (!item.assignee || !item.assignee.name) {
                 throw new Error(`Issue ${item.issue.id} não tem responsável definido`);
             }
+            if (!item.status) {
+                throw new Error(`Issue ${item.issue.id} não tem status definido`);
+            }
         });
     }
 
-    private initializeFromProject(allIssues: Issue[], sprint: TimeBox): void {
+
+     private initializeFromProject(allIssues: Issue[], sprint: TimeBox): void {
         const projectIssues = allIssues.length > 0 ? allIssues : 
             sprint.sprintItems.map(item => item.issue);
 
@@ -162,6 +181,7 @@ export class ProjectDependencyAnalyzer {
         const result: string[] = [];
         const queue: string[] = [];
 
+        // Calcular graus de entrada
         this.allIssues.forEach((_, id) => {
             inDegree.set(id, 0);
         });
@@ -172,12 +192,14 @@ export class ProjectDependencyAnalyzer {
             });
         });
 
+        // Encontrar nós sem dependências
         inDegree.forEach((degree, id) => {
             if (degree === 0) {
                 queue.push(id);
             }
         });
 
+        // Processar fila
         while (queue.length > 0) {
             const current = queue.shift()!;
             result.push(current);
@@ -192,6 +214,7 @@ export class ProjectDependencyAnalyzer {
             });
         }
 
+        // Retornar apenas issues relevantes para o sprint atual
         return result.filter(id => {
             const isInSprint = this.sprintItems.has(id);
             const isDependencyOfSprintItem = Array.from(this.sprintItems.keys()).some(sprintId => 
@@ -224,7 +247,7 @@ export class ProjectDependencyAnalyzer {
         diagram += '    classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;\n';
         diagram += '    classDef done fill:#98fb98,stroke:#333,stroke-width:2px;\n';
         
-        // Adicionar nós com formatação melhorada e mais descritiva
+        // Adicionar nós
         const relevantIds = new Set(this.getTopologicalSort());
         relevantIds.forEach(id => {
             const issue = this.allIssues.get(id)!;
@@ -239,22 +262,14 @@ export class ProjectDependencyAnalyzer {
                 nodeClass = status.status === 'TODO' ? 'pending' : 'external';
             }
             
-            const statusText = status.implemented ? 'Concluído' : status.status;
-            const assigneeText = status.assignee ? `Responsável: ${status.assignee.name}` : 'Sem responsável';
+            const statusText = status.implemented ? 'DONE' : status.status;
+            const assigneeText = status.assignee ? `Resp: ${status.assignee.name}` : '';
             
-            // Formata o título e escapa caracteres especiais
-            const title = (issue.title || '').replace(/["\[\]]/g, '');
-            
-            // Monta o label com descrições mais claras
-            const label = `${id}["🔍 Identificador: ${id}<br>` +
-                         `📝 Tarefa: ${title}<br>` +
-                         `📊 Estado: ${statusText}<br>` +
-                         `👤 ${assigneeText}"]`;
-                         
+            const label = `${id}["${id}\\n${issue.title || ''}\\n${statusText}\\n${assigneeText}"]`;
             diagram += `    ${label}:::${nodeClass}\n`;
         });
 
-        // Adicionar arestas com descrição do tipo de dependência
+        // Adicionar arestas
         relevantIds.forEach(from => {
             const deps = this.graph.get(from) || new Set();
             deps.forEach(to => {
@@ -322,7 +337,7 @@ export class ProjectDependencyAnalyzer {
             });
         }
 
-        // Tabela de análise detalhada
+        // Tabela de análise
         markdown += '## 📋 Análise de Issues\n\n';
         markdown += '| Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |\n';
         markdown += '|-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|\n';

@@ -8,6 +8,28 @@
       "endDate": "30/11/2024",
       "sprintItems": [
         {
+          "id": "spike.epic1.story1.estudar",
+          "assignee": {
+            "id": "joaomarcos",
+            "name": "João Marcos ",
+            "email": "joao.marcos@blackops.com.br"
+          },
+          "issue": {
+            "id": "spike.epic1.story1.estudar",
+            "title": "Estudar a arquitetura proposta pelo OPA",
+            "description": "",
+            "type": "atomicuserstory",
+            "depends": [
+              {
+                "id": "Spike.epic1.story1.estudar"
+              }
+            ]
+          },
+          "startDate": "20/11/2024",
+          "dueDate": "30/11/2024",
+          "status": "TODO"
+        },
+        {
           "id": "spike.epic1.story1.apresentar",
           "assignee": {
             "id": "joaomarcos",
@@ -18,24 +40,34 @@
             "id": "spike.epic1.story1.apresentar",
             "title": "Estudar a arquitetura proposta pelo OPA",
             "description": "",
-            "type": "atomicuserstory"
+            "type": "atomicuserstory",
+            "depends": [
+              {
+                "id": "Spike.epic1.story1.estudar"
+              }
+            ]
           },
           "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
           "status": "TODO"
         },
         {
-          "id": "spike.epic1.story2.estudar",
+          "id": "spike.epic1.story2.apresentar",
           "assignee": {
             "id": "joaomarcos",
             "name": "João Marcos ",
             "email": "joao.marcos@blackops.com.br"
           },
           "issue": {
-            "id": "spike.epic1.story2.estudar",
+            "id": "spike.epic1.story2.apresentar",
             "title": "Estudar a arquitetura proposta pelo OpenFGA",
             "description": "",
-            "type": "atomicuserstory"
+            "type": "atomicuserstory",
+            "depends": [
+              {
+                "id": "Spike.epic1.story1.estudar"
+              }
+            ]
           },
           "startDate": "20/11/2024",
           "dueDate": "30/11/2024",

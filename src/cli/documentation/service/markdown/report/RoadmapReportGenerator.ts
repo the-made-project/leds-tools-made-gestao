@@ -1,7 +1,5 @@
 import { Roadmap, Release } from '../../../../model/models.js';
 
-
-
 export class RoadmapReportGenerator {
   private roadmaps: Roadmap[];
   

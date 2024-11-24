@@ -28,19 +28,22 @@ export class TimeBoxApplication extends AbstractApplication {
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
             sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
-                
-                
-                id: item.id.$refNode?.text.toLocaleLowerCase(),
+                                
+                id: item.backlogItem.$refNode?.text.toLocaleLowerCase(),                
                 assignee: {
                     id: item.assignee?.ref?.id,  
                     name: item.assignee?.ref?.name,
                     email: item.assignee?.ref?.email
                 } as Person,
+
                 issue: {
-                    id: item.id.$refNode?.text.toLocaleLowerCase() ?? "",
-                    title: item.id.ref?.name ?? "" ,
-                    description: item.id.ref?.description ?? "",
-                    type: item.id.ref?.$type.toLocaleLowerCase() ?? ""
+                    
+                    id: item.backlogItem.$refNode?.text.toLocaleLowerCase() ?? "",
+                    title: item.backlogItem.ref?.name ?? "" ,
+                    description: item.backlogItem.ref?.description ?? "",
+                    type: item.backlogItem.ref?.$type.toLocaleLowerCase() ?? "",                    
+
+                    depends: [{id:"Spike.epic1.story1.estudar"}]
                 },
 
                 startDate: item.startDate,
