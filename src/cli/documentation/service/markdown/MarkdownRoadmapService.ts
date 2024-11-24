@@ -5,8 +5,8 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { RoadmapReportGenerator } from "./report/RoadmapReportGenerator.js";
-import fs from "fs";
 
+import fs from "fs";
 
 export class MardownRoadmapService {
 
@@ -29,7 +29,7 @@ export class MardownRoadmapService {
     public async create(){
 
         let roadmap: Roadmap[] = (await this.retrive(this.jsonFile)) as Roadmap[];
-
+ 
         const generator = new RoadmapReportGenerator(roadmap);
        
         fs.writeFileSync(path.join(this.ROADMAP_PATH, `/readme.md`),  generator.generateReport())

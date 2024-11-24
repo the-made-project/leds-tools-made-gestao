@@ -19,14 +19,14 @@ Progresso: 0%
 ## 🎯 Milestones
 
 
-      ### 🏃 xxx (IN_PROGRESS)
-      - **Início**: 20/11/2022
-      - **Conclusão Prevista**: 20/11/2022
-      - **Descrição**: xxx
-      - **Releases Associadas**: xx
-      - **Dependências**: Nenhuma
+### 🏃 xxx (IN_PROGRESS)
+- **Início**: 20/11/2022
+- **Conclusão Prevista**: 20/11/2022
+- **Descrição**: xxx
+- **Releases Associadas**: xx
+- **Dependências**: Nenhuma
       
-      
+    
 #### Releases
 | Versão | Nome | Status | Data Prevista | Data Release |
 |--------|------|--------|---------------|--------------|

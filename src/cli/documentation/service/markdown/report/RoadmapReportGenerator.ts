@@ -1,7 +1,10 @@
 import { Roadmap, Release } from '../../../../model/models.js';
 
+
+
 export class RoadmapReportGenerator {
   private roadmaps: Roadmap[];
+  
 
   constructor(roadmaps: Roadmap[]) {
     this.roadmaps = roadmaps;
@@ -48,20 +51,19 @@ export class RoadmapReportGenerator {
 
   private generateMilestonesSection(roadmap: Roadmap): string {
     if (!roadmap.milestones?.length) return '';
-
-    const milestonesContent = roadmap.milestones.map(milestone => `
-      ### ${this.getStatusEmoji(milestone.status || 'PLANNED')} ${milestone.name} (${milestone.status})
-      - **Início**: ${this.formatDate(milestone.startDate)}
-      - **Conclusão${milestone.status !== 'COMPLETED' ? ' Prevista' : ''}**: ${this.formatDate(milestone.dueDate)}
-      - **Descrição**: ${milestone.description}
-      ${milestone.releases?.length ? 
-        `- **Releases Associadas**: ${milestone.releases.map(r => r.version).join(', ')}` : 
-        '- **Releases**: Nenhuma'}
-      ${milestone.dependencies?.length ? 
-        `- **Dependências**: ${milestone.dependencies.map(d => d.name).join(', ')}` : 
-        '- **Dependências**: Nenhuma'}
+const milestonesContent = roadmap.milestones.map(milestone => `
+### ${this.getStatusEmoji(milestone.status || 'PLANNED')} ${milestone.name} (${milestone.status})
+- **Início**: ${this.formatDate(milestone.startDate)}
+- **Conclusão${milestone.status !== 'COMPLETED' ? ' Prevista' : ''}**: ${this.formatDate(milestone.dueDate)}
+- **Descrição**: ${milestone.description}
+${milestone.releases?.length ? 
+`- **Releases Associadas**: ${milestone.releases.map(r => r.version).join(', ')}` : 
+'- **Releases**: Nenhuma'}
+${milestone.dependencies?.length ? 
+`- **Dependências**: ${milestone.dependencies.map(d => d.name).join(', ')}` : 
+'- **Dependências**: Nenhuma'}
       
-      ${this.generateReleasesTable(milestone.releases)}
+    ${this.generateReleasesTable(milestone.releases)}
       `).join('\n');
 
     return `
@@ -163,7 +165,7 @@ ${timelineItems.map(item =>
   }
 
   public generateReport(): string {
-    let report = '# 📋 Relatório de Roadmaps\n\n';
+    let report = '# 📋  Roadmaps\n\n';
 
     this.roadmaps.forEach(roadmap => {
       report += `# ${roadmap.name || 'Roadmap sem nome'}\n\n`;
