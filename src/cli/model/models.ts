@@ -94,3 +94,25 @@ export type SprintItem = {
   sprintItems:SprintItem[];
 };
 
+export type Task  = {
+  id?: string;  
+  name: string;
+  description: string
+  depends?: (Process | Activity | Task)[];
+}
+
+export type Activity  = {  
+  id?: string;  
+  name: string;
+  description: string  
+  tasks: Task[]
+  depends?: (Process | Activity | Task)[];
+}
+
+export type Process  = {
+  id?: string;  
+  name: string;
+  description: string;
+  activities: Activity[];
+  depends?: (Process | Activity | Task)[];
+}

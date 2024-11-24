@@ -18,8 +18,17 @@ process xx {
     name: "xxx"
     description: "xxxxx"
 
-    activity xxx {name: "xxx" 
+    activity xxx 
+    {
+    name: "xxx" 
+    description:"xxxx"
       task yyy   {name: "xxx" }
+    } 
+    activity yyy {name: "xxx" 
+        name: "xxx" 
+        description:"xxxx"    
+      task yyy   {name: "xxx" }
+      depends: xx.xxx
     }   
     
 }

@@ -7,6 +7,7 @@ import { TeamApplication } from "./TeamApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { MarkdownService } from '../../documentation/service/markdown/MarkdownService.js';
 import { RoadmapApplication } from './RoadmapApplication.js';
+import { ProcessApplication } from './ProcessApplication.js';
 
 
 interface InitializationStep {
@@ -27,7 +28,9 @@ export class ApplicationManager {
     issueApplication: IssueApplication
     backlogApplication: BacklogApplication
     roadmapApplication: RoadmapApplication
+    processApplication: ProcessApplication
     markdownService: MarkdownService
+    
 
     model: Model
 
@@ -50,6 +53,8 @@ export class ApplicationManager {
         this.backlogApplication = new BacklogApplication(target_folder,model)
 
         this.roadmapApplication = new RoadmapApplication(target_folder,model)
+
+        this.processApplication = new ProcessApplication(target_folder,model)
 
 
         // Define MADE Agile initialization steps
@@ -81,6 +86,13 @@ export class ApplicationManager {
                 description: 'Setting up sprint planning system',
                 startEmoji: '⏱️',
                 successEmoji: '🎯'
+            },            
+            {
+                name: 'MADE Process',
+                action: async () => await this.processApplication.create(),
+                description: 'Setting up process ',
+                startEmoji: '⏱️',
+                successEmoji: '🎯'
             },
             {
                 name: 'MADE Roadmap',
@@ -96,7 +108,7 @@ export class ApplicationManager {
                 name: 'MADE Documentation',
                 action: async () => {
                     // Gera documentação para o processo
-                    //await  this.markdownService.createProcessDocumentation()
+                    await  this.markdownService.createProcessDocumentation()
                     // Gera documentação para o backlog
                     await this.markdownService.createManagementDocumenation()
                 },
