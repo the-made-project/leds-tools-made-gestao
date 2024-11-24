@@ -1,7 +1,7 @@
 project  {
     name: "Modulo de Autentication, Autorization e Accounting"
     description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
-    
+    startDate: 22/22/2222
 }
 
 team blackops {
@@ -45,25 +45,31 @@ backlog Produto {
 roadmap xxx {
     name: "xxxx"
     description: "yyyyy"
-    version xxx {
-        name: "xxxx"
-        description: "yyyy"
-        startDate:"xxxx"
-        endDate:"xxxx"
-        planning {
-            item: Produto.xx
-        } 
+    milestone yyy {
+        name: "xxx"
+        description: "xxx"
+        startDate: 20/11/2222
+        dueDate: 20/11/2222
+        
+        release zzz {
+             name: "xxx"
+             description: "xxx"
+             version: "xx"
+             dueDate: 22/11/2222
+             completedDate: 22/11/2222
+             item : Produto.xx
+        }
     }
 }
 
 sprint estudo {
     name: "estudo"
     description: "estudoooo"
-    startDate: "20/11/2024"
-    endDate: "30/11/2024"
+    startDate: 20/11/2024
+    endDate: 30/11/2024
     
     sprintbacklog estudo {
-        
+        item Produto.xx {assignee: blackops.joaomarcos startDate: 22/22/2222} 
     }
     comment: "xxxx"
 }

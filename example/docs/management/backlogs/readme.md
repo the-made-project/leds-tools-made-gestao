@@ -2,12 +2,13 @@
 title: "Backlog"
 sidebar_position: 1
 ---
-## PRODUTO
-|ID |Nome |Descrição | Type | Status|
-|:--|:----|:-------- |:----:| :---: |
-|AUTENTICACAO|CRIAR MÓDULO DE AUTORIZAÇÃO||EPIC|-|
-|ESTUDO|ESTUDAR A ARQUITETURA DE AUTORIZAÇÃO PROPOSTA PELO NIS|LER ARTIGOS SOBRE ARQUITETURA DE AUTENTICACAO E CRIR UMA APRESENTACAO|ATOMICUSERSTORY|-|
-|LER_ARTIGOS|LER OS ARTIGOS SOBRE NISS|LER O ARTIGO X E Y|TASKBACKLOG|-|
-|LER_ARTIGOS2|LER OS ARTIGOS SOBRE NISS|LER O ARTIGO X E Y|TASKBACKLOG|-|
-|CRIARAPRESENTACAO|CRIAR UMA APRESENTACAO DOS ARTIGOS SOBRE NISS|CRIAR UMA APRESENTACAO O ARTIGO X E Y|TASKBACKLOG|-|
+## Modulo de Autentication, Autorization e Accounting
+
+Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema
+
+* Data de Início: 22/22/2222
+* Data de Fim Planejado:
+* Data de Conclusão:
+
+
 

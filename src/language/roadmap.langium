@@ -6,28 +6,37 @@ Roadmap:
     'roadmap' id=ID'{'
         (Name 
         | Description
-        | versions+=Version )*
+        | milestones+=Milestone 
+        )*
     '}'
  ;    
 
-Version:
-    'version' id=ID '{'
+Milestone:
+    'milestone' id=ID '{'
         (
             Name 
             | Description 
-            |'startDate'':' startDate=STRING 
-            |'endDate' ':' endDate=STRING 
-            |versionPlanning=VersionPlanning)*
+            |DueDate
+            |StartDate
+            |CompletedDate
+            | 'status' ':'status =  ('PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'DELAYED')
+            |releases+=Release
+            )*
     '}'
 ;
 
-VersionPlanning:
-    'planning' '{' 
-        (planningItems+=VersionPlanningItem)*
+Release:
+    'release' id=ID '{' 
+        (
+         Name 
+        | Description
+        | 'version' ':' version=STRING 
+        | DueDate
+        | 'status' ':'status =  ('PLANNED' | 'IN_DEVELOPMENT' | 'TESTING' | 'RELEASED')
+        | CompletedDate
+        |'item' ':' item=[backlogItem:QualifiedName] (',' itens+=[backlogItem:QualifiedName])?
+        )*
     '}'    
 ;
 
-VersionPlanningItem:
-    ('item' ':' (item=[backlogElement:QualifiedName]))+
-;
 

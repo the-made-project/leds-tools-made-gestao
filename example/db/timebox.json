@@ -1,49 +1,6 @@
 {
   "data": [
     {
-      "id": "xx",
-      "name": "xxx",
-      "description": "xxx",
-      "startDate": "20/11/2024",
-      "endDate": "30/11/2024",
-      "sprintItems": [
-        {
-          "id": "produto.autenticacao",
-          "assignee": {
-            "id": "rafaelemerick",
-            "name": "Rafael Emerick",
-            "email": "rafael.emerick@blackops.com.br"
-          },
-          "issue": {
-            "id": "autenticacao",
-            "title": "Criar Módulo de autorização",
-            "description": "",
-            "type": "epic"
-          },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "TODO"
-        },
-        {
-          "id": "produto.estudo",
-          "assignee": {
-            "id": "rafaelemerick",
-            "name": "Rafael Emerick",
-            "email": "rafael.emerick@blackops.com.br"
-          },
-          "issue": {
-            "id": "estudo",
-            "title": "Estudar a arquitetura de autorização proposta pelo NIS",
-            "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
-            "type": "atomicuserstory"
-          },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "DONE"
-        }
-      ]
-    },
-    {
       "id": "estudo",
       "name": "estudo",
       "description": "estudoooo",
@@ -51,55 +8,20 @@
       "endDate": "30/11/2024",
       "sprintItems": [
         {
-          "id": "produto.autenticacao",
+          "id": "produto.xx",
           "assignee": {
-            "id": "rafaelemerick",
-            "name": "Rafael Emerick",
-            "email": "rafael.emerick@blackops.com.br"
+            "id": "joaomarcos",
+            "name": "João Marcos ",
+            "email": "joao.marcos@blackops.com.br"
           },
           "issue": {
-            "id": "autenticacao",
-            "title": "Criar Módulo de autorização",
+            "id": "xx",
+            "title": "",
             "description": "",
             "type": "epic"
           },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
+          "startDate": "22/22/2222",
           "status": "TODO"
-        },
-        {
-          "id": "produto.estudo",
-          "assignee": {
-            "id": "rafaelemerick",
-            "name": "Rafael Emerick",
-            "email": "rafael.emerick@blackops.com.br"
-          },
-          "issue": {
-            "id": "estudo",
-            "title": "Estudar a arquitetura de autorização proposta pelo NIS",
-            "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
-            "type": "atomicuserstory"
-          },
-          "startDate": "23/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "DOING"
-        },
-        {
-          "id": "produto.estudo",
-          "assignee": {
-            "id": "rafaelemerick",
-            "name": "Rafael Emerick",
-            "email": "rafael.emerick@blackops.com.br"
-          },
-          "issue": {
-            "id": "estudo",
-            "title": "Estudar a arquitetura de autorização proposta pelo NIS",
-            "description": "Ler artigos sobre arquitetura de autenticacao e crir uma apresentacao",
-            "type": "atomicuserstory"
-          },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "DONE"
         }
       ]
     }

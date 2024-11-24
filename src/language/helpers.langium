@@ -39,3 +39,19 @@ fragment DefinitionReady:
 fragment Learning:
     'learning'':'  value=STRING (',' value+=STRING)*
 ;
+
+fragment StartDate:
+'startDate' ':' startDate=DATE 
+;
+
+fragment EndDate:
+    'endDate' ':' endDate=DATE 
+;
+
+fragment DueDate:
+    'dueDate' ':' duedate=DATE
+;
+
+fragment CompletedDate:
+    'completedDate' ':' completedDate=DATE
+;

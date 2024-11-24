@@ -95,46 +95,23 @@
         ],
         "commands": [
             {
-                "command": "made.synchronizeFromMadeToProjectManagement",
-                "title": "Synchronize"
-            },
-            {
                 "command": "made.generateDocumentation",
                 "title": "Generate Documentation"
-            },
-            {
-                "command": "made.generateAll",
-                "title": "All"
             }
+            
         ],
         "menus": {
             "commandPalette": [
                 {
-                    "command": "made.synchronizeFromMadeToProjectManagement",
-                    "when": "editorLangId == made"
-                },
-                {
                     "command": "made.generateDocumentation",
-                    "when": "editorLangId == made"
-                },
-                {
-                    "command": "made.generateAll",
                     "when": "editorLangId == made"
                 }
+             
             ],
             "editor/context": [
-                {
-                    "command": "made.synchronizeFromMadeToProjectManagement",
-                    "group": "z_commands",
-                    "when": "editorLangId == made"
-                },
+                
                 {
                     "command": "made.generateDocumentation",
-                    "group": "z_commands",
-                    "when": "editorLangId == made"
-                },
-                {
-                    "command": "made.generateAll",
                     "group": "z_commands",
                     "when": "editorLangId == made"
                 }

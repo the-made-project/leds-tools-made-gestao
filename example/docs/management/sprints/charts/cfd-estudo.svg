@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >3</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >3</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -60,7 +60,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -124,7 +124,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >0</text>
             
               <line 
                 x1="70" 
@@ -140,7 +140,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >0</text>
             
               <line 
                 x1="70" 
@@ -156,7 +156,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >0</text>
             
               <line 
                 x1="70" 
@@ -192,17 +192,17 @@
             
 
           <path 
-            d="M70,200 L168,200 L266,200 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
             fill="#ef4444" 
             opacity="0.8"
           />
           <path 
-            d="M70,350 L168,350 L266,350 L364,200 L462,200 L560,200 L658,200 L756,200 L854,200 L952,200 L1050,200 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
             fill="#f59e0b" 
             opacity="0.8"
           />
           <path 
-            d="M70,350 L168,350 L266,350 L364,350 L462,350 L560,350 L658,350 L756,350 L854,350 L952,350 L1050,350 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
             fill="#22c55e" 
             opacity="0.8"
           />
@@ -350,7 +350,7 @@
               Período: 20/11/2024 - 30/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Issues: 3
+              Total de Issues: 1
             </text>
           </g>
         </svg>

@@ -6,6 +6,37 @@ export type Backlog = {
   
 }
 
+export type Roadmap = {
+  id: string;
+  name?:string;
+  description?: string;
+  milestones?: Milestone[];
+  releases?: Release[];
+}
+
+export type Milestone = {
+  id: string;
+  name: string;
+  description: string;
+  startDate:String
+  dueDate: String;
+  status?: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'DELAYED';
+  dependencies?: Milestone[];
+  release?: Release;
+  
+}
+
+export type Release = {
+  id: string;
+  version: string;
+  name: string;
+  description: string;
+  plannedDate?: Date;
+  dueDate?: Date;
+  status?: 'PLANNED' | 'IN_DEVELOPMENT' | 'TESTING' | 'RELEASED';
+  issues?: Issue[];
+}
+
  
 export type IssuesDTO = {
     data: any[];

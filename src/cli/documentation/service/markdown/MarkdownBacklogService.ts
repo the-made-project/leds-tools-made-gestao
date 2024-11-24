@@ -1,4 +1,4 @@
-import { Model} from "../../../../language/generated/ast.js"
+import {  Model} from "../../../../language/generated/ast.js"
 import { createPath} from '../../../generator-utils.js'
 import fs from "fs";
 import path from "path";
@@ -52,23 +52,33 @@ export class MarkdownBacklogService {
     // Colocar o status de cada Issue no backlog, varrendo o sprints
 
     private createDocument(backlogs:Backlog[]){
+
+
         return expandToStringWithNL`
         ---
         title: "Backlog"
         sidebar_position: 1
         ---
-        ${backlogs.map(backlog => this.createBacklog(backlog)).join(`\n`)}       
+        ## ${this.model.project.name}
+        
+        ${this.model.project.description} 
+        
+        * Data de Início: ${this.model.project.startDate}
+        * Data de Fim Planejado: ${this.model.project.duedate}
+        * Data de Conclusão:  ${this.model.project.completedDate}
+        
+      
+       
         `
     }
 
-    private createBacklog (backlog: Backlog){
-        return expandToStringWithNL`
-        ## ${backlog.name?.toLocaleUpperCase() ?? backlog.id.toLocaleUpperCase()}
-        |ID |Nome |Descrição | Type | Status|
-        |:--|:----|:-------- |:----:| :---: |
-        ${backlog.issues?.map(issue=> `|${issue.id.toLocaleUpperCase() ?? "-"}|${issue.title?.toLocaleUpperCase() ?? "-"}|${issue.description?.toLocaleUpperCase() ?? "-"}|${issue.type.toLocaleUpperCase() ?? "-"}|${issue.status?.toLocaleUpperCase() ?? "-"}|`).join("\n")}
-        `
-    }
+
+
+  
+
+ 
+
+
 
     protected async retrive(database: string){
     

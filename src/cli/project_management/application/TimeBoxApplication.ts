@@ -41,7 +41,7 @@ export class TimeBoxApplication extends AbstractApplication {
                     type: item.id.ref?.$type.toLocaleLowerCase() ?? ""
                 },
 
-                startDate: item.startdate,
+                startDate: item.startDate,
                 dueDate: item.duedate,
                 completedDate:item.completedDate,
                 status:item.status ?? "TODO"

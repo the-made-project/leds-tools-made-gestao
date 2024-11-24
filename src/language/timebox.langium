@@ -7,9 +7,9 @@ TimeBox:
     'sprint' id=ID '{'
         (Name 
         | Description 
-        | sprintBacklog =SprintBacklog
-        | 'startDate' ':' startDate=STRING 
-        | 'endDate' ':' endDate=STRING 
+        | sprintBacklog = SprintBacklog
+        | StartDate
+        | EndDate
         | 'comment' ':' comment=STRING
         | Label)*
     '}'
@@ -26,9 +26,9 @@ PlanningItem: 'item' id=[timeBoxTask:QualifiedName] '{'
     
     ('assignee' ':' assignee=[TeamMember:QualifiedName]
         |'complexity' ':' complexity=('EASY'|'MEDIUM|HARD|SPIKE')
-        |'dueDate' ':' duedate=STRING
-        |'startDate' ':' startdate=STRING
-        |'completedDate' ':' completedDate=STRING
+        |DueDate
+        |StartDate
+        |CompletedDate
         |'status' ':' status=('TODO'|'DOING'|'DONE')
     )*
 '}'  

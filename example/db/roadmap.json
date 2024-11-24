@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "xxx",
+      "name": "xxxx",
+      "description": "yyyyy",
+      "milestones": [
+        {
+          "id": "yyy",
+          "name": "xxx",
+          "description": "xxx",
+          "startDate": "20/11/2222",
+          "dueDate": "20/11/2222",
+          "releases": [
+            {
+              "id": "zzz",
+              "version": "xx",
+              "name": "xxx",
+              "description": "xxx",
+              "plannedDate": "22/11/2222",
+              "dueDate": "22/11/2222",
+              "status": "PLANNED",
+              "issues": [
+                {
+                  "id": "xx",
+                  "description": "",
+                  "type": "epic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
