@@ -36,15 +36,15 @@ export  class RoadmapApplication extends AbstractApplication {
                                 : await this.createIssues([
                                     ...(release.itens ?? []),
                                     release.item
-                                ].filter(Boolean)); // Remove itens null/undefined
+                                ].filter(Boolean));
 
                             return {
                                 id: release.id,
                                 version: release.version ?? "",
                                 name: release.name ?? "",
                                 description: release.description ?? "",
-                                plannedDate: release.duedate,
-                                dueDate: release.completedDate,
+                                dueDate: release.duedate,
+                                releasedDate: release.releasedDate,
                                 status: release.status ?? 'PLANNED',
                                 issues
                             } as Release;
@@ -65,7 +65,7 @@ export  class RoadmapApplication extends AbstractApplication {
       return Promise.all(
           items
               .filter(Boolean) // Remove itens null/undefined
-              .map(item => this.createIssue(item))
+              .map(item => this.createIssue(item.ref))
       );
   }
 

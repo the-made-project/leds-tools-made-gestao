@@ -6,6 +6,7 @@ import { MarkdownProcessService } from "./MarkdownProcessService.js";
 import { MarkdownBacklogService } from "./MarkdownBacklogService.js";
 import { expandToStringWithNL } from "langium/generate";
 import { MarkdownTimeBoxService } from "./MarkdownTimeBoxService.js";
+import { MardownRoadmapService } from "./MarkdownRoadmapService.js";
 
 
 export class MarkdownService {
@@ -14,9 +15,11 @@ export class MarkdownService {
     target_folder:string
     DOC_PATH:string
     DB_PATH: string
+    
     markdownProcessService: MarkdownProcessService
     markdownBacklogService: MarkdownBacklogService
     markdownTimeBoxService: MarkdownTimeBoxService
+    markdownRoadmapService: MardownRoadmapService
 
     constructor (model: Model, target_folder:string){
         this.model = model
@@ -26,9 +29,11 @@ export class MarkdownService {
         fs.mkdirSync(this.target_folder, {recursive:true})
 
         this.markdownProcessService = new MarkdownProcessService(model,this.DOC_PATH)
+        
         this.markdownBacklogService = new MarkdownBacklogService(model,this.DOC_PATH,this.DB_PATH)
         this.markdownTimeBoxService = new MarkdownTimeBoxService(model, this.DOC_PATH, this.DB_PATH)
 
+        this.markdownRoadmapService = new MardownRoadmapService(model, this.DOC_PATH, this.DB_PATH)
         this.config()
     }
 
@@ -58,6 +63,7 @@ export class MarkdownService {
     public createManagementDocumenation(){
         this.markdownTimeBoxService.create()
         this.markdownBacklogService.create()
+        this.markdownRoadmapService.create()
     }
 
     

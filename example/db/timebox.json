@@ -8,16 +8,16 @@
       "endDate": "30/11/2024",
       "sprintItems": [
         {
-          "id": "produto.xx",
+          "id": "produto.epic1",
           "assignee": {
             "id": "joaomarcos",
             "name": "João Marcos ",
             "email": "joao.marcos@blackops.com.br"
           },
           "issue": {
-            "id": "xx",
-            "title": "",
-            "description": "",
+            "id": "epic1",
+            "title": "epci1",
+            "description": "descroption1",
             "type": "epic"
           },
           "startDate": "22/22/2222",

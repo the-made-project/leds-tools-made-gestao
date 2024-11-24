@@ -11,17 +11,17 @@ sidebar_position: estudo
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|XX||JOÃO MARCOS |22/22/2222||TODO|
+|EPIC1|EPCI1|JOÃO MARCOS |22/22/2222||TODO|
 
 # Análise de Dependências do Projeto e Sprint
 
-Análise gerada em: 24/11/2024, 13:07:15
+Análise gerada em: 24/11/2024, 14:31:57
 
 ## 📊 Resumo por Status
 
 | Status | Quantidade |
 |--------|------------|
-| TODO | 1 |
+| TODO | 2 |
 
 ## 🔍 Grafo de Dependências
 
@@ -31,7 +31,7 @@ graph TD
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;
     classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
-    xx["xx\n\nTODO\nResp: João Marcos "]:::sprint
+    epic1["epic1\nepci1\nTODO\nResp: João Marcos "]:::sprint
 ```
 
 **Legenda:**
@@ -47,7 +47,7 @@ graph TD
 
 | Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |
 |-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|
-| xx | N/A | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
+| epic1 | epci1 | TODO | 🟢 Sprint | João Marcos  | 0 | 0 | - | - |
 
 
 ## Gráficos
@@ -105,4 +105,4 @@ graph TD
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 13:07:15*
+*Relatório gerado em 24/11/2024, 14:31:57*

@@ -20,6 +20,7 @@ Milestone:
             |StartDate
             |CompletedDate
             | 'status' ':'status =  ('PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'DELAYED')
+            |'depends' ':' depend=[Milestone:QualifiedName] (',' depends+=[Milestone:QualifiedName])?
             |releases+=Release
             )*
     '}'
@@ -33,7 +34,7 @@ Release:
         | 'version' ':' version=STRING 
         | DueDate
         | 'status' ':'status =  ('PLANNED' | 'IN_DEVELOPMENT' | 'TESTING' | 'RELEASED')
-        | CompletedDate
+        | 'releasedDate' ':' releasedDate=DATE 
         |'item' ':' item=[backlogItem:QualifiedName] (',' itens+=[backlogItem:QualifiedName])?
         )*
     '}'    

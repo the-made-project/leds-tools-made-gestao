@@ -11,18 +11,17 @@ export type Roadmap = {
   name?:string;
   description?: string;
   milestones?: Milestone[];
-  releases?: Release[];
 }
 
 export type Milestone = {
   id: string;
   name: string;
   description: string;
-  startDate:String
-  dueDate: String;
+  startDate:string
+  dueDate: string;
   status?: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED' | 'DELAYED';
   dependencies?: Milestone[];
-  release?: Release;
+  releases?: Release[];
   
 }
 
@@ -31,11 +30,26 @@ export type Release = {
   version: string;
   name: string;
   description: string;
-  plannedDate?: Date;
-  dueDate?: Date;
+  releasedDate?: string;
+  dueDate: string;
   status?: 'PLANNED' | 'IN_DEVELOPMENT' | 'TESTING' | 'RELEASED';
   issues?: Issue[];
 }
+
+export type Issue = {
+  id: string;
+  externalId?: string;
+  key?: string;
+  self?: string;
+  type: string;
+  title?: string;
+  description?:string;
+  status?:string;
+  createdDate?:string;            
+  parent?:Issue
+  depends?: Issue[];
+  labels?: string[];
+};
 
  
 export type IssuesDTO = {
@@ -56,20 +70,7 @@ export type Person = {
   name : string;  
 }
 
-export type Issue = {
-  id: string;
-  externalId?: string;
-  key?: string;
-  self?: string;
-  type: string;
-  title?: string;
-  description?:string;
-  status?:string;
-  createdDate?:string;            
-  parent?:Issue
-  depends?: Issue[];
-  labels?: string[];
-};
+
 
 
 export type SprintItem = {

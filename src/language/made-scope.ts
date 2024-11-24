@@ -1,6 +1,6 @@
 import { AstNode, AstNodeDescription, DefaultScopeComputation, LangiumDocument } from "langium";
 import { CancellationToken } from "vscode-languageclient";
-import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam, isTaskBacklog } from "./generated/ast.js";
+import { Model, isBacklog, isEpic, isProcess, isAtomicUserStory, isTeam, isTaskBacklog, isRoadmap } from "./generated/ast.js";
 
 export class CustomScopeComputation extends DefaultScopeComputation {
     override async computeExports(document: LangiumDocument<AstNode>, cancelToken?: CancellationToken): Promise<AstNodeDescription[]> {
@@ -22,8 +22,16 @@ export class CustomScopeComputation extends DefaultScopeComputation {
         const tasks = this.getTasks(root, document);
         
         const people = this.getPeople(root, document);
+        const milestones = this.getMileStone(root, document)
 
-        return defaultGlobal.concat(epics, userStories, taskBacklog, processes,  activities, tasks, people);
+        return defaultGlobal.concat(epics, userStories, taskBacklog, processes,  activities, tasks, people,milestones);
+    }
+
+    private getMileStone(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {
+        return root.components
+            .filter(isRoadmap)
+            .flatMap(roadmap => roadmap.milestones
+            .map(milestone => this.descriptions.createDescription(milestone, `${milestone.$container.id}.${milestone.id}`, document)));
     }
 
     private getEpics(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {

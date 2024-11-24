@@ -9,21 +9,23 @@
           "id": "yyy",
           "name": "xxx",
           "description": "xxx",
-          "startDate": "20/11/2222",
-          "dueDate": "20/11/2222",
+          "startDate": "20/11/2022",
+          "dueDate": "20/11/2022",
+          "status": "IN_PROGRESS",
           "releases": [
             {
               "id": "zzz",
               "version": "xx",
               "name": "xxx",
               "description": "xxx",
-              "plannedDate": "22/11/2222",
-              "dueDate": "22/11/2222",
-              "status": "PLANNED",
+              "dueDate": "22/11/2022",
+              "releasedDate": "22/11/2022",
+              "status": "RELEASED",
               "issues": [
                 {
-                  "id": "xx",
-                  "description": "",
+                  "id": "epic1",
+                  "title": "epci1",
+                  "description": "descroption1",
                   "type": "epic"
                 }
               ]
