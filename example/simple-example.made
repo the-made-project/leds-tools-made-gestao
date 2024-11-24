@@ -14,6 +14,35 @@ team blackops {
   
 }
 
+backlog Spike2 {
+   name: "Backlog de Estudo2"
+   description: "Backlog dedicado a estudo da equipe"
+   epic epic1 {
+    name: "Estudar sobre Autorização"
+    description: "Estudo sobre autorização de usuários a recursos de redes"
+    story story1 {
+        name: "Estudar a arquitetura proposta pelo OPA"
+        task estudar {
+            name: "Estudar sobre OPA"
+            }
+        task apresentar {
+            name: "Apresentar o estudo"                        
+            }
+        }
+        story story2 {
+        name: "Estudar a arquitetura proposta pelo OpenFGA"
+        task estudar {
+            name: "Estudar sobre OPA"            
+            }
+        task apresentar {
+            name: "Apresentar o estudo"
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
+            }
+        }
+    }    
+    }
+
+
 backlog Spike {
    name: "Backlog de Estudo"
    description: "Backlog dedicado a estudo da equipe"

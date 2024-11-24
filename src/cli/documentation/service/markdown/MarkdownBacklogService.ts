@@ -4,9 +4,10 @@ import fs from "fs";
 import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
-import { expandToStringWithNL } from "langium/generate";
-import {Backlog, IssuesDTO,TimeBox} from '../../../model/models.js'
+
+import {IssuesDTO,TimeBox} from '../../../model/models.js'
 import { ProjectMetricsGenerator } from "./chart/project/ProjectMetricsGenerator.js";
+import { BacklogMarkdownConverter } from "./report/BacklogReport.js";
 
 
 export class MarkdownBacklogService {
@@ -35,8 +36,13 @@ export class MarkdownBacklogService {
     public async create(){
 
         const backlogs = await this.retrive(this.jsonFileBacklog);        
-        fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/readme.md`), this.createDocument(backlogs))
         
+        const converter = new BacklogMarkdownConverter();
+        const markdown = converter.convertBacklogsToMarkdown(backlogs);
+        const outputDirBacklolg = path.join(this.TIMEBOX_PATH, 'backlogs.md');
+
+        fs.writeFileSync(outputDirBacklolg, markdown, 'utf8');
+
         this.sprintData = await this.retrive(this.jsonTimeBox); 
         const generator = new ProjectMetricsGenerator(this.sprintData);
         const outputDir = path.join(this.TIMEBOX_PATH, 'reports');
@@ -49,36 +55,7 @@ export class MarkdownBacklogService {
         }
     }
 
-    // Colocar o status de cada Issue no backlog, varrendo o sprints
-
-    private createDocument(backlogs:Backlog[]){
-
-
-        return expandToStringWithNL`
-        ---
-        title: "Backlog"
-        sidebar_position: 1
-        ---
-        ## ${this.model.project.name}
-        
-        ${this.model.project.description} 
-        
-        * Data de Início: ${this.model.project.startDate}
-        * Data de Fim Planejado: ${this.model.project.duedate}
-        * Data de Conclusão:  ${this.model.project.completedDate}
-        
-      
-       
-        `
-    }
-
-
-
-  
-
- 
-
-
+   
 
     protected async retrive(database: string){
     

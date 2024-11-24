@@ -5,6 +5,20 @@ export type Backlog = {
   issues?:Issue[];
   
 }
+export type Issue = {
+  id: string;
+  externalId?: string;
+  key?: string;
+  self?: string;
+  type: string;
+  title?: string;
+  description?:string;
+  status?:string;
+  createdDate?:string;            
+  issues?:  Issue[]; 
+  depends?: Issue[];
+  labels?: string[];
+};
 
 export type Roadmap = {
   id: string;
@@ -36,20 +50,7 @@ export type Release = {
   issues?: Issue[];
 }
 
-export type Issue = {
-  id: string;
-  externalId?: string;
-  key?: string;
-  self?: string;
-  type: string;
-  title?: string;
-  description?:string;
-  status?:string;
-  createdDate?:string;            
-  issues?:  Issue[]; 
-  depends?: Issue[];
-  labels?: string[];
-};
+
 
  
 export type IssuesDTO = {
