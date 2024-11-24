@@ -36,7 +36,7 @@ backlog Spike {
             }
         task apresentar {
             name: "Apresentar o estudo"
-            depends: Spike.epic1.story1.estudar                       
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
             }
         }
     }    

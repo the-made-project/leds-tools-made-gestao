@@ -16,7 +16,7 @@ sidebar_position: estudo
 
 # Análise de Dependências do Projeto e Sprint
 
-Análise gerada em: 24/11/2024, 18:01:14
+Análise gerada em: 24/11/2024, 19:13:08
 
 ## 📊 Resumo por Status
 
@@ -108,4 +108,4 @@ graph TD
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 18:01:14*
+*Relatório gerado em 24/11/2024, 19:13:08*

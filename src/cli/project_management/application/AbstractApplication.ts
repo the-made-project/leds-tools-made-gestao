@@ -96,6 +96,8 @@ export abstract class AbstractApplication {
 
   protected async createIssue (parentID: string, data: any){
     const id = parentID+"."+data.id.toLocaleLowerCase()
+    let depends:  Issue[] = []
+
     const issue: Issue = {
       
       id: id,
@@ -113,20 +115,28 @@ export abstract class AbstractApplication {
   if (data.tasks){
     if (data.tasks.length >0){    
      issue.issues = await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(id, value))) ??[]
+    }
   }
-}
 
     if (data.depends){
-      if (data.depends.length >0){
-        issue.depends = await Promise.all(data.depends?.map(async (value:any) => await this.createIssue(id, value.ref))) ??[]
+      if (data.depends.length >0){        
+        await Promise.all(data.depends?.map(async (value:any) => 
+          depends.push ({
+            id:value.$refNode?.text.toLocaleLowerCase()
+          }as Issue )
+    
+        ))
+        	     
     }
 
     if (data.depend){
-      issue.depends = issue.depends?.concat (await this.createIssue(id, data.depend.ref))
+      depends.push ({
+        id:data.depend.$refNode?.text.toLocaleLowerCase()
+      }as Issue )
     }
   }
 
-
+  issue.depends = depends
 
     return issue
   }

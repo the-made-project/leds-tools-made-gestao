@@ -21,15 +21,18 @@
                   "id": "Spike.epic1.story1.estudar",
                   "title": "Estudar sobre OPA",
                   "description": "",
-                  "type": "taskbacklog"
+                  "type": "taskbacklog",
+                  "depends": []
                 },
                 {
                   "id": "Spike.epic1.story1.apresentar",
                   "title": "Apresentar o estudo",
                   "description": "",
-                  "type": "taskbacklog"
+                  "type": "taskbacklog",
+                  "depends": []
                 }
-              ]
+              ],
+              "depends": []
             },
             {
               "id": "Spike.epic1.story2",
@@ -41,17 +44,28 @@
                   "id": "Spike.epic1.story2.estudar",
                   "title": "Estudar sobre OPA",
                   "description": "",
-                  "type": "taskbacklog"
+                  "type": "taskbacklog",
+                  "depends": []
                 },
                 {
                   "id": "Spike.epic1.story2.apresentar",
                   "title": "Apresentar o estudo",
                   "description": "",
-                  "type": "taskbacklog"
+                  "type": "taskbacklog",
+                  "depends": [
+                    {
+                      "id": "spike.epic1.story2.estudar"
+                    },
+                    {
+                      "id": "spike.epic1.story1.estudar"
+                    }
+                  ]
                 }
-              ]
+              ],
+              "depends": []
             }
-          ]
+          ],
+          "depends": []
         }
       ]
     }
