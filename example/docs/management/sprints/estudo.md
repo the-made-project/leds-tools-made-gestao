@@ -11,54 +11,50 @@ sidebar_position: estudo
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|spike.epic1.story1.estudar|Estudar a arquitetura proposta pelo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
-|spike.epic1.story1.apresentar|Estudar a arquitetura proposta pelo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
-|spike.epic1.story2.apresentar|Estudar a arquitetura proposta pelo OpenFGA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story1.estudar|Estudar sobre OPA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story1.apresentar|Apresentar o estudo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story2.apresentar|Apresentar o estudo OpenFGA|João Marcos |20/11/2024|30/11/2024|TODO|
 
-# Análise de Dependências do Projeto e Sprint
+# Análise de Dependências do Sprint
 
-Análise gerada em: 24/11/2024, 20:24:25
-
-## 📊 Resumo por Status
-
-| Status | Quantidade |
-|--------|------------|
-| TODO | 5 |
+Análise gerada em: 24/11/2024, 21:05:52
 
 ## 🔍 Grafo de Dependências
 
 ```mermaid
-graph TD
+graph BT
     classDef sprint fill:#a8e6cf,stroke:#333,stroke-width:2px;
-    classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;
-    classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
-    spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Estudar a arquitetura proposta pelo OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    Spike.epic1.story1.estudar["🔍 Identificador: Spike.epic1.story1.estudar<br>📝 Tarefa: <br>📊 Estado: TODO<br>👤 Sem responsável"]:::pending
-    spike.epic1.story1.estudar -.-> Spike.epic1.story1.estudar
-    spike.epic1.story1.apresentar -.-> Spike.epic1.story1.estudar
-    spike.epic1.story2.apresentar -.-> Spike.epic1.story1.estudar
+    classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;
+    spike.epic1.story2.estudar["🔍 spike.epic1.story2.estudar<br>⚠️ Dependência Externa"]:::external
+    spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar sobre OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Apresentar o estudo OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story1.apresentar -.-> spike.epic1.story2.estudar
+    spike.epic1.story1.apresentar --> spike.epic1.story1.estudar
+    spike.epic1.story2.apresentar -.-> spike.epic1.story2.estudar
+    spike.epic1.story2.apresentar --> spike.epic1.story1.estudar
 ```
 
 **Legenda:**
-- 🟢 Verde Escuro: Issues concluídas (DONE)
-- 🟢 Verde Claro: Issues no sprint atual
-- 🟡 Laranja: Issues no projeto, fora do sprint
-- 🔴 Vermelho: Issues pendentes
-- ➡️ Linha dupla: Dependência implementada
+- 🟢 Verde Claro: Issues no sprint
+- 🟢 Verde Escuro: Issues concluídas
+- 🟡 Laranja: Dependências externas ao sprint
 - ➡️ Linha sólida: Dependência no sprint
 - ➡️ Linha pontilhada: Dependência externa
 
-## 📋 Análise de Issues
+## 📋 Sugestão de Execução das Issues
 
-| Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |
-|-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|
-| spike.epic1.story1.estudar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
-| spike.epic1.story1.apresentar | Estudar a arquitetura proposta pelo OPA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
-| spike.epic1.story2.apresentar | Estudar a arquitetura proposta pelo OpenFGA | TODO | 🟢 Sprint | João Marcos  | 1 | 1 | Spike.epic1.story1.estudar⚠️ | - |
-| Spike.epic1.story1.estudar | N/A | TODO | ⚠️ Fora do Sprint | N/A | 0 | 0 | - | spike.epic1.story1.estudar🟢, spike.epic1.story1.apresentar🟢, spike.epic1.story2.apresentar🟢 |
+| # | Issue | Título | Status | Responsável | Dependências |
+|---|-------|--------|--------|-------------|---------------|
+| 1 | spike.epic1.story1.estudar | Estudar sobre OPA | TODO | João Marcos  | 🆓 |
+| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
+| 3 | spike.epic1.story2.apresentar | Apresentar o estudo OpenFGA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
+
+**Legenda das Dependências:**
+- 🆓 Sem dependências
+- ✅ Issue concluída
+- ⚠️ Dependência externa ao sprint
 
 
 ## Gráficos
@@ -74,8 +70,8 @@ graph TD
 ### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: qua., 27/11/2024
-- **Dias em relação ao planejado**: -2 dias
+- **Data mais provável de conclusão**: qui., 28/11/2024
+- **Dias em relação ao planejado**: -1 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas Críticas
@@ -91,7 +87,7 @@ graph TD
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| qua., 27/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| qui., 28/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -116,4 +112,4 @@ graph TD
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 20:24:25*
+*Relatório gerado em 24/11/2024, 21:05:52*

@@ -27,7 +27,8 @@ backlog Spike {
             name: "Estudar sobre OPA"
             }
         task apresentar {
-            name: "Apresentar o estudo OPA"                        
+            name: "Apresentar o estudo OPA"  
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
             }
         }
         story story2 {

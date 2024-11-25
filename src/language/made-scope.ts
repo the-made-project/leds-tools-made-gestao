@@ -55,7 +55,7 @@ export class CustomScopeComputation extends DefaultScopeComputation {
         return root.components
             .filter(isBacklog)
             .flatMap(backlog => backlog.items.filter(isEpic))
-            .flatMap(epic => epic.userstories.flatMap (us => us.tasks.map(task => this.descriptions.createDescription(us, `${epic.$container.id}.${epic.id}.${us.id}.${task.id}`, document))));
+            .flatMap(epic => epic.userstories.flatMap (us => us.tasks.map(task => this.descriptions.createDescription(task, `${epic.$container.id}.${epic.id}.${us.id}.${task.id}`, document))));
     }
 
     private getUserStories(root: Model, document: LangiumDocument<AstNode>): AstNodeDescription[] {

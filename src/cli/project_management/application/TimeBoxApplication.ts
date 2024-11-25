@@ -29,7 +29,7 @@ export class TimeBoxApplication extends AbstractApplication {
             endDate: sprint.endDate ?? "",
             sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
                                 
-                id: item.backlogItem.$refNode?.text.toLocaleLowerCase(),                
+                id: item.backlogItem?.$refNode?.text.toLocaleLowerCase(),                
                 assignee: {
                     id: item.assignee?.ref?.id,  
                     name: item.assignee?.ref?.name,
@@ -38,12 +38,12 @@ export class TimeBoxApplication extends AbstractApplication {
 
                 issue: {
                     
-                    id: item.backlogItem.$refNode?.text.toLocaleLowerCase() ?? "",
-                    title: item.backlogItem.ref?.name ?? "" ,
-                    description: item.backlogItem.ref?.description ?? "",
-                    type: item.backlogItem.ref?.$type.toLocaleLowerCase() ?? "",                    
+                    id: item.backlogItem?.$refNode?.text.toLocaleLowerCase() ?? "",
+                    title: item.backlogItem?.ref?.name ?? "" ,
+                    description: item.backlogItem?.ref?.description ?? "",
+                    type: item.backlogItem?.ref?.$type.toLocaleLowerCase() ?? "",                    
 
-                    depends: [{id:"Spike.epic1.story1.estudar"}]
+                    depends: [...(item.backlogItem?.ref?.depends?.map(d => ({ id: d.$refNode?.text?.toLowerCase() })) || []),...(item.backlogItem?.ref?.depend?.$refNode?.text ? [{ id: item.backlogItem.ref.depend.$refNode.text.toLowerCase() }] : [])]
                 },
 
                 startDate: item.startDate,
@@ -59,7 +59,7 @@ export class TimeBoxApplication extends AbstractApplication {
            
     }
 
-
+    
     
            
 }

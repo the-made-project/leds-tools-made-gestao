@@ -14,7 +14,7 @@ export class ProjectDependencyAnalyzer {
     private reversedGraph: Map<string, Set<string>>;
     private issueStatus: Map<string, IssueStatus>;
 
-    constructor(sprint: TimeBox, allProjectIssues: Issue[]) {
+    constructor(sprint: TimeBox) {
         this.validateInputs(sprint);
         
         this.allIssues = new Map();
@@ -23,45 +23,12 @@ export class ProjectDependencyAnalyzer {
         this.reversedGraph = new Map();
         this.issueStatus = new Map();
 
-        this.initializeFromProject(allProjectIssues, sprint);
-    }
-
-    private parseDate(dateString: string): Date {
-        const cleanDate = dateString.replace(/[^\d/-]/g, '');
-        
-        // Tenta formato dd/mm/yyyy ou dd-mm-yyyy
-        if (cleanDate.match(/^\d{2}[-/]\d{2}[-/]\d{4}$/)) {
-            const [dia, mes, ano] = cleanDate.split(/[-/]/).map(Number);
-            const date = new Date(ano, mes - 1, dia);
-            if (!isNaN(date.getTime())) {
-                return date;
-            }
-        }
-
-        throw new Error(`Data inválida: ${dateString}. Use o formato dd/mm/yyyy`);
+        this.initializeFromSprint(sprint);
     }
 
     private validateInputs(sprint: TimeBox): void {
         if (!sprint.sprintItems) {
             throw new Error('Sprint não contém array de items');
-        }
-
-        if (!sprint.startDate || !sprint.endDate) {
-            throw new Error('Sprint deve ter data de início e fim');
-        }
-
-        try {
-            const startDate = this.parseDate(sprint.startDate);
-            const endDate = this.parseDate(sprint.endDate);
-
-            if (endDate < startDate) {
-                throw new Error(`Data de fim (${sprint.endDate}) é anterior à data de início (${sprint.startDate})`);
-            }
-        } catch (error) {
-            if (error instanceof Error) {
-                throw new Error(`Erro na validação de datas: ${error.message}`);
-            }
-            throw error;
         }
 
         sprint.sprintItems.forEach((item, index) => {
@@ -74,29 +41,16 @@ export class ProjectDependencyAnalyzer {
         });
     }
 
-    private initializeFromProject(allIssues: Issue[], sprint: TimeBox): void {
-        const projectIssues = allIssues.length > 0 ? allIssues : 
-            sprint.sprintItems.map(item => item.issue);
-
-        projectIssues.forEach(issue => {
+    private initializeFromSprint(sprint: TimeBox): void {
+        // Inicializa com todas as issues do sprint
+        sprint.sprintItems.forEach(item => {
+            const issue = item.issue;
+            
             this.allIssues.set(issue.id, issue);
+            this.sprintItems.set(issue.id, item);
             this.graph.set(issue.id, new Set());
             this.reversedGraph.set(issue.id, new Set());
-            this.issueStatus.set(issue.id, { 
-                inSprint: false,
-                status: issue.status || 'TODO',
-                implemented: issue.status === 'DONE'
-            });
-        });
-
-        sprint.sprintItems.forEach(item => {
-            this.sprintItems.set(item.issue.id, item);
-            this.allIssues.set(item.issue.id, item.issue);
-            if (!this.graph.has(item.issue.id)) {
-                this.graph.set(item.issue.id, new Set());
-                this.reversedGraph.set(item.issue.id, new Set());
-            }
-            this.issueStatus.set(item.issue.id, {
+            this.issueStatus.set(issue.id, {
                 inSprint: true,
                 status: item.status || 'TODO',
                 assignee: item.assignee,
@@ -104,22 +58,26 @@ export class ProjectDependencyAnalyzer {
             });
         });
 
-        this.allIssues.forEach((issue) => {
-            if (issue.depends) {
-                issue.depends.forEach(dep => {
-                    if (!this.allIssues.has(dep.id)) {
-                        console.warn(`Dependência não encontrada: ${dep.id}. Adicionando como nova issue.`);
-                        this.allIssues.set(dep.id, dep);
-                        this.graph.set(dep.id, new Set());
-                        this.reversedGraph.set(dep.id, new Set());
-                        this.issueStatus.set(dep.id, {
-                            inSprint: false,
-                            status: 'TODO',
-                            implemented: false
-                        });
+        // Adiciona dependências (tanto internas quanto externas)
+        sprint.sprintItems.forEach(item => {
+            if (item.issue.depends && Array.isArray(item.issue.depends)) {
+                item.issue.depends.forEach(dep => {
+                    if (dep && dep.id) {
+                        // Se a dependência não existe nos mapas, adiciona
+                        if (!this.allIssues.has(dep.id)) {
+                            this.allIssues.set(dep.id, dep);
+                            this.graph.set(dep.id, new Set());
+                            this.reversedGraph.set(dep.id, new Set());
+                            this.issueStatus.set(dep.id, {
+                                inSprint: false,
+                                status: dep.status || 'EXTERNAL',
+                                implemented: false
+                            });
+                        }
+                        // Adiciona as relações de dependência
+                        this.graph.get(item.issue.id)?.add(dep.id);
+                        this.reversedGraph.get(dep.id)?.add(item.issue.id);
                     }
-                    this.graph.get(issue.id)?.add(dep.id);
-                    this.reversedGraph.get(dep.id)?.add(issue.id);
                 });
             }
         });
@@ -148,7 +106,7 @@ export class ProjectDependencyAnalyzer {
             recursionStack.delete(nodeId);
         };
 
-        this.sprintItems.forEach((_, id) => {
+        this.sprintItems.forEach((_, id: string) => {
             if (!visited.has(id)) {
                 dfs(id);
             }
@@ -157,143 +115,143 @@ export class ProjectDependencyAnalyzer {
         return cycles;
     }
 
-    private getTopologicalSort(): string[] {
-        const inDegree = new Map<string, number>();
-        const result: string[] = [];
-        const queue: string[] = [];
-
-        this.allIssues.forEach((_, id) => {
-            inDegree.set(id, 0);
-        });
-
-        this.graph.forEach((deps) => {
-            deps.forEach(dep => {
-                inDegree.set(dep, (inDegree.get(dep) || 0) + 1);
-            });
-        });
-
-        inDegree.forEach((degree, id) => {
-            if (degree === 0) {
-                queue.push(id);
-            }
-        });
-
-        while (queue.length > 0) {
-            const current = queue.shift()!;
-            result.push(current);
-
-            const dependencies = this.graph.get(current) || new Set();
-            dependencies.forEach(dep => {
-                const newDegree = (inDegree.get(dep) || 0) - 1;
-                inDegree.set(dep, newDegree);
-                if (newDegree === 0) {
-                    queue.push(dep);
-                }
-            });
-        }
-
-        return result.filter(id => {
-            const isInSprint = this.sprintItems.has(id);
-            const isDependencyOfSprintItem = Array.from(this.sprintItems.keys()).some(sprintId => 
-                this.hasPath(sprintId, id)
-            );
-            return isInSprint || isDependencyOfSprintItem;
-        });
-    }
-
-    private hasPath(from: string, to: string, visited = new Set<string>()): boolean {
-        if (from === to) return true;
-        if (visited.has(from)) return false;
-
-        visited.add(from);
-        const deps = this.graph.get(from) || new Set();
-        
-        for (const dep of deps) {
-            if (this.hasPath(dep, to, visited)) return true;
-        }
-
-        return false;
-    }
+    
 
     private generateMermaidDiagram(): string {
-        let diagram = 'graph TD\n';
+        let diagram = 'graph BT\n';
         
         // Definir estilos
         diagram += '    classDef sprint fill:#a8e6cf,stroke:#333,stroke-width:2px;\n';
-        diagram += '    classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;\n';
-        diagram += '    classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;\n';
         diagram += '    classDef done fill:#98fb98,stroke:#333,stroke-width:2px;\n';
+        diagram += '    classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;\n';
         
-        // Adicionar nós com formatação melhorada e mais descritiva
-        const relevantIds = new Set(this.getTopologicalSort());
-        relevantIds.forEach(id => {
-            const issue = this.allIssues.get(id)!;
-            const status = this.issueStatus.get(id)!;
-            
-            let nodeClass;
-            if (status.implemented) {
-                nodeClass = 'done';
-            } else if (status.inSprint) {
-                nodeClass = 'sprint';
-            } else {
-                nodeClass = status.status === 'TODO' ? 'pending' : 'external';
+        // Coletar todas as dependências externas
+        const externalDeps = new Set<string>();
+        this.sprintItems.forEach((item) => {
+            if (item.issue.depends && Array.isArray(item.issue.depends)) {
+                item.issue.depends.forEach(dep => {
+                    if (dep && dep.id && !this.sprintItems.has(dep.id)) {
+                        externalDeps.add(dep.id);
+                    }
+                });
             }
+        });
+
+        // Adicionar nós externos
+        externalDeps.forEach(id => {
+            const label = `${id}["🔍 ${id}<br>` +
+                         `⚠️ Dependência Externa"]`;
+            diagram += `    ${label}:::external\n`;
+        });
+
+        // Ordenar issues do sprint por nível de dependência
+        const issues = this.getTopologicalSort();
+        
+        // Adicionar nós do sprint
+        issues.forEach(id => {
+            const item = this.sprintItems.get(id)!;
+            const status = this.issueStatus.get(id)!;
+            const nodeClass = status.implemented ? 'done' : 'sprint';
             
-            const statusText = status.implemented ? 'Concluído' : status.status;
-            const assigneeText = status.assignee ? `Responsável: ${status.assignee.name}` : 'Sem responsável';
-            
-            // Formata o título e escapa caracteres especiais
-            const title = (issue.title || '').replace(/["\[\]]/g, '');
-            
-            // Monta o label com descrições mais claras
             const label = `${id}["🔍 Identificador: ${id}<br>` +
-                         `📝 Tarefa: ${title}<br>` +
-                         `📊 Estado: ${statusText}<br>` +
-                         `👤 ${assigneeText}"]`;
+                         `📝 Tarefa: ${item.issue.title || 'Sem título'}<br>` +
+                         `📊 Estado: ${status.status}<br>` +
+                         `👤 Responsável: ${status.assignee?.name || 'N/A'}"]`;
                          
             diagram += `    ${label}:::${nodeClass}\n`;
         });
 
-        // Adicionar arestas com descrição do tipo de dependência
-        relevantIds.forEach(from => {
-            const deps = this.graph.get(from) || new Set();
-            deps.forEach(to => {
-                if (relevantIds.has(to)) {
-                    const isImplemented = this.issueStatus.get(to)?.implemented;
-                    const style = isImplemented ? 
-                        '==>' : 
-                        (this.issueStatus.get(to)?.inSprint ? '-->' : '-.->');
-                    diagram += `    ${from} ${style} ${to}\n`;
-                }
-            });
+        // Adicionar arestas (incluindo para dependências externas)
+        this.sprintItems.forEach((item) => {
+            if (item.issue.depends && Array.isArray(item.issue.depends)) {
+                item.issue.depends.forEach(dep => {
+                    if (dep && dep.id) {
+                        const style = this.sprintItems.has(dep.id) ? '-->' : '-.->'; // Linha pontilhada para deps externas
+                        diagram += `    ${item.issue.id} ${style} ${dep.id}\n`;
+                    }
+                });
+            }
         });
 
         return diagram;
     }
 
-    public generateAnalysis(): string {
-        if (this.allIssues.size === 0) {
-            return '# Análise de Dependências\n\nNenhuma issue encontrada para análise.';
+    private getTopologicalSort(): string[] {
+        const result: string[] = [];
+        const independentTasks: string[] = [];
+        const dependentTasks: string[] = [];
+        const processed = new Set<string>();
+        const inDegree = new Map<string, number>();
+
+        // Inicializar graus de entrada
+        this.sprintItems.forEach((_, id) => {
+            inDegree.set(id, 0);
+        });
+
+        // Calcular graus de entrada para dependências dentro do sprint
+        this.sprintItems.forEach((item) => {
+            if (item.issue.depends && Array.isArray(item.issue.depends)) {
+                item.issue.depends.forEach(dep => {
+                    if (dep && dep.id && this.sprintItems.has(dep.id)) {
+                        inDegree.set(dep.id, (inDegree.get(dep.id) || 0) + 1);
+                    }
+                });
+            }
+        });
+
+        // Primeiro, separar todas as tarefas sem dependências
+        this.sprintItems.forEach((item, id) => {
+            if (!item.issue.depends || !Array.isArray(item.issue.depends) || item.issue.depends.length === 0) {
+                independentTasks.push(id);
+                processed.add(id);
+            } else {
+                // Verificar se tem apenas dependências externas
+                const hasOnlyExternalDeps = item.issue.depends.every(dep => 
+                    !dep.id || !this.sprintItems.has(dep.id)
+                );
+                if (hasOnlyExternalDeps) {
+                    independentTasks.push(id);
+                    processed.add(id);
+                } else {
+                    dependentTasks.push(id);
+                }
+            }
+        });
+
+        // Ordenar as tarefas dependentes
+        const queue = dependentTasks.filter(id => (inDegree.get(id) || 0) === 0);
+        const orderedDependentTasks: string[] = [];
+
+        while (queue.length > 0) {
+            const current = queue.shift()!;
+            if (!processed.has(current)) {
+                orderedDependentTasks.push(current);
+                processed.add(current);
+
+                const dependencies = this.graph.get(current) || new Set();
+                dependencies.forEach(dep => {
+                    if (this.sprintItems.has(dep)) {
+                        const newDegree = (inDegree.get(dep) || 0) - 1;
+                        inDegree.set(dep, newDegree);
+                        if (newDegree === 0 && !processed.has(dep)) {
+                            queue.push(dep);
+                        }
+                    }
+                });
+            }
         }
-        const cycles = this.findCycles();
-        let markdown = '# Análise de Dependências do Projeto e Sprint\n\n';
 
+        // Combinar os resultados: primeiro as independentes, depois as dependentes ordenadas
+        result.push(...independentTasks, ...orderedDependentTasks);
+        return result;
+    }
+    public generateAnalysis(): string {
+        if (this.sprintItems.size === 0) {
+            return '# Análise de Dependências do Sprint\n\nNenhuma issue encontrada no sprint.';
+        }
+
+        let markdown = '# Análise de Dependências do Sprint\n\n';
         markdown += `Análise gerada em: ${new Date().toLocaleString('pt-BR')}\n\n`;
-
-        // Status Summary
-        const statusCount = new Map<string, number>();
-        this.issueStatus.forEach(status => {
-            const key = status.implemented ? 'DONE' : status.status;
-            statusCount.set(key, (statusCount.get(key) || 0) + 1);
-        });
-
-        markdown += '## 📊 Resumo por Status\n\n';
-        markdown += '| Status | Quantidade |\n';
-        markdown += '|--------|------------|\n';
-        statusCount.forEach((count, status) => {
-            markdown += `| ${status} | ${count} |\n`;
-        });
-        markdown += '\n';
 
         // Mermaid diagram
         markdown += '## 🔍 Grafo de Dependências\n\n';
@@ -302,15 +260,14 @@ export class ProjectDependencyAnalyzer {
         markdown += '```\n\n';
 
         markdown += '**Legenda:**\n';
-        markdown += '- 🟢 Verde Escuro: Issues concluídas (DONE)\n';
-        markdown += '- 🟢 Verde Claro: Issues no sprint atual\n';
-        markdown += '- 🟡 Laranja: Issues no projeto, fora do sprint\n';
-        markdown += '- 🔴 Vermelho: Issues pendentes\n';
-        markdown += '- ➡️ Linha dupla: Dependência implementada\n';
+        markdown += '- 🟢 Verde Claro: Issues no sprint\n';
+        markdown += '- 🟢 Verde Escuro: Issues concluídas\n';
+        markdown += '- 🟡 Laranja: Dependências externas ao sprint\n';
         markdown += '- ➡️ Linha sólida: Dependência no sprint\n';
         markdown += '- ➡️ Linha pontilhada: Dependência externa\n\n';
 
         // Ciclos
+        const cycles = this.findCycles();
         if (cycles.length > 0) {
             markdown += '## ⚠️ Ciclos de Dependência Detectados\n\n';
             cycles.forEach((cycle, index) => {
@@ -322,36 +279,40 @@ export class ProjectDependencyAnalyzer {
             });
         }
 
-        // Tabela de análise detalhada
-        markdown += '## 📋 Análise de Issues\n\n';
-        markdown += '| Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |\n';
-        markdown += '|-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|\n';
+        // Tabela de análise em ordem de execução
+        markdown += '## 📋 Sugestão de Execução das Issues\n\n';
+        markdown += '| # | Issue | Título | Status | Responsável | Dependências |\n';
+        markdown += '|---|-------|--------|--------|-------------|---------------|\n';
 
-        this.getTopologicalSort().forEach(id => {
-            const issue = this.allIssues.get(id)!;
-            const status = this.issueStatus.get(id)!;
-            const dependencies = this.graph.get(id)!;
-            const dependents = this.reversedGraph.get(id)!;
+        const orderedIssues = this.getTopologicalSort();
+        
+        orderedIssues.forEach((id, index) => {
+            const item = this.sprintItems.get(id)!;
+            const allDeps = new Set<string>();
+            
+            if (item.issue.depends && Array.isArray(item.issue.depends)) {
+                item.issue.depends.forEach(dep => {
+                    if (dep && dep.id) allDeps.add(dep.id);
+                });
+            }
+            
+            const dependenciesStr = Array.from(allDeps)
+                .map(depId => {
+                    if (this.sprintItems.has(depId)) {
+                        const depStatus = this.issueStatus.get(depId)!;
+                        return `${depId}${depStatus.implemented ? '✅' : ''}`;
+                    }
+                    return `${depId}⚠️`;
+                })
+                .join(', ') || '🆓'; // Usa 🆓 para indicar que não tem dependências
 
-            const location = status.implemented ? '✅ Concluída' :
-                           (status.inSprint ? '🟢 Sprint' : '⚠️ Fora do Sprint');
-
-            const pendingDeps = Array.from(dependencies).filter(depId => 
-                !this.issueStatus.get(depId)?.implemented
-            ).length;
-
-            const dependenciesStr = Array.from(dependencies).map(depId => {
-                const depStatus = this.issueStatus.get(depId)!;
-                return `${depId}${depStatus.implemented ? '✅' : depStatus.inSprint ? '🟢' : '⚠️'}`;
-            }).join(', ') || '-';
-
-            const dependentsStr = Array.from(dependents).map(depId => {
-                const depStatus = this.issueStatus.get(depId)!;
-                return `${depId}${depStatus.implemented ? '✅' : depStatus.inSprint ? '🟢' : '⚠️'}`;
-            }).join(', ') || '-';
-
-            markdown += `| ${id} | ${issue.title || 'N/A'} | ${status.status} | ${location} | ${status.assignee?.name || 'N/A'} | ${dependencies.size} | ${pendingDeps} | ${dependenciesStr} | ${dependentsStr} |\n`;
+            markdown += `| ${index + 1} | ${id} | ${item.issue.title || 'N/A'} | ${item.status || 'TODO'} | ${item.assignee.name} | ${dependenciesStr} |\n`;
         });
+
+        markdown += '\n**Legenda das Dependências:**\n';
+        markdown += '- 🆓 Sem dependências\n';
+        markdown += '- ✅ Issue concluída\n';
+        markdown += '- ⚠️ Dependência externa ao sprint\n';
 
         return markdown;
     }

@@ -16,14 +16,10 @@
           },
           "issue": {
             "id": "spike.epic1.story1.estudar",
-            "title": "Estudar a arquitetura proposta pelo OPA",
+            "title": "Estudar sobre OPA",
             "description": "",
-            "type": "atomicuserstory",
-            "depends": [
-              {
-                "id": "Spike.epic1.story1.estudar"
-              }
-            ]
+            "type": "taskbacklog",
+            "depends": []
           },
           "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
@@ -38,12 +34,15 @@
           },
           "issue": {
             "id": "spike.epic1.story1.apresentar",
-            "title": "Estudar a arquitetura proposta pelo OPA",
+            "title": "Apresentar o estudo OPA",
             "description": "",
-            "type": "atomicuserstory",
+            "type": "taskbacklog",
             "depends": [
               {
-                "id": "Spike.epic1.story1.estudar"
+                "id": "spike.epic1.story2.estudar"
+              },
+              {
+                "id": "spike.epic1.story1.estudar"
               }
             ]
           },
@@ -60,12 +59,15 @@
           },
           "issue": {
             "id": "spike.epic1.story2.apresentar",
-            "title": "Estudar a arquitetura proposta pelo OpenFGA",
+            "title": "Apresentar o estudo OpenFGA",
             "description": "",
-            "type": "atomicuserstory",
+            "type": "taskbacklog",
             "depends": [
               {
-                "id": "Spike.epic1.story1.estudar"
+                "id": "spike.epic1.story2.estudar"
+              },
+              {
+                "id": "spike.epic1.story1.estudar"
               }
             ]
           },

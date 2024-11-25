@@ -5,7 +5,7 @@ import path from "path";
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
-import {Issue, IssuesDTO, TimeBox} from '../../../model/models.js'
+import { IssuesDTO, TimeBox} from '../../../model/models.js'
 import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";
@@ -35,11 +35,11 @@ export class MarkdownTimeBoxService {
 
         const timeBoxes = await this.retrive(this.jsonFile);
 
-        const issues = await this.retrive("issue.json")
+
 
         timeBoxes.forEach (timebox  =>{
             
-            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox, issues))
+            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
             
             const generator = new ThroughputGenerator(timebox,this.TIMEBOX_CHARTS_PATH+`/throughput-${timebox.id}.svg`);
             generator.generate();
@@ -51,14 +51,14 @@ export class MarkdownTimeBoxService {
                 
     }
 
-    private createTimeBoxExport(timeBox: TimeBox, issues: Issue[]):string {
+    private createTimeBoxExport(timeBox: TimeBox ):string {
 
 
      // Gerar simulação
       const monteCarlo = new SprintMonteCarlo(timeBox,10000);
       const monteCarloAnalysis = monteCarlo.generateMarkdownReport();
 
-      const analyzer = new ProjectDependencyAnalyzer(timeBox, issues);
+      const analyzer = new ProjectDependencyAnalyzer(timeBox);
       const dependencyAnalysis = analyzer.generateAnalysis();
 
         return expandToStringWithNL`

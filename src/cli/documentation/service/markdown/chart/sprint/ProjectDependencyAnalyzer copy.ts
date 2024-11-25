@@ -1,4 +1,3 @@
-
 import { Issue, SprintItem, TimeBox, Person } from '../../../../../model/models.js';
 
 interface IssueStatus {
@@ -15,68 +14,21 @@ export class ProjectDependencyAnalyzer {
     private reversedGraph: Map<string, Set<string>>;
     private issueStatus: Map<string, IssueStatus>;
 
-    constructor(sprint: TimeBox, allProjectIssues: Issue[]) {
-        this.validateInputs(sprint, allProjectIssues);
-        if (!allProjectIssues || allProjectIssues.length === 0) {
-            throw new Error('Nenhuma issue do projeto fornecida');
-        }
-        if (!sprint) {
-            throw new Error('Sprint não fornecido');
-        }
+    constructor(sprint: TimeBox) {
+        this.validateInputs(sprint);
+        
         this.allIssues = new Map();
         this.sprintItems = new Map();
         this.graph = new Map();
         this.reversedGraph = new Map();
         this.issueStatus = new Map();
 
-        this.initializeFromProject(allProjectIssues, sprint);
+        this.initializeFromSprint(sprint);
     }
 
-    private parseDate(dateString: string): Date {
-        // Tenta diferentes formatos de data
-        let date: Date | null = null;
-
-        // Remove qualquer caracter que não seja número ou separador
-        const cleanDate = dateString.replace(/[^\d/-]/g, '');
-
-        // Tenta formato yyyy-mm-dd ou yyyy/mm/dd
-        if (cleanDate.match(/^\d{4}[-/]\d{2}[-/]\d{2}$/)) {
-            date = new Date(cleanDate);
-        }
-        // Tenta formato dd/mm/yyyy ou dd-mm-yyyy
-        else if (cleanDate.match(/^\d{2}[-/]\d{2}[-/]\d{4}$/)) {
-            const [dia, mes, ano] = cleanDate.split(/[-/]/).map(Number);
-            date = new Date(ano, mes - 1, dia);
-        }
-
-        if (!date || isNaN(date.getTime())) {
-            throw new Error(`Data inválida: ${dateString}. Use o formato dd/mm/yyyy ou yyyy-mm-dd`);
-        }
-
-        return date;
-    }
-
-    private validateInputs(sprint: TimeBox, allProjectIssues: Issue[]): void {
+    private validateInputs(sprint: TimeBox): void {
         if (!sprint.sprintItems) {
             throw new Error('Sprint não contém array de items');
-        }
-
-        if (!sprint.startDate || !sprint.endDate) {
-            throw new Error('Sprint deve ter data de início e fim');
-        }
-
-        try {
-            const startDate = this.parseDate(sprint.startDate);
-            const endDate = this.parseDate(sprint.endDate);
-
-            if (endDate < startDate) {
-                throw new Error(`Data de fim (${sprint.endDate}) é anterior à data de início (${sprint.startDate})`);
-            }
-        } catch (error) {
-            if (error instanceof Error) {
-                throw new Error(`Erro na validação de datas: ${error.message}`);
-            }
-            throw error;
         }
 
         sprint.sprintItems.forEach((item, index) => {
@@ -86,36 +38,19 @@ export class ProjectDependencyAnalyzer {
             if (!item.assignee || !item.assignee.name) {
                 throw new Error(`Issue ${item.issue.id} não tem responsável definido`);
             }
-            if (!item.status) {
-                throw new Error(`Issue ${item.issue.id} não tem status definido`);
-            }
         });
     }
 
-
-     private initializeFromProject(allIssues: Issue[], sprint: TimeBox): void {
-        const projectIssues = allIssues.length > 0 ? allIssues : 
-            sprint.sprintItems.map(item => item.issue);
-
-        projectIssues.forEach(issue => {
+    private initializeFromSprint(sprint: TimeBox): void {
+        // Inicializa com todas as issues do sprint
+        sprint.sprintItems.forEach(item => {
+            const issue = item.issue;
+            
             this.allIssues.set(issue.id, issue);
+            this.sprintItems.set(issue.id, item);
             this.graph.set(issue.id, new Set());
             this.reversedGraph.set(issue.id, new Set());
-            this.issueStatus.set(issue.id, { 
-                inSprint: false,
-                status: issue.status || 'TODO',
-                implemented: issue.status === 'DONE'
-            });
-        });
-
-        sprint.sprintItems.forEach(item => {
-            this.sprintItems.set(item.issue.id, item);
-            this.allIssues.set(item.issue.id, item.issue);
-            if (!this.graph.has(item.issue.id)) {
-                this.graph.set(item.issue.id, new Set());
-                this.reversedGraph.set(item.issue.id, new Set());
-            }
-            this.issueStatus.set(item.issue.id, {
+            this.issueStatus.set(issue.id, {
                 inSprint: true,
                 status: item.status || 'TODO',
                 assignee: item.assignee,
@@ -123,22 +58,15 @@ export class ProjectDependencyAnalyzer {
             });
         });
 
-        this.allIssues.forEach((issue) => {
-            if (issue.depends) {
+        // Adiciona apenas as dependências entre issues do sprint
+        sprint.sprintItems.forEach(item => {
+            const issue = item.issue;
+            if (issue.depends && Array.isArray(issue.depends)) {
                 issue.depends.forEach(dep => {
-                    if (!this.allIssues.has(dep.id)) {
-                        console.warn(`Dependência não encontrada: ${dep.id}. Adicionando como nova issue.`);
-                        this.allIssues.set(dep.id, dep);
-                        this.graph.set(dep.id, new Set());
-                        this.reversedGraph.set(dep.id, new Set());
-                        this.issueStatus.set(dep.id, {
-                            inSprint: false,
-                            status: 'TODO',
-                            implemented: false
-                        });
+                    if (dep && dep.id && this.allIssues.has(dep.id)) {
+                        this.graph.get(issue.id)?.add(dep.id);
+                        this.reversedGraph.get(dep.id)?.add(issue.id);
                     }
-                    this.graph.get(issue.id)?.add(dep.id);
-                    this.reversedGraph.get(dep.id)?.add(issue.id);
                 });
             }
         });
@@ -176,108 +104,78 @@ export class ProjectDependencyAnalyzer {
         return cycles;
     }
 
-    private getTopologicalSort(): string[] {
-        const inDegree = new Map<string, number>();
-        const result: string[] = [];
-        const queue: string[] = [];
-
-        // Calcular graus de entrada
-        this.allIssues.forEach((_, id) => {
-            inDegree.set(id, 0);
-        });
-
-        this.graph.forEach((deps) => {
-            deps.forEach(dep => {
-                inDegree.set(dep, (inDegree.get(dep) || 0) + 1);
-            });
-        });
-
-        // Encontrar nós sem dependências
-        inDegree.forEach((degree, id) => {
-            if (degree === 0) {
-                queue.push(id);
-            }
-        });
-
-        // Processar fila
-        while (queue.length > 0) {
-            const current = queue.shift()!;
-            result.push(current);
-
-            const dependencies = this.graph.get(current) || new Set();
-            dependencies.forEach(dep => {
-                const newDegree = (inDegree.get(dep) || 0) - 1;
-                inDegree.set(dep, newDegree);
-                if (newDegree === 0) {
-                    queue.push(dep);
-                }
-            });
-        }
-
-        // Retornar apenas issues relevantes para o sprint atual
-        return result.filter(id => {
-            const isInSprint = this.sprintItems.has(id);
-            const isDependencyOfSprintItem = Array.from(this.sprintItems.keys()).some(sprintId => 
-                this.hasPath(sprintId, id)
-            );
-            return isInSprint || isDependencyOfSprintItem;
-        });
-    }
-
-    private hasPath(from: string, to: string, visited = new Set<string>()): boolean {
-        if (from === to) return true;
-        if (visited.has(from)) return false;
-
-        visited.add(from);
-        const deps = this.graph.get(from) || new Set();
-        
-        for (const dep of deps) {
-            if (this.hasPath(dep, to, visited)) return true;
-        }
-
-        return false;
-    }
-
     private generateMermaidDiagram(): string {
-        let diagram = 'graph TD\n';
+        let diagram = 'graph BT\n';  // Mudado para BT (bottom to top)
         
         // Definir estilos
         diagram += '    classDef sprint fill:#a8e6cf,stroke:#333,stroke-width:2px;\n';
-        diagram += '    classDef external fill:#ffd3b6,stroke:#333,stroke-width:2px;\n';
-        diagram += '    classDef pending fill:#ff8b94,stroke:#333,stroke-width:2px;\n';
         diagram += '    classDef done fill:#98fb98,stroke:#333,stroke-width:2px;\n';
         
-        // Adicionar nós
-        const relevantIds = new Set(this.getTopologicalSort());
-        relevantIds.forEach(id => {
-            const issue = this.allIssues.get(id)!;
-            const status = this.issueStatus.get(id)!;
+        // Primeiro, identificar as camadas (níveis) de cada issue
+        const levels = new Map<string, number>();
+        
+        // Função auxiliar para calcular o nível de uma issue
+        const calculateLevel = (id: string, visited = new Set<string>()): number => {
+            if (visited.has(id)) return 0;
+            visited.add(id);
             
-            let nodeClass;
-            if (status.implemented) {
-                nodeClass = 'done';
-            } else if (status.inSprint) {
-                nodeClass = 'sprint';
-            } else {
-                nodeClass = status.status === 'TODO' ? 'pending' : 'external';
-            }
+            const dependencies = this.graph.get(id) || new Set();
+            if (dependencies.size === 0) return 0;
             
-            const statusText = status.implemented ? 'DONE' : status.status;
-            const assigneeText = status.assignee ? `Resp: ${status.assignee.name}` : '';
+            let maxLevel = 0;
+            dependencies.forEach(depId => {
+                if (this.sprintItems.has(depId)) {
+                    const depLevel = calculateLevel(depId, visited);
+                    maxLevel = Math.max(maxLevel, depLevel);
+                }
+            });
             
-            const label = `${id}["${id}\\n${issue.title || ''}\\n${statusText}\\n${assigneeText}"]`;
-            diagram += `    ${label}:::${nodeClass}\n`;
+            return maxLevel + 1;
+        };
+
+        // Calcular níveis para todas as issues do sprint
+        this.sprintItems.forEach((_, id: string) => {
+            const level = calculateLevel(id);
+            levels.set(id, level);
         });
 
+        // Agrupar issues por nível
+        const issuesByLevel = new Map<number, string[]>();
+        levels.forEach((level, id) => {
+            if (!issuesByLevel.has(level)) {
+                issuesByLevel.set(level, []);
+            }
+            issuesByLevel.get(level)?.push(id);
+        });
+
+        // Adicionar nós agrupados por nível (do topo para baixo)
+        const maxLevel = Math.max(...Array.from(levels.values()));
+        for (let level = maxLevel; level >= 0; level--) {  // Invertido o loop
+            const issuesInLevel = issuesByLevel.get(level) || [];
+            
+            // Adicionar os nós deste nível
+            issuesInLevel.forEach(id => {
+                const item = this.sprintItems.get(id)!;
+                const status = this.issueStatus.get(id)!;
+                const nodeClass = status.implemented ? 'done' : 'sprint';
+                
+                // Monta o label com descrições claras
+                const label = `${id}["🔍 Identificador: ${id}<br>` +
+                             `📝 Tarefa: ${item.issue.title || 'Sem título'}<br>` +
+                             `📊 Estado: ${status.status}<br>` +
+                             `👤 Responsável: ${status.assignee?.name || 'N/A'}"]`;
+                             
+                diagram += `    ${label}:::${nodeClass}\n`;
+            });
+        }
+
         // Adicionar arestas
-        relevantIds.forEach(from => {
+        this.sprintItems.forEach((_, from: string) => {
             const deps = this.graph.get(from) || new Set();
             deps.forEach(to => {
-                if (relevantIds.has(to)) {
+                if (this.sprintItems.has(to)) {
                     const isImplemented = this.issueStatus.get(to)?.implemented;
-                    const style = isImplemented ? 
-                        '==>' : 
-                        (this.issueStatus.get(to)?.inSprint ? '-->' : '-.->');
+                    const style = isImplemented ? '==>' : '-->';
                     diagram += `    ${from} ${style} ${to}\n`;
                 }
             });
@@ -287,29 +185,20 @@ export class ProjectDependencyAnalyzer {
     }
 
     public generateAnalysis(): string {
-        if (this.allIssues.size === 0) {
-            return '# Análise de Dependências\n\nNenhuma issue encontrada para análise.';
+        if (this.sprintItems.size === 0) {
+            return '# Análise de Dependências do Sprint\n\nNenhuma issue encontrada no sprint.';
         }
-        const cycles = this.findCycles();
-        let markdown = '# Análise de Dependências do Projeto e Sprint\n\n';
 
+        let markdown = '# Análise de Dependências do Sprint\n\n';
         markdown += `Análise gerada em: ${new Date().toLocaleString('pt-BR')}\n\n`;
 
         // Status Summary
         const statusCount = new Map<string, number>();
-        this.issueStatus.forEach(status => {
-            const key = status.implemented ? 'DONE' : status.status;
-            statusCount.set(key, (statusCount.get(key) || 0) + 1);
+        this.sprintItems.forEach(item => {
+            const status = item.status || 'TODO';
+            statusCount.set(status, (statusCount.get(status) || 0) + 1);
         });
-
-        markdown += '## 📊 Resumo por Status\n\n';
-        markdown += '| Status | Quantidade |\n';
-        markdown += '|--------|------------|\n';
-        statusCount.forEach((count, status) => {
-            markdown += `| ${status} | ${count} |\n`;
-        });
-        markdown += '\n';
-
+       
         // Mermaid diagram
         markdown += '## 🔍 Grafo de Dependências\n\n';
         markdown += '```mermaid\n';
@@ -317,15 +206,13 @@ export class ProjectDependencyAnalyzer {
         markdown += '```\n\n';
 
         markdown += '**Legenda:**\n';
-        markdown += '- 🟢 Verde Escuro: Issues concluídas (DONE)\n';
-        markdown += '- 🟢 Verde Claro: Issues no sprint atual\n';
-        markdown += '- 🟡 Laranja: Issues no projeto, fora do sprint\n';
-        markdown += '- 🔴 Vermelho: Issues pendentes\n';
+        markdown += '- 🟢 Verde Claro: Issues no sprint\n';
+        markdown += '- 🟢 Verde Escuro: Issues concluídas\n';
         markdown += '- ➡️ Linha dupla: Dependência implementada\n';
-        markdown += '- ➡️ Linha sólida: Dependência no sprint\n';
-        markdown += '- ➡️ Linha pontilhada: Dependência externa\n\n';
+        markdown += '- ➡️ Linha sólida: Dependência no sprint\n\n';
 
         // Ciclos
+        const cycles = this.findCycles();
         if (cycles.length > 0) {
             markdown += '## ⚠️ Ciclos de Dependência Detectados\n\n';
             cycles.forEach((cycle, index) => {
@@ -338,34 +225,22 @@ export class ProjectDependencyAnalyzer {
         }
 
         // Tabela de análise
-        markdown += '## 📋 Análise de Issues\n\n';
-        markdown += '| Issue | Título | Status | Localização | Responsável | # Deps | # Bloqueada por | Dependências | Dependentes |\n';
-        markdown += '|-------|--------|--------|-------------|-------------|--------|-----------------|--------------|-------------|\n';
+        markdown += '## 📋 Sugestão de Execução das Issues\n\n';
+        markdown += '| Issue | Título | Status | Responsável | Dependências |\n';
+        markdown += '|-------|--------|--------|-------------|---------------|\n';
 
-        this.getTopologicalSort().forEach(id => {
-            const issue = this.allIssues.get(id)!;
-            const status = this.issueStatus.get(id)!;
+        this.sprintItems.forEach((item, id) => {
+            const issue = item.issue;
             const dependencies = this.graph.get(id)!;
-            const dependents = this.reversedGraph.get(id)!;
+            
+            const dependenciesStr = Array.from(dependencies)
+                .filter(depId => this.sprintItems.has(depId))
+                .map(depId => {
+                    const depStatus = this.issueStatus.get(depId)!;
+                    return `${depId}${depStatus.implemented ? '✅' : ''}`;
+                }).join(', ') || '-';
 
-            const location = status.implemented ? '✅ Concluída' :
-                           (status.inSprint ? '🟢 Sprint' : '⚠️ Fora do Sprint');
-
-            const pendingDeps = Array.from(dependencies).filter(depId => 
-                !this.issueStatus.get(depId)?.implemented
-            ).length;
-
-            const dependenciesStr = Array.from(dependencies).map(depId => {
-                const depStatus = this.issueStatus.get(depId)!;
-                return `${depId}${depStatus.implemented ? '✅' : depStatus.inSprint ? '🟢' : '⚠️'}`;
-            }).join(', ') || '-';
-
-            const dependentsStr = Array.from(dependents).map(depId => {
-                const depStatus = this.issueStatus.get(depId)!;
-                return `${depId}${depStatus.implemented ? '✅' : depStatus.inSprint ? '🟢' : '⚠️'}`;
-            }).join(', ') || '-';
-
-            markdown += `| ${id} | ${issue.title || 'N/A'} | ${status.status} | ${location} | ${status.assignee?.name || 'N/A'} | ${dependencies.size} | ${pendingDeps} | ${dependenciesStr} | ${dependentsStr} |\n`;
+            markdown += `| ${id} | ${issue.title || 'N/A'} | ${item.status || 'TODO'} | ${item.assignee.name} | ${dependenciesStr} |\n`;
         });
 
         return markdown;
