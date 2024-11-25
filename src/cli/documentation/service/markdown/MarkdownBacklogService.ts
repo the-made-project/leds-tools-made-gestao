@@ -45,7 +45,7 @@ export class MarkdownBacklogService {
 
         this.sprintData = await this.retrive(this.jsonTimeBox); 
         const generator = new ProjectMetricsGenerator(this.sprintData);
-        const outputDir = path.join(this.TIMEBOX_PATH, 'reports');
+        const outputDir = path.join(this.MANAGEMENT_PATH, 'project');
   
         try {
             await generator.generateFiles(outputDir);

@@ -173,7 +173,7 @@ export class ProjectMonteCarlo {
         );
       }
 
-      let markdown = `\n\n ## Relatório de Previsão do Projeto - Método Monte Carlo\n\n`;
+      let markdown = `\n\n ## Previsão do Projeto \n\n`;
       
       markdown += `## 🎯 Conclusão Principal\n\n`;
       markdown += `### ${this.getCompletionStatus(onTimeProb)}\n\n`;

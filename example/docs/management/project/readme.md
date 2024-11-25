@@ -21,12 +21,9 @@
 ## Cumulative Flow 
 ![ Cumulative Flow](./project-cfd.svg)
 
-## Throughput 
-![ Throughput Flow](./project-throughput.svg)
 
 
-
- ## Relatório de Previsão do Projeto - Método Monte Carlo
+ ## Previsão do Projeto 
 
 ## 🎯 Conclusão Principal
 
@@ -67,4 +64,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 21:29:09*
+*Relatório gerado em 24/11/2024, 21:41:45*

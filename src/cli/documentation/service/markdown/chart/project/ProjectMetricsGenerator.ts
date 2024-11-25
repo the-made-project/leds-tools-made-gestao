@@ -211,10 +211,7 @@ export class ProjectMetricsGenerator {
     
     markdown += '\n\n## Cumulative Flow \n'
     markdown +='![ Cumulative Flow](./project-cfd.svg)\n\n'
-    
-    markdown += '## Throughput \n'
-    markdown +='![ Throughput Flow](./project-throughput.svg)\n\n'
-
+ 
     const projectAnalysis = new ProjectMonteCarlo(this.sprints);
     const report = projectAnalysis.generateMarkdownReport();
     markdown += report
