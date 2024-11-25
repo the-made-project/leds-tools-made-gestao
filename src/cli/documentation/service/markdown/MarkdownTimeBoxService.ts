@@ -71,23 +71,18 @@ export class MarkdownTimeBoxService {
             const fileName = `/${timebox.id}.md`            
             const filePath = path.join(this.TIMEBOX_PATH, fileName)
             const exist = this.fileContainsName(this.TIMEBOX_PATH, fileName)
+            // Gerar o CFD
+            let generatorx = new CumulativeFlowDiagram(timebox,this.TIMEBOX_CHARTS_PATH+`/cfd-${timebox.id}.svg`);
             
             if (!exist){
                 fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))
-                     
+                generatorx.generate();            
             }
             if (exist && timebox.status != 'CLOSED'){
                 fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))                        
-                
-            }
-
-            if (!exist && timebox.status == 'CLOSED'){
-                fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))                        
+                generatorx.generate();   
             }
             
-            // Gerar o CFD
-            const generatorx = new CumulativeFlowDiagram(timebox,this.TIMEBOX_CHARTS_PATH+`/cfd-${timebox.id}.svg`);
-            generatorx.generate();   
         } );
                 
     }

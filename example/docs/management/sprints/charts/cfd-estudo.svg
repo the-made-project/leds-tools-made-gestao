@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -156,7 +156,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -197,12 +197,12 @@
             opacity="0.8"
           />
           <path 
-            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,200 L168,200 L266,200 L364,200 L462,200 L560,200 L658,200 L756,200 L854,200 L952,200 L1050,200 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
             fill="#f59e0b" 
             opacity="0.8"
           />
           <path 
-            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,350 L756,350 L854,350 L952,350 L1050,350 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
             fill="#22c55e" 
             opacity="0.8"
           />
@@ -350,7 +350,7 @@
               Período: 20/11/2024 - 30/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Issues: 2
+              Total de Issues: 3
             </text>
           </g>
         </svg>
