@@ -1,5 +1,11 @@
 # 📊 Visão Geral do Projeto 
 
+Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema
+* Data de Início: 22/11/2022
+* Data de Planejado: 30/11/2022
+* Data de Finalização: -
+
+Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema
 ## Métricas Consolidadas
 
 | Sprint | Período | Duração | Total Tasks | Concluídas | Em Progresso | Pendentes | Velocidade | Eficiência |
@@ -66,4 +72,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 25/11/2024, 13:01:28*
+*Relatório gerado em 25/11/2024, 13:09:50*

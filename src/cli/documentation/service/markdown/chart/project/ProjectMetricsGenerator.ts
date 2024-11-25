@@ -4,6 +4,7 @@ import { SprintItem, TimeBox } from '../../../../../model/models.js';
 import { ProjectCFD } from './ProjectCFD.js';
 import { ProjectThroughputGenerator } from './ProjectThroughputGenerator.js';
 import { ProjectMonteCarlo } from './ProjectMonteCarlo.js';
+import { Model } from '../../../../../../language/generated/ast.js';
 
 interface SprintStatus {
   completed: number;
@@ -180,10 +181,16 @@ export class ProjectMetricsGenerator {
     return markdown;
   }
 
-  private generateMarkdownReport(): string {
+  private generateMarkdownReport(model: Model): string {
 
     let markdown = '# 📊 Visão Geral do Projeto \n\n' 
+    markdown += `${model.project.description}` + '\n';
     
+    markdown += `* Data de Início: ${model.project.startDate?? "-" }` + '\n';
+    markdown += `* Data de Planejado: ${model.project.duedate ?? "-"}` + '\n';
+    markdown += `* Data de Finalização: ${model.project.completedDate ?? "-"}` + '\n\n';
+
+    markdown += `${model.project.description}` + '\n';
     // Adiciona a tabela de métricas
     markdown += this.generateSummaryTable() + '\n';
     
@@ -220,7 +227,7 @@ export class ProjectMetricsGenerator {
     return markdown;
   }
 
-  public async generateFiles(outputDir: string): Promise<void> {
+  public async generateFiles(outputDir: string, model: Model): Promise<void> {
     try {
       // Criar diretório se não existir
       if (!fs.existsSync(outputDir)) {
@@ -237,7 +244,7 @@ export class ProjectMetricsGenerator {
       throughput.generate();
 
       // Gerar markdown com referência ao SVG
-      const markdown = this.generateMarkdownReport();
+      const markdown = this.generateMarkdownReport(model);
       const markdownPath = path.join(outputDir, '01_overview.md');
       await fs.promises.writeFile(markdownPath, markdown, 'utf-8');
 

@@ -16,7 +16,7 @@ Apresentar estudos sobre OPA e openFGA
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 25/11/2024, 13:01:28
+Análise gerada em: 25/11/2024, 13:09:50
 
 ## 🔍 Grafo de Dependências
 

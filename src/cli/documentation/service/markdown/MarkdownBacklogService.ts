@@ -45,7 +45,7 @@ export class MarkdownBacklogService {
         const generator = new ProjectMetricsGenerator(this.sprintData);        
   
         try {
-            await generator.generateFiles(this.MANAGEMENT_PATH);
+            await generator.generateFiles(this.MANAGEMENT_PATH, this.model);
            
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);
