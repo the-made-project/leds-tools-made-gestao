@@ -26,31 +26,32 @@
           "status": "TODO"
         },
         {
-          "id": "spike.epic1.story1.apresentar",
+          "id": "spike.epic1.story2.estudar",
           "assignee": {
             "id": "joaomarcos",
             "name": "João Marcos ",
             "email": "joao.marcos@blackops.com.br"
           },
           "issue": {
-            "id": "spike.epic1.story1.apresentar",
-            "title": "Apresentar o estudo OPA",
+            "id": "spike.epic1.story2.estudar",
+            "title": "Estudar sobre OpenFGA",
             "description": "",
             "type": "taskbacklog",
-            "depends": [
-              {
-                "id": "spike.epic1.story2.estudar"
-              },
-              {
-                "id": "spike.epic1.story1.estudar"
-              }
-            ]
+            "depends": []
           },
-          "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
-          "completedDate": "26/11/2024",
-          "status": "DONE"
-        },
+          "status": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "apresentar",
+      "name": "Apresentar os estudos Autorizacao",
+      "description": "Apresentar estudos sobre OPA e openFGA",
+      "startDate": "20/11/2024",
+      "endDate": "30/11/2024",
+      "status": "PLANNED",
+      "sprintItems": [
         {
           "id": "spike.epic1.story2.apresentar",
           "assignee": {
@@ -71,34 +72,6 @@
                 "id": "spike.epic1.story1.estudar"
               }
             ]
-          },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "DOING"
-        }
-      ]
-    },
-    {
-      "id": "apersentar",
-      "name": "Apresentar Autorizacao",
-      "description": "Apresentar a autorização ",
-      "startDate": "30/11/2024",
-      "endDate": "31/11/2024",
-      "status": "PLANNED",
-      "sprintItems": [
-        {
-          "id": "spike.epic1.story1.estudar",
-          "assignee": {
-            "id": "joaomarcos",
-            "name": "João Marcos ",
-            "email": "joao.marcos@blackops.com.br"
-          },
-          "issue": {
-            "id": "spike.epic1.story1.estudar",
-            "title": "Estudar sobre OPA",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
           },
           "dueDate": "30/11/2024",
           "status": "TODO"
@@ -124,35 +97,8 @@
               }
             ]
           },
-          "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
-          "completedDate": "26/11/2024",
-          "status": "DONE"
-        },
-        {
-          "id": "spike.epic1.story2.apresentar",
-          "assignee": {
-            "id": "joaomarcos",
-            "name": "João Marcos ",
-            "email": "joao.marcos@blackops.com.br"
-          },
-          "issue": {
-            "id": "spike.epic1.story2.apresentar",
-            "title": "Apresentar o estudo OpenFGA",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": [
-              {
-                "id": "spike.epic1.story2.estudar"
-              },
-              {
-                "id": "spike.epic1.story1.estudar"
-              }
-            ]
-          },
-          "startDate": "20/11/2024",
-          "dueDate": "30/11/2024",
-          "status": "DOING"
+          "status": "TODO"
         }
       ]
     }

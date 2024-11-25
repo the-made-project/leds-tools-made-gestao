@@ -6,18 +6,17 @@ Realizar estudos sobre autorizacao
 * **Goal**:  Realizar estudos sobre autorizacao
 * **Data Início**: 20/11/2024
 * **Data Fim**: 30/11/2024
-
+* **Status**: IN_PROGRESS
 ## Sprint Backlog
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
 |spike.epic1.story1.estudar|Estudar sobre OPA|João Marcos ||30/11/2024|TODO|
-|spike.epic1.story1.apresentar|Apresentar o estudo OPA|João Marcos |20/11/2024|30/11/2024|DONE|
-|spike.epic1.story2.apresentar|Apresentar o estudo OpenFGA|João Marcos |20/11/2024|30/11/2024|DOING|
+|spike.epic1.story2.estudar|Estudar sobre OpenFGA|João Marcos ||30/11/2024|TODO|
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 25/11/2024, 10:38:11
+Análise gerada em: 25/11/2024, 11:16:03
 
 ## 🔍 Grafo de Dependências
 
@@ -26,14 +25,8 @@ graph BT
     classDef sprint fill:#a8e6cf,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;
-    spike.epic1.story2.estudar["🔍 spike.epic1.story2.estudar<br>⚠️ Dependência Externa"]:::external
     spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar sobre OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: DONE<br>👤 Responsável: João Marcos "]:::done
-    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Apresentar o estudo OpenFGA<br>📊 Estado: DOING<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story1.apresentar -.-> spike.epic1.story2.estudar
-    spike.epic1.story1.apresentar --> spike.epic1.story1.estudar
-    spike.epic1.story2.apresentar -.-> spike.epic1.story2.estudar
-    spike.epic1.story2.apresentar --> spike.epic1.story1.estudar
+    spike.epic1.story2.estudar["🔍 Identificador: spike.epic1.story2.estudar<br>📝 Tarefa: Estudar sobre OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
 ```
 
 **Legenda:**
@@ -48,8 +41,7 @@ graph BT
 | # | Issue | Título | Status | Responsável | Dependências |
 |---|-------|--------|--------|-------------|---------------|
 | 1 | spike.epic1.story1.estudar | Estudar sobre OPA | TODO | João Marcos  | 🆓 |
-| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | DONE | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
-| 3 | spike.epic1.story2.apresentar | Apresentar o estudo OpenFGA | DOING | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
+| 2 | spike.epic1.story2.estudar | Estudar sobre OpenFGA | TODO | João Marcos  | 🆓 |
 
 **Legenda das Dependências:**
 - 🆓 Sem dependências
@@ -89,9 +81,9 @@ graph BT
 
 | Status | Quantidade | Porcentagem |
 |--------|------------|-------------|
-| Concluído | 1 | 33.3% |
-| Em Andamento | 1 | 33.3% |
-| A Fazer | 1 | 33.3% |
+| Concluído | 0 | 0.0% |
+| Em Andamento | 0 | 0.0% |
+| A Fazer | 2 | 100.0% |
 
 ## 💡 Recomendações
 
@@ -104,8 +96,8 @@ graph BT
 - **Sprint**: Estudar Autorizacao
 - **Início**: qua., 20/11/2024
 - **Término Planejado**: sáb., 30/11/2024
-- **Total de Tarefas**: 3
+- **Total de Tarefas**: 2
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 25/11/2024, 10:38:11*
+*Relatório gerado em 25/11/2024, 11:16:03*
