@@ -1,0 +1,236 @@
+overview modalidade {
+            name:"Módulo Pagamento de Bolsistas"
+            Architecture: csharp-clean-architecture
+            description:"Este documento apresenta a análise do módulo Pagamento de Bolsistas da plataforma ConectaFapes, com a contextualização do problema, e a aplicação de técnicas de documentação de requisitos, modelagem de casos de uso e modelagem de classes."
+            purpose : "O módulo Pagamento de Bolsistas visa permitir o controle de pagamentos mensais aos bolsistas de editais da FAPES."
+            miniworld : 
+            "
+            A FAPES gerencia centenas de editais e projetos com milhares de bolsistas alocados. A cada mês é necessário contabilizar as bolsas dos editais sob responsabilidade de cada área técnica a serem agrupadas em uma folha de pagamento que, após autorizada, é enviada ao Banestes para que os pagamentos sejam feitos aos respectivos bolsistas.
+            O processo de pagamento ocorre em ciclos mensais que contam com três marcos relevantes: Data Limite de Solicitação de Bolsas (M1), Data Prevista de Geração da Folha Normal (M2) e Data de Pagamento da Folha Normal (M3). Tais marcos devem ser definidos, mês a mês, em um calendário atual.
+            Assim, cada ciclo mensal de pagamentos ocorre da seguinte maneira:
+            Os coordenadores de projeto solicitam novas alocações de bolsas até o prazo limite de M1 (até o final do dia).
+            No dia seguinte ao M1 (M1+1), os editais ativos, e suas informações sobre bolsas (tais como quantidade bolsas vigentes, novas, pendentes e valores), são listados para suas respectivas áreas técnicas para que elas decidam sobre sua liberação para a folha.
+            Cada área técnica define os editais que deseja liberar (ou não) o pagamento daquela competência (ou anteriores, se pendentes). Em geral, os editais são liberados após a resolução de bolsas pendentes (aprovação ou negação das alocações solicitadas).
+            A partir do marco M2, a GEPOF pode monitorar a liberação dos editais no mês e gerar uma folha de pagamento. Quando a folha é a primeira do mês, é dita Folha Normal, as seguintes são Folhas Complementares.
+            A geração de uma folha de pagamento implica em relacionar todos os pagamentos dos bolsistas alocados a projetos dos editais que foram liberados pelas áreas técnicas naquele mês.
+            Uma vez gerada, a folha não pode mais ter editais ou pagamentos alterados, mas podem ser geradas folhas complementares incluindo editais liberados posteriormente ou bolsistas com alocação aprovada após a geração da folha anterior. Uma folha gerada também pode ser cancelada, para que seja gerada novamente com prováveis mudanças.
+            A DIRAF decide sobre a autorização ou rejeição de uma folha gerada. Em caso de rejeição, a folha fica cancelada, podendo ser gerada novamente.
+            Em caso de autorização, a folha segue para pagamento no Banestes, a ser efetuado na data do marco M3.
+            Ao longo de cada ciclo, são gerados documentos referentes às decisões de geração e autorização da folha, para serem anexados aos processos no E-DOCs.
+
+            Como exemplo, considere o seguinte cenário focado no curso normal de eventos de pagamento (exceções estão especificadas ao longo do documento).
+            No mês de outubro de 2024, a Área Técnica GEINOV possui 10 editais ativos (Alfa, Beta, Gama etc.), cada um com 5 projetos com 10 bolsistas cada. Temos, portanto, 500 bolsistas ativos na GEINOV. Antes do marco M1, o coordenador do projeto Alfa-01, do edital Alfa, solicita a inclusão de mais 4 bolsistas a seu projeto.
+            A partir de M1+1 (ex: dia 06/10), o Gerente da GEINOV visualiza a sua lista de 10 editais, cada um com 50 bolsistas, tendo o edital Alfa 4 pendências. À medida que as pendências são resolvidas por meio da avaliação das solicitações, o número de pendências diminui, incrementando-se o número de bolsistas ativos, caso aprovadas. Quando os técnicos da GEINOV aprovam 3 das solicitações e reprovam 1, o gerente visualiza o edital Alfa com 53 bolsistas ativos e, não havendo mais pendências, decide liberar todos os seus 10 editais para a folha.
+            Ao chegar a M2 (ex.: dia 15/10), o Gerente da GEPOF, visualiza um resumo de todas as áreas e observa que a GEINOV não possui mais editais a liberar, já tendo liberado editais totalizando 503 bolsistas no valor de R$ 503.000,00. A GEPOF avalia a situação de liberação da GEINOV e das outras áreas, e decide prosseguir com a geração da folha. Um resumo é exibido e o gerente confirma, gerando uma Folha de Pagamento Normal para o mês de Outubro, totalizando R$ 2.503.000,00 em bolsas, com os pagamentos a serem efetivados em M3 (ex:. 31/10). A Folha Normal de Outubro considera todos os pagamentos da competência de Outubro dos bolsistas alocados aos projetos dos editais liberados pelas áreas da FAPES.
+            Com a folha gerada, a Diretora Administrativa (DIRAF) avalia os pagamentos previstos e autoriza o pagamento da Folha. O processo segue para que o BANDES libere os recursos e o Banestes realize os pagamentos.
+
+            "
+        
+        }
+
+requirements xxxx {
+    name :"Requisitos do modulox"
+    
+    functional_requirement RF01 {
+        description: "O sistema deve permitir definir um calendário."        
+    }
+
+    functional_requirement RF02 { 
+        description: "O sistema deve permitir liberar editais para pagamento."
+        depend: xxxx.RF01  
+    }
+
+    functional_requirement RF03 {
+        description: "O sistema deve permitir gerar uma folha de pagamento com os editais liberado."        
+        depend: xxxx.RF01, xxxx.RF02    
+    }
+
+    functional_requirement RF04 {
+        description: "O sistema deve permitir visualizar detalhes dos projetos de um edital."
+        priority: "Alta"    
+    }
+
+    functional_requirement RF05 {
+        description: "O sistema deve permitir visualizar detalhes dos bolsistas de um projeto."        
+    }
+
+    functional_requirement RF06 {
+        description: "O sistema deve permitir consultar folhas de pagamento."
+        depend: xxxx.RF03        
+    }
+
+    functional_requirement RF07 {
+        description: "O sistema deve permitir decidir sobre a autorização de pagamento de uma folha."        
+        depend: xxxx.RF03    
+    }
+
+    functional_requirement RF08 { 
+        description: "O sistema deve permitir gerar documentos pdf para anexar ao EDOCs."        
+    }
+
+    functional_requirement RF09 { 
+        description: "O sistema deve permitir gerar arquivos de cadastro e pagamento dos bolsistas ao Banestes."        
+        depend: xxxx.RF01, xxxx.RF03
+    }
+
+    functional_requirement RF10 {
+        description: "O sistema deve processar as informações de arquivos de pagamento recebidos pelo Banestes."        
+    }
+
+
+    non_functional_requirement RNF01{
+        description: "O sistema deve garantir que, em cada confirmação de ação, os impactos potenciais da ação sejam apresentados de forma clara e compreensível ao usuário."
+        priority: "Alta"
+    }
+
+    bussines_rule RN01{
+        description: "Para definição do Marco de solicitação M1 (Data Limite de Solicitação de Bolsas) serão aceitas apenas datas dentro do mês de competência ou do mês anterior ao mês de competência. Por exemplo, para o mês de julho, M1 pode ter datas de Junho e Julho."
+        priority: "Alta"
+        depend: xxxx.RF01, xxxx.RF02
+    }
+
+    bussines_rule RN02{
+        description: "Para definição do Marco de Geração da Folha M2 (Data Prevista de Geração da Folha Normal) serão aceitas apenas datas dentro do mês de competência. Por exemplo, para o mês de Julho, M2 deve ser data de Julho conforme."
+        priority: "Alta"
+        depend: xxxx.RF01, xxxx.RF03
+    }
+
+    bussines_rule RN03{
+        description: "Para definição do Marco de pagamento M3 (Data de Pagamento da Folha Normal) serão aceitas apenas datas dentro do mês de competência ou do mês posterior ao mês de competência. Por exemplo, para o mês de julho, M3 deve ser uma data do mês de julho ou agosto."
+        priority: "Alta"
+        depend: xxxx.RF01, xxxx.RF09
+    }
+
+    bussines_rule RN04{
+        description: "O marco M1 pode ser editado até o fim do dia atualmente definido para o marco. Considerando que o marco M1 seja dia 05/08, o sistema só permite que a mudança de data ocorra até às 23:59h desse mesmo dia."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN05{
+        description: "O marco M2 pode ser editado até o fim do dia anterior ao atualmente definido para o marco. Considerando que o marco M2 seja dia 15/08, o sistema só permite que a mudança de data ocorra até às 23:59h do dia 14/08."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN06{
+        description: "O marco M3 pode ser editado até antes da efetiva geração da Folha Normal do mês em questão, pois no momento da geração o arquivo de remessa é gerado e a data de pagamento definida é gravada no arquivo."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN07{
+        description: "Para cada mês em questão, o marco M1 ocorre antes do marco M2 e o marco M2 ocorre antes do marco M3."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN08{
+        description: "O marco M2 de um dado mês não pode ocorrer depois que o marco M1 do mês seguinte."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN09{
+        description: "Para cada mês em questão, é recomendável que haja uma distância maior que 5 dias entre M1 e M2 e entre M2 e M3."
+        priority: "Alta"
+        depend: xxxx.RF01
+    }
+
+    bussines_rule RN10{
+        description: "A Folha de uma competência é considerada Normal quando é a primeira folha gerada a partir do marco de gerar folha do mês vigente. Se a Folha gerada não for a primeira, é considerada uma folha Complementar."
+        priority: "Alta"
+        depend: xxxx.RF03
+    }
+
+    bussines_rule RN11{
+        description: "Editais que foram liberados e contêm pendência de avaliação de bolsa não precisarão de nova liberação quando as bolsas forem aprovadas. Quando a avaliação da bolsa for aprovada as bolsas que eram pendentes ficarão, automaticamente, disponíveis para gerar folha."
+        priority: "Alta"
+        depend: xxxx.RF02
+    }
+
+    bussines_rule RN12{
+        description: "As áreas só podem liberar os editais para a competência do mês seguinte após o marco M1 + 1 dia."
+        priority: "Alta"
+        depend: xxxx.RF02
+    }
+
+    bussines_rule RN13{
+        description: "Quando um edital entra em uma folha ele não pode mais sofrer alterações de decisão de liberação."
+        priority: "Alta"
+        depend: xxxx.RF02
+    }
+
+    bussines_rule RN14{
+        description: "Não é possível desfazer cancelar uma folha autorizada."
+        priority: "Alta"
+    }
+
+    bussines_rule RN15{
+        description: "Não é possível gerar uma nova folha se a última folha ainda estiver no estado Gerada (ou seja, a folha foi gerada mas ainda não teve uma decisão sobre sua autorização ou cancelamento)."
+        priority: "Alta"
+        depend: xxxx.RF03
+    }
+
+    bussines_rule RN16{
+        description: "Caso uma folha do mês seja cancelada, a próxima ação de gerar folha daquele mês irá gerá-la novamente (e não gerar uma nova folha)."
+        priority: "Alta"
+        depend: xxxx.RF03
+    }
+
+}
+
+   module Main {
+        description: "Esse modolo é sobre um diagrama que contém a entidade Projeto, Tempo e um Enum Status"
+        entity Project {
+            nome: string
+            start_date: date
+            end_date: date
+            budget: decimal
+            client: string
+            sponsor: string
+            goal: string
+            project_father OneToMany Project
+            time OneToMany Time
+            status uses Status
+        }
+
+        entity Time {
+            nome: string
+            start_date: date
+            end_date: date
+            budget: decimal
+            client: string
+            sponsor: string
+            goal: string
+            project_father OneToMany Project
+            time OneToMany Time
+            status uses Status
+        }
+
+        enum Status {
+            Ativo
+            Cancelado
+            Entregue
+        }
+   }
+
+   actor Roberto is Project
+
+
+usecase UC05 {
+    name: "Definir Calendário das Folhas"
+    description: "Definir Calendário das Folhas"
+    performer: Roberto
+
+    event E021 {
+        name: "Visualizar Calendário Anual"
+        description: "O objetivo deste evento é visualizar os calendários definidos em cada mês, em um dado ano."
+        action: "
+            O sistema exibe um conjunto de opções de ano do calendário, com o ano atual selecionado por padrão.
+            O Gerente GEPOF seleciona o ano em que deseja visualizar o calendário. 
+            O sistema exibe os marcos definidos para cada mês do ano selecionado. Os marcos são: (M1) Data Limite de Solicitação de Bolsas, (M2) Data Prevista de Geração da Folha Normal, e (M3) Data de Pagamento da Folha Normal.
+        "
+    }
+
+}

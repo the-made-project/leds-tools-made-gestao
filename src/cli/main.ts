@@ -1,5 +1,4 @@
 import type { Model } from '../language/generated/ast.js';
-import chalk from 'chalk';
 import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';
@@ -19,8 +18,8 @@ import { NodeFileSystem } from 'langium/node';
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
     const model = await extractAstNode<Model>(fileName, services);
-    const generatedFilePath = generate(model, fileName, opts.destination,opts);
-    console.log(chalk.green(`Code generated successfully: ${generatedFilePath}`));
+    generate(model, fileName, opts.destination,opts);
+  
 };
 
 export type GenerateOptions = {

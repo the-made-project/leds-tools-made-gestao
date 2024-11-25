@@ -1,0 +1,100 @@
+project  {
+    name: "Modulo de Autentication, Autorization e Accounting"
+    description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
+    startDate: 22/11/2022
+    dueDate: 30/11/2022
+}
+
+team blackops {
+    name: "Team Black Ops"
+    description: "Equipe responsável por produzir artefatos de segurança"
+    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael.emerick@blackops.com.br"}
+    teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br"}
+    teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
+  
+  
+}
+
+roadmap projeto {
+    name: "Rodmap do projeto"
+    description: "Roadmap de todo do projeto"
+    milestone beta {
+        name: "Primeira versão"
+        description: "Contem apenas estudo das tecnologias do projeto"
+        startDate: 20/11/2024        
+        dueDate: 30/11/2024
+        status: IN_PROGRESS
+        release beta {
+            description: "Estudo para entender as tecnologias"
+            item : Spike.epic1
+            status: IN_DEVELOPMENT
+            dueDate: 30/11/2024
+            version: "1.0"
+        }
+    }
+}
+
+backlog Spike {
+   name: "Backlog de Estudo"
+   description: "Backlog dedicado a estudo da equipe"
+   
+   epic epic1 {
+    name: "Estudar sobre Autorização"
+    description: "Estudo sobre autorização de usuários a recursos de redes"
+    story story1 {
+        name: "Estudar a arquitetura proposta pelo OPA"
+        task estudar {
+            name: "Estudar sobre OPA"
+            }
+        task apresentar {
+            name: "Apresentar o estudo OPA"  
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
+            }
+        }
+        story story2 {
+        name: "Estudar a arquitetura proposta pelo OpenFGA"
+        task estudar {
+            name: "Estudar sobre OpenFGA"            
+            }
+        task apresentar {
+            name: "Apresentar o estudo OpenFGA"
+            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
+            }
+        }
+    }    
+    }
+
+
+sprint estudo {
+    name: "Estudar Autorizacao"
+    description: "Realizar estudos sobre autorizacao"
+    startDate: 20/11/2024
+    endDate: 30/11/2024
+    status: IN_PROGRESS
+
+    sprintbacklog estudo {
+        item Spike.epic1.story1.estudar {assignee: blackops.joaomarcos  dueDate: 30/11/2024 status: TODO}
+        item Spike.epic1.story2.estudar {assignee: blackops.joaomarcos  dueDate: 30/11/2024 status: TODO}
+        
+    }
+    
+}
+
+sprint apresentar {
+    name: "Apresentar os estudos Autorizacao"
+    description: "Apresentar estudos sobre OPA e openFGA"
+    startDate: 20/11/2024
+    endDate: 30/11/2024
+    status: PLANNED
+
+    sprintbacklog estudo {
+        
+        item Spike.epic1.story2.apresentar {assignee: blackops.joaomarcos dueDate: 30/11/2024 status: TODO}         
+        item Spike.epic1.story1.apresentar {assignee: blackops.joaomarcos dueDate: 30/11/2024 status: TODO}         
+    }
+    
+}
+
+
+
+
