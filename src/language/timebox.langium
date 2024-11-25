@@ -10,6 +10,7 @@ TimeBox:
         | sprintBacklog = SprintBacklog
         | StartDate
         | EndDate
+        |'status' ':' status=('PLANNED'|'IN_PROGRESS'|'CLOSED')
         | 'comment' ':' comment=STRING
         | Label)*
     '}'

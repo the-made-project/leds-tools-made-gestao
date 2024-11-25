@@ -78,6 +78,7 @@ export type SprintItem = {
   startDate:string;
   endDate: string;
   name: string;      
+  status?: 'PLANNED' | 'IN_PROGRESS' | 'CLOSED' ;
   completeDate?:string;  
   sprintItems:SprintItem[];
 };

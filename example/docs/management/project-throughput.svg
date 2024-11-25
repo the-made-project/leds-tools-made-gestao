@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >3</text>
+              >6</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >3</text>
+              >5</text>
             
               <line 
                 x1="70" 
@@ -60,7 +60,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >5</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >4</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >4</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -124,7 +124,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -140,7 +140,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -172,7 +172,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -211,7 +211,7 @@
           
                 <g>
                   <rect 
-                    x="78.9090909090909" 
+                    x="78.16666666666667" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -220,7 +220,7 @@
                   />
                   
                   <rect 
-                    x="78.9090909090909" 
+                    x="78.16666666666667" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -229,7 +229,7 @@
                   />
                   
                   <rect 
-                    x="78.9090909090909" 
+                    x="78.16666666666667" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -238,8 +238,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 103.9090909090909 520)" 
-                    x="103.9090909090909" 
+                    transform="rotate(-45 103.16666666666667 520)" 
+                    x="103.16666666666667" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -247,38 +247,38 @@
                   
                   
                     <text 
-                      x="103.9090909090909" 
+                      x="103.16666666666667" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="103.9090909090909" 
+                      x="103.16666666666667" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="103.9090909090909" 
+                      x="103.16666666666667" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="168" 
+                    x="159.83333333333334" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -287,7 +287,7 @@
                   />
                   
                   <rect 
-                    x="168" 
+                    x="159.83333333333334" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -296,7 +296,7 @@
                   />
                   
                   <rect 
-                    x="168" 
+                    x="159.83333333333334" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -305,8 +305,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 193 520)" 
-                    x="193" 
+                    transform="rotate(-45 184.83333333333334 520)" 
+                    x="184.83333333333334" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -314,38 +314,38 @@
                   
                   
                     <text 
-                      x="193" 
+                      x="184.83333333333334" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="193" 
+                      x="184.83333333333334" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="193" 
+                      x="184.83333333333334" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="257.0909090909091" 
+                    x="241.5" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -354,7 +354,7 @@
                   />
                   
                   <rect 
-                    x="257.0909090909091" 
+                    x="241.5" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -363,7 +363,7 @@
                   />
                   
                   <rect 
-                    x="257.0909090909091" 
+                    x="241.5" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -372,8 +372,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 282.0909090909091 520)" 
-                    x="282.0909090909091" 
+                    transform="rotate(-45 266.5 520)" 
+                    x="266.5" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -381,38 +381,38 @@
                   
                   
                     <text 
-                      x="282.0909090909091" 
+                      x="266.5" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="282.0909090909091" 
+                      x="266.5" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="282.0909090909091" 
+                      x="266.5" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="346.1818181818182" 
+                    x="323.1666666666667" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -421,7 +421,7 @@
                   />
                   
                   <rect 
-                    x="346.1818181818182" 
+                    x="323.1666666666667" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -430,7 +430,7 @@
                   />
                   
                   <rect 
-                    x="346.1818181818182" 
+                    x="323.1666666666667" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -439,8 +439,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 371.1818181818182 520)" 
-                    x="371.1818181818182" 
+                    transform="rotate(-45 348.1666666666667 520)" 
+                    x="348.1666666666667" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -448,38 +448,38 @@
                   
                   
                     <text 
-                      x="371.1818181818182" 
+                      x="348.1666666666667" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="371.1818181818182" 
+                      x="348.1666666666667" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="371.1818181818182" 
+                      x="348.1666666666667" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="435.2727272727273" 
+                    x="404.83333333333337" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -488,7 +488,7 @@
                   />
                   
                   <rect 
-                    x="435.2727272727273" 
+                    x="404.83333333333337" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -497,7 +497,7 @@
                   />
                   
                   <rect 
-                    x="435.2727272727273" 
+                    x="404.83333333333337" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -506,8 +506,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 460.2727272727273 520)" 
-                    x="460.2727272727273" 
+                    transform="rotate(-45 429.83333333333337 520)" 
+                    x="429.83333333333337" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -515,38 +515,38 @@
                   
                   
                     <text 
-                      x="460.2727272727273" 
+                      x="429.83333333333337" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="460.2727272727273" 
+                      x="429.83333333333337" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="460.2727272727273" 
+                      x="429.83333333333337" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="524.3636363636364" 
+                    x="486.50000000000006" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -555,7 +555,7 @@
                   />
                   
                   <rect 
-                    x="524.3636363636364" 
+                    x="486.50000000000006" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -564,7 +564,7 @@
                   />
                   
                   <rect 
-                    x="524.3636363636364" 
+                    x="486.50000000000006" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -573,8 +573,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 549.3636363636364 520)" 
-                    x="549.3636363636364" 
+                    transform="rotate(-45 511.50000000000006 520)" 
+                    x="511.50000000000006" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -582,38 +582,38 @@
                   
                   
                     <text 
-                      x="549.3636363636364" 
+                      x="511.50000000000006" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="549.3636363636364" 
+                      x="511.50000000000006" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="549.3636363636364" 
+                      x="511.50000000000006" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="613.4545454545454" 
+                    x="568.1666666666666" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -622,7 +622,7 @@
                   />
                   
                   <rect 
-                    x="613.4545454545454" 
+                    x="568.1666666666666" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -631,7 +631,7 @@
                   />
                   
                   <rect 
-                    x="613.4545454545454" 
+                    x="568.1666666666666" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -640,8 +640,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 638.4545454545454 520)" 
-                    x="638.4545454545454" 
+                    transform="rotate(-45 593.1666666666666 520)" 
+                    x="593.1666666666666" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -649,38 +649,38 @@
                   
                   
                     <text 
-                      x="638.4545454545454" 
+                      x="593.1666666666666" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="638.4545454545454" 
+                      x="593.1666666666666" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="638.4545454545454" 
+                      x="593.1666666666666" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="702.5454545454545" 
+                    x="649.8333333333334" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -689,7 +689,7 @@
                   />
                   
                   <rect 
-                    x="702.5454545454545" 
+                    x="649.8333333333334" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -698,7 +698,7 @@
                   />
                   
                   <rect 
-                    x="702.5454545454545" 
+                    x="649.8333333333334" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -707,8 +707,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 727.5454545454545 520)" 
-                    x="727.5454545454545" 
+                    transform="rotate(-45 674.8333333333334 520)" 
+                    x="674.8333333333334" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -716,38 +716,38 @@
                   
                   
                     <text 
-                      x="727.5454545454545" 
+                      x="674.8333333333334" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="727.5454545454545" 
+                      x="674.8333333333334" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="727.5454545454545" 
+                      x="674.8333333333334" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="791.6363636363636" 
+                    x="731.5" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -756,7 +756,7 @@
                   />
                   
                   <rect 
-                    x="791.6363636363636" 
+                    x="731.5" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -765,7 +765,7 @@
                   />
                   
                   <rect 
-                    x="791.6363636363636" 
+                    x="731.5" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -774,8 +774,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 816.6363636363636 520)" 
-                    x="816.6363636363636" 
+                    transform="rotate(-45 756.5 520)" 
+                    x="756.5" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -783,38 +783,38 @@
                   
                   
                     <text 
-                      x="816.6363636363636" 
+                      x="756.5" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="816.6363636363636" 
+                      x="756.5" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="816.6363636363636" 
+                      x="756.5" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="880.7272727272727" 
+                    x="813.1666666666666" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -823,7 +823,7 @@
                   />
                   
                   <rect 
-                    x="880.7272727272727" 
+                    x="813.1666666666666" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -832,7 +832,7 @@
                   />
                   
                   <rect 
-                    x="880.7272727272727" 
+                    x="813.1666666666666" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -841,8 +841,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 905.7272727272727 520)" 
-                    x="905.7272727272727" 
+                    transform="rotate(-45 838.1666666666666 520)" 
+                    x="838.1666666666666" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -850,38 +850,38 @@
                   
                   
                     <text 
-                      x="905.7272727272727" 
+                      x="838.1666666666666" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="905.7272727272727" 
+                      x="838.1666666666666" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="905.7272727272727" 
+                      x="838.1666666666666" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                 </g>
               
                 <g>
                   <rect 
-                    x="969.8181818181819" 
+                    x="894.8333333333334" 
                     y="350" 
                     width="50" 
                     height="150" 
@@ -890,7 +890,7 @@
                   />
                   
                   <rect 
-                    x="969.8181818181819" 
+                    x="894.8333333333334" 
                     y="200" 
                     width="50" 
                     height="150" 
@@ -899,7 +899,7 @@
                   />
                   
                   <rect 
-                    x="969.8181818181819" 
+                    x="894.8333333333334" 
                     y="50" 
                     width="50" 
                     height="150" 
@@ -908,8 +908,8 @@
                   />
                   
                   <text 
-                    transform="rotate(-45 994.8181818181819 520)" 
-                    x="994.8181818181819" 
+                    transform="rotate(-45 919.8333333333334 520)" 
+                    x="919.8333333333334" 
                     y="520" 
                     text-anchor="end" 
                     class="axis"
@@ -917,32 +917,99 @@
                   
                   
                     <text 
-                      x="994.8181818181819" 
+                      x="919.8333333333334" 
                       y="425" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="994.8181818181819" 
+                      x="919.8333333333334" 
                       y="275" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
                   
                   
                   
                     <text 
-                      x="994.8181818181819" 
+                      x="919.8333333333334" 
                       y="125" 
                       text-anchor="middle" 
                       class="value"
                       fill="white"
-                    >1</text>
+                    >2</text>
+                  
+                </g>
+              
+                <g>
+                  <rect 
+                    x="976.5" 
+                    y="350" 
+                    width="50" 
+                    height="150" 
+                    fill="#ef4444"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="976.5" 
+                    y="200" 
+                    width="50" 
+                    height="150" 
+                    fill="#f59e0b"
+                    rx="4"
+                  />
+                  
+                  <rect 
+                    x="976.5" 
+                    y="50" 
+                    width="50" 
+                    height="150" 
+                    fill="#22c55e"
+                    rx="4"
+                  />
+                  
+                  <text 
+                    transform="rotate(-45 1001.5 520)" 
+                    x="1001.5" 
+                    y="520" 
+                    text-anchor="end" 
+                    class="axis"
+                  >dom. 01/12</text>
+                  
+                  
+                    <text 
+                      x="1001.5" 
+                      y="425" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
+                  
+                  
+                  
+                    <text 
+                      x="1001.5" 
+                      y="275" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
+                  
+                  
+                  
+                    <text 
+                      x="1001.5" 
+                      y="125" 
+                      text-anchor="middle" 
+                      class="value"
+                      fill="white"
+                    >2</text>
                   
                 </g>
               
@@ -981,13 +1048,13 @@
             
             <text x="0" y="90" class="value">
               Período: 20/11/2024 - 
-              30/11/2024
+              31/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Tasks: 3
+              Total de Tasks: 6
             </text>
             <text x="0" y="130" class="value">
-              Total de Sprints: 1
+              Total de Sprints: 2
             </text>
           </g>
         </svg>

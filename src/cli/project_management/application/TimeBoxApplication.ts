@@ -27,6 +27,7 @@ export class TimeBoxApplication extends AbstractApplication {
             description: sprint.description ?? "",
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
+            status: sprint.status ?? "PLANNED",
             sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
                                 
                 id: item.backlogItem?.$refNode?.text.toLocaleLowerCase(),                

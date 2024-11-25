@@ -2,6 +2,8 @@ import { Model} from "../../../../language/generated/ast.js"
 import { createPath} from '../../../generator-utils.js'
 import fs from "fs";
 import path from "path";
+import { readdirSync } from 'fs';
+
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
@@ -33,12 +35,24 @@ export class MarkdownTimeBoxService {
     public async create(){
 
         const timeBoxes = await this.retrive(this.jsonFile);
-
-
-
+        
         timeBoxes.forEach (timebox  =>{
+            const fileName = `/${timebox.id}.md`            
+            const filePath = path.join(this.TIMEBOX_PATH, fileName)
+            const exist = this.fileContainsName(this.TIMEBOX_PATH, fileName)
             
-            fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
+            if (!exist){
+                fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))
+                     
+            }
+            if (exist && timebox.status != 'CLOSED'){
+                fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))                        
+                
+            }
+
+            if (!exist && timebox.status == 'CLOSED'){
+                fs.writeFileSync(filePath, this.createTimeBoxExport(timebox))                        
+            }
             
             // Gerar o CFD
             const generatorx = new CumulativeFlowDiagram(timebox,this.TIMEBOX_CHARTS_PATH+`/cfd-${timebox.id}.svg`);
@@ -46,22 +60,31 @@ export class MarkdownTimeBoxService {
         } );
                 
     }
-
+    private  fileContainsName(directory: string, partialName: string): boolean {
+        try {
+            const files = readdirSync(directory); // Lista todos os arquivos no diretório
+            return files.some(file => file.includes(partialName)); // Verifica se algum arquivo contém o nome parcial
+        } catch (error) {
+            console.error(`Erro ao acessar o diretório: ${error}`);
+            return false;
+        }
+    }
     private createTimeBoxExport(timeBox: TimeBox ):string {
 
-
-     // Gerar simulação
-      const monteCarlo = new SprintMonteCarlo(timeBox,10000);
-      const monteCarloAnalysis = monteCarlo.generateMarkdownReport();
-
+       let monteCarloAnalysis = ""
+       if (timeBox.status == "IN_PROGRESS"){
+          const monteCarlo = new SprintMonteCarlo(timeBox,10000);
+          monteCarloAnalysis = monteCarlo.generateMarkdownReport();
+       }
+      
       const analyzer = new ProjectDependencyAnalyzer(timeBox);
       const dependencyAnalysis = analyzer.generateAnalysis();
 
         return expandToStringWithNL`
-        ---
-        title: "${timeBox.name.toLocaleUpperCase()}"
-        sidebar_position: ${timeBox.id}
-        ---
+        
+        # ${timeBox.name.toLocaleUpperCase()}
+        ${timeBox.description}
+
         ## Dados do Sprint
         * **Goal**:  ${timeBox.description}
         * **Data Início**: ${timeBox.startDate}
@@ -78,7 +101,7 @@ export class MarkdownTimeBoxService {
        
         ## Cumulative Flow
         ![ Cumulative Flow](./charts/cfd-${timeBox.id}.svg)
-
+        
         ${monteCarloAnalysis}
         `
     }
