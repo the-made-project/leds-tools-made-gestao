@@ -1,7 +1,8 @@
 project  {
     name: "Modulo de Autentication, Autorization e Accounting"
     description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
-    startDate: 22/22/2022
+    startDate: 22/11/2022
+    dueDate: 30/11/2022
 }
 
 team blackops {
@@ -12,6 +13,25 @@ team blackops {
     teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
   
   
+}
+
+roadmap projeto {
+    name: "Rodmap do projeto"
+    description: "Roadmap de todo do projeto"
+    milestone beta {
+        name: "Primeira versão"
+        description: "Contem apenas estudo das tecnologias do projeto"
+        startDate: 20/11/2024        
+        dueDate: 30/11/2024
+        status: IN_PROGRESS
+        release beta {
+            description: "Estudo para entender as tecnologias"
+            item : Spike.epic1
+            status: IN_DEVELOPMENT
+            dueDate: 30/11/2024
+            version: "1.0"
+        }
+    }
 }
 
 backlog Spike {

@@ -44,10 +44,18 @@ export class MarkdownService {
 
     private createMainDocument():string{
         return expandToStringWithNL`
-        # Documentation Overview
+        # Visão da Gestão do Projeto ${this.model.project.name}
+        
+        ${this.model.project.description}
+
+        |Data de Inicío|Data Planejeada para Entrega|Data da Entrega Real|
+        |:-------------:|:--------------------------:|:------------:|
+        |${this.model.project.startDate}|${this.model.project.duedate ?? "-"}|${this.model.project.completedDate ?? "-"}|
+
+        As informaçõs do projeto foram organizadas como segue:
     
-        1. [Process](./process/README.md): Describes the processes used to build the solution.
-        2. [Management](./management/README.md): Presents the Team, Project Management, Backlog and TimeBox used to build the solution.    
+        1. [Process](./process/README.md): Descreve os processos utilizados para implementar a solução
+        2. [Management](./management/README.md): Apresenta informações sobre a equipe, backlog e outros dados importante para a construção da solução.
     
         `
     }
