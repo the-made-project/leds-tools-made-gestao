@@ -49,28 +49,41 @@ export class CumulativeFlowDiagram {
       while (currentDate <= endDate) {
         const weekDay = currentDate.toLocaleDateString('pt-BR', { weekday: 'short' });
         const formattedDate = this.formatDate(currentDate);
-        const issuesUntilDay = this.data.sprintItems.filter(issue => {
-          if (!issue.startDate) return false;
-          const issueStartDate = this.parseBrazilianDate(issue.startDate);
-          return issueStartDate <= currentDate;
+
+        // Calcula as issues em cada estado para o dia atual
+        const issueStates = this.data.sprintItems.map(issue => {
+          // Se não tem data de início, está em TODO
+          if (!issue.startDate) return 'todo';
+
+          const startDate = this.parseBrazilianDate(issue.startDate);
+          
+          // Se a data de início é futura em relação à data atual, está em TODO
+          if (startDate > currentDate) return 'todo';
+          
+          // Se tem data de conclusão e já foi concluída até a data atual, está DONE
+          if (issue.completedDate) {
+            const completedDate = this.parseBrazilianDate(issue.completedDate);
+            if (completedDate <= currentDate) return 'done';
+          }
+          
+          // Se já começou mas não foi concluída ou a conclusão é futura, está IN_PROGRESS
+          if (startDate <= currentDate) return 'inProgress';
+          
+          // Caso padrão (não deveria ocorrer com a lógica acima)
+          return 'todo';
         });
+
+        // Conta o número de issues em cada estado
+        const statusCounts = {
+          todo: issueStates.filter(state => state === 'todo').length,
+          inProgress: issueStates.filter(state => state === 'inProgress').length,
+          done: issueStates.filter(state => state === 'done').length
+        };
 
         days.push({
           day: `${weekDay} ${formattedDate}`,
           date: new Date(currentDate),
-          todo: issuesUntilDay.filter(issue => 
-            issue.status === "TODO" || 
-            issue.status === "A Fazer"
-          ).length,
-          inProgress: issuesUntilDay.filter(issue => 
-            issue.status === "IN_PROGRESS" || 
-            issue.status === "DOING" || 
-            issue.status === "Em Andamento"
-          ).length,
-          done: issuesUntilDay.filter(issue => 
-            issue.status === "DONE" || 
-            issue.status === "Concluído"
-          ).length
+          ...statusCounts
         });
 
         currentDate.setDate(currentDate.getDate() + 1);
@@ -109,7 +122,7 @@ export class CumulativeFlowDiagram {
 
       const xScale = (date: Date) => {
         const startDate = this.parseBrazilianDate(this.data.startDate);
-        const totalDays = Math.max(1, dailyData.length - 1); // Evita divisão por zero
+        const totalDays = Math.max(1, dailyData.length - 1);
         const dayIndex = Math.floor((date.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
         return margin.left + (dayIndex * (chartWidth / totalDays));
       };
@@ -205,7 +218,6 @@ export class CumulativeFlowDiagram {
           />
 
           ${dailyData.map((d, i) => {
-            // Mostra mais labels para períodos curtos
             if (dailyData.length <= 14 || i % 2 === 0) {
               const x = xScale(d.date);
               return `

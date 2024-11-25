@@ -6,7 +6,6 @@ import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { expandToStringWithNL } from "langium/generate";
 import { IssuesDTO, TimeBox} from '../../../model/models.js'
-import { ThroughputGenerator } from './chart/sprint/Throughput.js';
 import { CumulativeFlowDiagram } from './chart/sprint/CumulativeFlowDiagram.js';
 import { SprintMonteCarlo } from "./chart/sprint/MonteCarlo.js";
 import { ProjectDependencyAnalyzer } from "./chart/sprint/ProjectDependencyAnalyzer.js";
@@ -41,9 +40,6 @@ export class MarkdownTimeBoxService {
             
             fs.writeFileSync(path.join(this.TIMEBOX_PATH, `/${timebox.id}.md`), this.createTimeBoxExport(timebox))
             
-            const generator = new ThroughputGenerator(timebox,this.TIMEBOX_CHARTS_PATH+`/throughput-${timebox.id}.svg`);
-            generator.generate();
-                        
             // Gerar o CFD
             const generatorx = new CumulativeFlowDiagram(timebox,this.TIMEBOX_CHARTS_PATH+`/cfd-${timebox.id}.svg`);
             generatorx.generate();   
@@ -79,10 +75,8 @@ export class MarkdownTimeBoxService {
       
         ${dependencyAnalysis}
         
-        ## Gráficos
-        ### Throughput
-        ![Throughput](./charts/throughput-${timeBox.id}.svg)
-        ### Cumulative Flow
+       
+        ## Cumulative Flow
         ![ Cumulative Flow](./charts/cfd-${timeBox.id}.svg)
 
         ${monteCarloAnalysis}

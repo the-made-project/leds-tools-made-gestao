@@ -212,27 +212,27 @@
               <g>
                 <rect 
                   x="78.9090909090909" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="78.9090909090909" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="78.9090909090909" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -246,43 +246,50 @@
                 >qua. 20/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="103.9090909090909" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="103.9090909090909" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="168" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="168" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="168" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -296,43 +303,50 @@
                 >qui. 21/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="193" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="193" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="257.0909090909091" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="257.0909090909091" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="257.0909090909091" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -346,43 +360,50 @@
                 >sex. 22/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="282.0909090909091" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="282.0909090909091" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="346.1818181818182" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="346.1818181818182" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="346.1818181818182" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -396,43 +417,50 @@
                 >sáb. 23/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="371.1818181818182" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="371.1818181818182" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="435.2727272727273" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="435.2727272727273" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="435.2727272727273" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -446,43 +474,50 @@
                 >dom. 24/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="460.2727272727273" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="460.2727272727273" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="524.3636363636364" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="524.3636363636364" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="524.3636363636364" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -496,43 +531,50 @@
                 >seg. 25/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="549.3636363636364" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="549.3636363636364" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="613.4545454545454" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="613.4545454545454" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="613.4545454545454" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -546,43 +588,50 @@
                 >ter. 26/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="638.4545454545454" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="638.4545454545454" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="702.5454545454545" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="702.5454545454545" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="702.5454545454545" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -596,43 +645,50 @@
                 >qua. 27/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="727.5454545454545" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="727.5454545454545" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="791.6363636363636" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="791.6363636363636" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="791.6363636363636" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -646,43 +702,50 @@
                 >qui. 28/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="816.6363636363636" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="816.6363636363636" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="880.7272727272727" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="880.7272727272727" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="880.7272727272727" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -696,43 +759,50 @@
                 >sex. 29/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="905.7272727272727" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="905.7272727272727" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             
               <g>
                 <rect 
                   x="969.8181818181819" 
-                  y="50" 
+                  y="500" 
                   width="50" 
-                  height="450" 
+                  height="0" 
                   fill="#ef4444"
                   rx="4"
                 />
                 
                 <rect 
                   x="969.8181818181819" 
-                  y="50" 
+                  y="350" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#f59e0b"
                   rx="4"
                 />
                 
                 <rect 
                   x="969.8181818181819" 
-                  y="50" 
+                  y="200" 
                   width="50" 
-                  height="0" 
+                  height="150" 
                   fill="#22c55e"
                   rx="4"
                 />
@@ -746,16 +816,23 @@
                 >sáb. 30/11</text>
                 
                 
+                
+                
+                  <text 
+                    x="994.8181818181819" 
+                    y="425" 
+                    text-anchor="middle" 
+                    class="value"
+                  >1</text>
+                
+                
+                
                   <text 
                     x="994.8181818181819" 
                     y="275" 
                     text-anchor="middle" 
                     class="value"
-                  >3</text>
-                
-                
-                
-                
+                  >1</text>
                 
               </g>
             

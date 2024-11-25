@@ -52,9 +52,9 @@ sprint estudo {
     endDate: 30/11/2024
     
     sprintbacklog estudo {
-        item Spike.epic1.story1.estudar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024}
-        item Spike.epic1.story1.apresentar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024}         
-        item Spike.epic1.story2.apresentar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024}         
+        item Spike.epic1.story1.estudar {assignee: blackops.joaomarcos  dueDate: 30/11/2024 status: TODO}
+        item Spike.epic1.story1.apresentar {assignee: blackops.joaomarcos startDate: 20/11/2024 completedDate:26/11/2024 dueDate: 30/11/2024 status: DONE}         
+        item Spike.epic1.story2.apresentar {assignee: blackops.joaomarcos startDate: 20/11/2024 dueDate: 30/11/2024 status: DOING}         
     }
     
 }

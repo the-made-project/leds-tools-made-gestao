@@ -224,9 +224,8 @@ export class SprintMonteCarlo {
         );
       }
 
-      let markdown = `# Relatório de Previsão da Sprint baseado no Método de Monte Carlo\n\n`;
-      markdown += `## 🎯 Conclusão Principal\n\n`;
-      markdown += `### ${this.getCompletionStatus(onTimeProb)}\n\n`;
+      let markdown = `# Previsão da Sprint\n\n`;      
+      markdown += `## ${this.getCompletionStatus(onTimeProb)}\n\n`;
 
       markdown += `- **Probabilidade de conclusão no prazo**: ${onTimeProb.toFixed(1)}%\n`;
       markdown += `- **Data mais provável de conclusão**: ${this.formatDate(mostLikelyDate.date)}\n`;

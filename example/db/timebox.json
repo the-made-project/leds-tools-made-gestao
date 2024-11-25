@@ -21,7 +21,6 @@
             "type": "taskbacklog",
             "depends": []
           },
-          "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
           "status": "TODO"
         },
@@ -48,7 +47,8 @@
           },
           "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
-          "status": "TODO"
+          "completedDate": "26/11/2024",
+          "status": "DONE"
         },
         {
           "id": "spike.epic1.story2.apresentar",
@@ -73,7 +73,7 @@
           },
           "startDate": "20/11/2024",
           "dueDate": "30/11/2024",
-          "status": "TODO"
+          "status": "DOING"
         }
       ]
     }

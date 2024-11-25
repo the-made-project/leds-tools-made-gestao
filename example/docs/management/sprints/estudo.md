@@ -11,13 +11,13 @@ sidebar_position: estudo
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|spike.epic1.story1.estudar|Estudar sobre OPA|João Marcos |20/11/2024|30/11/2024|TODO|
-|spike.epic1.story1.apresentar|Apresentar o estudo OPA|João Marcos |20/11/2024|30/11/2024|TODO|
-|spike.epic1.story2.apresentar|Apresentar o estudo OpenFGA|João Marcos |20/11/2024|30/11/2024|TODO|
+|spike.epic1.story1.estudar|Estudar sobre OPA|João Marcos ||30/11/2024|TODO|
+|spike.epic1.story1.apresentar|Apresentar o estudo OPA|João Marcos |20/11/2024|30/11/2024|DONE|
+|spike.epic1.story2.apresentar|Apresentar o estudo OpenFGA|João Marcos |20/11/2024|30/11/2024|DOING|
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 24/11/2024, 21:05:52
+Análise gerada em: 24/11/2024, 21:29:09
 
 ## 🔍 Grafo de Dependências
 
@@ -28,8 +28,8 @@ graph BT
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;
     spike.epic1.story2.estudar["🔍 spike.epic1.story2.estudar<br>⚠️ Dependência Externa"]:::external
     spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar sobre OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Apresentar o estudo OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
+    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: DONE<br>👤 Responsável: João Marcos "]:::done
+    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Apresentar o estudo OpenFGA<br>📊 Estado: DOING<br>👤 Responsável: João Marcos "]:::sprint
     spike.epic1.story1.apresentar -.-> spike.epic1.story2.estudar
     spike.epic1.story1.apresentar --> spike.epic1.story1.estudar
     spike.epic1.story2.apresentar -.-> spike.epic1.story2.estudar
@@ -48,8 +48,8 @@ graph BT
 | # | Issue | Título | Status | Responsável | Dependências |
 |---|-------|--------|--------|-------------|---------------|
 | 1 | spike.epic1.story1.estudar | Estudar sobre OPA | TODO | João Marcos  | 🆓 |
-| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
-| 3 | spike.epic1.story2.apresentar | Apresentar o estudo OpenFGA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
+| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | DONE | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
+| 3 | spike.epic1.story2.apresentar | Apresentar o estudo OpenFGA | DOING | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar |
 
 **Legenda das Dependências:**
 - 🆓 Sem dependências
@@ -57,21 +57,17 @@ graph BT
 - ⚠️ Dependência externa ao sprint
 
 
-## Gráficos
-### Throughput
-![Throughput](./charts/throughput-estudo.svg)
-### Cumulative Flow
+
+## Cumulative Flow
 ![ Cumulative Flow](./charts/cfd-estudo.svg)
 
-# Relatório de Previsão da Sprint baseado no Método de Monte Carlo
+# Previsão da Sprint
 
-## 🎯 Conclusão Principal
-
-### ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
+## ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: qui., 28/11/2024
-- **Dias em relação ao planejado**: -1 dias
+- **Data mais provável de conclusão**: qua., 27/11/2024
+- **Dias em relação ao planejado**: -2 dias
 - **Status**: ✅ Antes do Prazo
 
 ### 📊 Métricas Críticas
@@ -79,23 +75,23 @@ graph BT
 | Métrica | Valor | Status |
 |---------|--------|--------|
 | Velocidade Atual | 1.0 tarefas/dia | ✅ |
-| Velocidade Necessária | 0.5 tarefas/dia | - |
+| Velocidade Necessária | 0.3 tarefas/dia | - |
 | Dias Restantes | 6 dias | - |
-| Tarefas Restantes | 3 tarefas | - |
+| Tarefas Restantes | 2 tarefas | - |
 
 ### 📅 Previsões de Data de Conclusão
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| qui., 28/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
+| qua., 27/11/2024 | 100.0% | ✅ Antes do Prazo | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
 | Status | Quantidade | Porcentagem |
 |--------|------------|-------------|
-| Concluído | 0 | 0.0% |
-| Em Andamento | 0 | 0.0% |
-| A Fazer | 3 | 100.0% |
+| Concluído | 1 | 33.3% |
+| Em Andamento | 1 | 33.3% |
+| A Fazer | 1 | 33.3% |
 
 ## 💡 Recomendações
 
@@ -112,4 +108,4 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 24/11/2024, 21:05:52*
+*Relatório gerado em 24/11/2024, 21:29:09*
