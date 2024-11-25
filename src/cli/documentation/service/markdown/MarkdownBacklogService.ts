@@ -39,16 +39,15 @@ export class MarkdownBacklogService {
         
         const converter = new BacklogMarkdownConverter();
         const markdown = converter.convertBacklogsToMarkdown(backlogs);
-        const outputDirBacklolg = path.join(this.TIMEBOX_PATH, 'backlogs.md');
+        const outputDirBacklolg = path.join(this.TIMEBOX_PATH, 'readme.md');
 
         fs.writeFileSync(outputDirBacklolg, markdown, 'utf8');
 
         this.sprintData = await this.retrive(this.jsonTimeBox); 
-        const generator = new ProjectMetricsGenerator(this.sprintData);
-        const outputDir = path.join(this.MANAGEMENT_PATH, 'project');
+        const generator = new ProjectMetricsGenerator(this.sprintData);        
   
         try {
-            await generator.generateFiles(outputDir);
+            await generator.generateFiles(this.MANAGEMENT_PATH);
            
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);

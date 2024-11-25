@@ -17,7 +17,7 @@ sidebar_position: estudo
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 25/11/2024, 08:23:06
+Análise gerada em: 25/11/2024, 10:01:31
 
 ## 🔍 Grafo de Dependências
 
@@ -108,4 +108,4 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 25/11/2024, 08:23:06*
+*Relatório gerado em 25/11/2024, 10:01:31*
