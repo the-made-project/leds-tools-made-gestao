@@ -14,8 +14,7 @@ export class MarkdownBacklogService {
 
     model: Model
     target_folder:string
-    MANAGEMENT_PATH :string
-    TIMEBOX_PATH :string
+    MANAGEMENT_PATH :string    
     jsonTimeBox: string
     jsonFileBacklog:string
     DB_PATH: string
@@ -24,8 +23,7 @@ export class MarkdownBacklogService {
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
         this.target_folder = target_folder
-        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
-        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'backlogs')
+        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
         this.jsonTimeBox = "timebox.json"
         this.jsonFileBacklog = "backlog.json"
         this.DB_PATH = db_path
@@ -39,7 +37,7 @@ export class MarkdownBacklogService {
         
         const converter = new BacklogMarkdownConverter();
         const markdown = converter.convertBacklogsToMarkdown(backlogs);
-        const outputDirBacklolg = path.join(this.TIMEBOX_PATH, 'readme.md');
+        const outputDirBacklolg = path.join(this.MANAGEMENT_PATH, '02_backlogs.md');
 
         fs.writeFileSync(outputDirBacklolg, markdown, 'utf8');
 

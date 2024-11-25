@@ -182,7 +182,7 @@ export class ProjectMetricsGenerator {
 
   private generateMarkdownReport(): string {
 
-    let markdown = '# Resumo do Projeto \n\n' 
+    let markdown = '# 📊 Visão Geral do Projeto \n\n' 
     
     // Adiciona a tabela de métricas
     markdown += this.generateSummaryTable() + '\n';
@@ -238,7 +238,7 @@ export class ProjectMetricsGenerator {
 
       // Gerar markdown com referência ao SVG
       const markdown = this.generateMarkdownReport();
-      const markdownPath = path.join(outputDir, 'readme.md');
+      const markdownPath = path.join(outputDir, '01_overview.md');
       await fs.promises.writeFile(markdownPath, markdown, 'utf-8');
 
       

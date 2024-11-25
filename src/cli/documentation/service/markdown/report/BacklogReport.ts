@@ -57,7 +57,7 @@ export class BacklogMarkdownConverter {
     }
 
     public convertBacklogsToMarkdown(backlogs: Backlog[]): string {
-        let markdown = '# Visão Geral dos Backlogs\n\n';
+        let markdown = '# 📋 Backlogs\n\n';
         
         const headers = [
             'ID',            

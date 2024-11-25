@@ -163,7 +163,7 @@ ${timelineItems.map(item =>
   }
 
   public generateReport(): string {
-    let report = '# 📋  Roadmaps\n\n';
+    let report = '# 🎯 Roadmaps\n\n';
 
     this.roadmaps.forEach(roadmap => {
       report += `# ${roadmap.name || 'Roadmap sem nome'}\n\n`;

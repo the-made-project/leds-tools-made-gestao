@@ -12,16 +12,14 @@ export class MardownRoadmapService {
 
     model: Model
     target_folder:string
-    MANAGEMENT_PATH :string
-    ROADMAP_PATH :string
+    MANAGEMENT_PATH :string    
     jsonFile: string
     DB_PATH: string
     
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
         this.target_folder = target_folder
-        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
-        this.ROADMAP_PATH = createPath(this.MANAGEMENT_PATH,'roadmap')
+        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
         this.jsonFile = "roadmap.json"
         this.DB_PATH = db_path
     }
@@ -32,7 +30,7 @@ export class MardownRoadmapService {
  
         const generator = new RoadmapReportGenerator(roadmap);
        
-        fs.writeFileSync(path.join(this.ROADMAP_PATH, `/readme.md`),  generator.generateReport())
+        fs.writeFileSync(path.join(this.MANAGEMENT_PATH, `/03_roadmap.md`),  generator.generateReport())
                         
     }
 

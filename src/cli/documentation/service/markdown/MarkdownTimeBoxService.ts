@@ -31,11 +31,42 @@ export class MarkdownTimeBoxService {
         this.jsonFile = "timebox.json"
         this.DB_PATH = db_path
     }
+    private async createCategory(){
+        return expandToStringWithNL`
+        {
+            "label": " 🚀 Sprints",
+            "position": 4,
+            "link": {
+                "type": "generated-index",
+                "description": "Documentos sobre os sprints."
+            }
+            }
+        `
+    }
 
+    private async createCategoryIndex(){
+        return expandToStringWithNL`
+      {
+        "label": "Gestão",
+        "position": 1,
+        "link": {
+            "type": "generated-index",
+            "description": "Documentos relativos ao planejamento."
+        }
+        }
+        `
+    }
     public async create(){
 
         const timeBoxes = await this.retrive(this.jsonFile);
         
+        const filePathCategory = path.join(this.TIMEBOX_PATH, "_category_.json")
+
+        const filePathCategoryxxx = path.join(this.MANAGEMENT_PATH, "_category_.json")
+
+        fs.writeFileSync(filePathCategory, await this.createCategory())
+        fs.writeFileSync(filePathCategoryxxx, await this.createCategoryIndex())
+
         timeBoxes.forEach (timebox  =>{
             const fileName = `/${timebox.id}.md`            
             const filePath = path.join(this.TIMEBOX_PATH, fileName)
@@ -89,7 +120,7 @@ export class MarkdownTimeBoxService {
         * **Goal**:  ${timeBox.description}
         * **Data Início**: ${timeBox.startDate}
         * **Data Fim**: ${timeBox.endDate}
-        
+        * **Status**: ${timeBox.status}
         ## Sprint Backlog
 
         |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|

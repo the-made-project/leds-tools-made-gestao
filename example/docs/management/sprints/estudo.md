@@ -16,7 +16,7 @@ Realizar estudos sobre autorizacao
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 25/11/2024, 11:16:03
+Análise gerada em: 25/11/2024, 13:01:28
 
 ## 🔍 Grafo de Dependências
 
@@ -100,4 +100,4 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 25/11/2024, 11:16:03*
+*Relatório gerado em 25/11/2024, 13:01:28*
