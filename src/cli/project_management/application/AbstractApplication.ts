@@ -173,6 +173,33 @@ export abstract class AbstractApplication {
    });
   }
 
+  protected async remove(issueId: string) {
+    await mutex.runExclusive(async () => {
+        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);    
+        const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
+        const defaultData: IssuesDTO = { data: [] };
+
+        const db = new LowSync<IssuesDTO>(adapter, defaultData);
+
+        await db.read();
+        db.data ||= defaultData;
+        
+        if (db.data?.data) {
+            // Encontra o índice do item a ser removido
+            const itemIndex = db.data.data.findIndex(item => item.id === issueId);
+            
+            // Se encontrou o item, remove-o do array
+            if (itemIndex !== -1) {
+                db.data.data.splice(itemIndex, 1);
+                await db.write();
+                return true;
+            }
+            return false;
+        }
+        return false;
+    });
+}
+
   protected async update(issueId: string, newData: Partial<any>) {
     await mutex.runExclusive(async () => {
         const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
@@ -195,6 +222,22 @@ export abstract class AbstractApplication {
         } 
     });
 }
+
+  protected async retriveAll(){
+      
+    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
+    
+    const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
+    const defaultData: IssuesDTO = { data: [] };
+
+    const db = new LowSync<IssuesDTO>(adapter, defaultData);
+    await db.read();
+    
+    return db.data.data.sort((a, b) => {
+        return Number(a.id) - Number(b.id);
+    }); 
+    
+  }  
 
    public async execute(data: any): Promise<boolean>{
     return false
