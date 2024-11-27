@@ -17,14 +17,22 @@ export abstract class AbstractApplication {
   DB_PATH: string  
   model: Model  
   jsonFile: string
-  
+  protected items: Map<string, any>;
 
   constructor(target_folder: string, model: Model ) {
         Util.mkdirSync(target_folder)
         this.model = model
         this.DB_PATH = createPath(target_folder, 'db')        
         this.jsonFile = "data.json"
+        this.items = new Map<string, any>();
   }
+
+ 
+
+protected async addItem (value:any){
+  const id = value.id.toLocaleLowerCase()
+  this.items.set(id, value)
+}
 
   protected async _idExists(id:string){
     
@@ -239,10 +247,20 @@ export abstract class AbstractApplication {
     
   }  
 
-   public async execute(data: any): Promise<boolean>{
-    return false
-
-   }
+  protected async clean(){
+    const issues = this.retriveAll();
+    (await issues).map (issue => {
+        const id = issue.id
+        const result =  this.items.has(id)
+        //Caso não existe o ID apagar
+        if (!result){
+            this.remove(issue.id)
+        }
+    })
+    // criar uma lista de issues com ID, usar uma hash para isso
+    // caso não existe ... remover
+    //depois é necessário remover os filhos de um arvore, US que nao existem mais de uma EPIC, e task qeu nao existem mais em um US ou epic
+}
   
  
 }

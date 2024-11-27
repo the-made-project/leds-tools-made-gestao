@@ -53,9 +53,10 @@ export  class RoadmapApplication extends AbstractApplication {
                 })as Milestone) 
             )
         };
-
+        await this.addItem(instance)
         await this.saveorUpdate(instance);
     }));
+        await  this.clean()
     }
 
     private async createIssues(items: any[]): Promise<Issue[]> {

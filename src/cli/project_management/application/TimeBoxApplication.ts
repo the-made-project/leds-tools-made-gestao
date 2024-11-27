@@ -19,7 +19,7 @@ export class TimeBoxApplication extends AbstractApplication {
         
        const sprints = this.model.components.filter(isTimeBox)
 
-       sprints.map (sprint => {
+       sprints.map (async sprint => {
 
         const instance: TimeBox = {
             id: sprint.id,
@@ -56,7 +56,9 @@ export class TimeBoxApplication extends AbstractApplication {
 
         }
         this.saveorUpdate(instance)
+        await this.addItem(instance)
        })
+       await  this.clean()
            
     }
 

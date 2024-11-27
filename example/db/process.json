@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": "CriarModelosInfraestrutura",
+      "name": "Processo de Criação de Modelos de Dominio e Infraestrutura",
+      "description": "Processo executado para implementar o modelo de dominio e infraestrutura seguindo Clean Architecture",
+      "activities": [
+        {
+          "id": "CriarModeloDominio",
+          "name": "Criar Modelo de Dominio",
+          "description": "Criar o Modelo de Dominio",
+          "tasks": [
+            {
+              "id": "criarModelo",
+              "name": "Implementar o Dominio do Problema",
+              "description": "Criar as classes de dominio do modulo"
+            },
+            {
+              "id": "criarInfraestrutura",
+              "name": "Implementar a Infraestutura do Dominio do Problema",
+              "description": "Implementar Repositorios para cada Entidade do Modelo"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

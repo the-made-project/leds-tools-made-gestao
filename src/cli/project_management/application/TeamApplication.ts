@@ -17,7 +17,7 @@ export class TeamApplication extends AbstractApplication {
 
 
 
-        teams.map(team => {
+        teams.map(async team => {
 
             const instance: Partial<Team> = {
 
@@ -30,14 +30,15 @@ export class TeamApplication extends AbstractApplication {
                     email: teammember.email ?? "",
                   } as Person)) ?? [] 
             }
-            
-            this.saveorUpdate(instance)
+            await this.addItem(instance)
+            await this.saveorUpdate(instance)
             
         })
+        await  this.clean()
 
     }
 
-    
+   
     
 
     

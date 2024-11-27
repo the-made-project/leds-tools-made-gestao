@@ -26,9 +26,12 @@ export  class BacklogApplication extends AbstractApplication {
          }
 
          await this.saveorUpdate (instance)
+         await this.addItem(backlog)
        })
-
+       await  this.clean()
     }
+
+ 
 
     
 
