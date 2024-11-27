@@ -6,10 +6,9 @@ import { ApplicationManager } from './project_management/application/Application
 export async function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): Promise<string> {
     const final_destination = extractDestination(filePath, destination)
     
-    if (opts.only_project_documentation){
-        const appManager = new ApplicationManager(final_destination, model);
-        await appManager.initializeApplications();
-    }
+    const appManager = new ApplicationManager(final_destination, model);
+    await appManager.initializeApplications();
+    
     
     return final_destination;
 }
