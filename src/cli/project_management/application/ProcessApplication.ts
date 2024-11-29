@@ -44,7 +44,8 @@ export  class ProcessApplication extends AbstractApplication {
             id: activity.id ?? "",  
             name: activity.name ?? "",
             description: activity.description ?? "",             
-            tasks:  await Promise.all(activity.tasks.map (async task => await this.createTask(task)) ?? [])
+            tasks:  await Promise.all(activity.tasks.map (async task => await this.createTask(task)) ?? []) 
+            //depends: await Promise.all(activity.depend)
         }
     }
 

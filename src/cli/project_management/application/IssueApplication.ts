@@ -20,12 +20,26 @@ export  class IssueApplication extends AbstractApplication {
         const tasks = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isTaskBacklog));
         
         epcis.map (async value => {
-            await this.createAndSave(value.$container.id.toLocaleLowerCase(), value)
+            if (!value.process){
+                await this.createAndSave(value.$container.id.toLocaleLowerCase(), value)
+                
+            }
+            else{
+                //epics que estão implementando processos
+
+            }
             await this.addItem(value)
+            
         })
 
         atomicUserStories.map (async value => {
-            await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
+            if (!value.activity){
+                await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
+            
+            }
+            else{
+                
+            }
             await this.addItem(value)
         })
 
@@ -33,6 +47,8 @@ export  class IssueApplication extends AbstractApplication {
             await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
             await this.addItem(value)
         })
+
+        // Falta Criar os EPICs, Stories e Tasks baseados. 
         
         await this.clean()
 
