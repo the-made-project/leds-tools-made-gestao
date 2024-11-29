@@ -11,10 +11,7 @@ export class TimeBoxApplication extends AbstractApplication {
         super(target_folder, model)       
         this.jsonFile = "timebox.json"
     }
-
     
-    
-
     public async create() {
         
        const sprints = this.model.components.filter(isTimeBox)

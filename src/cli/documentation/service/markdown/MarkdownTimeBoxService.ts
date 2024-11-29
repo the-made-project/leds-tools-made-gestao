@@ -16,7 +16,6 @@ export class MarkdownTimeBoxService {
 
     model: Model
     target_folder:string
-    MANAGEMENT_PATH :string
     TIMEBOX_PATH :string
     TIMEBOX_CHARTS_PATH :string
     jsonFile: string
@@ -25,8 +24,8 @@ export class MarkdownTimeBoxService {
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
         this.target_folder = target_folder
-        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
-        this.TIMEBOX_PATH = createPath(this.MANAGEMENT_PATH,'sprints')
+        //this.MANAGEMENT_PATH = createPath(this.target_folder,'management')
+        this.TIMEBOX_PATH = createPath(this.target_folder,'sprints')
         this.TIMEBOX_CHARTS_PATH = createPath(this.TIMEBOX_PATH,'charts')
         this.jsonFile = "timebox.json"
         this.DB_PATH = db_path
@@ -62,7 +61,7 @@ export class MarkdownTimeBoxService {
         
         const filePathCategory = path.join(this.TIMEBOX_PATH, "_category_.json")
 
-        const filePathCategoryxxx = path.join(this.MANAGEMENT_PATH, "_category_.json")
+        const filePathCategoryxxx = path.join(this.target_folder, "_category_.json")
 
         fs.writeFileSync(filePathCategory, await this.createCategory())
         fs.writeFileSync(filePathCategoryxxx, await this.createCategoryIndex())

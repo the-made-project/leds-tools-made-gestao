@@ -1,5 +1,5 @@
 import { Model} from "../../../../language/generated/ast.js"
-import { createPath} from '../../../generator-utils.js'
+//import { createPath} from '../../../generator-utils.js'
 import {IssuesDTO, Roadmap} from '../../../model/models.js'
 import path from "path";
 import { LowSync } from 'lowdb';
@@ -12,14 +12,14 @@ export class MardownRoadmapService {
 
     model: Model
     target_folder:string
-    MANAGEMENT_PATH :string    
+    //MANAGEMENT_PATH :string    
     jsonFile: string
     DB_PATH: string
     
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
         this.target_folder = target_folder
-        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
+        //this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
         this.jsonFile = "roadmap.json"
         this.DB_PATH = db_path
     }
@@ -30,7 +30,7 @@ export class MardownRoadmapService {
  
         const generator = new RoadmapReportGenerator(roadmap);
        
-        fs.writeFileSync(path.join(this.MANAGEMENT_PATH, `/03_roadmap.md`),  generator.generateReport())
+        fs.writeFileSync(path.join(this.target_folder, `/03_roadmap.md`),  generator.generateReport())
                         
     }
 

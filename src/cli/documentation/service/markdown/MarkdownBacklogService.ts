@@ -1,5 +1,4 @@
 import {  Model} from "../../../../language/generated/ast.js"
-import { createPath} from '../../../generator-utils.js'
 import fs from "fs";
 import path from "path";
 import { LowSync } from 'lowdb';
@@ -14,7 +13,7 @@ export class MarkdownBacklogService {
 
     model: Model
     target_folder:string
-    MANAGEMENT_PATH :string    
+    //MANAGEMENT_PATH :string    
     jsonTimeBox: string
     jsonFileBacklog:string
     DB_PATH: string
@@ -23,7 +22,7 @@ export class MarkdownBacklogService {
     constructor (model: Model, target_folder:string, db_path:string){
         this.model = model
         this.target_folder = target_folder
-        this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
+        //this.MANAGEMENT_PATH = createPath(this.target_folder,'management')        
         this.jsonTimeBox = "timebox.json"
         this.jsonFileBacklog = "backlog.json"
         this.DB_PATH = db_path
@@ -37,7 +36,7 @@ export class MarkdownBacklogService {
         
         const converter = new BacklogMarkdownConverter();
         const markdown = converter.convertBacklogsToMarkdown(backlogs);
-        const outputDirBacklolg = path.join(this.MANAGEMENT_PATH, '02_backlogs.md');
+        const outputDirBacklolg = path.join(this.target_folder, '02_backlogs.md');
 
         fs.writeFileSync(outputDirBacklolg, markdown, 'utf8');
 
@@ -45,7 +44,7 @@ export class MarkdownBacklogService {
         const generator = new ProjectMetricsGenerator(this.sprintData);        
   
         try {
-            await generator.generateFiles(this.MANAGEMENT_PATH, this.model);
+            await generator.generateFiles(this.target_folder, this.model);
            
         } catch (error) {
             console.error('Erro ao gerar relatórios:', error);

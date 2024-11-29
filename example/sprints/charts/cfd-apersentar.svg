@@ -28,7 +28,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -44,7 +44,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >2</text>
+              >3</text>
             
               <line 
                 x1="70" 
@@ -76,7 +76,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -92,7 +92,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -108,7 +108,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >1</text>
+              >2</text>
             
               <line 
                 x1="70" 
@@ -156,7 +156,7 @@
                 text-anchor="end" 
                 class="axis" 
                 dominant-baseline="middle"
-              >0</text>
+              >1</text>
             
               <line 
                 x1="70" 
@@ -192,17 +192,17 @@
             
 
           <path 
-            d="M70,50 L168,50 L266,50 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,50 L1050,50 L1050,500 L70,500 Z" 
             fill="#ef4444" 
             opacity="0.8"
           />
           <path 
-            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,200 L1050,200 L1050,500 L70,500 Z" 
             fill="#f59e0b" 
             opacity="0.8"
           />
           <path 
-            d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+            d="M70,350 L1050,350 L1050,500 L70,500 Z" 
             fill="#22c55e" 
             opacity="0.8"
           />
@@ -231,79 +231,7 @@
                   y="520"
                   text-anchor="end"
                   class="axis"
-                >qua. 20/11</text>
-              
-                <text 
-                  transform="rotate(-45 168 520)"
-                  x="168"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >qui. 21/11</text>
-              
-                <text 
-                  transform="rotate(-45 266 520)"
-                  x="266"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >sex. 22/11</text>
-              
-                <text 
-                  transform="rotate(-45 364 520)"
-                  x="364"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >sáb. 23/11</text>
-              
-                <text 
-                  transform="rotate(-45 462 520)"
-                  x="462"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >dom. 24/11</text>
-              
-                <text 
-                  transform="rotate(-45 560 520)"
-                  x="560"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >seg. 25/11</text>
-              
-                <text 
-                  transform="rotate(-45 658 520)"
-                  x="658"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >ter. 26/11</text>
-              
-                <text 
-                  transform="rotate(-45 756 520)"
-                  x="756"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >qua. 27/11</text>
-              
-                <text 
-                  transform="rotate(-45 854 520)"
-                  x="854"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >qui. 28/11</text>
-              
-                <text 
-                  transform="rotate(-45 952 520)"
-                  x="952"
-                  y="520"
-                  text-anchor="end"
-                  class="axis"
-                >sex. 29/11</text>
+                >sáb. 30/11</text>
               
                 <text 
                   transform="rotate(-45 1050 520)"
@@ -311,7 +239,7 @@
                   y="520"
                   text-anchor="end"
                   class="axis"
-                >sáb. 30/11</text>
+                >dom. 01/12</text>
               
 
           <text 
@@ -334,7 +262,7 @@
             y="30" 
             text-anchor="middle" 
             class="title"
-          >Estudar Autorizacao - Cumulative Flow Diagram</text>
+          >Apresentar Autorizacao - Cumulative Flow Diagram</text>
 
           <g transform="translate(1070, 50)">
             <rect width="15" height="15" fill="#ef4444" rx="2"/>
@@ -347,10 +275,10 @@
             <text x="25" y="62" class="legend">Concluído</text>
             
             <text x="0" y="90" class="value">
-              Período: 20/11/2024 - 30/11/2024
+              Período: 30/11/2024 - 31/11/2024
             </text>
             <text x="0" y="110" class="value">
-              Total de Issues: 2
+              Total de Issues: 3
             </text>
           </g>
         </svg>
