@@ -26,7 +26,7 @@ export  class IssueApplication extends AbstractApplication {
             }
             else{
                 //epics que estão implementando processos
-
+                value.process.ref?.activities
             }
             await this.addItem(value)
             

@@ -1,3 +1,13 @@
+export type Project = {
+  id: string;
+  name: string;
+  description?:string;
+  startDate: string;
+  dueDate: string;
+  completedDate?: string;
+}
+
+
 export type Backlog = {
   id: string;
   name: string

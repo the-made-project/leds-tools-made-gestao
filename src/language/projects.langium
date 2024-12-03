@@ -1,11 +1,12 @@
 import 'terminals'
 import 'helpers'
 Project:
-    'project' '{'
+    'project' id=ID '{'
     (   Name 
         | Description  
         | DueDate
         | StartDate
-        | CompletedDate)*
-    '}'
-    ;
+        | CompletedDate
+    )*
+'}'
+;

@@ -8,6 +8,7 @@ import { TimeBoxApplication } from "./TimeBoxApplication.js";
 import { MarkdownService } from '../../documentation/service/markdown/MarkdownService.js';
 import { RoadmapApplication } from './RoadmapApplication.js';
 import { ProcessApplication } from './ProcessApplication.js';
+import { ProjectApplication } from './ProjectApplication.js';
 
 
 interface InitializationStep {
@@ -30,6 +31,7 @@ export class ApplicationManager {
     roadmapApplication: RoadmapApplication
     processApplication: ProcessApplication
     markdownService: MarkdownService
+    projectApplication: ProjectApplication
     
 
     model: Model
@@ -56,7 +58,7 @@ export class ApplicationManager {
 
         this.processApplication = new ProcessApplication(target_folder,model)
 
-
+        this.projectApplication = new ProjectApplication(target_folder,model)
         // Define MADE Agile initialization steps
         this.initializationSteps = [
             {
@@ -70,6 +72,13 @@ export class ApplicationManager {
                 name: 'MADE Issues',
                 action: async () => await this.issueApplication.create(),
                 description: 'Configuring user stories and tasks manager',
+                startEmoji: '📋',
+                successEmoji: '✅'
+            },
+            {
+                name: 'MADE Project',
+                action: async () => await this.projectApplication.create(),
+                description: 'Configuring project',
                 startEmoji: '📋',
                 successEmoji: '✅'
             },
