@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": "blackops",
+      "name": "Rafael Emerick",
+      "description": "Equipe responsável por produzir artefatos de segurança",
+      "teammebers": [
+        {
+          "id": "rafaelemerick",
+          "name": "",
+          "email": ""
+        }
+      ]
+    }
+  ]
+}

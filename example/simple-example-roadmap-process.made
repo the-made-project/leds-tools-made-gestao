@@ -8,9 +8,9 @@ project  {
 team blackops {
     name: "Team Black Ops"
     description: "Equipe responsável por produzir artefatos de segurança"
-    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael.emerick@blackops.com.br"}
-    teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br"}
-    teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
+    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael.emerick@blackops.com.br" discord: "x"}
+    teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br" discord: "x"}
+    teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br" discord: "x"}
   
   
 }
@@ -91,6 +91,8 @@ backlog Spike {
 backlog Spike3 {
    name: "Backlog de Estudo"
    description: "Backlog dedicado a estudo da equipe"
+
+   epic x { name: "xxx" process: CriarModelosInfraestrutura}
    
    epic epic1 {
     name: "Estudar sobre Autorização"
