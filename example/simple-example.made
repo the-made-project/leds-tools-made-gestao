@@ -7,10 +7,8 @@ project test {
 team blackops {
     name: "Team Black Ops"
     description: "Equipe responsável por produzir artefatos de segurança"
-    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael.emerick@blackops.com.br"}
-    teammember joaomarcos {name: "João Marcos " email: "joao.marcos@blackops.com.br"}
-    teammember Arthur {name: "Arthur Cremasco" email: "arthur.cremasco@blackops.com.br"}
-  
+    teammember rafaelemerick {name: "Rafael Emerick" email: "xxxx" discord : "xxx"}
+    teammember xxxx {name: "Rafael Emerick" }
   
 }
 
@@ -72,8 +70,8 @@ sprint estudo {
     status: IN_PROGRESS
 
     sprintbacklog estudo {
-        item Spike.epic1.story1.estudar {assignee: blackops.joaomarcos  dueDate: 30/11/2024 status: TODO}
-        item Spike.epic1.story2.estudar {assignee: blackops.joaomarcos  dueDate: 30/11/2024 status: TODO}
+        item Spike.epic1.story1.estudar {assignee: blackops.rafaelemerick  dueDate: 30/11/2024 status: TODO}
+        item Spike.epic1.story2.estudar {assignee: blackops.rafaelemerick  dueDate: 30/11/2024 status: TODO}
         
     }
     
@@ -88,8 +86,8 @@ sprint apresentar {
 
     sprintbacklog estudo {
         
-        item Spike.epic1.story2.apresentar {assignee: blackops.joaomarcos dueDate: 30/11/2024 status: TODO}         
-        item Spike.epic1.story1.apresentar {assignee: blackops.joaomarcos dueDate: 30/11/2024 status: TODO}         
+        item Spike.epic1.story2.apresentar {assignee: blackops.rafaelemerick dueDate: 30/11/2024 status: TODO}         
+        item Spike.epic1.story1.apresentar {assignee: blackops.rafaelemerick dueDate: 30/11/2024 status: TODO}         
     }
     
 }

@@ -8,6 +8,15 @@ QualifiedNameWithWildcard returns string:
     QualifiedName '.*'?
 ;
 
+fragment Email:
+    'email' ':' email=STRING
+;
+
+fragment Discord:
+    'discord' ':' email=STRING
+;
+
+
 fragment Description:
     'description' ':' description=STRING
 ;
