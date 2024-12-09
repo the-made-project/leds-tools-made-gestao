@@ -4,6 +4,7 @@ import { AbstractApplication } from "./AbstractApplication.js";
 
 import {SprintItem, TimeBox, Person, Issue} from "../../model/models.js"
 
+
 export class TimeBoxApplication extends AbstractApplication {
     
     constructor(target_folder:string, model: Model) {
@@ -17,6 +18,8 @@ export class TimeBoxApplication extends AbstractApplication {
        const sprints = this.model.components.filter(isTimeBox)
 
        sprints.map (async sprint => {
+        const sprintItems = (await Promise.all(sprint.sprintBacklog?.planningItems.flatMap(item => this.createTask(item)) as unknown as SprintItem[])).flatMap (item => item)
+        
 
         const instance: TimeBox = {
             id: sprint.id,
@@ -25,7 +28,7 @@ export class TimeBoxApplication extends AbstractApplication {
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
             status: sprint.status ?? "PLANNED",
-            sprintItems: await Promise.all(sprint.sprintBacklog?.planningItems.map(item => this.createTask(item)) as unknown as SprintItem[])
+            sprintItems: sprintItems
 
         }
         this.saveorUpdate(instance)
@@ -36,34 +39,35 @@ export class TimeBoxApplication extends AbstractApplication {
     }
     
     // ter apenas tarefas
-    private async createTask (item:PlanningItem){
-        let tasks: TaskBacklog[] = []
-
+    private async createTask (item:PlanningItem){        
+        const tasks: Map<string, TaskBacklog> = new Map();
+        
         if (item.backlogItem.ref?.$type == Epic){
-            item.backlogItem.ref?.userstories.map(us => us.tasks.map(task => tasks.push(task)))
+            
+            item.backlogItem.ref?.userstories.map(us => us.tasks.map(task => tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}.${us.id.toLocaleLowerCase()}.${task.id.toLocaleLowerCase()}`,task)))
         }
 
         if (item.backlogItem.ref?.$type == AtomicUserStory){
-            item.backlogItem.ref?.tasks.map(task => tasks.push(task))
+            item.backlogItem.ref?.tasks.map(task => tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}.${task.id.toLocaleLowerCase()}`,task))
         } 
 
         if (item.backlogItem.ref?.$type == TaskBacklog){
-            tasks.push(item.backlogItem.ref)
+            tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}`,item.backlogItem.ref)
         }
 
         let response: SprintItem[] = []
 
-        tasks.map (async task => {
+        tasks.forEach (async (task, key) => {
             response.push({
                                 
-                id: task.id.toLocaleLowerCase() ?? "",                
+                id: key ?? "",                
                 assignee: {
                     id: item.assignee?.ref?.id,  
                     name: item.assignee?.ref?.name,
                     email: item.assignee?.ref?.email
                 } as Person,
                 issue: {                    
-                    id: task.id.toLocaleLowerCase() ?? "",
+                    id: key ?? "",
                     title: task.name ?? "" ,
                     description: task.description ?? "",
                     type: task.$type.toLocaleLowerCase() ?? "",  
@@ -94,8 +98,8 @@ export class TimeBoxApplication extends AbstractApplication {
             
 
         return issues
-    }
-    
+    }    
+  
            
 }
 

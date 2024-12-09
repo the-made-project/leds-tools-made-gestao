@@ -8,47 +8,45 @@
       "endDate": "30/11/2024",
       "status": "IN_PROGRESS",
       "sprintItems": [
-        [
-          {
-            "id": "task estudar {\n            name: \"estudar sobre opa\"\n            }",
-            "assignee": {
-              "id": "rafaelemerick",
-              "name": "Rafael Emerick",
-              "email": "xxx"
-            },
-            "issue": {
-              "id": "task estudar {\n            name: \"estudar sobre opa\"\n            }",
-              "title": "Estudar sobre OPA",
-              "description": "",
-              "type": "taskbacklog",
-              "depends": []
-            },
-            "dueDate": "30/11/2024",
-            "status": "TODO"
+        {
+          "id": "spike.epic1.story1.estudar",
+          "assignee": {
+            "id": "rafaelemerick",
+            "name": "Rafael Emerick",
+            "email": "xxx"
           },
-          {
-            "id": "task apresentar {\n            name: \"apresentar o estudo opa\"  \n            depends: spike.epic1.story1.estudar                       \n            }",
-            "assignee": {
-              "id": "rafaelemerick",
-              "name": "Rafael Emerick",
-              "email": "xxx"
-            },
-            "issue": {
-              "id": "task apresentar {\n            name: \"apresentar o estudo opa\"  \n            depends: spike.epic1.story1.estudar                       \n            }",
-              "title": "Apresentar o estudo OPA",
-              "description": "",
-              "type": "taskbacklog",
-              "depends": [
-                {
-                  "id": "spike.epic1.story1.estudar",
-                  "type": "taskbacklog"
-                }
-              ]
-            },
-            "dueDate": "30/11/2024",
-            "status": "TODO"
-          }
-        ]
+          "issue": {
+            "id": "spike.epic1.story1.estudar",
+            "title": "Estudar sobre OPA",
+            "description": "",
+            "type": "taskbacklog",
+            "depends": []
+          },
+          "dueDate": "30/11/2024",
+          "status": "TODO"
+        },
+        {
+          "id": "spike.epic1.story1.apresentar",
+          "assignee": {
+            "id": "rafaelemerick",
+            "name": "Rafael Emerick",
+            "email": "xxx"
+          },
+          "issue": {
+            "id": "spike.epic1.story1.apresentar",
+            "title": "Apresentar o estudo OPA",
+            "description": "",
+            "type": "taskbacklog",
+            "depends": [
+              {
+                "id": "spike.epic1.story1.estudar",
+                "type": "taskbacklog"
+              }
+            ]
+          },
+          "dueDate": "30/11/2024",
+          "status": "TODO"
+        }
       ]
     }
   ]

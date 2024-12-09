@@ -28,7 +28,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -44,7 +44,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -60,7 +60,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >1</text>
+            >2</text>
           
             <line 
               x1="70" 
@@ -124,7 +124,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >0</text>
+            >1</text>
           
             <line 
               x1="70" 
@@ -140,7 +140,7 @@
               text-anchor="end" 
               class="axis" 
               dominant-baseline="middle"
-            >0</text>
+            >1</text>
           
             <line 
               x1="70" 
@@ -192,7 +192,7 @@
           
 
         <path 
-          d="M70,500 L168,500 L266,500 L364,500 L462,500 L560,500 L658,500 L756,500 L854,500 L952,500 L1050,500 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
+          d="M70,50 L168,50 L266,50 L364,50 L462,50 L560,50 L658,50 L756,50 L854,50 L952,50 L1050,50 L1050,500 L952,500 L854,500 L756,500 L658,500 L560,500 L462,500 L364,500 L266,500 L168,500 L70,500 Z" 
           fill="#ef4444" 
           opacity="0.8"
         />
@@ -311,7 +311,7 @@
             30/11/2024
           </text>
           <text x="0" y="110" class="value">
-            Total de Tasks: 1
+            Total de Tasks: 2
           </text>
           <text x="0" y="130" class="value">
             Total de Sprints: 1
