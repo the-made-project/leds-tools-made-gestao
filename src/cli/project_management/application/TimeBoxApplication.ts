@@ -1,5 +1,5 @@
 
-import { isTimeBox, Model} from "../../../language/generated/ast.js";
+import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
 import {SprintItem, TimeBox, Person} from "../../model/models.js"
@@ -25,31 +25,7 @@ export class TimeBoxApplication extends AbstractApplication {
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
             status: sprint.status ?? "PLANNED",
-            sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
-                                
-                id: item.backlogItem?.$refNode?.text.toLocaleLowerCase(),                
-                assignee: {
-                    id: item.assignee?.ref?.id,  
-                    name: item.assignee?.ref?.name,
-                    email: item.assignee?.ref?.email
-                } as Person,
-
-                issue: {
-                    
-                    id: item.backlogItem?.$refNode?.text.toLocaleLowerCase() ?? "",
-                    title: item.backlogItem?.ref?.name ?? "" ,
-                    description: item.backlogItem?.ref?.description ?? "",
-                    type: item.backlogItem?.ref?.$type.toLocaleLowerCase() ?? "",                    
-
-                    depends: [...(item.backlogItem?.ref?.depends?.map(d => ({ id: d.$refNode?.text?.toLowerCase() })) || []),...(item.backlogItem?.ref?.depend?.$refNode?.text ? [{ id: item.backlogItem.ref.depend.$refNode.text.toLowerCase() }] : [])]
-                },
-
-                startDate: item.startDate,
-                dueDate: item.duedate,
-                completedDate:item.completedDate,
-                status:item.status ?? "TODO"
-
-            }) as unknown as SprintItem) ?? []
+            sprintItems: await Promise.all(sprint.sprintBacklog?.planningItems.map(item => this.createTask(item)) as unknown as SprintItem[])
 
         }
         this.saveorUpdate(instance)
@@ -57,6 +33,53 @@ export class TimeBoxApplication extends AbstractApplication {
        })
        await  this.clean()
            
+    }
+    
+    // ter apenas tarefas
+    private async createTask (item:PlanningItem){
+        let tasks: TaskBacklog[] = []
+
+        if (item.backlogItem.ref?.$type == Epic){
+            item.backlogItem.ref?.userstories.map(us => us.tasks.map(task => tasks.push(task)))
+        }
+
+        if (item.backlogItem.ref?.$type == AtomicUserStory){
+            item.backlogItem.ref?.tasks.map(task => tasks.push(task))
+        } 
+
+        if (item.backlogItem.ref?.$type == TaskBacklog){
+            tasks.push(item.backlogItem.ref)
+        }
+
+        let response: SprintItem[] = []
+
+        tasks.map (task => {
+            response.push({
+                                
+                id: task.id.toLocaleLowerCase(),                
+                assignee: {
+                    id: item.assignee?.ref?.id,  
+                    name: item.assignee?.ref?.name,
+                    email: item.assignee?.ref?.email
+                } as Person,
+                issue: {                    
+                    id: task.id.toLocaleLowerCase() ?? "",
+                    title: task.name ?? "" ,
+                    description: task.description ?? "",
+                    type: task.$type.toLocaleLowerCase() ?? "",                    
+                    depends: task.depends.map(item => ({id: item.ref?.id.toLocaleLowerCase() ?? "", type: "" })) ?? []
+                    //depends: [...(task.depends?.map(d => ({ id: d.$refNode?.text?.toLowerCase() })) || []),...(task.depend?.$refNode?.text ? [{ id: task.depend.$refNode.text.toLowerCase() }] : [])]
+                },
+    
+                startDate: item.startDate,
+                dueDate: item.duedate,
+                completedDate:item.completedDate,
+                status:item.status ?? "TODO"
+    
+            })
+        })
+
+        return response 
     }
 
     

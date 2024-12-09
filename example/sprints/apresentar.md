@@ -11,12 +11,12 @@ Apresentar estudos sobre OPA e openFGA
 
 |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|spike.epic1.story2.apresentar|Apresentar o estudo OpenFGA|João Marcos ||30/11/2024|TODO|
-|spike.epic1.story1.apresentar|Apresentar o estudo OPA|João Marcos ||30/11/2024|TODO|
+|spike.epic1.story2.apresentar||Rafael Emerick||30/11/2024|TODO|
+|spike.epic1.story1.apresentar|Apresentar o estudo OPA|Rafael Emerick||30/11/2024|TODO|
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 04/12/2024, 14:46:23
+Análise gerada em: 09/12/2024, 11:04:06
 
 ## 🔍 Grafo de Dependências
 
@@ -27,10 +27,8 @@ graph BT
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;
     spike.epic1.story2.estudar["🔍 spike.epic1.story2.estudar<br>⚠️ Dependência Externa"]:::external
     spike.epic1.story1.estudar["🔍 spike.epic1.story1.estudar<br>⚠️ Dependência Externa"]:::external
-    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Apresentar o estudo OpenFGA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: João Marcos "]:::sprint
-    spike.epic1.story2.apresentar -.-> spike.epic1.story2.estudar
-    spike.epic1.story2.apresentar -.-> spike.epic1.story1.estudar
+    spike.epic1.story2.apresentar["🔍 Identificador: spike.epic1.story2.apresentar<br>📝 Tarefa: Sem título<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
+    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
     spike.epic1.story1.apresentar -.-> spike.epic1.story2.estudar
     spike.epic1.story1.apresentar -.-> spike.epic1.story1.estudar
 ```
@@ -46,8 +44,8 @@ graph BT
 
 | # | Issue | Título | Status | Responsável | Dependências |
 |---|-------|--------|--------|-------------|---------------|
-| 1 | spike.epic1.story2.apresentar | Apresentar o estudo OpenFGA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar⚠️ |
-| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | TODO | João Marcos  | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar⚠️ |
+| 1 | spike.epic1.story2.apresentar | N/A | TODO | Rafael Emerick | 🆓 |
+| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | TODO | Rafael Emerick | spike.epic1.story2.estudar⚠️, spike.epic1.story1.estudar⚠️ |
 
 **Legenda das Dependências:**
 - 🆓 Sem dependências

@@ -10,13 +10,12 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 
 | Sprint | Período | Duração | Total Tasks | Concluídas | Em Progresso | Pendentes | Velocidade | Eficiência |
 |--------|---------|----------|-------------|------------|--------------|-----------|------------|------------|
-| Estudar Autorizacao | 19/11 - 29/11 | 10 dias | 2 | 0 (0.0%) | 0 | 2 | 0/dia | 0.0% |
-| Apresentar os estudos Autorizacao | 19/11 - 29/11 | 10 dias | 2 | 0 (0.0%) | 0 | 2 | 0/dia | 0.0% |
+| Estudar Autorizacao | 19/11 - 29/11 | 10 dias | 1 | 0 (0.0%) | 0 | 1 | 0/dia | 0.0% |
 
 ## Análise Geral
 
-- **Total de Sprints:** 2
-- **Total de Tasks:** 4
+- **Total de Sprints:** 1
+- **Total de Tasks:** 1
 - **Taxa de Conclusão:** 0.0%
 
 ### Notas
@@ -45,10 +44,10 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 
 | Métrica | Valor | Status |
 |---------|--------|--------|
-| Velocidade Atual | 1.0 tarefas/dia | ❌ |
-| Velocidade Necessária | 4.0 tarefas/dia | - |
+| Velocidade Atual | 1.0 tarefas/dia | ✅ |
+| Velocidade Necessária | 1.0 tarefas/dia | - |
 | Dias Restantes | 1 dias | - |
-| Tarefas Restantes | 4 tarefas | - |
+| Tarefas Restantes | 1 tarefas | - |
 
 ### 📅 Previsões de Data de Conclusão
 
@@ -64,11 +63,11 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 
 ## ℹ️ Informações do Projeto
 
-- **Total de Sprints**: 2
+- **Total de Sprints**: 1
 - **Início**: qua., 20/11/2024
 - **Término Planejado**: sáb., 30/11/2024
-- **Total de Tarefas**: 4
+- **Total de Tarefas**: 1
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 04/12/2024, 14:46:23*
+*Relatório gerado em 09/12/2024, 13:58:41*

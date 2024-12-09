@@ -113,7 +113,7 @@ protected async addItem (value:any){
       description: data.description ?? "",
       type: data.$type.toLocaleLowerCase()
     }
-    
+   
    if (data.userstories){
       if (data.userstories.length >0){    
        issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[]

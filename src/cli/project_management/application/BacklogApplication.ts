@@ -1,5 +1,5 @@
 
-import { isBacklog, Model } from "../../../language/generated/ast.js";
+import {  isBacklog, Model} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import {Backlog} from "../../model/models.js"
 
@@ -21,19 +21,15 @@ export  class BacklogApplication extends AbstractApplication {
             id : backlog.id,
             name: backlog.name  ?? "",
             description: backlog.description ?? "", 
-            issues: await Promise.all(backlog.items?.map(async (issue) => 
-                await this.createIssue(issue.$container.id, issue))) ?? [] 
+            issues: await Promise.all(backlog.items?.map(async (issue) => await this.createIssue(issue.$container.id,issue))) ?? [] 
          }
 
          await this.saveorUpdate (instance)
          await this.addItem(backlog)
        })
        await  this.clean()
-    }
-
- 
+    }   
 
     
-
        
 }

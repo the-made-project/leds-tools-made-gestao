@@ -2,12 +2,17 @@
   "data": [
     {
       "id": "blackops",
-      "name": "Rafael Emerick",
+      "name": "Team Black Ops",
       "description": "Equipe responsável por produzir artefatos de segurança",
       "teammebers": [
         {
           "id": "rafaelemerick",
-          "name": "",
+          "name": "Rafael Emerick",
+          "email": "xxx"
+        },
+        {
+          "id": "xxxx",
+          "name": "Rafael Emerick",
           "email": ""
         }
       ]
