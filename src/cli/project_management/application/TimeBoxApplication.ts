@@ -2,7 +2,7 @@
 import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
-import {SprintItem, TimeBox, Person} from "../../model/models.js"
+import {SprintItem, TimeBox, Person, Issue} from "../../model/models.js"
 
 export class TimeBoxApplication extends AbstractApplication {
     
@@ -53,10 +53,10 @@ export class TimeBoxApplication extends AbstractApplication {
 
         let response: SprintItem[] = []
 
-        tasks.map (task => {
+        tasks.map (async task => {
             response.push({
                                 
-                id: task.id.toLocaleLowerCase(),                
+                id: task.id.toLocaleLowerCase() ?? "",                
                 assignee: {
                     id: item.assignee?.ref?.id,  
                     name: item.assignee?.ref?.name,
@@ -66,9 +66,9 @@ export class TimeBoxApplication extends AbstractApplication {
                     id: task.id.toLocaleLowerCase() ?? "",
                     title: task.name ?? "" ,
                     description: task.description ?? "",
-                    type: task.$type.toLocaleLowerCase() ?? "",                    
-                    depends: task.depends.map(item => ({id: item.ref?.id.toLocaleLowerCase() ?? "", type: "" })) ?? []
-                    //depends: [...(task.depends?.map(d => ({ id: d.$refNode?.text?.toLowerCase() })) || []),...(task.depend?.$refNode?.text ? [{ id: task.depend.$refNode.text.toLowerCase() }] : [])]
+                    type: task.$type.toLocaleLowerCase() ?? "",  
+                    depends: await this.createDependece(task)                  
+                    
                 },
     
                 startDate: item.startDate,
@@ -81,8 +81,20 @@ export class TimeBoxApplication extends AbstractApplication {
 
         return response 
     }
-
     
+    private async createDependece(task: TaskBacklog){
+        let issues: Issue[] = []
+
+        if (task.depend) {
+            if (task.depend.$refNode?.text.toLocaleLowerCase() && task.depend.ref?.$type.toLocaleLowerCase()){
+                issues.push({id: task.depend.$refNode.text.toLocaleLowerCase(), type: task.depend.ref.$type.toLocaleLowerCase()})
+            }
+        }
+        await task.depends.map (async dep => await issues.push({id:dep.$refNode?.text.toLocaleLowerCase() ?? "", type:dep.ref?.$type.toLocaleLowerCase() ?? "" }))
+            
+
+        return issues
+    }
     
            
 }

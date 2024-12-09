@@ -10,14 +10,14 @@
       "sprintItems": [
         [
           {
-            "id": "estudar",
+            "id": "task estudar {\n            name: \"estudar sobre opa\"\n            }",
             "assignee": {
               "id": "rafaelemerick",
               "name": "Rafael Emerick",
               "email": "xxx"
             },
             "issue": {
-              "id": "estudar",
+              "id": "task estudar {\n            name: \"estudar sobre opa\"\n            }",
               "title": "Estudar sobre OPA",
               "description": "",
               "type": "taskbacklog",
@@ -27,18 +27,23 @@
             "status": "TODO"
           },
           {
-            "id": "apresentar",
+            "id": "task apresentar {\n            name: \"apresentar o estudo opa\"  \n            depends: spike.epic1.story1.estudar                       \n            }",
             "assignee": {
               "id": "rafaelemerick",
               "name": "Rafael Emerick",
               "email": "xxx"
             },
             "issue": {
-              "id": "apresentar",
+              "id": "task apresentar {\n            name: \"apresentar o estudo opa\"  \n            depends: spike.epic1.story1.estudar                       \n            }",
               "title": "Apresentar o estudo OPA",
               "description": "",
               "type": "taskbacklog",
-              "depends": []
+              "depends": [
+                {
+                  "id": "spike.epic1.story1.estudar",
+                  "type": "taskbacklog"
+                }
+              ]
             },
             "dueDate": "30/11/2024",
             "status": "TODO"
