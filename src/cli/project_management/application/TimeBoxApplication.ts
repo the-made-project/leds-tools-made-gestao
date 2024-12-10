@@ -1,8 +1,9 @@
 
-import { isTimeBox, Model} from "../../../language/generated/ast.js";
+import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
-import {SprintItem, TimeBox, Person} from "../../model/models.js"
+import {SprintItem, TimeBox, Person, Issue} from "../../model/models.js"
+
 
 export class TimeBoxApplication extends AbstractApplication {
     
@@ -17,6 +18,8 @@ export class TimeBoxApplication extends AbstractApplication {
        const sprints = this.model.components.filter(isTimeBox)
 
        sprints.map (async sprint => {
+        const sprintItems = (await Promise.all(sprint.sprintBacklog?.planningItems.flatMap(item => this.createTask(item)) as unknown as SprintItem[])).flatMap (item => item)
+        
 
         const instance: TimeBox = {
             id: sprint.id,
@@ -25,31 +28,7 @@ export class TimeBoxApplication extends AbstractApplication {
             startDate: sprint.startDate ?? "",
             endDate: sprint.endDate ?? "",
             status: sprint.status ?? "PLANNED",
-            sprintItems: sprint.sprintBacklog?.planningItems.map(item => ({
-                                
-                id: item.backlogItem?.$refNode?.text.toLocaleLowerCase(),                
-                assignee: {
-                    id: item.assignee?.ref?.id,  
-                    name: item.assignee?.ref?.name,
-                    email: item.assignee?.ref?.email
-                } as Person,
-
-                issue: {
-                    
-                    id: item.backlogItem?.$refNode?.text.toLocaleLowerCase() ?? "",
-                    title: item.backlogItem?.ref?.name ?? "" ,
-                    description: item.backlogItem?.ref?.description ?? "",
-                    type: item.backlogItem?.ref?.$type.toLocaleLowerCase() ?? "",                    
-
-                    depends: [...(item.backlogItem?.ref?.depends?.map(d => ({ id: d.$refNode?.text?.toLowerCase() })) || []),...(item.backlogItem?.ref?.depend?.$refNode?.text ? [{ id: item.backlogItem.ref.depend.$refNode.text.toLowerCase() }] : [])]
-                },
-
-                startDate: item.startDate,
-                dueDate: item.duedate,
-                completedDate:item.completedDate,
-                status:item.status ?? "TODO"
-
-            }) as unknown as SprintItem) ?? []
+            sprintItems: sprintItems
 
         }
         this.saveorUpdate(instance)
@@ -58,9 +37,69 @@ export class TimeBoxApplication extends AbstractApplication {
        await  this.clean()
            
     }
+    
+    // ter apenas tarefas
+    private async createTask (item:PlanningItem){        
+        const tasks: Map<string, TaskBacklog> = new Map();
+        
+        if (item.backlogItem.ref?.$type == Epic){
+            
+            item.backlogItem.ref?.userstories.map(us => us.tasks.map(task => tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}.${us.id.toLocaleLowerCase()}.${task.id.toLocaleLowerCase()}`,task)))
+        }
 
+        if (item.backlogItem.ref?.$type == AtomicUserStory){
+            item.backlogItem.ref?.tasks.map(task => tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}.${task.id.toLocaleLowerCase()}`,task))
+        } 
+
+        if (item.backlogItem.ref?.$type == TaskBacklog){
+            tasks.set(`${item.backlogItem.ref?.$container.id.toLocaleLowerCase()}.${item.backlogItem.ref?.id.toLocaleLowerCase()}`,item.backlogItem.ref)
+        }
+
+        let response: SprintItem[] = []
+
+        tasks.forEach (async (task, key) => {
+            response.push({
+                                
+                id: key ?? "",                
+                assignee: {
+                    id: item.assignee?.ref?.id,  
+                    name: item.assignee?.ref?.name,
+                    email: item.assignee?.ref?.email
+                } as Person,
+                issue: {                    
+                    id: key ?? "",
+                    title: task.name ?? "" ,
+                    description: task.description ?? "",
+                    type: task.$type.toLocaleLowerCase() ?? "",  
+                    depends: await this.createDependece(task)                  
+                    
+                },
     
+                startDate: item.startDate,
+                dueDate: item.duedate,
+                completedDate:item.completedDate,
+                status:item.status ?? "TODO"
     
+            })
+        })
+
+        return response 
+    }
+    
+    private async createDependece(task: TaskBacklog){
+        let issues: Issue[] = []
+
+        if (task.depend) {
+            if (task.depend.$refNode?.text.toLocaleLowerCase() && task.depend.ref?.$type.toLocaleLowerCase()){
+                issues.push({id: task.depend.$refNode.text.toLocaleLowerCase(), type: task.depend.ref.$type.toLocaleLowerCase()})
+            }
+        }
+        await task.depends.map (async dep => await issues.push({id:dep.$refNode?.text.toLocaleLowerCase() ?? "", type:dep.ref?.$type.toLocaleLowerCase() ?? "" }))
+            
+
+        return issues
+    }    
+  
            
 }
 

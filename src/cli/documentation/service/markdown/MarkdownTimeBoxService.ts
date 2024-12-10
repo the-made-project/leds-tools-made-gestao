@@ -117,9 +117,9 @@ export class MarkdownTimeBoxService {
         * **Status**: ${timeBox.status}
         ## Sprint Backlog
 
-        |ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
-        |:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.id.toLocaleLowerCase()}|${assignee.issue.title ?? "-"}|${assignee.assignee.name}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
+        |Nome |Resposável |Data de Inicío | Data Planejada | Status|
+        |:----|:--------  |:-------:       | :----------:  | :---: |
+        ${timeBox.sprintItems?.map(assignee => `|${assignee.issue.title ?? "-"}|${assignee.assignee.name}|${assignee.startDate?? ""}|${assignee.dueDate ?? ""}|${assignee.status?.toLocaleUpperCase()}|`).join("\n")}
       
         ${dependencyAnalysis}
         

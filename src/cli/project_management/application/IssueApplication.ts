@@ -4,8 +4,6 @@ import { AbstractApplication } from "./AbstractApplication.js";
 
 export  class IssueApplication extends AbstractApplication {
 
-    
-
     constructor(target_folder:string, model: Model) {
 
         super(target_folder, model)       
@@ -24,10 +22,6 @@ export  class IssueApplication extends AbstractApplication {
                 await this.createAndSave(value.$container.id.toLocaleLowerCase(), value)
                 
             }
-            else{
-                //epics que estão implementando processos
-                value.process.ref?.activities
-            }
             await this.addItem(value)
             
         })
@@ -36,9 +30,6 @@ export  class IssueApplication extends AbstractApplication {
             if (!value.activity){
                 await this.createAndSave(value.$container.id.toLocaleLowerCase(),value)
             
-            }
-            else{
-                
             }
             await this.addItem(value)
         })

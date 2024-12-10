@@ -1,4 +1,4 @@
-project  {
+project xxx {
     name: "Modulo de Autentication, Autorization e Accounting"
     description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
     startDate: 22/11/2022
