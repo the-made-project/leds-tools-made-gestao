@@ -5,7 +5,8 @@ import { BacklogApplication } from "./BacklogApplication.js";
 import { IssueApplication } from "./IssueApplication.js";
 import { TeamApplication } from "./TeamApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
-import { MarkdownService } from '../../documentation/service/markdown/MarkdownService.js';
+
+import { ReportManager }  from  "made-report-lib";
 import { RoadmapApplication } from './RoadmapApplication.js';
 import { ProcessApplication } from './ProcessApplication.js';
 import { ProjectApplication } from './ProjectApplication.js';
@@ -30,9 +31,9 @@ export class ApplicationManager {
     backlogApplication: BacklogApplication
     roadmapApplication: RoadmapApplication
     processApplication: ProcessApplication
-    markdownService: MarkdownService
+    reportManager: ReportManager
     projectApplication: ProjectApplication
-    
+    target_folder: string
 
     model: Model
 
@@ -43,8 +44,8 @@ export class ApplicationManager {
         );
 
         this.model = model
-
-        this.markdownService = new MarkdownService(model,target_folder)
+        this.target_folder = target_folder
+        this.reportManager = new ReportManager()
 
         this.timeBoxApplication = new TimeBoxApplication(target_folder,model)
   
@@ -117,9 +118,7 @@ export class ApplicationManager {
                 name: 'MADE Documentation',
                 action: async () => {
                     // Gera documentação para o processo
-                    await  this.markdownService.createProcessDocumentation()
-                    // Gera documentação para o backlog
-                    await this.markdownService.createManagementDocumenation()
+                    await  this.reportManager.createReport(this.target_folder)
                 },
                 description: 'Generating agile process documentation',
                 startEmoji: '📚',

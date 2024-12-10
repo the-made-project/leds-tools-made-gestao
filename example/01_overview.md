@@ -3,7 +3,7 @@
 Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema
 * Data de Início: 22/11/2022
 * Data de Planejado: 30/11/2022
-* Data de Finalização: -
+* Data de Finalização: 
 
 Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema
 ## Métricas Consolidadas
@@ -70,4 +70,4 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 10/12/2024, 14:34:20*
+*Relatório gerado em 10/12/2024, 19:50:04*

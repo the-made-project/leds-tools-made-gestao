@@ -1,7 +1,7 @@
 
 import { Activity, isProcess, Model, Task, Process } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import { Process as ProcessData, Activity as ActivityData, Task as TaskData} from "../../model/models.js"
+import { Process as ProcessData, Activity as ActivityData, Task as TaskData} from "made-report-lib";
 
 
 export  class ProcessApplication extends AbstractApplication {

@@ -1,6 +1,6 @@
 import { isTeam, Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import {Person, Team} from "../../model/models.js"
+import {Person, Team} from "made-report-lib";
 
 export class TeamApplication extends AbstractApplication {
  

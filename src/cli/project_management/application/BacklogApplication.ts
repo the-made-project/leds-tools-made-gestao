@@ -1,7 +1,7 @@
 
 import {  isBacklog, Model} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import {Backlog} from "../../model/models.js"
+import {Backlog} from "made-report-lib";
 
 export  class BacklogApplication extends AbstractApplication {
 
