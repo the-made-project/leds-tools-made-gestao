@@ -9,14 +9,14 @@ Realizar estudos sobre autorizacao
 * **Status**: IN_PROGRESS
 ## Sprint Backlog
 
-|ID |Nome |Resposável |Data de Inicío | Data Planejada | Status|
-|:----    |:----|:--------  |:-------:       | :----------:  | :---: |
-|spike.epic1.story1.estudar|Estudar sobre OPA|Rafael Emerick||30/11/2024|TODO|
-|spike.epic1.story1.apresentar|Apresentar o estudo OPA|Rafael Emerick||30/11/2024|TODO|
+|Nome |Resposável |Data de Inicío | Data Planejada | Status|
+|:----|:--------  |:-------:       | :----------:  | :---: |
+|Estudar sobre OPA|Rafael Emerick||30/11/2024|TODO|
+|Apresentar o estudo OPA|Rafael Emerick||30/11/2024|TODO|
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 10/12/2024, 14:32:00
+Análise gerada em: 10/12/2024, 14:34:20
 
 ## 🔍 Grafo de Dependências
 
@@ -101,4 +101,4 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 10/12/2024, 14:32:00*
+*Relatório gerado em 10/12/2024, 14:34:20*
