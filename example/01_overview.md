@@ -36,8 +36,8 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 ### ✅ PROJETO PROVAVELMENTE SERÁ CONCLUÍDO NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: ter., 10/12/2024
-- **Dias em relação ao planejado**: 11 dias
+- **Data mais provável de conclusão**: qua., 11/12/2024
+- **Dias em relação ao planejado**: 12 dias
 - **Status**: ⚠️ Atraso Moderado
 
 ### 📊 Métricas do Projeto
@@ -53,7 +53,7 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| ter., 10/12/2024 | 100.0% | ⚠️ Atraso Moderado | 📍 Data mais provável |
+| qua., 11/12/2024 | 100.0% | ⚠️ Atraso Moderado | 📍 Data mais provável |
 
 ## 💡 Recomendações
 
@@ -70,4 +70,4 @@ Modulo responsável pela autenticação, autorização e rastreio do usuário no
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 09/12/2024, 20:17:42*
+*Relatório gerado em 10/12/2024, 14:32:00*

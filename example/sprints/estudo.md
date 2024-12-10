@@ -16,7 +16,7 @@ Realizar estudos sobre autorizacao
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 09/12/2024, 20:17:42
+Análise gerada em: 10/12/2024, 14:32:00
 
 ## 🔍 Grafo de Dependências
 
@@ -25,8 +25,8 @@ graph BT
     classDef sprint fill:#a8e6cf,stroke:#333,stroke-width:2px;
     classDef done fill:#98fb98,stroke:#333,stroke-width:2px;
     classDef external fill:#ffd3b6,stroke:#333,stroke-width:1px;
-    spike.epic1.story1.estudar["🔍 Identificador: spike.epic1.story1.estudar<br>📝 Tarefa: Estudar sobre OPA<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
-    spike.epic1.story1.apresentar["🔍 Identificador: spike.epic1.story1.apresentar<br>📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
+    spike.epic1.story1.estudar["📝 Tarefa: Estudar sobre OPA<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
+    spike.epic1.story1.apresentar["📝 Tarefa: Apresentar o estudo OPA<br>📊 Estado: TODO<br>👤 Responsável: Rafael Emerick"]:::sprint
     spike.epic1.story1.apresentar --> spike.epic1.story1.estudar
 ```
 
@@ -39,10 +39,10 @@ graph BT
 
 ## 📋 Sugestão de Execução das Issues
 
-| # | Issue | Título | Status | Responsável | Dependências |
-|---|-------|--------|--------|-------------|---------------|
-| 1 | spike.epic1.story1.estudar | Estudar sobre OPA | TODO | Rafael Emerick | 🆓 |
-| 2 | spike.epic1.story1.apresentar | Apresentar o estudo OPA | TODO | Rafael Emerick | spike.epic1.story1.estudar |
+| # | Título | Status | Responsável | Dependências |
+|---|--------|--------|-------------|---------------|
+| 1 |Estudar sobre OPA | TODO | Rafael Emerick | 🆓 |
+| 2 |Apresentar o estudo OPA | TODO | Rafael Emerick | spike.epic1.story1.estudar |
 
 **Legenda das Dependências:**
 - 🆓 Sem dependências
@@ -59,8 +59,8 @@ graph BT
 ## ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: ter., 10/12/2024
-- **Dias em relação ao planejado**: 11 dias
+- **Data mais provável de conclusão**: qua., 11/12/2024
+- **Dias em relação ao planejado**: 12 dias
 - **Status**: ❌ Atraso Crítico
 
 ### 📊 Métricas Críticas
@@ -76,7 +76,7 @@ graph BT
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| ter., 10/12/2024 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
+| qua., 11/12/2024 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -101,4 +101,4 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 09/12/2024, 20:17:42*
+*Relatório gerado em 10/12/2024, 14:32:00*
