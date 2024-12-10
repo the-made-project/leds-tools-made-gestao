@@ -1,5 +1,5 @@
-
 # ESTUDAR AUTORIZACAO
+
 Realizar estudos sobre autorizacao
 
 ## Dados do Sprint
@@ -13,10 +13,10 @@ Realizar estudos sobre autorizacao
 |:----|:--------  |:-------:       | :----------:  | :---: |
 |Estudar sobre OPA|Rafael Emerick||30/11/2024|TODO|
 |Apresentar o estudo OPA|Rafael Emerick||30/11/2024|TODO|
-
+      
 # Análise de Dependências do Sprint
 
-Análise gerada em: 10/12/2024, 14:34:20
+Análise gerada em: 10/12/2024, 19:50:04
 
 ## 🔍 Grafo de Dependências
 
@@ -41,19 +41,19 @@ graph BT
 
 | # | Título | Status | Responsável | Dependências |
 |---|--------|--------|-------------|---------------|
-| 1 |Estudar sobre OPA | TODO | Rafael Emerick | 🆓 |
-| 2 |Apresentar o estudo OPA | TODO | Rafael Emerick | spike.epic1.story1.estudar |
+| 1 | Estudar sobre OPA | TODO | Rafael Emerick | 🆓 |
+| 2 | Apresentar o estudo OPA | TODO | Rafael Emerick | spike.epic1.story1.estudar |
 
 **Legenda das Dependências:**
 - 🆓 Sem dependências
 - ✅ Issue concluída
 - ⚠️ Dependência externa ao sprint
 
-
-
+        
+       
 ## Cumulative Flow
 ![ Cumulative Flow](./charts/cfd-estudo.svg)
-
+        
 # Previsão da Sprint
 
 ## ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
@@ -101,4 +101,5 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 10/12/2024, 14:34:20*
+*Relatório gerado em 10/12/2024, 19:50:04*
+        

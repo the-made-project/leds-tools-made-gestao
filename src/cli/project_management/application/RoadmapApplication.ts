@@ -1,7 +1,7 @@
 
 import {  isRoadmap, Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import { Roadmap, Issue, Release, Milestone} from "../../model/models.js"
+import { Roadmap, Issue, Release, Milestone} from "made-report-lib";
 
 export  class RoadmapApplication extends AbstractApplication {
 
