@@ -18,6 +18,7 @@ export class TimeBoxApplication extends AbstractApplication {
        const sprints = this.model.components.filter(isTimeBox)
 
        sprints.map (async sprint => {
+        
         const sprintItems = (await Promise.all(sprint.sprintBacklog?.planningItems.flatMap(item => this.createTask(item)) as unknown as SprintItem[])).flatMap (item => item)
         
 
@@ -39,7 +40,8 @@ export class TimeBoxApplication extends AbstractApplication {
     }
     
     // ter apenas tarefas
-    private async createTask (item:PlanningItem){        
+    private async createTask (item:PlanningItem){     
+           
         const tasks: Map<string, TaskBacklog> = new Map();
         
         if (item.backlogItem.ref?.$type == Epic){
