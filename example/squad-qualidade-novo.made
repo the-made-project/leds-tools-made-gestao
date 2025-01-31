@@ -1,0 +1,276 @@
+
+project QA  {
+    name: "Quality Assurance Conecta Fapes"
+    description: " Time de QA (Quality Assurance) do projeto ConectaFapes."
+    startDate: 01/12/2024
+    dueDate: 31/12/2025
+}
+
+
+team time_qa {
+    name: "QA Team"
+    description: "Equipe responsável por produzir artefatos de QA."
+    teammember davinunes {name: "Davi Nunes" email: "davinunesribeiro@gmail.com"}
+    teammember gianpaneto {name: "Gian Paneto" email: "gianpaneto@gmail.com"}
+    teammember luanotoni {name: "Luan Otoni" email: "luan.oliveira@estudante.ifes.edu.br"}
+    teammember leandrocarone {name: "Leandro Carone" email: "leandrocala2@gmail.com"}
+    teammember sofiadealcantara {name: "Sofia de Alcantara" email: "sofiaalcantaras@outlook.com"}  
+}
+
+
+roadmap projeto {
+    name: "Módulo M001 Modalidades de Bolsas"
+
+    milestone beta {
+        name: "Controlar Modalidade de Bolsa"
+        description: "Validar os casos de uso do Módulo Controlar Modalidade de Bolsa"
+        startDate: 01/12/2024        
+        dueDate: 31/01/2025
+        status: IN_PROGRESS
+        release beta {
+            description: "Estudo para entender as tecnologias"
+            item : M001.E002,M001.E003
+            status: IN_DEVELOPMENT
+            dueDate: 30/11/2025
+            version: "1.0"
+        }
+    }
+}
+
+
+
+backlog PRODUTOS {
+    name : "Produtos"
+    description : "Produtos internos para melhorar o dia-a-dia do teste"
+
+    story S001 {
+        name: "Criar script para incluir o data-test"
+        description: "Criar um script para incluir o atributo data-test nos codigos existentes"
+
+         task T001 {name: "alinhamento de refatoração de código para inclusão do atributo data-test"}
+         task T002 {name: "implementar o script"}
+         task T003 {name: "executar a teste"}
+           
+    }
+}
+
+backlog SPIKE {
+    name : "Spikes"
+    description : "Backlog reservado para spikes, ou seja, tarefas de pesquisa ou experimentação destinada a esclarecer dúvidas técnicas ou de requisitos para o desenvolvimento de uma funcionalidade."
+
+    epic E001 {
+        name: "Seleção de Ferramenta de testes"
+        description: "Estudo e experimentação de técnicas e ferramentas para realizar testes de performance na aplicação."
+
+        story S001 {
+            name: "Estudo sobre ferramentas de Performace"
+
+            task T001 {name: "Pesquisa e comparação de ferramentas"}
+            task T002 {name: "Instalação e configuração básica da ferramenta escolhida"}
+            task T003 {name: "Definição dos cenários de teste"}
+            task T004 {name: "Implementação e execução dos cenários de teste"}
+            task T005 {name: "Análise e interpretação dos resultados dos testes realizados "}
+            task T006 {name: "Definir cronograma de implementação da ferramenta no projeto"}
+            task T007 {name: "Criar documentação"}
+            task T008 {name: "Treinar a Equipe"}
+            task T009 {name: "Implantar"}
+        }
+
+        story S002 {
+            name: "Estudo sobre ferramentas de Carga"
+
+            task T001 {name: "Pesquisa e comparação de ferramentas"}
+            task T002 {name: "Instalação e configuração básica da ferramenta escolhida"}
+            task T003 {name: "Definição dos cenários de teste"}
+            task T004 {name: "Implementação e execução dos cenários de teste"}
+            task T005 {name: "Análise e interpretação dos resultados dos testes realizados "}
+            task T006 {name: "Definir cronograma de implementação da ferramenta no projeto"}
+            task T007 {name: "Criar documentação"}
+            task T008 {name: "Treinar a Equipe"}
+            task T009 {name: "Implantar"}
+        }
+
+        story S003 {
+            name: "Estudo sobre ferramentas de Segurança"
+
+            task T001 {name: "Pesquisa e comparação de ferramentas"}
+            task T002 {name: "Instalação e configuração básica da ferramenta escolhida"}
+            task T003 {name: "Definição dos cenários de teste"}
+            task T004 {name: "Implementação e execução dos cenários de teste"}
+            task T005 {name: "Análise e interpretação dos resultados dos testes realizados "}
+            task T006 {name: "Definir cronograma de implementação da ferramenta no projeto"}
+            task T007 {name: "Criar documentação"}
+            task T008 {name: "Treinar a Equipe"}
+            task T009 {name: "Implantar"}
+        }
+
+        
+    }
+    epic E002 {
+        name: "Melhoria nos códigos de testes"
+        description: "Melhoria nas ferramentas escolhidas para testes"
+        
+        story S001 {
+            name: "Estudo sobre Data-Test no Vue"
+            task T001 {name: "Pesquisa e comparação de ferramentas"}
+            task T002 {name: "Instalação e configuração básica da ferramenta escolhida"}
+            task T003 {name: "Definição dos cenários de teste"}
+            task T004 {name: "Implementação e execução dos cenários de teste"}
+            task T005 {name: "Análise e interpretação dos resultados dos testes realizados "}
+            task T006 {name: "Definir cronograma de implementação da ferramenta no projeto"}
+            task T007 {name: "Criar documentação"}
+            task T008 {name: "Treinar a Equipe"}
+            task T009 {name: "Implantar"}
+        }
+    }   
+    
+}
+
+backlog M001 {
+   name: "Módulo M001 Modalidades de Bolsas"
+   description: "Verificar se os requisitos do Módulo Modalidades de Bolsas foram implementados conforme especificado "
+
+   epic E001 {
+    name: "Gestão de Testes"
+    description: "Desenvolver artefatos que permita gerenciar os testes"
+
+    story S001 {
+        name: "Criar infraestrutura de implementação de testes "
+        name: "Criar artefatos para auxiliar na gestão, execução e monitoramento dos testes"
+        
+        task T001 { name: "Criar planilha de testes do módulo" }
+        task T002 { name: "Organizar repositório de testes para o módulo" }
+        task T003 { name: "Implementar o pipeline de testing usando Drone" }
+
+    }
+   }
+
+   epic E002 {
+    name: "Testes referente a Controlar Modalidade de bolsa"
+    
+    story S001 {
+        name: "Incluir Modalidade de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }  
+    story S002 {
+        name: "Listar Modalidade de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+
+    story S003 {
+        name: "Criar Versão Modalidade de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S004 {
+        name: "Alterar Versão Modalidade de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S005 {
+        name: "Altivar Versão Modalidade de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S006 {
+        name: "Consultar Modalidade"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S007 {
+        name: "Desativar Modalidade"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }     
+   }
+
+   epic E003 {
+    name: "Testes referente a Cadastrar Resolução"    
+
+    story S001 {
+        name: "Incluir Resolução "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }  
+    story S002 {
+        name: "Listar Resolução "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    
+    story S003 {
+        name: "Alterar Resolução"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+
+    story S004 {
+        name: "Consultar Resolução"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S005 {
+        name: "Excluir Modalidade"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }     
+   }
+
+    epic E004 {
+    name: "Testes referente a Nível de Bolsa"    
+
+    story S001 {
+        name: "Incluir Nível de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }  
+    story S002 {
+        name: "Listar Nível de Bolsa "                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    
+    story S003 {
+        name: "Alterar Nível de Bolsa"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+
+    story S004 {
+        name: "Consultar Nível de Bolsa"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }
+    story S005 {
+        name: "Excluir Nível de Bolsa"                
+        task T001 { name: "Executar Teste de Funcionalidade" }
+        task T002 { name: "Executar Teste de Performance" }
+    }     
+   }
+}
+
+sprint sprint1 {
+    name: "Sprint 001 - Janeiro/2025"
+    description: "Estabelecer primeira versão de uma pipeline de QA funcional para auxilio na garantia da qualidade do software. Finalizar scripts do módulo 'Modalidades de Bolsas'. Desenvolver primeira versão do sistema de chamados, com módulo de coleta e registro de mensagens."
+    startDate: 01/01/2025
+    endDate: 17/01/2025
+    status: IN_PROGRESS
+
+    sprintbacklog M001 {
+
+       item M001.E001.S001.T001 {assignee: time_qa.sofiadealcantara startDate: 04/12/2024 dueDate: 06/12/2024  completedDate: 05/12/2024 status: DONE }
+       item M001.E001.S001.T002 {assignee: time_qa.sofiadealcantara startDate: 04/12/2024 dueDate: 06/12/2024  completedDate: 05/12/2024 status: DONE }
+
+       item M001.E001.S001.T003 {assignee: time_qa.davinunes startDate: 04/12/2024 dueDate: 31/01/2025  completedDate: 10/01/2025 status: DONE }
+
+       item M001.E002 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 status: DOING }       
+       item SPIKE.E002.S001.T007 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: DONE }
+
+       item M001.E003 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: DOING }
+       item M001.E004 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: TODO }
+
+       item PRODUTOS.S001  {assignee: time_qa.luanotoni startDate: 04/12/2024 dueDate: 31/01/2025 status: DOING}
+    }   
+}

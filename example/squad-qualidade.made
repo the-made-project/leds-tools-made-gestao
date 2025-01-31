@@ -1,0 +1,287 @@
+// INFORMAÇÕES DO TIME ---------------------------------------------------------------------------------
+project QA  {
+    name: "Quality Assurance Conecta Fapes"
+    description: " Time de QA (Quality Assurance) do projeto ConectaFapes."
+    startDate: 01/12/2024
+    dueDate: 31/12/2025
+}
+
+team time_qa {
+    name: "QA Team"
+    description: "Equipe responsável por produzir artefatos de QA."
+    teammember davinunes {name: "Davi Nunes" email: "davinunesribeiro@gmail.com"}
+    teammember gianpaneto {name: "Gian Paneto" email: "gianpaneto@gmail.com"}
+    teammember luanotoni {name: "Luan Otoni" email: "luan.oliveira@estudante.ifes.edu.br"}
+    teammember leandrocarone {name: "Leandro Carone" email: "leandrocala2@gmail.com"}
+    teammember sofiadealcantara {name: "Sofia de Alcantara" email: "sofiaalcantaras@outlook.com"}  
+}
+
+// ROADMAPS ---------------------------------------------------------------------------------
+
+
+roadmap R001 {
+    name: "Roadmap - Módulo M001 Modalidades de Bolsas"
+    description: "M001 - Modalidades de Bolsas"
+        
+        milestone UC01 {
+            name: "UC01: Controlar Modalidade de Bolsa"
+            description: "O caso de uso contém os seguintes eventos, que devem ser devidamente testados"
+            startDate: 01/12/2024        
+            dueDate: 31/01/2025
+            status: IN_PROGRESS
+            release beta {
+                description: "Cadastros"
+                item : M001.E001.S001, M001.E001.S001
+                status: IN_DEVELOPMENT
+                dueDate: 30/01/2025
+                version: "1.0"
+            }
+        }
+
+        
+    }
+
+    roadmap projeto {
+    name: "Rodmap do projeto"
+    description: "Roadmap de todo do projeto"
+    milestone beta {
+        name: "Primeira versão"
+        description: "Contem apenas estudo das tecnologias do projeto"
+        startDate: 20/11/2024        
+        dueDate: 30/11/2024
+        status: IN_PROGRESS
+        release beta {
+            description: "Estudo para entender as tecnologias"
+            item : spikes.E001
+            status: IN_DEVELOPMENT
+            dueDate: 30/11/2024
+            version: "1.0"
+        }
+    }
+}
+
+// BACKLOGS ---------------------------------------------------------------------------------
+
+backlog old {
+    name : "Backlog 'Old'"
+    description : "Coletânea de tarefas, ideias e estudos a serem realizar futuramente em momento oportuno.Dados reproduzidos de https://github.com/leds-conectafapes/leds-devops-plannig/"
+
+    epic E001 {
+        name: "Desenvolver um guia interno que documente as melhores práticas de desenvolvimento e QA para ser seguido por toda a equipe."
+    
+        story S001 {
+            name: "Modelagem de processo de desenvolvimento e entrega de software"
+
+            task T001 {name: "Criar processo do gitflow ci-cd padrão do LEDS em BPMN"}
+            task T002 {name: "Validar processo gitflow ci-cd com equipe"}
+            task T003 {name: "Criar documentação das tarefas de usuário do processo"}
+            task T004 {name: "Disponibilizar documentação e capacitar a equipe"}
+        }
+    }
+
+    epic E002 {
+        name: "Treinamento em Boas Práticas Produção e Revisão de Código"
+        story S001 {name: "Realizar workshops e treinamentos regulares sobre padrões de codificação, revisão de código e práticas de QA."}
+        story S002 {name: "Produzir artigos e videos para treinamento contínuo de equipe." }
+    }
+
+    epic E003 {
+        name: "Criação de um Manual de Boas Práticas de Deploy e Segurança de código"
+        story S001 {name: "Desenvolver um guia interno que documente as melhores práticas de implantação segura de código a ser seguido por toda a equipe."}
+    }
+
+    epic E004 {
+        name: "Implementação de Testes de Software"
+        story S001 {name: "Implementar estrutura de referência para testes de unitários e geração de relatórios de cobertura de código."}
+        story S002 {name: "Implementar estrutura de referência para testes de integração que cubra todas as funcionalidades críticas do software."}
+        story S003 {name: "Definição e implementação de uma solução de testes de qualidade de código"}
+        story S004 {name: "Integrar os testes automatizados no pipeline de CI/CD para execução em cada commit e pull request."}
+
+    }
+
+    epic E005 {
+        name: "Criação de um Processo de Revisão de Código Automatizado"
+        story S001 {name: "Definir metodologia referencial de revisão de código."}
+        story S002 {name: "Capacitar a equipe em revisão de código."}
+        story S003 {name: "Desenvolver scripts e ferramentas que verifiquem automaticamente a conformidade com padrões de código e testes antes da aprovação de PRs."}
+        story S004 {name: "Integrar os testes automatizados no pipeline de CI/CD para execução em cada commit e pull request."}
+
+    }
+
+    epic E006 {
+        name: "Implementar Integração Contínua e Entrega Contínua (CI/CD) com Segurança Contínua"
+        description: "Criar pipelines de CI/CD eficientes que integrem verificações de segurança automatizadas, permitindo a entrega rápida, segura e confiável de novas funcionalidades."
+    
+        story S001 {
+            name: "Desenvolvimento de Pipeline de CI/CD Automatizado"
+            task T001 {name: "Implantar um executor de pipeline on-premise no LEDS" }
+            task T002 {name: "Instalar o Drone CI em ambiente de testes"}
+            task T003 {name: "Criar documentação de instalação do Drone"}
+            task T004 {name: "Disponibilizar documentação e capacitar a equipe"}
+            task T005 {name: "Instalar o Drone CI em ambiente de produção a partir da documentação"}
+            task T006 {name: "Criar documentação criação de Pipeline para projeto de software a partir do processo gitflow ci-cd"}
+            task T007 {name: "Capacitar a equipe na criação de pipeline"}
+        }
+
+        story S002 {
+            name: "Automatizar o deploy das aplicações em ambientes de teste, homologação e produção, com rollback automático em caso de falha."
+            task T001 {name: "Criar um processo de padrão de deploy"}
+            task T002 {name: "Estudar estratégias de deploy"}
+            task T003 {name: "Definir estratégia padrão de deploy para projetos do LEDS"}
+            task T004 {name: "Criar documentação para implementação do deploy"}
+        }
+    }   
+
+    epic E007 {name: "Criação de um processo contínuo de gestão de segredos, tokens e certoficados"}
+    epic E008 {name: "Definir e implantar um sistema de AAA para acesso as recursos e sistemas"}
+    epic E009 {name: "Treinamento em aplicações escaláveis com microserviços"}
+    epic E010 {name: "Implantação de ambiente seguro em nuvem local ou publica para build e deploy de aplicações escaláveis"}
+    epic E011 {name: "Criação de um processo de gestão de infraestrutura em IaC executado em pipeline"}
+    epic E012 {name: "Implantação de um sistema de monitoramento de ativos e aplicações para acompanhamento de KPI de SLA"}
+
+    epic R013 {name: "Implantação de um sistema inteligente de coleta e análise de log de ativos, sistemas e aplicações com suporte a trace de aplicações"
+        story S001 {name: "Implantação de uma DMZ para ambientes de desenvolvimento, testes e produção"}
+        story S002 {name: "Implantação de um sistema de atendimento de incidentes"}
+        story S003 {name: "Implantação de um sistema de gestão de logs, eventos e trace de aplicações"}
+    }
+
+    epic R015 {name: "Implantar CI/CD para os softwares desenvolvidos"
+        story S001 {
+            name: "Backend-admin" 
+            task T001 {name: "Implementar um CI de build, testes e análise de qualidade de código"}
+            task T002 {name: "Implementar um CD para ambientes de desenvolvimento, testes e produção"}
+            task T003 {name: "Definir métricas validação para testes, desempenho e segurança"}
+            task T004 {name: "Criar monitoramento de KPI da aplicação para monitoramento de qualidade, desempenho e segurança"}
+        }
+
+        story S002 {
+            name: "Frontend-admin" 
+            task T001 {name: "Implementar um CI de build, testes e análise de qualidade de código"}
+            task T002 {name: "Implementar um CD para ambientes de desenvolvimento, testes e produção"}
+            task T003 {name: "Definir métricas validação para testes, desempenho e segurança"}
+            task T004 {name: "Criar monitoramento de KPI da aplicação para monitoramento de qualidade, desempenho e segurança"}
+        }
+    }
+
+    epic E016 {name: "Criar uma pipeline de deploy da aplicação: Front e backend"}
+    epic E017 {name: "Criar o monitoramento dos KPI das aplicações nos respectivos ambientes (desenvolvimento, testing,"}
+}
+
+backlog spikes {
+    name : "Backlog 'Spikes'"
+    description : "Backlog reservado para spikes, ou seja, tarefas de pesquisa ou experimentação destinada a esclarecer dúvidas técnicas ou de requisitos para o desenvolvimento de uma funcionalidade."
+
+    epic E001 {
+        name: "Spike - Testes de Performance"
+        description: "Estudo e experimentação de técnicas e ferramentas para realizar testes de performance na aplicação."
+
+        story S001 {
+            name: "Análise de ferramentas de testes de performance"
+
+            task T001 {name: "Pesquisa e comparação de ferramentas de testes de performance (JMeter, Gatling, Sonarqube, etc.)"}
+            task T002 {name: "Instalação e configuração básica ( da ferramenta escolhida )"}
+            task T003 {name: "Execução de teste simples de performance utilizando ( da ferramenta escolhida ), limitando-se ao escopo ( descrição do escopo )"}
+            task T004 {name: "Análise e interpretação dos resultados dos testes de performance"}
+        }
+    }
+
+    epic E002 {
+        name: "Spike - Testes de Carga"
+        description: "Estudo e experimentação para avaliar como a aplicação se comporta sob carga de usuários simultâneos."
+
+        story S002 {
+            name: "Definição de cenários de testes de carga"
+
+            task T001 {name: "Pesquisa sobre boas práticas para testes de carga"}
+            task T002 {name: "Criação de cenários de testes de carga realistas, limitando-se ao escopo ( descrição do escopo )"}
+            task T003 {name: "Configuração ( da ferramenta escolhida ) para execução de testes de carga"}
+            task T004 {name: "Execução de teste de carga, limitando-se ao escopo ( descrição do escopo )"}
+        }
+    }
+
+    epic E003 {
+        name: "Spike - Testes de Segurança"
+        description: "Exploração de técnicas e ferramentas para avaliar a segurança da aplicação contra vulnerabilidades comuns."
+
+        story S003 {
+            name: "Pesquisa sobre vulnerabilidades comuns em aplicações web"
+
+            task T001 {name: "Estudo sobre as principais vulnerabilidades OWASP Top 10"}
+            task T002 {name: "Instalação e configuração (da ferramenta escolhida) "}
+            task T003 {name: "Realização de um teste básico de segurança utilizando (ferramenta escolhida)"}
+            task T004 {name: "Análise de resultados e recomendações de melhorias de segurança"}
+        }
+    }
+}
+
+backlog M001 {
+   name: "Backlog - Módulo M001 Modalidades de Bolsas"
+   description: "Objetivo Geral: Criar uma pipeline de CI/CD para o ambiente de testes, de forma a permitir as validações dos módulos desenvolvidos pela equipe de dev, e habilite a implantação segura das aplicações até o final de janeiro/2025. Utilizar o módulo M001 - Modalidades de Bolsas como escopo inicial."
+
+   epic E001 {
+    name: "Realizar cobertura de testes E2E do módulo 'Modalidades de Bolsas'"
+    description: "Objetivo: Garantir que o módulo 'Modalidades de Bolsas' seja devidamente testados por meio de scripts e que, se identificados bugs, estes sejam devidamente relatados para que o time de Desenvolvimento seja capaz de corrigir erros."
+
+    story S001 {
+        name: "Testes E2E"
+        
+        task T001 { name: "Criar planilha de referência para gerenciamento de testes de qualidade" }
+        task T002 { name: "Organizar repositório de testes de qualidade para cada módulo desenvolvido" }
+        task T003 { name: "Desenvolver etapa da pipeline de QA (testing) com verificação via Drone dos scripts de teste E2E." }
+        task T004 { name: "Criar testes caixa preta do caso de uso UC01: Controlar Modalidade de Bolsa e gerar issues de bugs a serem resolvidos seguindo modelo" }
+        task T005 { name: "Criar guia de orientação para desenvolvedores quanto ao uso do atributo 'data-test' para assegurar pleno funcionamento dos testes" }
+        task T006 { name: "Criar testes caixa preta do caso de uso UC02: Cadastrar Resolução e gerar issues de bugs a serem resolvidos seguindo modelo" }
+        task T007 { name: "Criar testes caixa preta do caso de uso UC03: Cadastrar Nível de Bolsa e gerar issues de bugs a serem resolvidos seguindo modelo" }
+
+        task T008 {
+            name: "Alinhamento de refatoração de código para inclusão do atributo `data-test`"
+            description: "1. Reunir com time de IA e desenvolvedores front-end para definir processo de refatoração" }   
+    }
+   }
+
+   epic E002 {
+    name: "Desenvolver um MVP (Minimo Produto Viável) para atendimento de chamados via Whatsapp."
+    description: "Objetivo: Viabilizar comunicação com usuários do sistema de forma simples e eficaz, garantindo um fluxo de trabalho automatizado e proporcionando aos usuários maior qualidade no atendimento."
+    
+    story S001 {
+        name: "Criar o MVP de Chamado via Whatsapp"
+        task T001 { name: "Criar um módulo de capture mensagens de um telefone Whatsapp e registre numa fila Kafka" }
+        task T002 { name: "[Spike] Estudar como instalar e usar o Kafka para criação de sistema de mensageria (fazer documentação inicial)" }
+        task T003 { name: "Criar um módulo que leia mensagens do Kafka e registre as mensagens no RT e vice-versa" }
+        task T004 { name: "Criar um sistema de mensageria para integrar o atendimento via Whatsapp com RT, disponibilizando as mensagens para outras aplicações" }
+     }
+   }
+}
+
+// SPRINTS ---------------------------------------------------------------------------------
+
+// JANEIRO ---------------------------------------------------------------------------------
+
+sprint sprint1 {
+    name: "Sprint 001 - Janeiro/2025"
+    description: "Estabelecer primeira versão de uma pipeline de QA funcional para auxilio na garantia da qualidade do software. Finalizar scripts do módulo 'Modalidades de Bolsas'. Desenvolver primeira versão do sistema de chamados, com módulo de coleta e registro de mensagens."
+    startDate: 01/01/2025
+    endDate: 17/01/2025
+    status: IN_PROGRESS
+
+    sprintbacklog M001 {
+
+       item M001.E001.S001.T001 {assignee: time_qa.sofiadealcantara startDate: 04/12/2024 dueDate: 06/12/2024  completedDate: 05/12/2024 status: DONE }
+       item M001.E001.S001.T002 {assignee: time_qa.sofiadealcantara startDate: 04/12/2024 dueDate: 06/12/2024  completedDate: 05/12/2024 status: DONE }
+
+       item M001.E001.S001.T003 {assignee: time_qa.davinunes startDate: 04/12/2024 dueDate: 31/01/2025  completedDate: 10/01/2025 status: DONE }
+
+       item M001.E001.S001.T004 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 status: DOING }
+       item M001.E001.S001.T005 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: DONE }
+       item M001.E001.S001.T006 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: DOING }
+       item M001.E001.S001.T007 {assignee: time_qa.leandrocarone startDate: 04/12/2024 dueDate: 31/01/2025 completedDate: 08/01/2025 status: TODO }
+
+       item M001.E001.S001.T008 {assignee: time_qa.davinunes startDate: 13/01/2025 dueDate: 15/01/2025 completedDate: 14/01/2025 status: DONE }
+
+       item M001.E002.S001.T001 {assignee: time_qa.luanotoni startDate: 04/12/2024 dueDate: 31/01/2025 status: DOING}
+       item M001.E002.S001.T002 {assignee: time_qa.luanotoni startDate: 04/12/2024 dueDate: 31/01/2025 status: DOING}
+
+       item M001.E001.S001.T008 {assignee: time_qa.davinunes startDate: 13/01/2025 dueDate: 15/01/2025 completedDate: 14/01/2025 status: DONE }
+
+    }   
+}

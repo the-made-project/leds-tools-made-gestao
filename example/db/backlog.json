@@ -1,39 +1,346 @@
 {
   "data": [
     {
-      "id": "Spike",
-      "name": "Backlog de Estudo",
-      "description": "Backlog dedicado a estudo da equipe",
+      "id": "PRODUTOS",
+      "name": "Produtos",
+      "description": "Produtos internos para melhorar o dia-a-dia do teste",
       "issues": [
         {
-          "id": "Spike.epic1",
-          "title": "Estudar sobre Autorização",
-          "description": "Estudo sobre autorização de usuários a recursos de redes",
+          "id": "PRODUTOS.s001",
+          "title": "Criar script para incluir o data-test",
+          "description": "Criar um script para incluir o atributo data-test nos codigos existentes",
+          "type": "atomicuserstory",
+          "issues": [
+            {
+              "id": "PRODUTOS.s001.t001",
+              "title": "alinhamento de refatoração de código para inclusão do atributo data-test",
+              "description": "",
+              "type": "taskbacklog",
+              "depends": []
+            },
+            {
+              "id": "PRODUTOS.s001.t002",
+              "title": "implementar o script",
+              "description": "",
+              "type": "taskbacklog",
+              "depends": []
+            },
+            {
+              "id": "PRODUTOS.s001.t003",
+              "title": "executar a teste",
+              "description": "",
+              "type": "taskbacklog",
+              "depends": []
+            }
+          ],
+          "depends": []
+        }
+      ]
+    },
+    {
+      "id": "SPIKE",
+      "name": "Spikes",
+      "description": "Backlog reservado para spikes, ou seja, tarefas de pesquisa ou experimentação destinada a esclarecer dúvidas técnicas ou de requisitos para o desenvolvimento de uma funcionalidade.",
+      "issues": [
+        {
+          "id": "SPIKE.e001",
+          "title": "Seleção de Ferramenta de testes",
+          "description": "Estudo e experimentação de técnicas e ferramentas para realizar testes de performance na aplicação.",
           "type": "epic",
           "issues": [
             {
-              "id": "Spike.epic1.story1",
-              "title": "Estudar a arquitetura proposta pelo OPA",
+              "id": "SPIKE.e001.s001",
+              "title": "Estudo sobre ferramentas de Performace",
               "description": "",
               "type": "atomicuserstory",
               "issues": [
                 {
-                  "id": "Spike.epic1.story1.estudar",
-                  "title": "Estudar sobre OPA",
+                  "id": "SPIKE.e001.s001.t001",
+                  "title": "Pesquisa e comparação de ferramentas",
                   "description": "",
                   "type": "taskbacklog",
                   "depends": []
                 },
                 {
-                  "id": "Spike.epic1.story1.apresentar",
-                  "title": "Apresentar o estudo OPA",
+                  "id": "SPIKE.e001.s001.t002",
+                  "title": "Instalação e configuração básica da ferramenta escolhida",
                   "description": "",
                   "type": "taskbacklog",
-                  "depends": [
-                    {
-                      "id": "spike.epic1.story1.estudar"
-                    }
-                  ]
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t003",
+                  "title": "Definição dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t004",
+                  "title": "Implementação e execução dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t005",
+                  "title": "Análise e interpretação dos resultados dos testes realizados ",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t006",
+                  "title": "Definir cronograma de implementação da ferramenta no projeto",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t007",
+                  "title": "Criar documentação",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t008",
+                  "title": "Treinar a Equipe",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s001.t009",
+                  "title": "Implantar",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                }
+              ],
+              "depends": []
+            },
+            {
+              "id": "SPIKE.e001.s002",
+              "title": "Estudo sobre ferramentas de Carga",
+              "description": "",
+              "type": "atomicuserstory",
+              "issues": [
+                {
+                  "id": "SPIKE.e001.s002.t001",
+                  "title": "Pesquisa e comparação de ferramentas",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t002",
+                  "title": "Instalação e configuração básica da ferramenta escolhida",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t003",
+                  "title": "Definição dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t004",
+                  "title": "Implementação e execução dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t005",
+                  "title": "Análise e interpretação dos resultados dos testes realizados ",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t006",
+                  "title": "Definir cronograma de implementação da ferramenta no projeto",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t007",
+                  "title": "Criar documentação",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t008",
+                  "title": "Treinar a Equipe",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s002.t009",
+                  "title": "Implantar",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                }
+              ],
+              "depends": []
+            },
+            {
+              "id": "SPIKE.e001.s003",
+              "title": "Estudo sobre ferramentas de Segurança",
+              "description": "",
+              "type": "atomicuserstory",
+              "issues": [
+                {
+                  "id": "SPIKE.e001.s003.t001",
+                  "title": "Pesquisa e comparação de ferramentas",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t002",
+                  "title": "Instalação e configuração básica da ferramenta escolhida",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t003",
+                  "title": "Definição dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t004",
+                  "title": "Implementação e execução dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t005",
+                  "title": "Análise e interpretação dos resultados dos testes realizados ",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t006",
+                  "title": "Definir cronograma de implementação da ferramenta no projeto",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t007",
+                  "title": "Criar documentação",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t008",
+                  "title": "Treinar a Equipe",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e001.s003.t009",
+                  "title": "Implantar",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                }
+              ],
+              "depends": []
+            }
+          ],
+          "depends": []
+        },
+        {
+          "id": "SPIKE.e002",
+          "title": "Melhoria nos códigos de testes",
+          "description": "Melhoria nas ferramentas escolhidas para testes",
+          "type": "epic",
+          "issues": [
+            {
+              "id": "SPIKE.e002.s001",
+              "title": "Estudo sobre Data-Test no Vue",
+              "description": "",
+              "type": "atomicuserstory",
+              "issues": [
+                {
+                  "id": "SPIKE.e002.s001.t001",
+                  "title": "Pesquisa e comparação de ferramentas",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t002",
+                  "title": "Instalação e configuração básica da ferramenta escolhida",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t003",
+                  "title": "Definição dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t004",
+                  "title": "Implementação e execução dos cenários de teste",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t005",
+                  "title": "Análise e interpretação dos resultados dos testes realizados ",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t006",
+                  "title": "Definir cronograma de implementação da ferramenta no projeto",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t007",
+                  "title": "Criar documentação",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t008",
+                  "title": "Treinar a Equipe",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
+                },
+                {
+                  "id": "SPIKE.e002.s001.t009",
+                  "title": "Implantar",
+                  "description": "",
+                  "type": "taskbacklog",
+                  "depends": []
                 }
               ],
               "depends": []
