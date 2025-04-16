@@ -10,6 +10,7 @@ import { ReportManager }  from  "made-report-lib";
 import { RoadmapApplication } from './RoadmapApplication.js';
 import { ProcessApplication } from './ProcessApplication.js';
 import { ProjectApplication } from './ProjectApplication.js';
+import { ApplicationFactory } from "./ApplicationFactory.js";
 
 
 interface InitializationStep {
@@ -33,8 +34,8 @@ export class ApplicationManager {
     processApplication: ProcessApplication
     reportManager: ReportManager
     projectApplication: ProjectApplication
-    target_folder: string
 
+    target_folder: string
     model: Model
 
     constructor(target_folder:string, model: Model) {
@@ -47,19 +48,13 @@ export class ApplicationManager {
         this.target_folder = target_folder
         this.reportManager = new ReportManager()
 
-        this.timeBoxApplication = new TimeBoxApplication(target_folder,model)
-  
-        this.teamApplication = new TeamApplication(target_folder,model)
-  
-        this.issueApplication = new  IssueApplication(target_folder,model)
-  
-        this.backlogApplication = new BacklogApplication(target_folder,model)
-
-        this.roadmapApplication = new RoadmapApplication(target_folder,model)
-
-        this.processApplication = new ProcessApplication(target_folder,model)
-
-        this.projectApplication = new ProjectApplication(target_folder,model)
+        this.timeBoxApplication = ApplicationFactory.createApplication("TimeBox", target_folder, model) as TimeBoxApplication;
+        this.teamApplication = ApplicationFactory.createApplication("Team", target_folder, model) as TeamApplication;
+        this.issueApplication = ApplicationFactory.createApplication("Issue", target_folder, model) as IssueApplication;
+        this.backlogApplication = ApplicationFactory.createApplication("Backlog", target_folder, model) as BacklogApplication;
+        this.roadmapApplication = ApplicationFactory.createApplication("Roadmap", target_folder, model) as RoadmapApplication;
+        this.processApplication = ApplicationFactory.createApplication("Process", target_folder, model) as ProcessApplication;
+        this.projectApplication = ApplicationFactory.createApplication("Project", target_folder, model) as ProjectApplication;
         // Define MADE Agile initialization steps
         this.initializationSteps = [
             {
