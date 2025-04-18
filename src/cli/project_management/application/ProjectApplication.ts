@@ -1,10 +1,9 @@
 import {  Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import { Project } from "made-report-lib";
+/*import { Project } from "made-report-lib";*/
+import { ProjectBuilder } from './builders/ProjectBuilder.js';
 
 export  class ProjectApplication extends AbstractApplication {
-
-    
 
     constructor(target_folder:string, model: Model) {
 
@@ -13,24 +12,18 @@ export  class ProjectApplication extends AbstractApplication {
         
     }
     
-
     public async create(){
         const project = this.model.project
 
-        const instance: Project = {
-            id: project.id.toLocaleLowerCase()?? "",
-            name: project.name ?? "",
-            description: project.description ?? "" ,
-            startDate: project.startDate ?? "",
-            dueDate: project.duedate ?? "",
-            completedDate:project.completedDate ?? ""
-          }
-        
+        const instance = new ProjectBuilder()
+            .setId(project.id.toLocaleLowerCase()?? "")
+            .setName(project.name ?? "")
+            .setDescription(project.description ?? "" )
+            .setStartDate(project.startDate ?? "")
+            .setDueDate(project.dueDate ?? "")
+            .setCompletedDate(project.completedDate ?? "")
+            .build()
+            
         await this.saveorUpdate(instance)
-
     }
-
-    
-
-       
 }

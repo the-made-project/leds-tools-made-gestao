@@ -1,7 +1,8 @@
 
 import {  isBacklog, Model} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import {Backlog} from "made-report-lib";
+/*import {Backlog} from "made-report-lib";*/
+import { BacklogBuilder } from './builders/BacklogBuilder.js';
 
 export  class BacklogApplication extends AbstractApplication {
 
@@ -13,23 +14,24 @@ export  class BacklogApplication extends AbstractApplication {
 
     public async create(){
         
-       const backlogs = this.model.components.filter (isBacklog);
+      const backlogs = this.model.components.filter (isBacklog);
 
-       backlogs.map (async backlog => {
+      for (const backlog of backlogs) {
+        const issues = await Promise.all(backlog.items?.map (async issue => await this.createIssue(issue.$container.id, issue)) ?? [])
 
-         const instance: Backlog = {
-            id : backlog.id,
-            name: backlog.name  ?? "",
-            description: backlog.description ?? "", 
-            issues: await Promise.all(backlog.items?.map(async (issue) => await this.createIssue(issue.$container.id,issue))) ?? [] 
-         }
+        const instance = new BacklogBuilder()
+            .setId(backlog.id)
+            .setName(backlog.name ?? "")
+            .setDescription(backlog.description ?? "")
+            .setIssues(issues)
+            .build()
 
-         await this.saveorUpdate (instance)
-         await this.addItem(backlog)
-       })
-       await  this.clean()
+        await this.saveorUpdate(instance)
+        await this.addItem(instance)
+      
+      await  this.clean()
     }   
 
-    
+  }
        
 }

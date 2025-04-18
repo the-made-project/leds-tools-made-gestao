@@ -1,19 +1,17 @@
 import { Util } from '../service/util.js';
 import { createPath } from '../../generator-utils.js'
 
-import path from "path";
 import lodash from 'lodash'
-import { LowSync } from 'lowdb';
-import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
-import {IssuesDTO,Issue} from "made-report-lib";
+import {Issue} from "made-report-lib";
 import { Model } from '../../../language/generated/ast.js';
+import DatabaseSingleton from './singleton/DatabaseSingleton.js';
 
 const mutex = new Mutex();
 
 export abstract class AbstractApplication {
 
-  
+
   DB_PATH: string  
   model: Model  
   jsonFile: string
@@ -24,7 +22,10 @@ export abstract class AbstractApplication {
         this.model = model
         this.DB_PATH = createPath(target_folder, 'db')        
         this.jsonFile = "data.json"
-        this.items = new Map<string, any>();
+        this.items = new Map<string, any>()
+
+        // Initialize the DatabaseSingleton
+        DatabaseSingleton.initialize(this.DB_PATH, this.jsonFile);
   }
 
  
@@ -35,62 +36,39 @@ protected async addItem (value:any){
 }
 
   protected async _idExists(id:string){
-    
-    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
-    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    const db = DatabaseSingleton.getInstance()
     await db.read()
-    
+
     const exists = lodash.chain(db.data).get('data').some({ internalId: id }).value();
-    
-    if (exists) return true;
-    
-    return false;
+    return exists;
 
   }
 
   
   protected async retrive(id:string){
-    
-    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
-    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    const db = DatabaseSingleton.getInstance()
     await db.read()
     
-    return lodash.chain(db.data).get('data').find({ id: id }).value();    
-    
+    return lodash.chain(db.data).get('data').find((item: any) => item.id === id).value();
+
   }
 
 
 
   protected async retriveByExternal(id:string){
     
-    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-
-    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    const db = DatabaseSingleton.getInstance()
     await db.read()
-    
-    return lodash.chain(db.data).get('data').find({ id: id }).value();    
-    
+
+    return lodash.chain(db.data).get('data').find({ id: id }).value();
   }
 
   protected async retriveByExternalData(data:string){
-    
-    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
-    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter,defaultData)
+    const db = DatabaseSingleton.getInstance();
+        
     await db.read()
     
     return lodash.chain(db.data).get('data').find(data).value();    
@@ -116,7 +94,7 @@ protected async addItem (value:any){
    
    if (data.userstories){
       if (data.userstories.length >0){    
-       issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[]
+        issue.issues = await Promise.all(data.userstories.map(async (value: any) => await this.createIssue(id, value))) ?? []
     }
   }
 
@@ -163,14 +141,8 @@ protected async addItem (value:any){
 
   protected async save(issueDTO: any) {
     await mutex.runExclusive(async () => {
-    const ISSUEPATH = path.join(this.DB_PATH,  this.jsonFile);    
-    const adapter = new JSONFileSync <IssuesDTO>(ISSUEPATH); 
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter,defaultData)
-
-    await db.read();
-    db.data ||= defaultData;
+      const db = DatabaseSingleton.getInstance()
+      db.data ||= { data: [] }
     
     if (db.data?.data) {
         db.data.data.push(issueDTO);
@@ -183,14 +155,10 @@ protected async addItem (value:any){
 
   protected async remove(issueId: string) {
     await mutex.runExclusive(async () => {
-        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);    
-        const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
-        const defaultData: IssuesDTO = { data: [] };
-
-        const db = new LowSync<IssuesDTO>(adapter, defaultData);
+        const db = DatabaseSingleton.getInstance();
 
         await db.read();
-        db.data ||= defaultData;
+        db.data ||= { data: [] };
         
         if (db.data?.data) {
             // Encontra o índice do item a ser removido
@@ -210,15 +178,11 @@ protected async addItem (value:any){
 
   protected async update(issueId: string, newData: Partial<any>) {
     await mutex.runExclusive(async () => {
-        const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-        const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
-        const defaultData: IssuesDTO = { data: [] };
-
-        const db = new LowSync<IssuesDTO>(adapter, defaultData);
+        const db = DatabaseSingleton.getInstance();
         
         // Ler o banco de dados
         await db.read();
-        db.data ||= defaultData;
+        db.data ||= { data: [] };
 
         // Encontra o índice do item que deseja atualizar
         const issueIndex = db.data.data.findIndex((issue) => issue.id === issueId);
@@ -233,12 +197,7 @@ protected async addItem (value:any){
 
   protected async retriveAll(){
       
-    const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
-    
-    const adapter = new JSONFileSync<IssuesDTO>(ISSUEPATH);
-    const defaultData: IssuesDTO = { data: [] };
-
-    const db = new LowSync<IssuesDTO>(adapter, defaultData);
+    const db = DatabaseSingleton.getInstance();
     await db.read();
     
     return db.data.data.sort((a, b) => {

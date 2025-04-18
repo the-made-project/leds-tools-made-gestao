@@ -2,8 +2,9 @@
 import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
-import {SprintItem, TimeBox, Person, Issue} from "made-report-lib";
+import {SprintItem, /*TimeBox,*/ Person, Issue} from "made-report-lib";
 
+import {TimeBoxBuilder} from './builders/TimeBoxBuilder.js';
 
 export class TimeBoxApplication extends AbstractApplication {
     
@@ -22,19 +23,20 @@ export class TimeBoxApplication extends AbstractApplication {
         const sprintItems = (await Promise.all(sprint.sprintBacklog?.planningItems.flatMap(item => this.createTask(item)) as unknown as SprintItem[])).flatMap (item => item)
         
 
-        const instance: TimeBox = {
-            id: sprint.id,
-            name: sprint.name?? "",
-            description: sprint.description ?? "",
-            startDate: sprint.startDate ?? "",
-            endDate: sprint.endDate ?? "",
-            status: sprint.status ?? "PLANNED",
-            sprintItems: sprintItems
-
-        }
+        const instance = new TimeBoxBuilder()
+            .setId(sprint.id)
+            .setName(sprint.name ?? "")
+            .setDescription(sprint.description ?? "")
+            .setStartDate(sprint.startDate ?? "")
+            .setEndDate(sprint.endDate ?? "")
+            .setStatus(sprint.status ?? "PLANNED")
+            .setSprintItems(sprintItems)
+            .build()
+        
         this.saveorUpdate(instance)
         await this.addItem(instance)
        })
+
        await  this.clean()
            
     }
@@ -100,8 +102,7 @@ export class TimeBoxApplication extends AbstractApplication {
             
 
         return issues
-    }    
-  
+    }
            
 }
 
