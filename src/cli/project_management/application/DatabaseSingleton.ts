@@ -28,5 +28,3 @@ export default class DatabaseSingleton {
         return DatabaseSingleton.instance;
     }
 }
-
-//export default DatabaseSingleton;

@@ -7,7 +7,7 @@ import { ApplicationManager } from './project_management/application/Application
 export async function generate(model: Model, filePath: string, destination: string | undefined, opts: GenerateOptions): Promise<string> {
     const final_destination = extractDestination(filePath, destination)
     
-    const appManager = new ApplicationManager(final_destination, model);
+    const appManager = ApplicationManager.getInstance(final_destination, model);
     await appManager.initializeApplications();
     
     

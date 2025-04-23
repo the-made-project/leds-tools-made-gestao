@@ -22,6 +22,7 @@ interface InitializationStep {
 }
 
 export class ApplicationManager {
+    private static instance: ApplicationManager;
     private isInitializing: boolean = false;
     private statusBarItem: vscode.StatusBarItem;
     private initializationSteps: InitializationStep[];
@@ -38,7 +39,7 @@ export class ApplicationManager {
     target_folder: string
     model: Model
 
-    constructor(target_folder:string, model: Model) {
+    private constructor(target_folder:string, model: Model) {
         this.statusBarItem = vscode.window.createStatusBarItem(
             vscode.StatusBarAlignment.Left,
             100
@@ -120,6 +121,13 @@ export class ApplicationManager {
                 successEmoji: '📖'
             }
         ];
+    }
+
+    static getInstance(target_folder:string, model: Model): ApplicationManager {
+        if (!ApplicationManager.instance) {
+            ApplicationManager.instance = new ApplicationManager(target_folder, model);
+        }
+        return ApplicationManager.instance;
     }
 
     addInitializationStep(step: InitializationStep) {

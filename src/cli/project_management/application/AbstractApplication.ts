@@ -5,7 +5,7 @@ import lodash from 'lodash'
 import { Mutex } from 'async-mutex';
 import {Issue} from "made-report-lib";
 import { Model } from '../../../language/generated/ast.js';
-import DatabaseSingleton from './singleton/DatabaseSingleton.js';
+import DatabaseSingleton from './DatabaseSingleton.js';
 
 const mutex = new Mutex();
 
