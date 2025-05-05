@@ -22,8 +22,8 @@ export class BacklogBuilder {
         return this;
     }
 
-    async setIssues(processIssues: () => Promise<Issue[]>): Promise<BacklogBuilder> {
-        this.backlog.issues = await processIssues();
+    setIssues(issues: Issue[]): BacklogBuilder {
+        this.backlog.issues = issues;
         return this;
     }
 

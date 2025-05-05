@@ -23,7 +23,7 @@ export class TeamBuilder {
     }
 
     setTeamMembers(teamMembers: Person[]): TeamBuilder {
-        this.team.teammebers = teamMembers
+        this.team.teammebers = teamMembers;
         return this
     }
     

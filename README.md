@@ -23,15 +23,15 @@ Right-click on your `.made` file and select "Synchronize With Project Management
 ## Components
 
 ### Project:
-  Define the project configuration and the token for creating the project in your project manager.
+    Define the project configuration and the token for creating the project in your project manager.
 
-  ```
-  project "project-name"{
-    id: projectid
-    description: "project description"
-    email: "email of the project editor"
-    host: "host.project.net"
-    token: "the api token"
+    ```
+    project "project-name"{
+        id: projectid
+        description: "project description"
+        email: "email of the project editor"
+        host: "host.project.net"
+        token: "the api token"
 }
 ```
 
@@ -40,13 +40,13 @@ Define a team and inside of it define the members of the team
 
 ```
 team TeamID {
-    name: "team name"
-    description: "team description"
-    
-    teammember memberid {
-      name: "member name" 
-      email:"member@email.com"
-      }
+        name: "team name"
+        description: "team description"
+        
+        teammember memberid {
+            name: "member name" 
+            email:"member@email.com"
+            }
 }
 ```
 
@@ -55,20 +55,20 @@ Define the timebox its responsibles, planning and performed
 
 ```
 timebox timeboxid {
-    name: "timebox name"
-    description: "timebox description"
-    startDate: "01/01/2024"
-    endDate: "12/12/2024"
+        name: "timebox name"
+        description: "timebox description"
+        startDate: "2024-01-01"
+        endDate: "2024-12-12"
 
-    responsible: TeamID.memberid 
+        responsible: TeamID.memberid 
 
-    planning {
-        item: "planning item" assignee: "member name"
-    } 
+        planning {
+                item: "planning item" assignee: "member name"
+        } 
 
-    performed{
-        item: "performed item" status: DOING
-    }
+        performed{
+                item: "performed item" status: DOING
+        }
 }
 ```
 
@@ -76,13 +76,13 @@ timebox timeboxid {
 Define the project and its activities.
 ```
 process processID {
-    name: "process name"
-    description: "process description"
+        name: "process name"
+        description: "process description"
 
-    activity activityID{
-        name: "activity name"
-        description: "activity description"
-    }
+        activity activityID{
+                name: "activity name"
+                description: "activity description"
+        }
 }
 ```
 
@@ -91,16 +91,16 @@ Define the backlog its epics and user stories.
 
 ```
 backlog BackLogID  {
-    name: "backlog name"
-    description: "backlog description"
-    epic EpicId {
-        name: "Epic name"
-        process: processID
-    }
-    userstory userstoryId {
-        name: "User story name"
-        activity: processID.activityID
-    }
+        name: "backlog name"
+        description: "backlog description"
+        epic EpicId {
+                name: "Epic name"
+                process: processID
+        }
+        userstory userstoryId {
+                name: "User story name"
+                activity: processID.activityID
+        }
 }
 ```
 
@@ -109,19 +109,19 @@ Define the road map, its versions and the versions planning
 
 ```
 roadmap RoadMapID {
-    name: "Road map name"
-    description: "Road map description"
+        name: "Road map name"
+        description: "Road map description"
 
-    version RoadMapVersionID {
-        name: "Road map version name"
-        description: "Road map version description"
-        startDate: "01/01/2024"
-        endDate: "12/12/2024"
+        version RoadMapVersionID {
+                name: "Road map version name"
+                description: "Road map version description"
+                startDate: "2024-01-01"
+                endDate: "2024-12-12"
 
-        planning {
-            item: BackLogID.userstoryId
-            item: "planning item"
+                planning {
+                        item: BackLogID.userstoryId
+                        item: "planning item"
+                }
         }
-    }
 }
 ``` -->
