@@ -18,8 +18,8 @@ Progresso: 0%
 
 
 ### 🏃 Controlar Modalidade de Bolsa (IN_PROGRESS)
-- **Início**: 01/12/2024
-- **Conclusão Prevista**: 31/01/2025
+- **Início**: 2024/12/01
+- **Conclusão Prevista**: 2025/01/31
 - **Descrição**: Validar os casos de uso do Módulo Controlar Modalidade de Bolsa
 - **Releases Associadas**: 1.0
 - **Dependências**: Nenhuma

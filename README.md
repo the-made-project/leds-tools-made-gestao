@@ -57,8 +57,8 @@ Define the timebox its responsibles, planning and performed
 timebox timeboxid {
     name: "timebox name"
     description: "timebox description"
-    startDate: "01/01/2024"
-    endDate: "12/12/2024"
+    startDate: "2024/01/30"
+    endDate: "2024/12/30"
 
     responsible: TeamID.memberid 
 
@@ -115,8 +115,8 @@ roadmap RoadMapID {
     version RoadMapVersionID {
         name: "Road map version name"
         description: "Road map version description"
-        startDate: "01/01/2024"
-        endDate: "12/12/2024"
+        startDate: "2024/01/30"
+        endDate: "2024/12/30"
 
         planning {
             item: BackLogID.userstoryId
