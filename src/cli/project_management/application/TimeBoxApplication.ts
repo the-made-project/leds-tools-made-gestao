@@ -80,7 +80,7 @@ export class TimeBoxApplication extends AbstractApplication {
                 },
     
                 startDate: item.startDate,
-                dueDate: item.duedate,
+                dueDate: item.dueDate,
                 completedDate:item.completedDate,
                 status:item.status ?? "TODO"
     
