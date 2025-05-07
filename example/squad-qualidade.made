@@ -25,8 +25,8 @@ roadmap R001 {
         milestone UC01 {
             name: "UC01: Controlar Modalidade de Bolsa"
             description: "O caso de uso contém os seguintes eventos, que devem ser devidamente testados"
-            startDate: 2024-12-01        
-            dueDate: 2025-01-31
+            startDate: 2024/12/01      
+            dueDate: 2025/01/31
             status: IN_PROGRESS
             release beta {
                 description: "Cadastros"
@@ -46,8 +46,8 @@ roadmap R001 {
     milestone beta {
         name: "Primeira versão"
         description: "Contem apenas estudo das tecnologias do projeto"
-        startDate: 2024-11-20        
-        dueDate: 2024-11-30
+        startDate: 2024/11/20       
+        dueDate: 2024/11/30
         status: IN_PROGRESS
         release beta {
             description: "Estudo para entender as tecnologias"

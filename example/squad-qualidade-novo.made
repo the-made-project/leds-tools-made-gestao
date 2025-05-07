@@ -23,8 +23,8 @@ roadmap projeto {
     milestone beta {
         name: "Controlar Modalidade de Bolsa"
         description: "Validar os casos de uso do Módulo Controlar Modalidade de Bolsa"
-        startDate: 2024-12-01        
-        dueDate: 2025-01-31
+        startDate: 2024/12/01      
+        dueDate: 2025/01/31
         status: IN_PROGRESS
         release beta {
             description: "Estudo para entender as tecnologias"

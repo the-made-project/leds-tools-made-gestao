@@ -55,10 +55,10 @@ Define the timebox its responsibles, planning and performed
 
 ```
 timebox timeboxid {
-        name: "timebox name"
-        description: "timebox description"
-        startDate: "2024-01-01"
-        endDate: "2024-12-12"
+    name: "timebox name"
+    description: "timebox description"
+    startDate: "2024/01/30"
+    endDate: "2024/12/30"
 
         responsible: TeamID.memberid 
 
@@ -109,19 +109,18 @@ Define the road map, its versions and the versions planning
 
 ```
 roadmap RoadMapID {
-        name: "Road map name"
-        description: "Road map description"
+    name: "Road map name"
+    description: "Road map description"
 
-        version RoadMapVersionID {
-                name: "Road map version name"
-                description: "Road map version description"
-                startDate: "2024-01-01"
-                endDate: "2024-12-12"
+    version RoadMapVersionID {
+        name: "Road map version name"
+        description: "Road map version description"
+        startDate: "2024/01/30"
+        endDate: "2024/12/30"
 
-                planning {
-                        item: BackLogID.userstoryId
-                        item: "planning item"
-                }
+        planning {
+            item: BackLogID.userstoryId
+            item: "planning item"
         }
 }
 ``` -->
