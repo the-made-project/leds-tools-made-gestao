@@ -8,10 +8,9 @@ import 'processes'
 import 'timebox'
 import 'team'
 import 'roadmap'
-import 'issuegithub'
 
 entry Model:
     (project=Project)
-    (components+=(Team|Process|Backlog|TimeBox|Roadmap|IssueGithub))*
+    (components+=(Team|Process|Backlog|TimeBox|Roadmap))*
 
 ;

@@ -64,35 +64,3 @@ fragment DueDate:
 fragment CompletedDate:
     'completedDate' ':' completedDate=DATE
 ;
-
-fragment GithubUserName:
-    'githubUserName' ':' githubUserName=STRING
-;
-
-fragment RepositoryName:
-    'repositoryName' ':' repositoryName=STRING
-;
-
-fragment IssueName:
-    'issueName' ':' issueName=STRING
-;
-
-fragment About:
-    'about' ':' about=STRING
-;
-
-fragment Title:
-    'title' ':' title=STRING
-;
-
-fragment Labels:
-    'labels' ':' labels=STRING (',' labels+=STRING)*
-;
-
-fragment Assignees:
-    'assignees' ':' assignees=STRING (',' assignees+=STRING)*
-;
-
-fragment TokenGithub:
-    'tokengithub' ':' token=STRING
-;

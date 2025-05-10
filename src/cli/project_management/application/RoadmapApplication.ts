@@ -28,7 +28,7 @@ export  class RoadmapApplication extends AbstractApplication {
                                 name: milestone.name,
                                 description: milestone.description,
                                 startDate: milestone.startDate,
-                                dueDate: milestone.duedate,
+                                dueDate: milestone.dueDate,
                                 status: milestone.status,
                                 releases: await Promise.all(
                                     (milestone.releases ?? []).map(async release => {
@@ -44,7 +44,7 @@ export  class RoadmapApplication extends AbstractApplication {
                                             version: release.version ?? "",
                                             name: release.name ?? "",
                                             description: release.description ?? "",
-                                            dueDate: release.duedate,
+                                            dueDate: release.dueDate,
                                             releasedDate: release.releasedDate,
                                             status: release.status ?? "PLANNED",
                                             issues

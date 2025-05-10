@@ -20,7 +20,7 @@ export  class ProjectApplication extends AbstractApplication {
             .setName(project.name ?? "")
             .setDescription(project.description ?? "" )
             .setStartDate(project.startDate ?? "")
-            .setDueDate(project.duedate ?? "")
+            .setDueDate(project.dueDate ?? "")
             .setCompletedDate(project.completedDate ?? "")
             .build();
             
