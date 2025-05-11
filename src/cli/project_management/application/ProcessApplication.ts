@@ -2,6 +2,7 @@
 import { Activity, isProcess, Model, Task, Process } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { Process as ProcessData, Activity as ActivityData, Task as TaskData} from "made-report-lib";
+import { ProcessBuilder } from "./builders/ProcessBuilder.js";
 
 
 export  class ProcessApplication extends AbstractApplication {
@@ -22,20 +23,16 @@ export  class ProcessApplication extends AbstractApplication {
 
          await this.saveorUpdate (instance)
        })
-
     }
 
-   
     private async createProcess (process: Process): Promise<ProcessData>{
+        const builder = new ProcessBuilder()
+        builder.setId(process.id)
+            .setName(process.name ?? "")
+            .setDescription(process.description ?? "")
+            .setActivities(await Promise.all(process.activities.map(async activity => await this.createActivity(activity)) ?? []))
    
-       
-        return {
-            id : process.id,
-            name: process.name  ?? "",
-            description: process.description ?? "", 
-       
-            activities:  await Promise.all(process.activities.map(async activity => await this.createActivity(activity)) ?? [])
-         }
+        return builder.build()
     }
 
     private async createActivity (activity: Activity): Promise<ActivityData>{

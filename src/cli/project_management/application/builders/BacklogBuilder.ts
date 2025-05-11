@@ -29,7 +29,7 @@ export class BacklogBuilder {
 
     build(): Backlog {
         if (!this.backlog.id || !this.backlog.name) {
-            throw new Error("Backlog must have an ID and a name.");
+            throw new Error("Backlog must have an ID and a name");
         }
         return this.backlog as Backlog;
     }
