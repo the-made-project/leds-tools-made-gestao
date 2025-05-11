@@ -22,7 +22,7 @@ export  class ProjectApplication extends AbstractApplication {
             .setStartDate(project.startDate ?? "")
             .setDueDate(project.dueDate ?? "")
             .setCompletedDate(project.completedDate ?? "")
-            .build()
+            .build();
             
         await this.saveorUpdate(instance)
     }

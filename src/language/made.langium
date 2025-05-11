@@ -9,7 +9,7 @@ import 'timebox'
 import 'team'
 import 'roadmap'
 
-entry Model:    
+entry Model:
     (project=Project)
     (components+=(Team|Process|Backlog|TimeBox|Roadmap))*
 
