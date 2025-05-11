@@ -58,7 +58,7 @@ fragment EndDate:
 ;
 
 fragment DueDate:
-    'dueDate' ':' dueDate=DATE
+    'dueDate' ':' duedate=DATE
 ;
 
 fragment CompletedDate:
