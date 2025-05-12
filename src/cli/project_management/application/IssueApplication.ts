@@ -13,11 +13,11 @@ export  class IssueApplication extends AbstractApplication {
     
 
     public async create(){
-        const epcis = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isEpic));
+        const epics = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isEpic));
         const atomicUserStories = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isAtomicUserStory));
         const tasks = this.model.components.filter(isBacklog).flatMap(backlog => backlog.items.filter(isTaskBacklog));
         
-        epcis.map (async value => {
+        epics.map (async value => {
             if (!value.process){
                 await this.createAndSave(value.$container.id.toLocaleLowerCase(), value)
                 

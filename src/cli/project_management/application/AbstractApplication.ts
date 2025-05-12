@@ -8,6 +8,7 @@ import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
 import {IssuesDTO,Issue} from "made-report-lib";
 import { Model } from '../../../language/generated/ast.js';
+import { IssueBuilder } from './builders/IssueBuilder.js';
 
 const mutex = new Mutex();
 
@@ -106,25 +107,24 @@ protected async addItem (value:any){
     const id = parentID+"."+data.id.toLocaleLowerCase()
     let depends:  Issue[] = []
 
-    const issue: Issue = {
-      
-      id: id,
-      title: data.name,
-      description: data.description ?? "",
-      type: data.$type.toLocaleLowerCase()
-    }
+    const builder: IssueBuilder = new IssueBuilder()
+      .setId(id)
+      .setTitle(data.name)
+      .setDescription(data.description ?? "")
+      .setType(data.$type.toLocaleLowerCase())
    
-   if (data.userstories){
-      if (data.userstories.length >0){    
-       issue.issues = await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[]
+    if (data.userstories){
+        if (data.userstories.length >0){    
+        builder.setIssues(await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[])
+      }
+      
     }
-  }
 
-  if (data.tasks){
-    if (data.tasks.length >0){    
-     issue.issues = await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(id, value))) ??[]
+    if (data.tasks){
+      if (data.tasks.length >0){    
+      builder.setIssues(await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(id, value))) ??[])
+      }
     }
-  }
 
     if (data.depends){
       if (data.depends.length >0){        
@@ -133,20 +133,19 @@ protected async addItem (value:any){
             id:value.$refNode?.text.toLocaleLowerCase()
           }as Issue )
     
-        ))
-        	     
+        ))     
+      }
+
+      if (data.depend){
+        depends.push ({
+          id:data.depend.$refNode?.text.toLocaleLowerCase()
+        }as Issue )
+      }
     }
 
-    if (data.depend){
-      depends.push ({
-        id:data.depend.$refNode?.text.toLocaleLowerCase()
-      }as Issue )
-    }
-  }
+    builder.setDepends(depends)
 
-  issue.depends = depends
-
-    return issue
+    return builder.build()
   }
 
 
