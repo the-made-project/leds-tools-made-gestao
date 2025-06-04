@@ -49,6 +49,32 @@ describe('Validating', () => {
             `)
         );
     });
+
+    test('validação de data aceita YYYY-MM-DD', async () => {
+        document = await parse(`
+            sprint S1 {
+                startDate: 2024-05-04
+            }
+        `);
+
+        expect(
+            checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
+        ).toHaveLength(0);
+    });
+
+    test('validação de data rejeita DD/MM/YYYY', async () => {
+        document = await parse(`
+            sprint S1 {
+                startDate: 04/05/2024
+            }
+        `);
+
+        expect(
+            checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
+        ).toEqual(
+            expect.stringContaining('YYYY-MM-DD')
+        );
+    });
 });
 
 function checkDocumentValid(document: LangiumDocument): string | undefined {

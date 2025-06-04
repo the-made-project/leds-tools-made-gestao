@@ -1,6 +1,6 @@
 import {  Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-/*import { Project } from "made-report-lib";*/
+/*import { Project } from "made-report-lib-test";*/
 import { ProjectBuilder } from './builders/ProjectBuilder.js';
 
 export  class ProjectApplication extends AbstractApplication {
