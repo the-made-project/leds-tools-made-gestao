@@ -3,22 +3,6 @@ import { createDefaultModule, createDefaultSharedModule, type DefaultSharedModul
 import { MadeGeneratedModule, MadeGeneratedSharedModule } from './generated/module.js';
 import { MadeValidator, registerValidationChecks } from './made-validator.js';
 import { CustomScopeComputation } from './made-scope.js';
-import { reflection } from './generated/ast.js';
-
-/**
- * Custom validation function to check if date properties are in ISO 8601 format.
- */
-function validateDates(node: any, accept: any) {
-    const typeMeta = reflection.getTypeMetaData(node.$type);
-    for (const prop of typeMeta.properties) {
-        if (prop.name.match(/date$/i) && typeof node[prop.name] === 'string') {
-            const value = node[prop.name];
-            if (value && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-                accept('error', `A propriedade "${prop.name}" deve estar no formato ISO 8601 (YYYY-MM-DD)`, { node, property: prop.name });
-            }
-        }
-    }
-}
 /**
  * Declaration of custom services - add your own service classes here.
  */

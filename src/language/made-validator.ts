@@ -6,7 +6,7 @@ import { reflection } from './generated/ast.js';
 /**
  * Custom validation function to check if date properties are in ISO 8601 format.
  */
-function validateDates(node: any, accept: any) {
+export function validateDates(node: any, accept: any) {
     const typeMeta = reflection.getTypeMetaData(node.$type);
     for (const prop of typeMeta.properties) {
         if (prop.name.match(/date$/i) && typeof node[prop.name] === 'string') {

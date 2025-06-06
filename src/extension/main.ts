@@ -18,6 +18,23 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
     const generateDocumentation = build_generate_functions({ only_project_documentation: true })
     context.subscriptions.push(vscode.commands.registerCommand("made.generateDocumentation", generateDocumentation))
 
+    const githubPush = async () => {
+        const filepath = vscode.window.activeTextEditor?.document.fileName;
+        if (filepath) {
+            // Aqui você pode pedir token/org/repo via inputBox, ou usar valores fixos para teste
+            const token = await vscode.window.showInputBox({ prompt: "GitHub Token" });
+            const org = await vscode.window.showInputBox({ prompt: "GitHub Organization" });
+            const repo = await vscode.window.showInputBox({ prompt: "GitHub Repository" });
+            if (token && org && repo) {
+                // Importe e chame sua função githubpush aqui
+                const { githubPushAction } = await import('../cli/main.js');
+                githubPushAction(filepath, token, org, repo)
+                    .catch((reason: any) => vscode.window.showErrorMessage(reason.message));
+            }
+        }
+    };
+    context.subscriptions.push(vscode.commands.registerCommand("made.githubPush", githubPush));
+
 }
 
 let client: LanguageClient;
