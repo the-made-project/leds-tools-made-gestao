@@ -1,4 +1,4 @@
-import { Project } from "made-report-lib";
+import { Project } from "made-report-lib-test";
 
 export class ProjectBuilder {
     private project: Partial<Project>

@@ -6,7 +6,7 @@ import lodash from 'lodash'
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
-import {IssuesDTO,Issue} from "made-report-lib";
+import {IssuesDTO,Issue} from "made-report-lib-test";
 import { Model } from '../../../language/generated/ast.js';
 import { IssueBuilder } from './builders/IssueBuilder.js';
 

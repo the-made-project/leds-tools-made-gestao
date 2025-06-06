@@ -1,4 +1,4 @@
-import { Roadmap, Milestone} from "made-report-lib";
+import { Roadmap, Milestone} from "made-report-lib-test";
 
 export class RoadmapBuilder {
     private roadmap: Partial<Roadmap>;

@@ -3,7 +3,6 @@ import { createDefaultModule, createDefaultSharedModule, type DefaultSharedModul
 import { MadeGeneratedModule, MadeGeneratedSharedModule } from './generated/module.js';
 import { MadeValidator, registerValidationChecks } from './made-validator.js';
 import { CustomScopeComputation } from './made-scope.js';
-
 /**
  * Declaration of custom services - add your own service classes here.
  */

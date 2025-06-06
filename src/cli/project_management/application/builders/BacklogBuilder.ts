@@ -1,4 +1,4 @@
-import { Backlog, Issue } from "made-report-lib";
+import { Backlog, Issue } from "made-report-lib-test";
 
 export class BacklogBuilder {
     private backlog: Partial<Backlog>;

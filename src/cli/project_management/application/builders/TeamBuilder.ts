@@ -1,4 +1,4 @@
-import { Team, Person } from "made-report-lib";
+import { Team, Person } from "made-report-lib-test";
 
 export class TeamBuilder {
     private team: Partial<Team>
