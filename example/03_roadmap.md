@@ -18,8 +18,8 @@ Progresso: 0%
 
 
 ### 🏃 Controlar Modalidade de Bolsa (IN_PROGRESS)
-- **Início**: 2024-12-01
-- **Conclusão Prevista**: 2025-01-31
+- **Início**: 2024/12/01
+- **Conclusão Prevista**: 2025/01/31
 - **Descrição**: Validar os casos de uso do Módulo Controlar Modalidade de Bolsa
 - **Releases Associadas**: 1.0
 - **Dependências**: Nenhuma
@@ -28,7 +28,7 @@ Progresso: 0%
 #### Releases
 | Versão | Nome | Status | Data Prevista | Data Release |
 |--------|------|--------|---------------|--------------|
-| 1.0 |  | 🏗️ IN_DEVELOPMENT | 2025-11-30 | N/A |
+| 1.0 |  | 🏗️ IN_DEVELOPMENT | 30/11/2025 | N/A |
 
 
 #### Issues
@@ -41,6 +41,6 @@ Progresso: 0%
 
 ## 📅 Timeline
 
-- 2024-12-01 - 🏃 **Milestone Start**: Controlar Modalidade de Bolsa
-- 2025-01-31 - 🏃 **Milestone Due**: Controlar Modalidade de Bolsa
-- 2025-11-30 - 🏗️ **Release**: 1.0 - 
+- 01/12/2024 - 🏃 **Milestone Start**: Controlar Modalidade de Bolsa
+- 31/01/2025 - 🏃 **Milestone Due**: Controlar Modalidade de Bolsa
+- 30/11/2025 - 🏗️ **Release**: 1.0 - 

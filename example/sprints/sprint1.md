@@ -4,58 +4,58 @@ Estabelecer primeira versão de uma pipeline de QA funcional para auxilio na gar
 
 ## Dados do Sprint
 * **Goal**:  Estabelecer primeira versão de uma pipeline de QA funcional para auxilio na garantia da qualidade do software. Finalizar scripts do módulo 'Modalidades de Bolsas'. Desenvolver primeira versão do sistema de chamados, com módulo de coleta e registro de mensagens.
-* **Data Início**: 2025-01-01
-* **Data Fim**: 2025-01-17
+* **Data Início**: 01/01/2025
+* **Data Fim**: 17/01/2025
 * **Status**: IN_PROGRESS
 ## Sprint Backlog
 
 |Nome |Resposável |Data de Inicío | Data Planejada | Status|
 |:----|:--------  |:-------:       | :----------:  | :---: |
-|Criar planilha de testes do módulo|Sofia de Alcantara|2024-12-04|2024-12-06|DONE|
-|Organizar repositório de testes para o módulo|Sofia de Alcantara|2024-12-04|2024-12-06|DONE|
-|Implementar o pipeline de testing usando Drone|Davi Nunes|2024-12-04|2025-01-31|DONE|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Criar documentação|Leandro Carone|2024-12-04|2025-01-31|DONE|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|DOING|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Funcionalidade|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|Executar Teste de Performance|Leandro Carone|2024-12-04|2025-01-31|TODO|
-|alinhamento de refatoração de código para inclusão do atributo data-test|Luan Otoni|2024-12-04|2025-01-31|DOING|
-|implementar o script|Luan Otoni|2024-12-04|2025-01-31|DOING|
-|executar a teste|Luan Otoni|2024-12-04|2025-01-31|DOING|
+|Criar planilha de testes do módulo|Sofia de Alcantara|04/12/2024|06/12/2024|DONE|
+|Organizar repositório de testes para o módulo|Sofia de Alcantara|04/12/2024|06/12/2024|DONE|
+|Implementar o pipeline de testing usando Drone|Davi Nunes|04/12/2024|31/01/2025|DONE|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Criar documentação|Leandro Carone|04/12/2024|31/01/2025|DONE|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|DOING|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Funcionalidade|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|Executar Teste de Performance|Leandro Carone|04/12/2024|31/01/2025|TODO|
+|alinhamento de refatoração de código para inclusão do atributo data-test|Luan Otoni|04/12/2024|31/01/2025|DOING|
+|implementar o script|Luan Otoni|04/12/2024|31/01/2025|DOING|
+|executar a teste|Luan Otoni|04/12/2024|31/01/2025|DOING|
       
 # Análise de Dependências do Sprint
 
-Análise gerada em: 2025-01-15, 09:32:21
+Análise gerada em: 15/01/2025, 09:32:21
 
 ## 🔍 Grafo de Dependências
 
@@ -175,7 +175,7 @@ graph BT
 ## ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: ter., 2025-01-28
+- **Data mais provável de conclusão**: ter., 28/01/2025
 - **Dias em relação ao planejado**: 12 dias
 - **Status**: ❌ Atraso Crítico
 
@@ -192,7 +192,7 @@ graph BT
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| 2025-01-28 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
+| ter., 28/01/2025 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -211,12 +211,11 @@ graph BT
 ## ℹ️ Informações da Sprint
 
 - **Sprint**: Sprint 001 - Janeiro/2025
-- **Data Início**: 2025-01-01
-- **Data Fim**: 2025-01-17
-- **Término Planejado**: 2025-01-17
+- **Início**: qua., 01/01/2025
+- **Término Planejado**: sex., 17/01/2025
 - **Total de Tarefas**: 41
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 2025-01-15, 09:32:21*
+*Relatório gerado em 15/01/2025, 09:32:21*
         
