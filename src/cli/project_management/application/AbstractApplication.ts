@@ -6,7 +6,7 @@ import lodash from 'lodash'
 import { LowSync } from 'lowdb';
 import { JSONFileSync  } from 'lowdb/node';
 import { Mutex } from 'async-mutex';
-import {IssuesDTO,Issue} from "made-report-lib-test";
+import {IssuesDTO,Issue} from "made-lib-dev";
 import { Model } from '../../../language/generated/ast.js';
 import { IssueBuilder } from './builders/IssueBuilder.js';
 
@@ -54,7 +54,7 @@ protected async addItem (value:any){
   }
 
   
-  protected async retrive(id:string){
+  protected async retrieve(id:string){
     
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
@@ -70,7 +70,7 @@ protected async addItem (value:any){
 
 
 
-  protected async retriveByExternal(id:string){
+  protected async retrieveByExternal(id:string){
     
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
@@ -84,7 +84,7 @@ protected async addItem (value:any){
     
   }
 
-  protected async retriveByExternalData(data:string){
+  protected async retrieveByExternalData(data:string){
     
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
 
@@ -150,7 +150,7 @@ protected async addItem (value:any){
 
 
   protected async saveorUpdate (data: any){
-    const value = await this.retrive(data.id)
+    const value = await this.retrieve(data.id)
     if (!value){
       this.save (data)
 
@@ -230,7 +230,7 @@ protected async addItem (value:any){
     });
 }
 
-  protected async retriveAll(){
+  protected async retrieveAll(){
       
     const ISSUEPATH = path.join(this.DB_PATH, this.jsonFile);
     
@@ -247,7 +247,7 @@ protected async addItem (value:any){
   }  
 
   protected async clean(){
-    const issues = this.retriveAll();
+    const issues = this.retrieveAll();
     (await issues).map (issue => {
         const id = issue.id
         const result =  this.items.has(id)

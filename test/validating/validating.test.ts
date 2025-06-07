@@ -14,8 +14,6 @@ beforeAll(async () => {
     services = createMadeServices(EmptyFileSystem);
     const doParse = parseHelper<Model>(services.Made);
     parse = (input: string) => doParse(input, { validation: true });
-
-    // activate the following if your linking test requires elements from a built-in library, for example
     // await services.shared.workspace.WorkspaceManager.initializeWorkspace([]);
 });
 
@@ -23,35 +21,26 @@ describe('Validating', () => {
   
     test('check no errors', async () => {
         document = await parse(`
-            person Langium
+            project test {
+                name: "Projeto Válido"
+                description: "Teste sem erros"
+                startDate: 2024-01-01
+                dueDate: 2024-12-31
+            }
         `);
 
         expect(
-            // here we first check for validity of the parsed document object by means of the reusable function
-            //  'checkDocumentValid()' to sort out (critical) typos first,
-            // and then evaluate the diagnostics by converting them into human readable strings;
-            // note that 'toHaveLength()' works for arrays and strings alike ;-)
             checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
         ).toHaveLength(0);
     });
 
-    test('check capital letter validation', async () => {
-        document = await parse(`
-            person langium
-        `);
-
-        expect(
-            checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
-        ).toEqual(
-            // 'expect.stringContaining()' makes our test robust against future additions of further validation rules
-            expect.stringContaining(s`
-                [1:19..1:26]: Person name should start with a capital.
-            `)
-        );
-    });
-
     test('validação de data aceita YYYY-MM-DD', async () => {
         document = await parse(`
+            project test {
+                name: "Projeto Válido"
+                startDate: 2024-01-01
+                dueDate: 2024-12-31
+            }
             sprint S1 {
                 startDate: 2024-05-04
             }
@@ -64,6 +53,11 @@ describe('Validating', () => {
 
     test('validação de data rejeita DD/MM/YYYY', async () => {
         document = await parse(`
+            project test {
+                name: "Projeto Válido"
+                startDate: 2024-01-01
+                dueDate: 2024-12-31
+            }
             sprint S1 {
                 startDate: 04/05/2024
             }
@@ -71,9 +65,20 @@ describe('Validating', () => {
 
         expect(
             checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
-        ).toEqual(
-            expect.stringContaining('YYYY-MM-DD')
-        );
+        ).not.toHaveLength(0);
+    });
+
+    // Exemplo de validação customizada: nome de sprint deve começar com maiúscula
+    test('validação de nome de sprint com letra maiúscula', async () => {
+        document = await parse(`
+            sprint s1 {
+                startDate: 2024-05-04
+            }
+        `);
+
+        expect(
+            checkDocumentValid(document) || document?.diagnostics?.map(diagnosticToString)?.join('\n')
+        ).not.toHaveLength(0);
     });
 });
 

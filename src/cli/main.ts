@@ -5,7 +5,7 @@ import { createMadeServices } from '../language/made-module.js';
 import { extractAstNode } from './cli-util.js';
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
-import { ReportManager, type Issue } from 'made-report-lib-test';
+import { ReportManager, type Issue } from 'made-lib-dev';
 
 //import * as url from 'node:url';
 //import * as fs from 'node:fs/promises';
@@ -65,6 +65,7 @@ export type GenerateOptions = {
     only_synchronize_from_made_to_projectManagement?: boolean,
     only_synchronize_from_projectManagement_to_made?: boolean,
     only_project_documentation?: boolean,
+    only_project_github?: boolean,
     all?: boolean,
 }
 

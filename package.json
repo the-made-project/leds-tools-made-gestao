@@ -15,7 +15,6 @@
     },
     "type": "module",
     "scripts": {
-        "start:github": "node --no-warnings --loader ts-node/esm src/cli/project_management/application/github_issues/application/main.ts",
         "build": "tsc -b tsconfig.src.json && node esbuild.mjs",
         "watch": "concurrently -n tsc,esbuild -c blue,yellow \"tsc -b tsconfig.src.json --watch\" \"node esbuild.mjs --watch\"",
         "lint": "eslint src --ext ts",
@@ -44,7 +43,7 @@
         "langium": "~3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^7.0.1",
-        "made-report-lib-test": "file:../leds-tools-made-lib-forked",
+        "made-lib-dev": "0.1.5",
         "monaco-editor": "npm:@codingame/monaco-editor-treemended@1.83.16",
         "monaco-editor-workers": "~0.44.0",
         "monaco-editor-wrapper": "~3.5.0",
@@ -101,6 +100,10 @@
             {
                 "command": "made.generateDocumentation",
                 "title": "Generate Documentation"
+            },
+            {
+                "command": "made.generateGithubIssues",
+                "title": "Generate Github Issues"
             }
         ],
         "menus": {
@@ -108,11 +111,20 @@
                 {
                     "command": "made.generateDocumentation",
                     "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.generateGithubIssues",
+                    "when": "editorLangId == made"
                 }
             ],
             "editor/context": [
                 {
                     "command": "made.generateDocumentation",
+                    "group": "z_commands",
+                    "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.generateGithubIssues",
                     "group": "z_commands",
                     "when": "editorLangId == made"
                 }
