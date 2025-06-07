@@ -2,7 +2,7 @@
 import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
-import {SprintItem, /*TimeBox,*/ Person, Issue} from "made-report-lib";
+import {SprintItem, /*TimeBox,*/ Person, Issue} from "made-lib-dev";
 
 import {TimeBoxBuilder} from './builders/TimeBoxBuilder.js';
 
@@ -75,13 +75,14 @@ export class TimeBoxApplication extends AbstractApplication {
                     title: task.name ?? "" ,
                     description: task.description ?? "",
                     type: task.$type.toLocaleLowerCase() ?? "",  
+                    subtype: "",
                     depends: await this.createDependece(task)                  
                     
                 },
     
                 startDate: item.startDate,
                 dueDate: item.dueDate,
-                completedDate:item.completedDate,
+                //completedDate:item.completedDate,
                 status:item.status ?? "TODO"
     
             })
@@ -95,10 +96,10 @@ export class TimeBoxApplication extends AbstractApplication {
 
         if (task.depend) {
             if (task.depend.$refNode?.text.toLocaleLowerCase() && task.depend.ref?.$type.toLocaleLowerCase()){
-                issues.push({id: task.depend.$refNode.text.toLocaleLowerCase(), type: task.depend.ref.$type.toLocaleLowerCase()})
+                issues.push({id: task.depend.$refNode.text.toLocaleLowerCase(), type: task.depend.ref.$type.toLocaleLowerCase(), subtype: ""})
             }
         }
-        await task.depends.map (async dep => await issues.push({id:dep.$refNode?.text.toLocaleLowerCase() ?? "", type:dep.ref?.$type.toLocaleLowerCase() ?? "" }))
+        await task.depends.map (async dep => await issues.push({id:dep.$refNode?.text.toLocaleLowerCase() ?? "", type:dep.ref?.$type.toLocaleLowerCase() ?? "", subtype: "" }))
             
 
         return issues

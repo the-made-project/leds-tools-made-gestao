@@ -1,4 +1,4 @@
-import { Task, Process, Activity } from "made-report-lib";
+import { Task, Process, Activity } from "made-lib-dev";
 
 export class TaskBuilder {
     private task: Partial<Task>;

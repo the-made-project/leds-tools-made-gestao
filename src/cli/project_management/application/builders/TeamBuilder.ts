@@ -1,4 +1,4 @@
-import { Team, Person } from "made-report-lib";
+import { Team, Person } from "made-lib-dev";
 
 export class TeamBuilder {
     private team: Partial<Team>
@@ -23,7 +23,7 @@ export class TeamBuilder {
     }
 
     setTeamMembers(teamMembers: Person[]): TeamBuilder {
-        this.team.teammebers = teamMembers;
+        this.team.teamMembers = teamMembers;
         return this
     }
     

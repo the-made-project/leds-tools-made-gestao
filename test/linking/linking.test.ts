@@ -23,21 +23,67 @@ afterEach(async () => {
 
 describe('Linking tests', () => {
 
-    test('linking of greetings', async () => {
+    test('linking of backlog items', async () => {
         document = await parse(`
-            person Langium
-            Hello Langium!
+            project test {
+                name: "Exemplo de Projeto"
+                description: "Este é um projeto de exemplo."
+                startDate: 2022-11-22
+                dueDate: 2022-11-30
+            }
+            backlog Sprint {
+                epic E1 {
+                    name: "Minha Epic"
+                    story S1 {
+                        name: "Minha User Story"
+                        depends: Sprint.E1
+                    }
+                }
+            }
         `);
 
         expect(
-            // here we first check for validity of the parsed document object by means of the reusable function
-            //  'checkDocumentValid()' to sort out (critical) typos first,
-            // and then evaluate the cross references we're interested in by checking
-            //  the referenced AST element as well as for a potential error message;
             checkDocumentValid(document)
-                || document.parseResult.value.greetings.map(g => g.person.ref?.name || g.person.error?.message).join('\n')
+            || document.parseResult.value.components
+                .filter(c => c.$type === 'Backlog')
+                .flatMap(b => b.items)
+                .filter(i => i.$type === 'Epic')
+                .map(e => e.name)
+                .join('\n')
         ).toBe(s`
-            Langium
+            Minha Epic
+        `);
+    });
+
+    test('linking of backlog items', async () => {
+        document = await parse(`
+            project test {
+                name: "Exemplo de Projeto"
+                description: "Este é um projeto de exemplo."
+                startDate: 2022-11-22
+                dueDate: 2022-11-30
+            }
+            backlog Sprint {
+                epic E1 {
+                    name: "Minha Epic"
+                    story S1 {
+                        name: "Minha User Story"
+                        depends: Sprint.E1
+                    }
+                }
+            }
+        `);
+
+        expect(
+            checkDocumentValid(document)
+            || document.parseResult.value.components
+                .filter(c => c.$type === 'Backlog')
+                .flatMap(b => b.items)
+                .filter(i => i.$type === 'Epic')
+                .map(e => e.name)
+                .join('\n')
+        ).toBe(s`
+            Minha Epic
         `);
     });
 });

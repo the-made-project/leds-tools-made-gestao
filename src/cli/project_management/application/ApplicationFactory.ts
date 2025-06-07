@@ -10,7 +10,7 @@ import { ProcessApplication } from './ProcessApplication.js';
 import { ProjectApplication } from './ProjectApplication.js';
 
 export class ApplicationFactory {
-    static createApplication(type: string,target_folder:string, model: Model) {
+    static createApplication(type: string, target_folder: string, model: Model) {
         const applicationClasses: { [key: string]: any } = {
             TimeBox: TimeBoxApplication,
             Team: TeamApplication,
