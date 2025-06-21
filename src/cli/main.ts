@@ -1,11 +1,11 @@
-import type { Model, Backlog, AtomicUserStory, Epic, TaskBacklog } from '../language/generated/ast.js';
+import type { Model, Backlog, AtomicUserStory, Epic, TaskBacklog, TimeBox, PlanningItem } from '../language/generated/ast.js';
 import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';
 import { extractAstNode } from './cli-util.js';
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
-import { ReportManager, type Issue } from 'made-lib-dev';
+import { ReportManager, type Issue } from 'made-lib';
 
 //import * as url from 'node:url';
 //import * as fs from 'node:fs/promises';
@@ -56,8 +56,65 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     // Converte cada item para Issue
     const issues = allItems.map(astItemToIssue);
 
+    // Extrai o primeiro timebox do modelo (ajuste conforme sua necessidade)
+    const astTimebox = model.components.find(c => c.$type === 'TimeBox') as TimeBox | undefined;
+
+    if (!astTimebox) {
+        throw new Error('No TimeBox found in the model.');
+    }
+
+    // Agora o TypeScript sabe que astTimebox é TimeBox
+    const sprintItems = (astTimebox.sprintBacklog?.planningItems ?? [])
+        .map((item: PlanningItem, idx: number) => {
+            const assignee = item.assignee?.ref
+                ? {
+                    id: item.assignee.ref.id ?? '',
+                    email: item.assignee.ref.email ?? '',
+                    name: item.assignee.ref.name ?? '',
+                    discord: ''
+                }
+                : {
+                    id: '',
+                    email: '',
+                    name: '',
+                    discord: ''
+                };
+
+            const sprintItemId = item.backlogItem?.ref?.id
+                ? `planning-${item.backlogItem.ref.id}`
+                : `planning-${idx}`;
+
+            // Only include sprint items where issue can be created
+            if (!item.backlogItem?.ref) {
+                return undefined;
+            }
+
+            return {
+                id: sprintItemId,
+                assignee,
+                issue: astItemToIssue(item.backlogItem.ref),
+                startDate: item.startDate,
+                dueDate: item.dueDate,
+                plannedStartDate: undefined,
+                plannedDueDate: undefined,
+                status: item.status
+            };
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== undefined);
+
+    const timebox = {
+        id: astTimebox.id,
+        description: astTimebox.description ?? '',
+        startDate: astTimebox.startDate ?? '',
+        endDate: astTimebox.endDate ?? '',
+        name: astTimebox.name ?? '',
+        status: astTimebox.status,
+        completeDate: undefined,
+        sprintItems: sprintItems
+    };
+
     const reportManager = new ReportManager();
-    await reportManager.githubPush(token, org, repo, project, issues);
+    await reportManager.githubPush(token, org, repo, project, issues, timebox);
 };
 
 export type GenerateOptions = {
