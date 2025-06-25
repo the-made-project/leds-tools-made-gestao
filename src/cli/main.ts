@@ -1,4 +1,4 @@
-import type { Model, Backlog, AtomicUserStory, TaskBacklog, TeamMember } from '../language/generated/ast.js';
+import type { Model, Backlog, AtomicUserStory, TaskBacklog, TeamMember, Epic } from '../language/generated/ast.js';
 import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';
@@ -13,7 +13,20 @@ export const generateAction = async (fileName: string, opts: GenerateOptions): P
     generate(model, fileName, opts.destination, opts);
 };
 
-function astStoryToIssue(story: AtomicUserStory, assigneeMap: Map<string, Person>): Issue {
+function astEpicToIssue(epic: Epic, assigneeMap: Map<string, Person>, backlogName: string): Issue {
+    return {
+        id: epic.id,
+        type: 'Epic',
+        subtype: '',
+        title: epic.name ?? epic.label ?? '',
+        description: epic.description ?? '',
+        labels: epic.labelx ?? [],
+        assignee: assigneeMap.get(epic.id),
+        backlog: backlogName
+    };
+}
+
+function astStoryToIssue(story: AtomicUserStory, assigneeMap: Map<string, Person>, backlogName: string, parentEpic?: Epic): Issue {
     return {
         id: story.id,
         type: 'Feature',
@@ -21,11 +34,17 @@ function astStoryToIssue(story: AtomicUserStory, assigneeMap: Map<string, Person
         title: story.name ?? story.label ?? '',
         description: story.description ?? '',
         labels: story.labelx ?? [],
-        assignee: assigneeMap.get(story.id)
+        assignee: assigneeMap.get(story.id),
+        depends: parentEpic ? [{
+            id: parentEpic.id,
+            type: 'Epic',
+            subtype: ''
+        }] : [],
+        backlog: backlogName
     };
 }
 
-function astTaskToIssue(task: TaskBacklog, parentStory: AtomicUserStory, assigneeMap: Map<string, Person>): Issue {
+function astTaskToIssue(task: TaskBacklog, parentStory: AtomicUserStory, assigneeMap: Map<string, Person>, backlogName: string): Issue {
     return {
         id: task.id,
         type: 'Task',
@@ -38,7 +57,8 @@ function astTaskToIssue(task: TaskBacklog, parentStory: AtomicUserStory, assigne
             id: parentStory.id,
             type: 'Feature',
             subtype: ''
-        }]
+        }],
+        backlog: backlogName
     };
 }
 
@@ -55,10 +75,7 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     const services = createMadeServices(NodeFileSystem).Made;
     const model = await extractAstNode<Model>(fileName, services);
 
-    // Extrai todos os backlogs do modelo
     const backlogs = model.components.filter(c => c.$type === 'Backlog') as Backlog[];
-
-    // Cria um mapa de backlogItem.id para assignee (Person) a partir de todos os TimeBoxes do modelo
     const assigneeMap = new Map<string, Person>();
     for (const component of model.components) {
         if (component.$type === 'TimeBox' && component.sprintBacklog) {
@@ -72,35 +89,51 @@ export const githubPushAction = async (fileName: string, token: string, org: str
         }
     }
 
-    // Arrays para armazenar stories e tasks como issues
+    const epics: Issue[] = [];
     const stories: Issue[] = [];
     const tasks: Issue[] = [];
+    const backlogList: any[] = [];
 
     for (const backlog of backlogs) {
+        const localEpics: Issue[] = [];
+        const localStories: Issue[] = [];
+        const localTasks: Issue[] = [];
         for (const item of backlog.items) {
             if (item.$type === 'Epic') {
+                const epic = astEpicToIssue(item, assigneeMap, backlog.name ?? backlog.id);
+                epics.push(epic);
+                localEpics.push(epic);
                 for (const story of item.userstories) {
-                    const storyIssue = astStoryToIssue(story, assigneeMap);
+                    const storyIssue = astStoryToIssue(story, assigneeMap, backlog.name ?? backlog.id, item);
                     stories.push(storyIssue);
-
+                    localStories.push(storyIssue);
                     for (const task of story.tasks) {
-                        const taskIssue = astTaskToIssue(task, story, assigneeMap);
+                        const taskIssue = astTaskToIssue(task, story, assigneeMap, backlog.name ?? backlog.id);
                         tasks.push(taskIssue);
+                        localTasks.push(taskIssue);
                     }
                 }
             } else if (item.$type === 'AtomicUserStory') {
-                const storyIssue = astStoryToIssue(item, assigneeMap);
+                const storyIssue = astStoryToIssue(item, assigneeMap, backlog.name ?? backlog.id);
                 stories.push(storyIssue);
-
+                localStories.push(storyIssue);
                 for (const task of item.tasks) {
-                    const taskIssue = astTaskToIssue(task, item, assigneeMap);
+                    const taskIssue = astTaskToIssue(task, item, assigneeMap, backlog.name ?? backlog.id);
                     tasks.push(taskIssue);
+                    localTasks.push(taskIssue);
                 }
             }
         }
+        backlogList.push({
+            id: backlog.id,
+            name: backlog.name ?? backlog.id,
+            description: backlog.description ?? '',
+            epics: localEpics,
+            stories: localStories,
+            tasks: localTasks
+        });
     }
 
-    // Monta o projeto
     const astProject = model.project;
     const project = {
         id: astProject.id,
@@ -112,7 +145,7 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     };
 
     const reportManager = new ReportManager();
-    await reportManager.githubPush(token, org, repo, project, stories, tasks);
+    await reportManager.githubPush(token, org, repo, project, epics, stories, tasks, backlogList);
 };
 
 export type GenerateOptions = {
