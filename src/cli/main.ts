@@ -22,7 +22,9 @@ function astEpicToIssue(epic: Epic, assigneeMap: Map<string, Person>, backlogNam
         description: epic.description ?? '',
         labels: epic.labelx ?? [],
         assignee: assigneeMap.get(epic.id),
-        backlog: backlogName
+        backlog: backlogName,
+        criterions: epic.criterions ?? [],
+        observation: epic.observation ?? ''
     };
 }
 
@@ -35,12 +37,17 @@ function astStoryToIssue(story: AtomicUserStory, assigneeMap: Map<string, Person
         description: story.description ?? '',
         labels: story.labelx ?? [],
         assignee: assigneeMap.get(story.id),
-        depends: parentEpic ? [{
-            id: parentEpic.id,
-            type: 'Epic',
-            subtype: ''
-        }] : [],
-        backlog: backlogName
+        depends: [
+            ...(parentEpic ? [{
+                id: parentEpic.id,
+                type: 'Epic',
+                subtype: ''
+            }] : [])
+        ],
+        backlog: backlogName,
+        criterions: story.criterions ?? [],
+        requirements: story.requirements ?? [],
+        observation: story.observation ?? '',
     };
 }
 
@@ -53,12 +60,15 @@ function astTaskToIssue(task: TaskBacklog, parentStory: AtomicUserStory, assigne
         description: task.description ?? '',
         labels: task.labelx ?? [],
         assignee: assigneeMap.get(task.id),
-        depends: [{
-            id: parentStory.id,
-            type: 'Feature',
-            subtype: ''
-        }],
-        backlog: backlogName
+        depends: [
+            {
+                id: parentStory.id,
+                type: 'Feature',
+                subtype: ''
+            }
+        ],
+        backlog: backlogName,
+        deliverables: task.deliverables ?? [],
     };
 }
 
@@ -71,11 +81,68 @@ function astTeamMemberToPerson(member: TeamMember): Person {
     };
 }
 
+function astTeamToTeam(team: TeamMember[]): Person[] {
+    return team.map(member => ({
+        id: member.id ?? '',
+        email: member.email ?? '',
+        name: member.name ?? '',
+        discord: '' // ajuste se houver campo no modelo
+    }));
+}
+
+function astTimeBoxToTimeBox(timebox: any): any {
+    return {
+        id: timebox.id,
+        description: timebox.description ?? '',
+        startDate: timebox.startDate ?? '',
+        endDate: timebox.endDate ?? '',
+        name: timebox.name ?? '',
+        status: timebox.status,
+        completeDate: timebox.completedDate,
+        sprintItems: (timebox.sprintBacklog?.planningItems ?? []).map((item: any) => {
+            // Monta o Issue correspondente ao backlogItem
+            let issue: Issue | undefined = undefined;
+            const ref = item.backlogItem?.ref;
+            if (ref) {
+                if (ref.$type === 'Epic') {
+                    issue = astEpicToIssue(ref, new Map(), ''); // ajuste o assigneeMap e backlogName se necessário
+                } else if (ref.$type === 'AtomicUserStory') {
+                    issue = astStoryToIssue(ref, new Map(), '', undefined);
+                } else if (ref.$type === 'TaskBacklog') {
+                    issue = astTaskToIssue(ref, ref.$container, new Map(), '');
+                }
+            }
+            return {
+                id: item.backlogItem?.ref?.id ?? '',
+                assignee: item.assignee?.ref ? {
+                    id: item.assignee.ref.id ?? '',
+                    name: item.assignee.ref.name ?? '',
+                    email: item.assignee.ref.email ?? ''
+                } : undefined,
+                issue,
+                startDate: item.startDate,
+                dueDate: item.dueDate,
+                plannedStartDate: item.startDate,
+                plannedDueDate: item.dueDate,
+                status: item.status,
+            };
+        })
+    };
+}
+
 export const githubPushAction = async (fileName: string, token: string, org: string, repo: string): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
     const model = await extractAstNode<Model>(fileName, services);
 
     const backlogs = model.components.filter(c => c.$type === 'Backlog') as Backlog[];
+    const teamsRaw = model.components.filter(c => c.$type === 'Team') as import('../language/generated/ast.js').Team[];
+    const teams = teamsRaw.map(team => ({
+        id: team.id,
+        name: team.name ?? '',
+        description: team.description ?? '',
+        teamMembers: astTeamToTeam(team.teammember)
+    }));
+
     const assigneeMap = new Map<string, Person>();
     for (const component of model.components) {
         if (component.$type === 'TimeBox' && component.sprintBacklog) {
@@ -124,13 +191,12 @@ export const githubPushAction = async (fileName: string, token: string, org: str
                 }
             }
         }
+        // Novo modelo de backlog
         backlogList.push({
             id: backlog.id,
             name: backlog.name ?? backlog.id,
             description: backlog.description ?? '',
-            epics: localEpics,
-            stories: localStories,
-            tasks: localTasks
+            issues: [...localEpics, ...localStories, ...localTasks]
         });
     }
 
@@ -145,7 +211,10 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     };
 
     const reportManager = new ReportManager();
-    await reportManager.githubPush(token, org, repo, project, epics, stories, tasks, backlogList);
+    const timeboxesRaw = model.components.filter(c => c.$type === 'TimeBox');
+    const timebox = timeboxesRaw.map(astTimeBoxToTimeBox);
+
+    await reportManager.githubPush(token, org, repo, project, epics, stories, tasks, backlogList, teams, timebox);
 };
 
 export type GenerateOptions = {

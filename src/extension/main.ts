@@ -1,5 +1,6 @@
 import type { LanguageClientOptions, ServerOptions} from 'vscode-languageclient/node.js';
 import * as vscode from 'vscode';
+import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import { LanguageClient, TransportKind } from 'vscode-languageclient/node.js';
 import { GenerateOptions, generateAction, githubPushAction } from '../cli/main.js';
@@ -17,14 +18,21 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
 
     const build_github_functions = (_opts: GenerateOptions) => {
         return async() => {
-            const filepath = vscode.window.activeTextEditor?.document.fileName
+            const filepath = vscode.window.activeTextEditor?.document.fileName;
             if(filepath) {
-                const token = await vscode.window.showInputBox({ prompt: "GitHub Token" });
-                const org = await vscode.window.showInputBox({ prompt: "GitHub Organization" });
-                const repo = await vscode.window.showInputBox({ prompt: "GitHub Repository" });
-                
+                // Carrega o .env do mesmo diretório do .made
+                const envPath = path.join(path.dirname(filepath), '.env');
+                dotenv.config({ path: envPath });
+
+                const token = process.env.GITHUB_TOKEN;
+                const org = process.env.GITHUB_ORG;
+                const repo = process.env.GITHUB_REPO;
+
                 if (token && org && repo) {
-                    githubPushAction(filepath, token, org, repo).catch((reason: any) => vscode.window.showErrorMessage(reason.message));
+                    githubPushAction(filepath, token, org, repo)
+                        .catch((reason: any) => vscode.window.showErrorMessage(reason.message));
+                } else {
+                    vscode.window.showErrorMessage('Configure GITHUB_TOKEN, GITHUB_ORG e GITHUB_REPO no .env do diretório do seu arquivo .made');
                 }
             }
         };
