@@ -1,4 +1,4 @@
-import type { Model, Backlog, AtomicUserStory, TaskBacklog, TeamMember, Epic } from '../language/generated/ast.js';
+import type { Model, Backlog, AtomicUserStory, TaskBacklog, TeamMember, Epic, Team } from '../language/generated/ast.js';
 import { Command } from 'commander';
 import { MadeLanguageMetaData } from '../language/generated/module.js';
 import { createMadeServices } from '../language/made-module.js';
@@ -135,7 +135,7 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     const model = await extractAstNode<Model>(fileName, services);
 
     const backlogs = model.components.filter(c => c.$type === 'Backlog') as Backlog[];
-    const teamsRaw = model.components.filter(c => c.$type === 'Team') as import('../language/generated/ast.js').Team[];
+    const teamsRaw = model.components.filter(c => c.$type === 'Team') as Team[];
     const teams = teamsRaw.map(team => ({
         id: team.id,
         name: team.name ?? '',
