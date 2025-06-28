@@ -7,9 +7,8 @@ project test {
 team blackops {
     name: "Team Black Ops"
     description: "Equipe responsável por produzir artefatos de segurança"
-    teammember rafaelemerick {name: "Rafael Emerick" email: "xxxx" discord : "xxx"}
-    teammember xxxx {name: "Rafael Emerick" }
-  
+    teammember rafaelemerick {name: "Rafael Emerick" email: "rafael@blackops.com" discord: "rafael#1234"}
+    teammember joao {name: "João Silva" email: "joao@blackops.com" discord: "joao#5678"}
 }
 
 backlog Spike {
@@ -17,16 +16,18 @@ backlog Spike {
    description: "Backlog dedicado a estudo da equipe"
    
    epic epic1 {
-    name: "Estudar sobre Autorização"
-    description: "Estudo sobre autorização de usuários a recursos de redes"
-    story story1 {
-        name: "Estudar a arquitetura proposta pelo OPA"
-        task estudar {
-            name: "Estudar sobre OPA"
+        name: "Estudar sobre Autorização"
+        description: "Estudo sobre autorização de usuários a recursos de redes"
+        
+        story story1 {
+            name: "Estudar a arquitetura proposta pelo OPA"
+            
+            task estudar {
+                name: "Estudar sobre OPA"
             }
-        task apresentar {
-            name: "Apresentar o estudo OPA"  
-            depends: Spike.epic1.story1.estudar                       
+            task apresentar {
+                name: "Apresentar o estudo OPA"  
+                depends: Spike.epic1.story1.estudar                       
             }
         }
     }

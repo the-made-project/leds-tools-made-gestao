@@ -25,8 +25,9 @@ roadmap projeto {
         dueDate: 2024/11/30
         status: IN_PROGRESS
         release beta {
+            name: "Beta Release"
             description: "Estudo para entender as tecnologias"
-            item : Spike.epic1
+            item: Spike.epic1
             status: IN_DEVELOPMENT
             dueDate: 2024-11-30
             version: "1.0"

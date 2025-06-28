@@ -13,6 +13,17 @@
         "type": "git",
         "url": "https://gitlab.com/ledsifes/tools/made"
     },
+    "keywords": [
+        "project-management",
+        "jira",
+        "github",
+        "documentation",
+        "dsl",
+        "langium",
+        "roadmap",
+        "backlog",
+        "sprint"
+    ],
     "type": "module",
     "scripts": {
         "build": "tsc -b tsconfig.src.json && node esbuild.mjs",
@@ -43,7 +54,7 @@
         "langium": "~3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^7.0.1",
-        "made-lib": "0.1.71",
+        "made-lib": "0.1.75",
         "monaco-editor": "npm:@codingame/monaco-editor-treemended@1.83.16",
         "monaco-editor-workers": "~0.44.0",
         "monaco-editor-wrapper": "~3.5.0",
