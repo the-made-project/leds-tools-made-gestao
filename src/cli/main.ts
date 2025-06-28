@@ -6,6 +6,10 @@ import { extractAstNode, buildAssigneeMap, processBacklogs, processTeams, proces
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
 import { ReportManager } from 'made-lib';
+import { readFileSync } from 'node:fs';
+
+// Read package.json for version
+const packageJson = JSON.parse(readFileSync(new URL('../../package.json', import.meta.url), 'utf-8'));
 
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
@@ -44,18 +48,26 @@ export type GenerateOptions = {
 
 export default function(): void {
     const program = new Command();
+    const fileExtensions = MadeLanguageMetaData.fileExtensions.join(', ');
 
     program
-        // eslint-disable-next-line @typescript-eslint/no-var-requires
-        .version(require('../../package.json').version);
+        .version(packageJson.version);
 
-    const fileExtensions = MadeLanguageMetaData.fileExtensions.join(', ');
     program
         .command('generate')
         .argument('<file>', `source file (possible file extensions: ${fileExtensions})`)
         .option('-d, --destination <dir>', 'destination directory of generating')
         .description('Generate Files')
         .action(generateAction);
+
+    program
+        .command('github-push')
+        .argument('<file>', `source file (possible file extensions: ${fileExtensions})`)
+        .option('-t, --token <token>', 'GitHub token for authentication')
+        .option('-o, --org <org>', 'GitHub organization name')
+        .option('-r, --repo <repo>', 'GitHub repository name')
+        .description('Push project to GitHub')
+        .action(githubPushAction);
 
     program.parse(process.argv);
 }
