@@ -10,8 +10,8 @@ import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import { readFileSync } from 'node:fs';
 
-// Read package.json for version
-const packageJson = JSON.parse(readFileSync(new URL('../../package.json', import.meta.url), 'utf-8'));
+// Read package.json for version - using relative path from compiled output directory
+const packageJson = JSON.parse(readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
 
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
