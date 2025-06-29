@@ -1,4 +1,5 @@
-project xxx{ name: "Modulo de Autentication, Autorization e Accounting"
+project xxx {
+    name: "Modulo de Autentication, Autorization e Accounting"
     description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
     startDate: 2022-11-22
     dueDate: 2022-11-30
@@ -23,9 +24,11 @@ roadmap projeto {
         startDate: 2024-11-20        
         dueDate: 2024-11-30
         status: IN_PROGRESS
+        
         release beta {
+            name: "Beta Release"
             description: "Estudo para entender as tecnologias"
-            item : Spike.epic1
+            item: Spike.epic1
             status: IN_DEVELOPMENT
             dueDate: 2024-11-30
             version: "1.0"
@@ -38,29 +41,31 @@ backlog Spike {
    description: "Backlog dedicado a estudo da equipe"
    
    epic epic1 {
-    name: "Estudar sobre Autorização"
-    description: "Estudo sobre autorização de usuários a recursos de redes"
-    story story1 {
-        name: "Estudar a arquitetura proposta pelo OPA"
-        task estudar {
-            name: "Estudar sobre OPA"
+        name: "Estudar sobre Autorização"
+        description: "Estudo sobre autorização de usuários a recursos de redes"
+        
+        story story1 {
+            name: "Estudar a arquitetura proposta pelo OPA"
+            
+            task estudar {
+                name: "Estudar sobre OPA"
             }
-        task apresentar {
-            name: "Apresentar o estudo OPA"  
-            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
+            task apresentar {
+                name: "Apresentar o estudo OPA"  
+                depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
             }
         }
         story story2 {
-        name: "Estudar a arquitetura proposta pelo OpenFGA"
-        task estudar {
-            name: "Estudar sobre OpenFGA"            
+            name: "Estudar a arquitetura proposta pelo OpenFGA"
+            
+            task estudar {
+                name: "Estudar sobre OpenFGA"            
             }
-        task apresentar {
-            name: "Apresentar o estudo OpenFGA"
-            depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
+            task apresentar {
+                name: "Apresentar o estudo OpenFGA"
+                depends: Spike.epic1.story1.estudar, Spike.epic1.story2.estudar                       
             }
         }
-    }    
     }
 
 

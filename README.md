@@ -2,126 +2,204 @@
 # MADE
 It is a plugin that empowers the Scrum Master and the development team to create the backlog and sprints based on processes that can be reused and standardized throughout the project and/or across different projects.
 
-## Install
+## Installation
 
-To install the plugin, there are two methods. For the *first method*, follow these steps: 
-1. Download the plugin, 
+### VS Code Extension
+1. Open Visual Studio Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "MADE-Leds"
+4. Click **Install**
+
+### CLI Tool (NPM)
+```bash
+# Install globally
+npm install -g made-leds
+
+# Or use locally
+npx made-leds --help
+```
+
+### Manual Installation (VSIX)
+1. Download the latest `.vsix` file from releases
 2. Open Visual Studio Code
-3. Right-click and then select "Install Extension VSIX" to initiate the installation.
-
-The *second method* follow these steps:
-
-1. Open the VSCode
-2. Click in Extensions
-3. Search : MADE-Leds
-4. Click in **Install**
+3. Right-click and select "Install Extension VSIX"
 
 ## Usage
-Right-click on your `.made` file and select "Synchronize With Project Management"  
+
+### VS Code Extension
+Right-click on your `.made` file and select:
+- **"Generate Documentation"** - Creates markdown documentation
+- **"Generate Github Issues"** - Pushes to GitHub Issues/Projects
+
+### CLI Commands
+```bash
+# Generate documentation
+made-cli generate project.made
+
+# Push to GitHub (requires .env configuration)
+made-cli github project.made
+
+# Help
+made-cli --help
+```
+
+### GitHub Integration Setup
+Create a `.env` file in your project directory:
+```env
+GITHUB_TOKEN=your_github_token
+GITHUB_ORG=your_organization
+GITHUB_REPO=your_repository
+```
 ![image with the right-click menu](images/right-click-menu.png)
 
 ## Components
 
 ### Project:
-  Define the project configuration and the token for creating the project in your project manager.
+Define the project configuration and metadata.
 
-  ```
-  project "project-name"{
-    id: projectid
-    description: "project description"
-    email: "email of the project editor"
-    host: "host.project.net"
-    token: "the api token"
+```
+project projectid {
+    name: "project name"
+    description: "project description" 
+    startDate: 2024-01-30
+    dueDate: 2024-12-30
+    completedDate: 2024-11-15
 }
 ```
 
 ### Team:
-Define a team and inside of it define the members of the team
+Define a team and its members.
 
 ```
-team TeamID {
+team teamid {
     name: "team name"
     description: "team description"
     
     teammember memberid {
-      name: "member name" 
-      email:"member@email.com"
-      }
+        name: "member name" 
+        email: "member@email.com"
+        discord: "discord-handle"
+    }
 }
 ```
 
-### Timebox:
-Define the timebox its responsibles, planning and performed
+### Sprint (TimeBox):
+Define sprints with their planning items and assignees.
 
 ```
-timebox timeboxid {
-    name: "timebox name"
-    description: "timebox description"
-    startDate: "2024/01/30"
-    endDate: "2024/12/30"
-
-    responsible: TeamID.memberid 
-
-    planning {
-        item: "planning item" assignee: "member name"
-    } 
-
-    performed{
-        item: "performed item" status: DOING
+sprint sprintid {
+    name: "Sprint name"
+    description: "Sprint description"
+    startDate: 2024-01-30
+    endDate: 2024-02-13
+    status: IN_PROGRESS
+    comment: "First sprint comment"
+    
+    sprintbacklog backlogid {
+        item backlogid.epicid.storyid.taskid {
+            assignee: teamid.memberid
+            dueDate: 2024-02-10
+            startDate: 2024-01-30
+            completedDate: 2024-02-08
+            status: DONE
+            complexity: MEDIUM
+        }
     }
 }
 ```
 
 ### Process: 
-Define the project and its activities.
+Define processes with their activities and tasks.
+
 ```
-process processID {
+process processid {
     name: "process name"
     description: "process description"
-
-    activity activityID{
+    
+    activity activityid {
         name: "activity name"
         description: "activity description"
-    }
-}
-```
-
-### BackLog:
-Define the backlog its epics and user stories.
-
-```
-backlog BackLogID  {
-    name: "backlog name"
-    description: "backlog description"
-    epic EpicId {
-        name: "Epic name"
-        process: processID
-    }
-    userstory userstoryId {
-        name: "User story name"
-        activity: processID.activityID
-    }
-}
-```
-
-<!-- ### RoadMap:
-Define the road map, its versions and the versions planning
-
-```
-roadmap RoadMapID {
-    name: "Road map name"
-    description: "Road map description"
-
-    version RoadMapVersionID {
-        name: "Road map version name"
-        description: "Road map version description"
-        startDate: "2024/01/30"
-        endDate: "2024/12/30"
-
-        planning {
-            item: BackLogID.userstoryId
-            item: "planning item"
+        
+        task taskid {
+            name: "task name"
+            description: "task description"
         }
     }
 }
-``` -->
+```
+
+### Backlog:
+Define backlogs with epics, stories, and tasks.
+
+```
+backlog backlogid {
+    name: "backlog name"
+    description: "backlog description"
+    
+    epic epicid {
+        name: "Epic name"
+        description: "Epic description"
+        process: processid
+        Criterions: "acceptance criteria 1", "criteria 2"
+        observation: "epic notes"
+        
+        story storyid {
+            name: "User story name"
+            description: "Story description"
+            activity: processid.activityid
+            depends: backlogid.anotherstory
+            Requirements: "requirement 1", "requirement 2"
+            Criterions: "story criteria"
+            observation: "story notes"
+            
+            task taskid {
+                name: "Task name"
+                description: "Task description"
+                task: processid.activityid.taskid
+                depends: backlogid.epicid.storyid.anothertask
+                Deliverables: "deliverable 1", "deliverable 2"
+            }
+        }
+    }
+    
+    story standalonstory {
+        name: "Standalone story"
+        description: "Story not inside epic"
+        
+        task storytask {
+            name: "Story task"
+        }
+    }
+}
+```
+
+### Roadmap:
+Define roadmaps with milestones and releases.
+
+```
+roadmap roadmapid {
+    name: "Roadmap name"
+    description: "Roadmap description"
+    
+    milestone milestoneid {
+        name: "Milestone name"
+        description: "Milestone description"
+        startDate: 2024-01-30
+        dueDate: 2024-03-30
+        completedDate: 2024-03-25
+        status: COMPLETED
+        depends: roadmapid.previousmilestone
+        
+        release releaseid {
+            name: "Release name"
+            description: "Release description"
+            version: "1.0.0"
+            dueDate: 2024-03-30
+            releasedDate: 2024-03-25
+            status: RELEASED
+            item: backlogid.epicid
+            itens: backlogid.story1, backlogid.story2
+        }
+    }
+}
+```

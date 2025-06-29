@@ -6,10 +6,12 @@ import { extractAstNode, buildAssigneeMap, processBacklogs, processTeams, proces
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
 import { ReportManager } from 'made-lib';
+import * as dotenv from 'dotenv';
+import * as path from 'node:path';
 import { readFileSync } from 'node:fs';
 
-// Read package.json for version
-const packageJson = JSON.parse(readFileSync(new URL('../../package.json', import.meta.url), 'utf-8'));
+// Read package.json for version - using relative path from compiled output directory
+const packageJson = JSON.parse(readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
 
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
@@ -48,6 +50,10 @@ export type GenerateOptions = {
 
 export default function(): void {
     const program = new Command();
+
+    program
+        .version(packageJson.version);
+
     const fileExtensions = MadeLanguageMetaData.fileExtensions.join(', ');
 
     program
@@ -61,13 +67,39 @@ export default function(): void {
         .action(generateAction);
 
     program
-        .command('github-push')
+        .command('github')
         .argument('<file>', `source file (possible file extensions: ${fileExtensions})`)
-        .option('-t, --token <token>', 'GitHub token for authentication')
-        .option('-o, --org <org>', 'GitHub organization name')
-        .option('-r, --repo <repo>', 'GitHub repository name')
-        .description('Push project to GitHub')
-        .action(githubPushAction);
+        .description('Push project data to GitHub Issues, Projects, and Roadmaps')
+        .action(async (fileName: string) => {
+            // Load .env from the same directory as the .made file
+            const envPath = path.join(path.dirname(path.resolve(fileName)), '.env');
+            dotenv.config({ path: envPath });
+
+            const token = process.env.GITHUB_TOKEN;
+            const org = process.env.GITHUB_ORG;
+            const repo = process.env.GITHUB_REPO;
+
+            if (!token || !org || !repo) {
+                console.error('❌ Missing required environment variables:');
+                console.error('   GITHUB_TOKEN - Your GitHub personal access token');
+                console.error('   GITHUB_ORG - Your GitHub organization/username');
+                console.error('   GITHUB_REPO - Your GitHub repository name');
+                console.error('\n💡 Create a .env file in the same directory as your .made file with:');
+                console.error('   GITHUB_TOKEN=your_token_here');
+                console.error('   GITHUB_ORG=your_org_here');
+                console.error('   GITHUB_REPO=your_repo_here');
+                process.exit(1);
+            }
+
+            try {
+                console.log('🚀 Pushing to GitHub...');
+                await githubPushAction(fileName, token, org, repo);
+                console.log('✅ Successfully pushed to GitHub!');
+            } catch (error: any) {
+                console.error('❌ Error pushing to GitHub:', error.message);
+                process.exit(1);
+            }
+        });
 
     program.parse(process.argv);
 }
