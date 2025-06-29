@@ -6,7 +6,7 @@ import { IssueApplication } from "./IssueApplication.js";
 import { TeamApplication } from "./TeamApplication.js";
 import { TimeBoxApplication } from "./TimeBoxApplication.js";
 
-import { ReportManager }  from  "made-lib-dev";
+import { ReportManager }  from  "made-lib";
 import { RoadmapApplication } from './RoadmapApplication.js';
 import { ProcessApplication } from './ProcessApplication.js';
 import { ProjectApplication } from './ProjectApplication.js';

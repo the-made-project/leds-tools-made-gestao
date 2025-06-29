@@ -1,4 +1,4 @@
-import { Project } from "made-lib-dev";
+import { Project } from "made-lib";
 
 export class ProjectBuilder {
     private project: Partial<Project>

@@ -21,6 +21,10 @@ fragment Description:
     'description' ':' description=STRING
 ;
 
+fragment Observation:
+    'observation' ':' observation=STRING
+;
+
 fragment Label:
     'label' ':' label=ID (',' labelx+=ID)*
 ;

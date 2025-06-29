@@ -1,4 +1,3 @@
-
 import 'processes'
 
 type backlogItem = Epic| AtomicUserStory| TaskBacklog; 
@@ -21,8 +20,9 @@ Epic :
         |userstories +=AtomicUserStory
         |'process' ':' process=[Process:QualifiedName]
         |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?
+        |'Criterions' ':' criterions+=STRING (',' criterions+=STRING)*
+        |Observation
         )*
-       
     '}'
 ;
 
@@ -34,6 +34,9 @@ AtomicUserStory :
         |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?
         |'activity' ':' activity+=[Activity:QualifiedName]
         |tasks +=TaskBacklog
+        |'Requirements' ':' requirements+=STRING (',' requirements+=STRING)*
+        |'Criterions' ':' criterions+=STRING (',' criterions+=STRING)*
+        |Observation
         )*
     '}'
 ;
@@ -44,6 +47,8 @@ TaskBacklog:
         |Description
         |Label
         |'depends' ':' depend=[backlogItem:QualifiedName] (',' depends+=[backlogItem:QualifiedName])?        
-        |'task' ':' task=[Task:QualifiedName])* 
-       '}'
+        |'task' ':' task=[Task:QualifiedName]
+        |'Deliverables' ':' deliverables+=STRING (',' deliverables+=STRING)*
+        )*
+    '}'
 ;

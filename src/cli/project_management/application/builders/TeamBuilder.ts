@@ -1,4 +1,4 @@
-import { Team, Person } from "made-lib-dev";
+import { Team, Person } from "made-lib";
 
 export class TeamBuilder {
     private team: Partial<Team>
