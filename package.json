@@ -78,7 +78,7 @@
         "vitest": "~1.0.0",
         "vscode": "npm:@codingame/monaco-vscode-api@1.83.16"
     },
-    "displayName": "MADE - Leds",
+    "displayName": "MADE - Leds (Beta)",
     "engines": {
         "vscode": "^1.67.0",
         "node": ">=18.0.0"
