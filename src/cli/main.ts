@@ -9,9 +9,16 @@ import { ReportManager } from 'made-lib';
 import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-// Read package.json for version - using relative path from compiled output directory
-const packageJson = JSON.parse(readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
+// Get the directory of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Read package.json for version - using relative path from the current module
+// When compiled, this will be in out/cli/main.js, so we need to go up two levels to reach package.json
+const packageJsonPath = path.resolve(__dirname, '..', '..', 'package.json');
+const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
 
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;

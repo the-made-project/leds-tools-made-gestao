@@ -1,4 +1,37 @@
+# Exclude source code
+src/**
+test/**
+**/*.ts
+!out/**
+
+# Exclude node_modules except essential ones
+node_modules/**
+!node_modules/made-lib/**
+
+# Exclude development files
 .vscode/**
-.vscode-test/**
-.gitignore
+*.tsbuildinfo
+tsconfig*.json
+esbuild.mjs
+scripts/**
+static/**
+syntaxes/**
+package-lock.json
+npm-debug.log*
+.eslintrc*
+.prettierrc*
+
+# Exclude documentation and config files not needed in extension
+CLI-USAGE.md
+PUBLISHING.md
+prepare-publish.sh
+test-cli.sh
+teste.md
+.github/**
+.gitlab-ci.yml
+.cz.toml
+.env.example
 langium-quickstart.md
+vite.bundle.config.ts
+**/*.vsix
+**/*.tgz
