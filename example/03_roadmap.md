@@ -1,6 +1,8 @@
 # 🎯 Roadmaps
 
-# Módulo M001 Modalidades de Bolsas
+# Rodmap do projeto
+
+Roadmap de todo do projeto
 
 
 ## 📊 Visão Geral do Progresso
@@ -17,10 +19,10 @@ Progresso: 0%
 ## 🎯 Milestones
 
 
-### 🏃 Controlar Modalidade de Bolsa (IN_PROGRESS)
-- **Início**: 2024-12-01
-- **Conclusão Prevista**: 2025-01-31
-- **Descrição**: Validar os casos de uso do Módulo Controlar Modalidade de Bolsa
+### 🏃 Primeira versão (IN_PROGRESS)
+- **Início**: 2024-11-19
+- **Conclusão Prevista**: 2024-11-29
+- **Descrição**: Contem apenas estudo das tecnologias do projeto
 - **Releases Associadas**: 1.0
 - **Dependências**: Nenhuma
       
@@ -28,19 +30,19 @@ Progresso: 0%
 #### Releases
 | Versão | Nome | Status | Data Prevista | Data Release |
 |--------|------|--------|---------------|--------------|
-| 1.0 |  | 🏗️ IN_DEVELOPMENT | 2025-11-30 | N/A |
+| 1.0 |  | 🏗️ IN_DEVELOPMENT | 2024-11-29 | N/A |
 
 
 #### Issues
 | Key | Tipo | Título | Status | Labels |
 |-----|------|--------|--------|--------|
-| .e002 | epic | Testes referente a Controlar Modalidade de bolsa | N/A | N/A |
+| .segurancaredes | epic | Estudo de Segurança em Redes | N/A | N/A |
 
 
       
 
 ## 📅 Timeline
 
-- 2024-12-01 - 🏃 **Milestone Start**: Controlar Modalidade de Bolsa
-- 2025-01-31 - 🏃 **Milestone Due**: Controlar Modalidade de Bolsa
-- 2025-11-30 - 🏗️ **Release**: 1.0 - 
+- 2024-11-19 - 🏃 **Milestone Start**: Primeira versão
+- 2024-11-29 - 🏃 **Milestone Due**: Primeira versão
+- 2024-11-29 - 🏗️ **Release**: 1.0 - 

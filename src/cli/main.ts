@@ -11,14 +11,22 @@ import * as path from 'node:path';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
-// Get the directory of the current module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Read package.json for version - using relative path from the current module
-// When compiled, this will be in out/cli/main.js, so we need to go up two levels to reach package.json
-const packageJsonPath = path.resolve(__dirname, '..', '..', 'package.json');
-const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
+// Read package.json for version - handle both ES modules and CommonJS contexts
+let packageJson: any;
+try {
+    // Try ES module approach first
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    packageJson = JSON.parse(readFileSync(path.join(__dirname, '../../package.json'), 'utf-8'));
+} catch (error) {
+    // Fallback for CommonJS or when import.meta.url is not available
+    try {
+        packageJson = JSON.parse(readFileSync(path.join(process.cwd(), 'package.json'), 'utf-8'));
+    } catch {
+        // Final fallback with version info
+        packageJson = { version: '0.1.0' };
+    }
+}
 
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createMadeServices(NodeFileSystem).Made;
@@ -72,6 +80,41 @@ export default function(): void {
         .option('-d, --destination <dir>', 'destination directory of generating')
         .description('Generate Files')
         .action(generateAction);
+    
+    program
+        .command('github')
+        .argument('<file>', `source file (possible file extensions: ${fileExtensions})`)
+        .description('Push project data to GitHub Issues, Projects, and Roadmaps')
+        .action(async (fileName: string) => {
+            // Load .env from the same directory as the .made file
+            const envPath = path.join(path.dirname(path.resolve(fileName)), '.env');
+            dotenv.config({ path: envPath });
+
+            const token = process.env.GITHUB_TOKEN;
+            const org = process.env.GITHUB_ORG;
+            const repo = process.env.GITHUB_REPO;
+
+            if (!token || !org || !repo) {
+                console.error('❌ Missing required environment variables:');
+                console.error('   GITHUB_TOKEN - Your GitHub personal access token');
+                console.error('   GITHUB_ORG - Your GitHub organization/username');
+                console.error('   GITHUB_REPO - Your GitHub repository name');
+                console.error('\n💡 Create a .env file in the same directory as your .made file with:');
+                console.error('   GITHUB_TOKEN=your_token_here');
+                console.error('   GITHUB_ORG=your_org_here');
+                console.error('   GITHUB_REPO=your_repo_here');
+                process.exit(1);
+            }
+
+            try {
+                console.log('🚀 Pushing to GitHub...');
+                await githubPushAction(fileName, token, org, repo);
+                console.log('✅ Successfully pushed to GitHub!');
+            } catch (error: any) {
+                console.error('❌ Error pushing to GitHub:', error.message);
+                process.exit(1);
+            }
+        });
 
     program
         .command('github')
