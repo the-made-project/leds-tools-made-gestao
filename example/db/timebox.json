@@ -1,774 +1,358 @@
 {
   "data": [
     {
-      "id": "sprint1",
-      "name": "Sprint 001 - Janeiro/2025",
-      "description": "Estabelecer primeira versão de uma pipeline de QA funcional para auxilio na garantia da qualidade do software. Finalizar scripts do módulo 'Modalidades de Bolsas'. Desenvolver primeira versão do sistema de chamados, com módulo de coleta e registro de mensagens.",
-      "startDate": "01/01/2025",
-      "endDate": "17/01/2025",
+      "id": "estudo",
+      "name": "Estudar Autorizacao",
+      "description": "Realizar estudos sobre autorizacao",
+      "startDate": "2024-11-20",
+      "endDate": "2024-11-30",
       "status": "IN_PROGRESS",
       "sprintItems": [
         {
-          "id": "s001.t001",
+          "id": "firewall.pesquisartecnologias",
           "assignee": {
-            "id": "sofiadealcantara",
-            "name": "Sofia de Alcantara",
-            "email": "sofiaalcantaras@outlook.com"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "s001.t001",
-            "title": "Criar planilha de testes do módulo",
+            "id": "firewall.pesquisartecnologias",
+            "title": "Pesquisar tecnologias de firewall",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "06/12/2024",
-          "completedDate": "05/12/2024",
-          "status": "DONE"
-        },
-        {
-          "id": "s001.t002",
-          "assignee": {
-            "id": "sofiadealcantara",
-            "name": "Sofia de Alcantara",
-            "email": "sofiaalcantaras@outlook.com"
-          },
-          "issue": {
-            "id": "s001.t002",
-            "title": "Organizar repositório de testes para o módulo",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "06/12/2024",
-          "completedDate": "05/12/2024",
-          "status": "DONE"
-        },
-        {
-          "id": "s001.t003",
-          "assignee": {
-            "id": "davinunes",
-            "name": "Davi Nunes",
-            "email": "davinunesribeiro@gmail.com"
-          },
-          "issue": {
-            "id": "s001.t003",
-            "title": "Implementar o pipeline de testing usando Drone",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "10/01/2025",
-          "status": "DONE"
-        },
-        {
-          "id": "m001.e002.s001.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s001.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s001.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s001.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s002.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s002.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s002.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s002.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s003.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s003.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s003.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s003.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s004.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s004.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s004.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s004.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s005.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s005.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s005.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s005.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s006.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s006.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s006.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s006.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s007.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s007.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e002.s007.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e002.s007.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "s001.t007",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "s001.t007",
-            "title": "Criar documentação",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DONE"
-        },
-        {
-          "id": "m001.e003.s001.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s001.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s001.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s001.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s002.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s002.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s002.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s002.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s003.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s003.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s003.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s003.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s004.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s004.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s004.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s004.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s005.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s005.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e003.s005.t002",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e003.s005.t002",
-            "title": "Executar Teste de Performance",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
-          "status": "DOING"
-        },
-        {
-          "id": "m001.e004.s001.t001",
-          "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
-          },
-          "issue": {
-            "id": "m001.e004.s001.t001",
-            "title": "Executar Teste de Funcionalidade",
-            "description": "",
-            "type": "taskbacklog",
-            "depends": []
-          },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s001.t002",
+          "id": "ids.estudarids",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s001.t002",
-            "title": "Executar Teste de Performance",
+            "id": "ids.estudarids",
+            "title": "Estudar funcionamento de IDS",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s002.t001",
+          "id": "algoritmossimetricos.revisarliteratura",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s002.t001",
-            "title": "Executar Teste de Funcionalidade",
+            "id": "algoritmossimetricos.revisarliteratura",
+            "title": "Revisar literatura sobre algoritmos simétricos",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s002.t002",
+          "id": "algoritmossimetricos.criarresumo",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s002.t002",
-            "title": "Executar Teste de Performance",
+            "id": "algoritmossimetricos.criarresumo",
+            "title": "Criar resumo comparativo",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike.criptografia.algoritmossimetricos.revisarliteratura",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s003.t001",
+          "id": "firewall.elaborarrelatorio",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s003.t001",
-            "title": "Executar Teste de Funcionalidade",
+            "id": "firewall.elaborarrelatorio",
+            "title": "Elaborar relatório sobre firewalls",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike.segurancaredes.firewall.pesquisartecnologias",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s003.t002",
+          "id": "ids.apresentarresultados",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s003.t002",
-            "title": "Executar Teste de Performance",
+            "id": "ids.apresentarresultados",
+            "title": "Apresentar resultados do estudo de IDS",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike.segurancaredes.ids.estudarids",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s004.t001",
+          "id": "algoritmosassimetricos.documentarcodigo",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s004.t001",
-            "title": "Executar Teste de Funcionalidade",
+            "id": "algoritmosassimetricos.documentarcodigo",
+            "title": "Documentar código da demo",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike.criptografia.algoritmosassimetricos.implementardemo",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s004.t002",
+          "id": "algoritmosassimetricos.implementardemo",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s004.t002",
-            "title": "Executar Teste de Performance",
+            "id": "algoritmosassimetricos.implementardemo",
+            "title": "Implementar demo de criptografia assimétrica",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
+          "status": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "apresentar",
+      "name": "Apresentar os estudos Autorizacao",
+      "description": "Apresentar estudos sobre OPA e openFGA",
+      "startDate": "2024-11-20",
+      "endDate": "2024-11-30",
+      "status": "PLANNED",
+      "sprintItems": [
+        {
+          "id": "aws.levantarservicos",
+          "assignee": {
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
+          },
+          "issue": {
+            "id": "aws.levantarservicos",
+            "title": "Levantar principais serviços AWS",
+            "description": "",
+            "type": "taskbacklog",
+            "subtype": "",
+            "depends": []
+          },
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s005.t001",
+          "id": "aws.compararcustos",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s005.t001",
-            "title": "Executar Teste de Funcionalidade",
+            "id": "aws.compararcustos",
+            "title": "Comparar custos AWS",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike3.cloudcomputing.aws.levantarservicos",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "m001.e004.s005.t002",
+          "id": "azure.mapearrecursos",
           "assignee": {
-            "id": "leandrocarone",
-            "name": "Leandro Carone",
-            "email": "leandrocala2@gmail.com"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "m001.e004.s005.t002",
-            "title": "Executar Teste de Performance",
+            "id": "azure.mapearrecursos",
+            "title": "Mapear recursos do Azure",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "completedDate": "08/01/2025",
+          "dueDate": "2024-11-30",
           "status": "TODO"
         },
         {
-          "id": "produtos.s001.t001",
+          "id": "azure.criarapresentacao",
           "assignee": {
-            "id": "luanotoni",
-            "name": "Luan Otoni",
-            "email": "luan.oliveira@estudante.ifes.edu.br"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "produtos.s001.t001",
-            "title": "alinhamento de refatoração de código para inclusão do atributo data-test",
+            "id": "azure.criarapresentacao",
+            "title": "Criar apresentação sobre Azure",
             "description": "",
             "type": "taskbacklog",
-            "depends": []
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike3.cloudcomputing.azure.mapearrecursos",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
+          "dueDate": "2024-11-30",
+          "status": "TODO"
         },
         {
-          "id": "produtos.s001.t002",
+          "id": "pipelines.escolherferramenta",
           "assignee": {
-            "id": "luanotoni",
-            "name": "Luan Otoni",
-            "email": "luan.oliveira@estudante.ifes.edu.br"
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
           },
           "issue": {
-            "id": "produtos.s001.t002",
-            "title": "implementar o script",
+            "id": "pipelines.escolherferramenta",
+            "title": "Escolher ferramenta de CI/CD",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
+          "dueDate": "2024-11-30",
+          "status": "TODO"
         },
         {
-          "id": "produtos.s001.t003",
+          "id": "pipelines.configurarpipeline",
           "assignee": {
-            "id": "luanotoni",
-            "name": "Luan Otoni",
-            "email": "luan.oliveira@estudante.ifes.edu.br"
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
           },
           "issue": {
-            "id": "produtos.s001.t003",
-            "title": "executar a teste",
+            "id": "pipelines.configurarpipeline",
+            "title": "Configurar pipeline de exemplo",
             "description": "",
             "type": "taskbacklog",
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike3.devops.pipelines.escolherferramenta",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
+          },
+          "dueDate": "2024-11-30",
+          "status": "TODO"
+        },
+        {
+          "id": "monitoramento.selecionarferramenta",
+          "assignee": {
+            "id": "paulo",
+            "name": "PauloYo",
+            "email": "x"
+          },
+          "issue": {
+            "id": "monitoramento.selecionarferramenta",
+            "title": "Selecionar ferramenta de monitoramento",
+            "description": "",
+            "type": "taskbacklog",
+            "subtype": "",
             "depends": []
           },
-          "startDate": "04/12/2024",
-          "dueDate": "31/01/2025",
-          "status": "DOING"
+          "dueDate": "2024-11-30",
+          "status": "TODO"
+        },
+        {
+          "id": "monitoramento.criardashboard",
+          "assignee": {
+            "id": "jonathan",
+            "name": "Jonathancastrosilva",
+            "email": "x"
+          },
+          "issue": {
+            "id": "monitoramento.criardashboard",
+            "title": "Criar dashboard de monitoramento",
+            "description": "",
+            "type": "taskbacklog",
+            "subtype": "",
+            "depends": [
+              {
+                "id": "spike3.devops.monitoramento.selecionarferramenta",
+                "type": "taskbacklog",
+                "subtype": ""
+              }
+            ]
+          },
+          "dueDate": "2024-11-30",
+          "status": "TODO"
         }
       ]
     }

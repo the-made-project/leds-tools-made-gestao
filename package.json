@@ -1,17 +1,17 @@
 {
-    "name": "made-leds",
-    "description": "It allows you to create tasks in your project manager (e.g., Jira) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
-    "version": "0.2.4",
+    "name": "made-beta",
+    "description": "It allows you to create tasks in your project manager (e.g., Github) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
+    "version": "0.1.2",
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
         "name": "LEDS-IFES",
         "email": "ledsifes@gmail.com"
     },
-    "publisher": "ledsifes",
+    "publisher": "Paulo-Lopes",
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/ledsifes/tools/made"
+        "url": "https://gitlab.com/LEDS-GPS-TEAM-MADE/leds-tools-made"
     },
     "type": "module",
     "scripts": {
@@ -43,7 +43,7 @@
         "langium": "~3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^7.0.1",
-        "made-lib": "0.1.71",
+        "made-lib": "0.1.75",
         "monaco-editor": "npm:@codingame/monaco-editor-treemended@1.83.16",
         "monaco-editor-workers": "~0.44.0",
         "monaco-editor-wrapper": "~3.5.0",
@@ -67,7 +67,7 @@
         "vitest": "~1.0.0",
         "vscode": "npm:@codingame/monaco-vscode-api@1.83.16"
     },
-    "displayName": "MADE - Leds",
+    "displayName": "MADE - Leds - Beta",
     "engines": {
         "vscode": "^1.67.0",
         "node": ">=18.0.0"
