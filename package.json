@@ -5,14 +5,25 @@
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
-        "name": "LEDS-IFES",
-        "email": "ledsifes@gmail.com"
+        "name": "Paulo Lopes",
+        "email": "paulosousasancheslopes@gmail.com"
     },
     "publisher": "Paulo-Lopes",
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/LEDS-GPS-TEAM-MADE/leds-tools-made"
+        "url": "https://github.com/LEDS-GPS-TEAM-MADE/leds-tools-made"
     },
+    "keywords": [
+        "project-management",
+        "jira",
+        "github",
+        "documentation",
+        "dsl",
+        "langium",
+        "roadmap",
+        "backlog",
+        "sprint"
+    ],
     "type": "module",
     "scripts": {
         "build": "tsc -b tsconfig.src.json && node esbuild.mjs",

@@ -1,8 +1,10 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-langium-quickstart.md
+# Exclude source code
+src/**
+test/**
+**/*.ts
+!out/**
 
 example/**
 src/**
 test/**
+
