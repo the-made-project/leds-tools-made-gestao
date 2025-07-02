@@ -1,6 +1,6 @@
 import { Activity, isProcess, Model, Task, Process } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
-import { Process as ProcessData, Activity as ActivityData, Task as TaskData} from "made-lib";
+import { Process as ProcessData, Activity as ActivityData, Task as TaskData} from "made-lib-beta";
 import { ProcessBuilder } from "./builders/ProcessBuilder.js";
 import { TaskBuilder } from "./builders/TaskBuilder.js";
 import { ActivityBuilder } from "./builders/ActivityBuilder.js";

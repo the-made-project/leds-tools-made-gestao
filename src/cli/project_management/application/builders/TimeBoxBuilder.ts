@@ -1,4 +1,4 @@
-import { TimeBox, SprintItem } from "made-lib";
+import { TimeBox, SprintItem } from "made-lib-beta";
 
 export class TimeBoxBuilder {
     private timeBox: Partial<TimeBox>

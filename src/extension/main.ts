@@ -2,6 +2,7 @@ import type { LanguageClientOptions, ServerOptions} from 'vscode-languageclient/
 import * as vscode from 'vscode';
 import * as dotenv from 'dotenv';
 import * as path from 'node:path';
+import * as fs from 'node:fs';
 import { LanguageClient, TransportKind } from 'vscode-languageclient/node.js';
 import { GenerateOptions, generateAction, githubPushAction } from '../cli/main.js';
 
@@ -64,8 +65,15 @@ let client: LanguageClient;
 
 // This function is called when the extension is activated.
 export function activate(context: vscode.ExtensionContext): void {
-    registerGeneratorCommand(context)
-    client = startLanguageClient(context);
+    console.log('[MADE Extension] Activating extension...');
+    try {
+        registerGeneratorCommand(context);
+        client = startLanguageClient(context);
+        console.log('[MADE Extension] Extension activated successfully');
+    } catch (error) {
+        console.error('[MADE Extension] Error during activation:', error);
+        vscode.window.showErrorMessage(`MADE Extension activation failed: ${error}`);
+    }
 }
 
 // This function is called when the extension is deactivated.
@@ -77,7 +85,38 @@ export function deactivate(): Thenable<void> | undefined {
 }
 
 function startLanguageClient(context: vscode.ExtensionContext): LanguageClient {
-    const serverModule = context.asAbsolutePath(path.join('out', 'language', 'main.cjs'));
+    // Try multiple possible paths for the language server
+    const possiblePaths = [
+        path.join('out', 'language', 'main.cjs'),
+        path.join('out', 'language', 'main.js'),
+        'out/language/main.cjs',
+        'out/language/main.js'
+    ];
+    
+    let serverModule: string | undefined;
+    
+    for (const possiblePath of possiblePaths) {
+        try {
+            const resolvedPath = context.asAbsolutePath(possiblePath);
+            if (resolvedPath && fs.existsSync(resolvedPath)) {
+                serverModule = resolvedPath;
+                console.log('[MADE Extension] Found server module at:', serverModule);
+                break;
+            }
+        } catch (error) {
+            console.log('[MADE Extension] Failed to resolve path:', possiblePath, error);
+        }
+    }
+    
+    if (!serverModule) {
+        const error = 'Language server not found. Please run "npm run build" to compile the language server.';
+        console.error('[MADE Extension]', error);
+        vscode.window.showErrorMessage(error);
+        throw new Error(error);
+    }
+    
+    console.log('[MADE Extension] Using server module path:', serverModule);
+    
     // The debug options for the server
     // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging.
     // By setting `process.env.DEBUG_BREAK` to a truthy value, the language server will wait until a debugger is attached.

@@ -1,7 +1,7 @@
 {
-    "name": "made-leds-beta",
-    "description": "It allows you to create tasks in your project manager (e.g., Jira) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
-    "version": "0.2.6",
+    "name": "made-beta",
+    "description": "It allows you to create tasks in your project manager (e.g., Github) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
+    "version": "0.1.2",
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
@@ -27,11 +27,13 @@
     "type": "module",
     "scripts": {
         "build": "tsc -b tsconfig.src.json && node esbuild.mjs",
+        "build:npm": "npm run langium:generate && tsc -b tsconfig.src.json",
         "watch": "concurrently -n tsc,esbuild -c blue,yellow \"tsc -b tsconfig.src.json --watch\" \"node esbuild.mjs --watch\"",
         "lint": "eslint src --ext ts",
         "langium:generate": "langium generate",
         "langium:watch": "langium generate --watch",
         "vscode:prepublish": "npm run build && npm run lint",
+        "prepublishOnly": "npm run build:npm",
         "prepare:static": "node ./scripts/prepare.js",
         "build:web": "npm run build && npm run prepare:static && npm run build:monarch && npm run build:worker && npm run build:bundle",
         "build:monarch": "tsc -b tsconfig.monarch.json",
@@ -54,7 +56,7 @@
         "langium": "~3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^7.0.1",
-        "made-lib": "0.1.75",
+        "made-lib-beta": "0.1.11",
         "monaco-editor": "npm:@codingame/monaco-editor-treemended@1.83.16",
         "monaco-editor-workers": "~0.44.0",
         "monaco-editor-wrapper": "~3.5.0",
@@ -78,7 +80,7 @@
         "vitest": "~1.0.0",
         "vscode": "npm:@codingame/monaco-vscode-api@1.83.16"
     },
-    "displayName": "MADE - Leds (Beta)",
+    "displayName": "MADE - Leds - Beta",
     "engines": {
         "vscode": "^1.67.0",
         "node": ">=18.0.0"

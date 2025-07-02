@@ -1,34 +1,19 @@
 {
   "data": [
     {
-      "id": "time_qa",
-      "name": "QA Team",
-      "description": "Equipe responsável por produzir artefatos de QA.",
-      "teammebers": [
+      "id": "blackops",
+      "name": "Team Black Ops",
+      "description": "Equipe responsável por produzir artefatos de segurança",
+      "teamMembers": [
         {
-          "id": "davinunes",
-          "name": "Davi Nunes",
-          "email": "davinunesribeiro@gmail.com"
+          "id": "paulo",
+          "name": "PauloYo",
+          "email": "x"
         },
         {
-          "id": "gianpaneto",
-          "name": "Gian Paneto",
-          "email": "gianpaneto@gmail.com"
-        },
-        {
-          "id": "luanotoni",
-          "name": "Luan Otoni",
-          "email": "luan.oliveira@estudante.ifes.edu.br"
-        },
-        {
-          "id": "leandrocarone",
-          "name": "Leandro Carone",
-          "email": "leandrocala2@gmail.com"
-        },
-        {
-          "id": "sofiadealcantara",
-          "name": "Sofia de Alcantara",
-          "email": "sofiaalcantaras@outlook.com"
+          "id": "jonathan",
+          "name": "Jonathancastrosilva",
+          "email": "x"
         }
       ]
     }

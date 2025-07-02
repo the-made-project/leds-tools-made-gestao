@@ -1,0 +1,237 @@
+project xxx {
+    name: "Modulo de Autentication, Autorization e Accounting"
+    description: "Modulo responsável pela autenticação, autorização e rastreio do usuário no sistema"
+    startDate: 2022-11-22
+    dueDate: 2022-11-30
+}
+
+team blackops {
+    name: "Team Black Ops"
+    description: "Equipe responsável por produzir artefatos de segurança"
+    teammember paulo {name: "PauloYo" email: "paulo@gmail.com" discord: "x"}
+    teammember jonathan {name: "Jonathancastrosilva" email: "jonathan@gmail.com" discord: "x"}
+}
+
+roadmap projeto {
+    name: "Rodmap do projeto"
+    description: "Roadmap de todo do projeto"
+    milestone beta {
+        name: "Primeira versão"
+        description: "Contem apenas estudo das tecnologias do projeto"
+        startDate: 2024-11-20        
+        dueDate: 2024-11-30
+        status: IN_PROGRESS
+        release beta {
+            description: "Estudo para entender as tecnologias"
+            item : Spike.segurancaRedes
+            status: IN_DEVELOPMENT
+            dueDate: 2024-11-30
+            version: "1.0"
+        }
+    }
+}
+
+backlog Spike {
+   name: "Backlog de Estudo"
+   description: "Backlog dedicado a estudo da equipe"
+   
+   epic segurancaRedes {
+    name: "Estudo de Segurança em Redes"
+    description: "Explorar conceitos e práticas de segurança em redes corporativas"
+    Criterions: "Mapear principais ameaças", "Definir controles mínimos", "Documentar recomendações"
+    observation: "Foco em ambientes corporativos de médio porte"
+    story firewall {
+        name: "Analisar Firewalls Modernos"
+        Criterions: "Comparar pelo menos 3 soluções", "Apresentar vantagens e desvantagens", "Recomendar uma solução"
+        observation: "Considerar soluções open source e proprietárias"
+        task pesquisarTecnologias {
+            name: "Pesquisar tecnologias de firewall"
+            Deliverables: "Lista de tecnologias pesquisadas", "Resumo das principais características"
+        }
+        task elaborarRelatorio {
+            name: "Elaborar relatório sobre firewalls"
+            depends: Spike.segurancaRedes.firewall.pesquisarTecnologias
+            Deliverables: "Relatório final em PDF","Apresentação em slides"
+        }
+    }
+    story ids {
+        name: "Avaliar Sistemas de Detecção de Intrusão"
+        Criterions: "Testar pelo menos 2 IDS", "Registrar resultados de testes", "Sugerir melhorias"
+        observation: "Utilizar ambiente de laboratório para testes"
+        task estudarIDS {
+            name: "Estudar funcionamento de IDS"
+            Deliverables: "Documento de estudo", "Mapa de funcionamento dos IDS"
+        }
+        task apresentarResultados {
+            name: "Apresentar resultados do estudo de IDS"
+            depends: Spike.segurancaRedes.ids.estudarIDS
+            Deliverables: "Slides de apresentação", "Resumo executivo"
+        }
+    }
+   }
+   epic criptografia {
+    name: "Estudo de Criptografia Aplicada"
+    description: "Investigar métodos de criptografia para proteção de dados"
+    Criterions: "Cobrir criptografia simétrica e assimétrica", "Exemplificar com código", "Comparar desempenho"
+    observation: "Focar em aplicações web"
+    story algoritmosSimetricos {
+        name: "Comparar algoritmos simétricos"
+        Criterions: "Comparar AES, DES e 3DES", "Apresentar benchmarks", "Recomendar uso"
+        observation: "Utilizar exemplos em Python"
+        task revisarLiteratura {
+            name: "Revisar literatura sobre algoritmos simétricos"
+            Deliverables: "Lista de artigos revisados", "Resumo dos principais pontos"
+        }
+        task criarResumo {
+            name: "Criar resumo comparativo"
+            depends: Spike.criptografia.algoritmosSimetricos.revisarLiteratura
+            Deliverables: "Tabela comparativa", "Documento resumo"
+        }
+    }
+    story algoritmosAssimetricos {
+        name: "Explorar algoritmos assimétricos"
+        Criterions: "Implementar exemplo de RSA", "Comparar com ECC", "Documentar limitações"
+        observation: "Focar em uso prático para troca de chaves"
+        task implementarDemo {
+            name: "Implementar demo de criptografia assimétrica"
+            Deliverables: "Código-fonte da demo", "Instruções de uso"
+        }
+        task documentarCodigo {
+            name: "Documentar código da demo"
+            depends: Spike.criptografia.algoritmosAssimetricos.implementarDemo
+            Deliverables: "Documentação técnica", "Guia rápido"
+        }
+    }
+   }
+}
+
+backlog Spike3 {
+   name: "Backlog de Pesquisa"
+   description: "Backlog dedicado a pesquisas técnicas diversas"
+
+   epic cloudComputing { 
+        name: "Pesquisa em Cloud Computing" 
+        process: CriarModelosInfraestrutura
+        Criterions: "Avaliar pelo menos 2 provedores", "Comparar custos e recursos", "Documentar resultados"
+        observation: "Priorizar AWS e Azure"
+        story aws {
+            name: "Avaliar serviços AWS"
+            Criterions: "Listar principais serviços", "Comparar preços", "Identificar pontos fortes"
+            observation: "Focar em serviços de infraestrutura"
+            task levantarServicos {
+                name: "Levantar principais serviços AWS"
+                Deliverables: "Lista de serviços", "Descrição resumida de cada serviço"
+            }
+            task compararCustos {
+                name: "Comparar custos AWS"
+                depends: Spike3.cloudComputing.aws.levantarServicos
+                Deliverables: "Tabela de custos", "Relatório de comparação"
+            }
+        }
+        story azure {
+            name: "Explorar soluções Azure"
+            Criterions: "Mapear recursos disponíveis", "Comparar com AWS", "Apresentar vantagens"
+            observation: "Considerar integração com ferramentas Microsoft"
+            task mapearRecursos {
+                name: "Mapear recursos do Azure"
+                Deliverables: "Lista de recursos", "Resumo de funcionalidades"
+            }
+            task criarApresentacao {
+                name: "Criar apresentação sobre Azure"
+                depends: Spike3.cloudComputing.azure.mapearRecursos
+                Deliverables: "Slides de apresentação", "Resumo executivo"
+            }
+        }
+   }
+   epic devops {
+        name: "Estudo de Práticas DevOps"
+        description: "Investigar ferramentas e práticas DevOps"
+        Criterions: "Cobrir CI/CD e monitoramento", "Apresentar ferramentas populares", "Demonstrar pipeline"
+        observation: "Focar em integração contínua para projetos web"
+        story pipelines {
+            name: "Configurar pipelines CI/CD"
+            Criterions: "Escolher ferramenta", "Configurar pipeline de exemplo", "Documentar processo"
+            observation: "Comparar GitHub Actions e GitLab CI"
+            task escolherFerramenta {
+                name: "Escolher ferramenta de CI/CD"
+                Deliverables: "Lista de ferramentas avaliadas", "Justificativa da escolha"
+            }
+            task configurarPipeline {
+                name: "Configurar pipeline de exemplo"
+                depends: Spike3.devops.pipelines.escolherFerramenta
+                Deliverables: "Arquivo de configuração", "Guia de execução"
+            }
+        }
+        story monitoramento {
+            name: "Implementar monitoramento de aplicações"
+            Criterions: "Selecionar ferramenta", "Criar dashboard", "Documentar métricas"
+            observation: "Focar em Prometheus e Grafana"
+            task selecionarFerramenta {
+                name: "Selecionar ferramenta de monitoramento"
+                Deliverables: "Lista de ferramentas", "Critérios de seleção"
+            }
+            task criarDashboard {
+                name: "Criar dashboard de monitoramento"
+                depends: Spike3.devops.monitoramento.selecionarFerramenta
+                Deliverables: "Dashboard configurado", "Prints de telas"
+            }
+        }
+   }
+}
+
+process CriarModelosInfraestrutura{
+    name: "Processo de Criação de Modelos de Dominio e Infraestrutura"
+    description: "Processo executado para implementar o modelo de dominio e infraestrutura seguindo Clean Architecture"
+
+    activity CriarModeloDominio {
+        name: "Criar Modelo de Dominio"
+        description: "Criar o Modelo de Dominio"
+        task criarModelo {
+            name: "Implementar o Dominio do Problema"
+            description: "Criar as classes de dominio do modulo"
+        }
+        task criarInfraestrutura {
+            name: "Implementar a Infraestutura do Dominio do Problema"
+            description: "Implementar Repositorios para cada Entidade do Modelo"
+            depends: CriarModeloDominio.criarModelo
+        }
+    }
+}
+
+sprint estudo {
+    name: "Estudar Autorizacao"
+    description: "Realizar estudos sobre autorizacao"
+    startDate: 2024-11-20
+    endDate: 2024-11-30
+    status: IN_PROGRESS
+
+    sprintbacklog estudo {
+        item Spike.segurancaRedes.firewall.pesquisarTecnologias {assignee: blackops.paulo  dueDate: 2024-11-30 status: TODO}
+        item Spike.segurancaRedes.ids.estudarIDS {assignee: blackops.jonathan  dueDate: 2024-11-30 status: TODO}
+        item Spike.criptografia.algoritmosSimetricos.revisarLiteratura {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike.criptografia.algoritmosSimetricos.criarResumo {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike.segurancaRedes.firewall.elaborarRelatorio {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike.segurancaRedes.ids.apresentarResultados {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike.criptografia.algoritmosAssimetricos.documentarCodigo {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike.criptografia.algoritmosAssimetricos.implementarDemo {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+    }
+}
+
+sprint apresentar {
+    name: "Apresentar os estudos Autorizacao"
+    description: "Apresentar estudos sobre OPA e openFGA"
+    startDate: 2024-11-20
+    endDate: 2024-11-30
+    status: PLANNED
+
+    sprintbacklog estudo {
+        item Spike3.cloudComputing.aws.levantarServicos {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike3.cloudComputing.aws.compararCustos {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike3.cloudComputing.azure.mapearRecursos {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike3.cloudComputing.azure.criarApresentacao {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike3.devops.pipelines.escolherFerramenta {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+        item Spike3.devops.pipelines.configurarPipeline {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike3.devops.monitoramento.selecionarFerramenta {assignee: blackops.paulo dueDate: 2024-11-30 status: TODO}
+        item Spike3.devops.monitoramento.criarDashboard {assignee: blackops.jonathan dueDate: 2024-11-30 status: TODO}
+    }
+}

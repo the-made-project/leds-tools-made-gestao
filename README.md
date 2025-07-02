@@ -7,16 +7,16 @@ It is a plugin that empowers the Scrum Master and the development team to create
 ### VS Code Extension
 1. Open Visual Studio Code
 2. Go to Extensions (Ctrl+Shift+X)
-3. Search for "MADE-Leds"
+3. Search for "MADE - Leds - Beta"
 4. Click **Install**
 
 ### CLI Tool (NPM)
 ```bash
 # Install globally
-npm install -g made-leds
+npm install -g made-beta
 
 # Or use locally
-npx made-leds --help
+npx made-beta --help
 ```
 
 ### Manual Installation (VSIX)

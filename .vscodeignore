@@ -1,4 +1,113 @@
-.vscode/**
-.vscode-test/**
-.gitignore
+# Source files (keep compiled output only)
+src/**
+!src/language/generated/**
+
+# Development and build configuration files
+*.tsbuildinfo
+tsconfig*.json
+esbuild.mjs
+vite.config.ts
+vite.bundle.config.ts
+vitest.config.js
+langium-config.json
+
+# Development documentation (keep main README)
 langium-quickstart.md
+*.md
+!README.md
+
+# Linting and formatting configuration
+.eslintrc*
+.prettierrc*
+eslint.config.js
+
+# VS Code workspace files
+.vscode/**
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Git files
+.git/**
+.gitignore
+.gitattributes
+
+# Node.js and npm files
+node_modules/**
+package-lock.json
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build artifacts and temporary files
+*.log
+.nyc_output/
+coverage/
+.cache/
+.temp/
+tmp/
+temp/
+
+# Environment files
+.env*
+!.env.example
+
+# Test files
+test/**
+tests/**
+**/*.test.ts
+**/*.test.js
+**/*.spec.ts
+**/*.spec.js
+
+# Development scripts
+scripts/**
+prepare-publish.sh
+test-cli.sh
+
+# Static web development files (not needed for extension)
+static/**
+index.html
+vite.*.config.*
+
+# NPM packaging files
+.npmignore
+*.tgz
+*.tar.gz
+
+# VS Code extension development files
+*.vsix
+
+# Monarch syntax (TextMate is used instead)
+syntaxes/*.ts
+syntaxes/*.monarch.js
+!syntaxes/*.json
+
+# Example files and demos
+example/**
+examples/**
+
+# Documentation assets (keep main icon)
+images/**
+!images/icon.png
+
+# Development databases and logs
+db/**
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/**
+*.sublime-*
+*.code-workspace
+
+# Bundle outputs that aren't needed
+out/language/main-browser.js
+out/cli/**

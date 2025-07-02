@@ -67,7 +67,7 @@ backlog Spike {
             }
         }
     }
-
+}
 
 sprint estudo {
     name: "Estudar Autorizacao"
