@@ -1,4 +1,4 @@
-import { Issue } from "made-lib"; 
+import { Issue } from "made-lib-beta"; 
 
 export class IssueBuilder {
     private issue: Partial<Issue>;

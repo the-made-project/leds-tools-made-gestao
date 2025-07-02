@@ -37,8 +37,8 @@
 ### ✅ PROJETO PROVAVELMENTE SERÁ CONCLUÍDO NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: ter., 22/07/2025
-- **Dias em relação ao planejado**: 235 dias
+- **Data mais provável de conclusão**: qua., 23/07/2025
+- **Dias em relação ao planejado**: 236 dias
 - **Status**: ❌ Atraso Crítico
 
 ### 📊 Métricas do Projeto
@@ -54,7 +54,7 @@
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| ter., 22/07/2025 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
+| qua., 23/07/2025 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
 
 ## 💡 Recomendações
 
@@ -71,4 +71,4 @@
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 01/07/2025, 00:10:27*
+*Relatório gerado em 01/07/2025, 22:51:43*

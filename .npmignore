@@ -1,0 +1,68 @@
+# Exclude ALL files by default, then include only what's in "files" array
+
+# Source code (except what's in files array)
+src/
+!src/language/generated/
+
+# Development and build files
+test/
+tests/
+.vscode/
+.github/
+scripts/
+static/
+example/
+
+# TypeScript and build configs
+*.tsbuildinfo
+tsconfig*.json
+esbuild.mjs
+vite.bundle.config.ts
+vite.config.ts
+vitest.config.js
+
+# Development documentation
+langium-quickstart.md
+*.md
+!README.md
+
+# Linting and formatting
+.eslintrc*
+.prettierrc*
+
+# VS Code extension specific files
+.vscodeignore
+*.vsix
+made-beta-*.vsix
+
+# Development scripts
+test-cli.sh
+prepare-publish.sh
+teste.md
+
+# Build artifacts and logs
+*.tgz
+npm-debug.log*
+*.log
+coverage/
+.nyc_output/
+
+# Environment and cache
+.env*
+!.env.example
+node_modules/
+.cache/
+.temp/
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# NPM files
+package-lock.json
+
+# Language server files (not needed for NPM CLI usage)
+out/extension/
+out/language/
+!out/cli/

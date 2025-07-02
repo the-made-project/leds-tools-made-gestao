@@ -33,7 +33,7 @@ gantt
 
 # Análise de Dependências do Sprint
 
-Análise gerada em: 01/07/2025, 00:10:27
+Análise gerada em: 01/07/2025, 22:51:43
 
 ## 🔍 Grafo de Dependências
 
@@ -97,8 +97,8 @@ graph BT
 ## ✅ SPRINT PROVAVELMENTE SERÁ CONCLUÍDA NO PRAZO
 
 - **Probabilidade de conclusão no prazo**: 100.0%
-- **Data mais provável de conclusão**: qui., 10/07/2025
-- **Dias em relação ao planejado**: 223 dias
+- **Data mais provável de conclusão**: sex., 11/07/2025
+- **Dias em relação ao planejado**: 224 dias
 - **Status**: ❌ Atraso Crítico
 
 ### 📊 Métricas Críticas
@@ -114,7 +114,7 @@ graph BT
 
 | Data | Probabilidade | Status | Observação |
 |------|---------------|---------|------------|
-| qui., 10/07/2025 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
+| sex., 11/07/2025 | 100.0% | ❌ Atraso Crítico | 📍 Data mais provável |
 
 ### 📋 Status das Tarefas
 
@@ -139,5 +139,5 @@ graph BT
 - **Simulações Realizadas**: 10,000
 
 ---
-*Relatório gerado em 01/07/2025, 00:10:27*
+*Relatório gerado em 01/07/2025, 22:51:43*
         
