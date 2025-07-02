@@ -29,6 +29,9 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Generate Langium Files
+        run: npm run langium:generate
+
       # Package and publish the extension
       - name: Publish Extension
         env:
