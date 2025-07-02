@@ -1,7 +1,7 @@
 {
     "name": "made-beta",
     "description": "It allows you to create tasks in your project manager (e.g., Github) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
