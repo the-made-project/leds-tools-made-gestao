@@ -99,13 +99,20 @@ protected async addItem (value:any){
   }
 
   protected async createAndSave(parentID: string, data: any){
-    const issue = await this.createIssue (parentID, data)
+    const issue = await this.createIssue (parentID, data, 0)
     await this.saveorUpdate (issue)
   }
 
-  protected async createIssue (parentID: string, data: any){
+  protected async createIssue (parentID: string, data: any, depth: number = 0): Promise<Issue> {
+    // Proteção contra recursão infinita
+    if (depth > 50) {
+        console.warn(`Max depth reached for issue: ${parentID}.${data.id}`);
+        throw new Error(`Maximum recursion depth exceeded for issue: ${parentID}.${data.id}`);
+    }
+
     const id = parentID+"."+data.id.toLocaleLowerCase()
     let depends:  Issue[] = []
+    let childIssues: Issue[] = [] // Array para acumular todas as issues filhas
 
     const builder: IssueBuilder = new IssueBuilder()
       .setId(id)
@@ -113,17 +120,29 @@ protected async addItem (value:any){
       .setDescription(data.description ?? "")
       .setType(data.$type.toLocaleLowerCase())
    
-    if (data.userstories){
-        if (data.userstories.length >0){    
-        builder.setIssues(await Promise.all(data.userstories.map(async (value:any) => await this.createIssue(id,value))) ??[])
-      }
-      
+    // Processar user stories
+    if (data.userstories && data.userstories.length > 0) {
+        const userStoryIssues = await Promise.all(
+            data.userstories.map(async (value: any) => 
+                await this.createIssue(id, value, depth + 1)
+            )
+        );
+        childIssues.push(...userStoryIssues); // Adicionar ao array
     }
 
-    if (data.tasks){
-      if (data.tasks.length >0){    
-      builder.setIssues(await Promise.all(data.tasks.map(async (value:any) => await this.createIssue(id, value))) ??[])
-      }
+    // Processar tasks
+    if (data.tasks && data.tasks.length > 0) {
+        const taskIssues = await Promise.all(
+            data.tasks.map(async (value: any) => 
+                await this.createIssue(id, value, depth + 1)
+            )
+        );
+        childIssues.push(...taskIssues); // Adicionar ao array (não sobrescrever)
+    }
+
+    // Definir todas as issues filhas de uma vez
+    if (childIssues.length > 0) {
+        builder.setIssues(childIssues);
     }
 
     if (data.depends){
