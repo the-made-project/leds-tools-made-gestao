@@ -45,7 +45,7 @@ protected async addItem (value:any){
     const db = new LowSync<IssuesDTO>(adapter,defaultData)
     await db.read()
     
-    const exists = lodash.chain(db.data).get('data').some({ internalId: id }).value();
+    const exists = lodash.chain(db.data).get('data').some({ id: id }).value();
     
     if (exists) return true;
     
