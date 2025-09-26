@@ -1,7 +1,7 @@
 {
     "name": "made-beta",
     "description": "It allows you to create tasks in your project manager (e.g., Github) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
@@ -56,7 +56,7 @@
         "langium": "~3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^7.0.1",
-        "made-lib-beta": "0.1.16",
+        "made-lib-beta": "^0.1.17",
         "monaco-editor": "npm:@codingame/monaco-editor-treemended@1.83.16",
         "monaco-editor-workers": "~0.44.0",
         "monaco-editor-wrapper": "~3.5.0",
