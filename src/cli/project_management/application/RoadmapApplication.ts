@@ -33,7 +33,7 @@ export  class RoadmapApplication extends AbstractApplication {
                                 releases: await Promise.all(
                                     (milestone.releases ?? []).map(async release => {
                                         const issues = release.item
-                                            ? [await this.createIssue("", release.item.ref)]
+                                            ? [await this.createIssue("", release.item.ref, 0)]
                                             : await this.createIssues([
                                                 ...(release.itens ?? []),
                                                 release.item
@@ -71,7 +71,7 @@ export  class RoadmapApplication extends AbstractApplication {
       return Promise.all(
           items
               .filter(Boolean) // Remove itens null/undefined
-              .map(item => this.createIssue("", item.ref))
+              .map(item => this.createIssue("", item.ref, 0))
       );
   }
        

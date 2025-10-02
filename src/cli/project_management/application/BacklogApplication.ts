@@ -21,7 +21,7 @@ export class BacklogApplication extends AbstractApplication {
                   .setIssues(async () => {
                     return await Promise.all(
                       backlog.items?.map(async (issue) => {
-                        return await this.createIssue(issue.$container.id, issue);
+                        return await this.createIssue(issue.$container.id, issue, 0);
                       }) ?? []
                     );
                   }))
