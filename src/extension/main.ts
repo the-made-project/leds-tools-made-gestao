@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import * as fs from 'node:fs';
 import { LanguageClient, TransportKind } from 'vscode-languageclient/node.js';
-import { GenerateOptions, generateAction, githubPushAction } from '../cli/main.js';
+import { GenerateOptions, generateAction, githubPushAction, jiraPushAction } from '../cli/main.js';
 
 function registerGeneratorCommand(context: vscode.ExtensionContext): void {
    
@@ -39,11 +39,36 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
         };
     }
 
+    const build_jira_functions = (_opts: GenerateOptions) => {
+        return async() => {
+            const filepath = vscode.window.activeTextEditor?.document.fileName;
+            if(filepath) {
+                // Carrega o .env do mesmo diretório do .made
+                const envPath = path.join(path.dirname(filepath), '.env');
+                dotenv.config({ path: envPath });
+
+                const domain = process.env.JIRA_DOMAIN;
+                const userName = process.env.JIRA_USERNAME;
+                const apiToken = process.env.JIRA_APITOKEN;
+
+                if (domain && userName && apiToken) {
+                    jiraPushAction(filepath, domain, userName, apiToken)
+                        .catch((reason: any) => vscode.window.showErrorMessage(reason.message));
+                } else {
+                    vscode.window.showErrorMessage('Configure JIRA_DOMAIN, JIRA_USERNAME e JIRA_APITOKEN no .env do diretório do seu arquivo .made');
+                }
+            }
+        };
+    }
+
     const generateDocumentation = build_generate_functions({ only_project_documentation: true })
     context.subscriptions.push(vscode.commands.registerCommand("made.generateDocumentation", generateDocumentation))
 
     const generateGithubIssues = build_github_functions({ only_project_github: true })
     context.subscriptions.push(vscode.commands.registerCommand("made.generateGithubIssues", generateGithubIssues))
+
+    const generateJiraIssues = build_jira_functions({ only_project_jira: true })
+    context.subscriptions.push(vscode.commands.registerCommand("made.generateJiraIssues", generateJiraIssues))
 
     const githubPush = async () => {
         const filepath = vscode.window.activeTextEditor?.document.fileName;
@@ -58,6 +83,21 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
         }
     };
     context.subscriptions.push(vscode.commands.registerCommand("made.githubPush", githubPush));
+
+    const jiraPush = async () => {
+        const filepath = vscode.window.activeTextEditor?.document.fileName;
+        if (filepath) {
+            const domain = await vscode.window.showInputBox({ prompt: "Jira domain" });
+            const userName = await vscode.window.showInputBox({ prompt: "Jira UserName" });
+            const apiToken = await vscode.window.showInputBox({ prompt: "Jira APIToken" });
+
+            if (domain && userName && apiToken) {
+                const { jiraPushAction } = await import('../cli/main.js');
+                jiraPushAction(filepath, domain, userName, apiToken).catch((reason: any) => vscode.window.showErrorMessage(reason.message));
+            }
+        }
+    };
+    context.subscriptions.push(vscode.commands.registerCommand("made.jiraPush", jiraPush));
 
 }
 

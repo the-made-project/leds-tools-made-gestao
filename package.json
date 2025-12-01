@@ -1,14 +1,14 @@
 {
     "name": "made-beta",
     "description": "It allows you to create tasks in your project manager (e.g., Github) automatically based on predefined processes. Additionally, it generates documentation based on the project.",
-    "version": "0.1.14",
+    "version": "0.1.21",
     "icon": "images/icon.png",
     "license": "Apache-2.0",
     "author": {
-        "name": "Paulo Lopes",
-        "email": "paulosousasancheslopes@gmail.com"
+        "name": "Douglas Bolis Lima",
+        "email": "douglasbolislima@gmail.com"
     },
-    "publisher": "Paulo-Lopes",
+    "publisher": "Douglas-Bolis-Lima",
     "repository": {
         "type": "git",
         "url": "https://github.com/LEDS-GPS-TEAM-MADE/leds-tools-made"
@@ -117,6 +117,10 @@
             {
                 "command": "made.generateGithubIssues",
                 "title": "Generate Github Issues"
+            },
+            {
+                "command": "made.generateJiraIssues",
+                "title": "Generate Jira Issues"
             }
         ],
         "menus": {
@@ -128,6 +132,10 @@
                 {
                     "command": "made.generateGithubIssues",
                     "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.generateJiraIssues",
+                    "when": "editorLangId == made"
                 }
             ],
             "editor/context": [
@@ -138,6 +146,11 @@
                 },
                 {
                     "command": "made.generateGithubIssues",
+                    "group": "z_commands",
+                    "when": "editorLangId == made"
+                },
+                {
+                    "command": "made.generateJiraIssues",
                     "group": "z_commands",
                     "when": "editorLangId == made"
                 }
