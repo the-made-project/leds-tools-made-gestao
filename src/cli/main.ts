@@ -5,7 +5,7 @@ import { createMadeServices } from '../language/made-module.js';
 import { extractAstNode, buildAssigneeMap, processBacklogs, processTeams, processProject, processTimeBoxes, processRoadmaps } from './cli-util.js';
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
-import { ReportManager } from 'made-lib-beta';
+import { ReportManager } from 'made-lib-made-eto';
 import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import { readFileSync } from 'node:fs';

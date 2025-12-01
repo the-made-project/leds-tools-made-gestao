@@ -1,4 +1,4 @@
-import { Backlog, Issue } from "made-lib-beta";
+import { Backlog, Issue } from "made-lib-made-eto";
 
 export class BacklogBuilder {
     private backlog: Partial<Backlog>;
