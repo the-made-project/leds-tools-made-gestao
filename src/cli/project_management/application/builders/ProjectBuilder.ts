@@ -1,4 +1,4 @@
-import { Project } from "made-lib-beta";
+import { Project } from "made-lib-beta-grupo-2";
 
 export class ProjectBuilder {
     private project: Partial<Project>

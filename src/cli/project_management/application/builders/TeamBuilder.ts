@@ -1,4 +1,4 @@
-import { Team, Person } from "made-lib-beta";
+import { Team, Person } from "made-lib-beta-grupo-2";
 
 export class TeamBuilder {
     private team: Partial<Team>
