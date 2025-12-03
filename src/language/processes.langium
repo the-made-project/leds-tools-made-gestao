@@ -15,7 +15,14 @@ Activity:
 
 Task:
     'task' id=ID '{'
-        (Name | Description |DefinitionDone|DefinitionReady|Learning|Label|'depends' ':' depend=[processType:QualifiedName] (',' depends+=[processType:QualifiedName])?)*
+        (
+            Name | 
+            Description |
+            DefinitionDone |
+            DefinitionReady |
+            Learning |
+            Label |
+            'depends' ':' depend=[processType:QualifiedName] (',' depends+=[processType:QualifiedName])?)*
         
     '}'
 ;

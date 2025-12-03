@@ -28,6 +28,7 @@ export abstract class AbstractApplication {
         this.items = new Map<string, any>();
   }
 
+  public abstract create(): Promise<void>;
  
 
 protected async addItem (value:any){

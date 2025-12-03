@@ -1,4 +1,5 @@
-import { isBacklog, Model } from "../../../language/generated/ast.js";
+import { Issue } from "made-lib-made-eto";
+import { Epic, isBacklog, isEpic, Model } from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 import { BacklogBuilder } from "./builders/BacklogBuilder.js";
 
@@ -6,6 +7,18 @@ export class BacklogApplication extends AbstractApplication {
     constructor(target_folder: string, model: Model) {
         super(target_folder, model);
         this.jsonFile = "backlog.json";
+    }
+
+    private async createEpicIssue(parentID: string, epic: Epic, depth?: number): Promise<Issue> {
+      
+    }
+
+    protected override async createIssue(parentID: string, data: any, depth?: number): Promise<Issue> {
+      if(isEpic(data)) {
+        return await this.createEpicIssue(parentID, data, depth);
+      } else {
+        return await super.createIssue(parentID, data, depth);
+      }
     }
 
     public async create() {
