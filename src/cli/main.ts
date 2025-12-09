@@ -5,7 +5,7 @@ import { createMadeServices } from '../language/made-module.js';
 import { extractAstNode, buildAssigneeMap, processBacklogs, processTeams, processProject, processTimeBoxes, processRoadmaps } from './cli-util.js';
 import { generate } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
-import { ReportManager } from 'made-lib-beta';
+import { ReportManager } from 'made-lib-beta-grupo-2';
 import * as dotenv from 'dotenv';
 import * as path from 'node:path';
 import { readFileSync } from 'node:fs';
@@ -51,7 +51,29 @@ export const githubPushAction = async (fileName: string, token: string, org: str
     const roadmapList = processRoadmaps(roadmaps, assigneeMap);
 
     const reportManager = new ReportManager();
+
     await reportManager.githubPush(token, org, repo, project, epics, stories, tasks, backlogList, teams, timebox, roadmapList);
+};
+
+export const jiraPushAction = async (fileName: string, domain: string, userName: string, apiToken: string): Promise<void> => {
+    const services = createMadeServices(NodeFileSystem).Made;
+    const model = await extractAstNode<Model>(fileName, services);
+
+    const backlogs = model.components.filter(c => c.$type === 'Backlog') as Backlog[];
+    const teamsRaw = model.components.filter(c => c.$type === 'Team') as Team[];
+    const timeboxesRaw = model.components.filter(c => c.$type === 'TimeBox');
+    const roadmaps = model.components.filter(c => c.$type === 'Roadmap') as Roadmap[];
+
+    const assigneeMap = buildAssigneeMap(model);
+    const { epics, stories, tasks, backlogList } = processBacklogs(backlogs, assigneeMap);
+    const teams = processTeams(teamsRaw);
+    const project = processProject(model.project);
+    const timebox = processTimeBoxes(timeboxesRaw);
+    const roadmapList = processRoadmaps(roadmaps, assigneeMap);
+
+    const reportManager = new ReportManager();
+
+    await reportManager.jiraPush(domain, userName, apiToken, project, epics, stories, tasks, backlogList, teams, timebox, roadmapList);
 };
 
 export type GenerateOptions = {
@@ -60,10 +82,11 @@ export type GenerateOptions = {
     only_synchronize_from_projectManagement_to_made?: boolean,
     only_project_documentation?: boolean,
     only_project_github?: boolean,
+    only_project_jira?: boolean,
     all?: boolean,
 }
 
-export default function(): void {
+export default function (): void {
     const program = new Command();
 
     program

@@ -4,7 +4,7 @@ import * as path from 'node:path';
 import * as fs from 'node:fs';
 import { URI } from 'langium';
 import type { AtomicUserStory, TaskBacklog, TeamMember, Epic, Model, Backlog, Team, Roadmap, Milestone, Release } from '../language/generated/ast.js';
-import { type Issue, type Person } from 'made-lib-beta';
+import { type Issue, type Person } from 'made-lib-beta-grupo-2';
 
 export async function extractDocument(fileName: string, services: LangiumCoreServices): Promise<LangiumDocument> {
     const extensions = services.LanguageMetaData.fileExtensions;

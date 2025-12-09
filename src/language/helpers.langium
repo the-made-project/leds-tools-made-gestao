@@ -13,7 +13,7 @@ fragment Email:
 ;
 
 fragment Discord:
-    'discord' ':' email=STRING
+    'discord' ':' discord=STRING
 ;
 
 

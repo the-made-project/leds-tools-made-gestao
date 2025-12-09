@@ -2,7 +2,7 @@
 import { AtomicUserStory, Epic, isTimeBox, Model, PlanningItem, TaskBacklog} from "../../../language/generated/ast.js";
 import { AbstractApplication } from "./AbstractApplication.js";
 
-import {SprintItem, /*TimeBox,*/ Person, Issue} from "made-lib-beta";
+import {SprintItem, /*TimeBox,*/ Person, Issue} from "made-lib-beta-grupo-2";
 
 import {TimeBoxBuilder} from './builders/TimeBoxBuilder.js';
 

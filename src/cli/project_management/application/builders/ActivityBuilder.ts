@@ -1,4 +1,4 @@
-import { Process, Activity, Task } from "made-lib-beta";
+import { Process, Activity, Task } from "made-lib-beta-grupo-2";
 
 export class ActivityBuilder {
     private activity: Partial<Activity>;
