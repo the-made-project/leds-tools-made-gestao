@@ -65,13 +65,15 @@ function registerGeneratorCommand(context: vscode.ExtensionContext): void {
 
         if (domain && userName && apiToken) {
           vscode.window.showInformationMessage(
-            `Iniciando push para o Jira no domínio ${domain}...`
+            `📝 MADE: Iniciando push para o Jira no domínio '${domain}'...`
           );
+
           await jiraPushAction(filepath, domain, userName, apiToken).catch(
             (reason: any) => vscode.window.showErrorMessage(reason.message)
           );
+
           vscode.window.showInformationMessage(
-            `Issues enviados para o Jira com sucesso!`
+            `✅ MADE: Issues enviadas para o Jira com sucesso!`
           );
         } else {
           vscode.window.showErrorMessage(
